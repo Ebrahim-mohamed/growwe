@@ -1,0 +1,59 @@
+{
+  "header": {},
+  "footer": {
+    "p": "GROWWE is a biodegradable soil alternative produced in Egypt from natural resources. GROWWE is a a sustainable eco-friendly solution developed with British technology by a license from Scaletek UK. GROWWE utilizes natural organic resources to contribute to organic agriculture while enhancing soil quality for horticulture, landscaping and farming.",
+    "link": "Links",
+    "about": "About Us",
+    "products": "Products",
+    "gardening": "Gardening Guide",
+    "contact": "Contact Us",
+    "email": "hello@growwe.com",
+    "phone1": "+2 (02) 2488 0000",
+    "phone2": "+2 (010) 1200 3000",
+    "copyRight": "© 2025 GROWWE. All rights reserved.",
+    "terms": "Terms of Use",
+    "Privacy": "Privacy Policy"
+  },
+
+  "lang": { "lang": "AR" },
+  "homePage": {
+    "title": "Creating a good life | from growing good plants",
+    "productsSection": {
+      "ProductTitle": "Products",
+      "renewable": "Renewable",
+      "biodegradable": "Biodegradable",
+      "egyptian": "Egyptian"
+    },
+    "smartSection": {
+      "smarterTitle": "The Smarter Growing Medium",
+      "smartFirstBoxHeader": "100% Organic",
+      "smartFirstBoxDescription": "Biodegradable alternative soil.",
+      "smartSecondBoxHeader": "Soil Aeration",
+      "smartSecondBoxDescription": "High air circulation for soil.",
+      "smartThirdBoxHeader": "Water Retention",
+      "smartThirdBoxDescription": "Absorbs & retains water for longer times.",
+      "smartFourthBoxHeader": "Low EC",
+      "smartFourthBoxDescription": "Low salt levels (safer for sensitive plants)",
+      "smartFifthBoxHeader": "Neutral pH",
+      "smartFifthBoxDescription": "Biodegradable Alternative Soil",
+      "smartSixthBoxHeader": "Add Water",
+      "smartSixthBoxDescription": "Add 18 liters of water per block to get 50 liters volume."
+    },
+    "plantsSection": {
+      "header": "Perfect for All Plants",
+      "des": "Ideal for gardening, hydroponics, nurseries, and potting mixes.",
+      "secHeader": "Best Uses",
+      "firstUse": "Seed starting",
+      "secondUse": "Container gardening",
+      "thirdUse": "Soil amendment",
+      "forthUse": "Hydroponic growing"
+    },
+    "partnersSection": {
+      "header": "Become Our Partner. Enjoy Greener Benefits.",
+      "firstP": "Enjoy exclusive benefits when you partner with us and order large shipments of our premium alternative soil.",
+      "secondP": "Get priority access, wholesale pricing, and dedicated support for your growing needs.",
+      "thirdP": "Join now and grow smarter with GROWWE! 🌱",
+      "button": "BECOME A PARTNER"
+    }
+  }
+}
