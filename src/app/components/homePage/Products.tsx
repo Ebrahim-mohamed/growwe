@@ -35,13 +35,14 @@ export function Products() {
   const t = useTranslations("homePage.productsSection");
   return (
     <div className=" p-[var(--section-Padding)]">
-      <div className="flex items-end gap-6 mb-[5rem]">
-        <h1 className="text-black text-[3rem] font-black">
+      <div className="flex flex-col justify-center items-center gap-1 w-full mb-[2rem]">
+        <h1 className="text-black text-[3.5rem] font-black">
           {t("ProductTitle")}
         </h1>
         <p className="text-black text-[1rem] font-medium">
           {t("renewable")}.{t("biodegradable")}.{t("egyptian")}.
         </p>
+        <div className="bg-[#1010104f] w-full h-[0.1rem] mt-[0.5rem]"></div>
       </div>
       <div className="flex  gap-4 ">
         {products.map((product) => (
