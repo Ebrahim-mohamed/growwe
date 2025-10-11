@@ -1,0 +1,59 @@
+import { useTranslations } from "next-intl";
+import { Card } from "./Card";
+const cards1 = [
+  {
+    header: "header1",
+    des: "des1",
+  },
+  {
+    header: "header2",
+    des: "des2",
+  },
+  {
+    header: "header3",
+    des: "des3",
+  },
+];
+const cards2 = [
+  {
+    header: "header4",
+    des: "des4",
+  },
+  {
+    header: "header5",
+    des: "des5",
+  },
+  {
+    header: "header6",
+    des: "des6",
+  },
+];
+export function CardsSection() {
+  const t = useTranslations("gardening.cardsSection");
+  return (
+    <div className="p-[var(--section-Padding)] flex flex-col items-center justify-center gap-[1.5rem] w-full">
+      <div className="flex items-center w-full justify-between gap-[1rem]">
+        {cards1.map((card) => (
+          <Card
+            des={t(card.des)}
+            header={t(card.header)}
+            img="hero"
+            buttonName={t("button")}
+            key={card.header}
+          />
+        ))}
+      </div>
+      <div className="flex items-center w-full justify-between gap-[1rem]">
+        {cards2.map((card) => (
+          <Card
+            des={t(card.des)}
+            header={t(card.header)}
+            img="hero"
+            buttonName={t("button")}
+            key={card.header}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}

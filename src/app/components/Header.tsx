@@ -1,21 +1,15 @@
 import Image from "next/image";
 import { NavTab } from "./NavTab";
-import { useLocale, useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 
-const navTabs = {
-  "About Us": "about",
-  Products: "products",
-  Gardening: "gardening",
-  "Contact Us": "contact",
-};
+const navTabs = ["about", "products", "gardening", "contact"];
 export function Header() {
-  const t = useTranslations("lang");
-  const locale = useLocale();
+  const t = useTranslations("header");
   return (
-    <div className="flex items-center justify-between gap-1 p-10 bg-transparent absolute top-0 left-0 w-full">
+    <div className="flex items-center justify-between gap-1 p-10 bg-transparent absolute top-0 left-0 w-full z-50">
       <div className="flex-1">
-        <Link href={locale}>
+        <Link href="/">
           <Image
             alt="logo image"
             src="/logo.svg"
@@ -27,8 +21,8 @@ export function Header() {
         </Link>
       </div>
       <div className="flex items-center justify-between w-fit gap-[3rem]">
-        {Object.entries(navTabs).map((entry) => (
-          <NavTab name={entry[0]} to={entry[1]} key={entry[0]} />
+        {navTabs.map((link) => (
+          <NavTab name={t(link)} to={link} key={link} />
         ))}
       </div>
       <div className="flex items-center justify-end gap-8 flex-1">

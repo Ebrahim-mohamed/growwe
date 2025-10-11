@@ -1,5 +1,11 @@
 {
-  "header": {},
+  "header": {
+    "lang": "AR",
+    "about": "About Us",
+    "products": "Products",
+    "gardening": "Gardening",
+    "contact": "Contact Us"
+  },
   "footer": {
     "p": "GROWWE is a biodegradable soil alternative produced in Egypt from natural resources. GROWWE is a a sustainable eco-friendly solution developed with British technology by a license from Scaletek UK. GROWWE utilizes natural organic resources to contribute to organic agriculture while enhancing soil quality for horticulture, landscaping and farming.",
     "link": "Links",
@@ -12,10 +18,8 @@
     "phone2": "+2 (010) 1200 3000",
     "copyRight": "© 2025 GROWWE. All rights reserved.",
     "terms": "Terms of Use",
-    "Privacy": "Privacy Policy"
+    "privacy": "Privacy Policy"
   },
-
-  "lang": { "lang": "AR" },
   "homePage": {
     "title": "Creating a good life | from growing good plants",
     "productsSection": {
@@ -43,10 +47,10 @@
       "header": "Perfect for All Plants",
       "des": "Ideal for gardening, hydroponics, nurseries, and potting mixes.",
       "secHeader": "Best Uses",
-      "firstUse": "Seed starting",
-      "secondUse": "Container gardening",
-      "thirdUse": "Soil amendment",
-      "forthUse": "Hydroponic growing"
+      "firstUse": "✅  Seed starting",
+      "secondUse": "✅  Container gardening ",
+      "thirdUse": "✅  Soil amendment",
+      "forthUse": "✅  Hydroponic growing"
     },
     "partnersSection": {
       "header": "Become Our Partner. Enjoy Greener Benefits.",
@@ -54,6 +58,137 @@
       "secondP": "Get priority access, wholesale pricing, and dedicated support for your growing needs.",
       "thirdP": "Join now and grow smarter with GROWWE! 🌱",
       "button": "BECOME A PARTNER"
+    },
+    "mulch": {
+      "title": "Mulch",
+      "des": "The Secret to Smart Gardening",
+      "content": "Mulch is a protective layer of material spread on top of the soil to protect it and decorate your landscape. Think of it like a blanket for your garden. Mulch protects the soil and the plants growing in it. It is natural, organic and reusable.",
+      "features": "Mulch Benefits & Features",
+      "feat1": "✅ Saves water",
+      "feat2": "✅ Controls weeds",
+      "feat3": "✅ Reduces plant diseases",
+      "feat4": "✅ Improves soil health",
+      "feat5": "✅ Lowers long-term costs"
+    }
+  },
+  "about": {
+    "heroSection": {
+      "title": "ABOUT US",
+      "natural": "Natural",
+      "sustainable": "Sustainable",
+      "egyptian": "Egyptian"
+    },
+    "whoWeAreSection": {
+      "whoHeader": "WHO WE ARE",
+      "whoDes": "We are dedicated to producing high-quality alternative soil from Egypt’s rich natural resources.",
+      "why": "WHY GROWWE?",
+      "organic": "100% Organic",
+      "sustainable": "100% Sustainable",
+      "egyptian": "100% Egyptian",
+      "missionHeader": "OUR MISSION",
+      "missionSecHeader": "ECO-Friendly, Sustainable, Organic Growing Media",
+      "missionDes": "We aim to provide eco-friendly, sustainable growing media that empowers farmers, gardeners, and agricultural businesses to grow premium quality plants while protecting the environment.",
+      "visionHeader": "OUR VISION",
+      "visionSecHeader": "Natural, Innovative, Productive",
+      "visionDes": "To lead the global shift toward sustainable cultivation by innovating plant-based solutions that are kind to the earth and productive for farmers."
+    },
+    "certificationSection": {
+      "title": "OUR CERTIFICATIONS",
+      "iso1": "ISO 9001",
+      "quality": "Quality Management",
+      "iso2": "ISO 14001",
+      "environmental": "Environmental Management",
+      "omri": "OMRI Certification",
+      "organicUse": "Approved for organic use"
+    }
+  },
+  "products": {
+    "heroSection": {
+      "title": "PRODUCTS",
+      "premium": "Premium",
+      "efficient": "Efficient",
+      "cost": "Cost-Effective"
+    },
+    "productsSection": {
+      "products": "Products",
+      "quantity": "Quantity",
+      "egp": "EGP",
+      "add": "Add To Cart"
+    }
+  },
+  "gardening": {
+    "heroSection": {
+      "title": "GARDENING",
+      "p1": "Your Garden is Greener,",
+      "p2": "Your Crops are Healthier."
+    },
+    "gardeningSection": {
+      "title": "GARDENING",
+      "des1": "Grow Green, Naturally—Healthy Soil for a Healthier Harvest!",
+      "header": "Ideal for Acid-Loving Plants",
+      "des2": "Alternative soil is slightly acidic (pH ~5.5-6.5)—perfect for blueberries, azaleas, and ferns. For neutral-pH plants, balance with a bit of garden lime."
+    },
+    "thirdSection": {
+      "header1": "Boost Seed Starting Success",
+      "des1": "Alternative soil is sterile and lightweight—perfect for seed trays! Mix with vermiculite (3:1 ratio) to prevent damping-off disease and promote strong seedling roots.",
+      "header2": "Pro Tips for Starting Seeds in Alternative Soil",
+      "point1": "Pre-Moisten: Always soak alternative soil before sowing!",
+      "point2": "Mix for Drainage: Add 20% perlite or vermiculite to prevent compaction.",
+      "point3": "Warmth is Key: Use a heat mat (75–80°F) for tropical seeds (e.g., orchids).",
+      "point4": "Cover for Humidity: Stretch plastic wrap over trays until germination.",
+      "point5": "Transplant Early: Palm peat breaks down fast—move seedlings once 2–4 true leaves appear.",
+      "header3": "Strawberries",
+      "des2": "Pre-planting hack: Solarize soil with clear plastic for 2 weeks, then amend with palm peat to kill weeds and boost acidity."
+    },
+    "cardsSection": {
+      "header1": "Landscaping",
+      "des1": "hello my name is ibrahim hello my name is kareem hello my name is rasha hello my name is bassuni",
+      "header2": "Pruning plants",
+      "des2": "hello my name is ibrahim hello my name is kareem hello my name is rasha hello my name is bassuni",
+      "header3": "irrigation & Drainage",
+      "des3": "hello my name is ibrahim hello my name is kareem hello my name is rasha hello my name is bassuni",
+      "header4": "Garden Maintenance",
+      "des4": "hello my name is ibrahim hello my name is kareem hello my name is rasha hello my name is bassuni",
+      "header5": "Green Technology",
+      "des5": "hello my name is ibrahim hello my name is kareem hello my name is rasha hello my name is bassuni",
+      "header6": "Urban Gardening",
+      "des6": "hello my name is ibrahim hello my name is kareem hello my name is rasha hello my name is bassuni",
+      "button": "Read More"
+    }
+  },
+  "contact": {
+    "heroSection": {
+      "title": "CONTACT US"
+    },
+    "formSection": {
+      "header": "CONTACT US",
+      "des": "Any question or request for partnership? Just write us a message!",
+      "footer": "* I consent to GROWWE storing my submitted information so they can respond to my inquiry.",
+      "firstLabel": "First Name",
+      "firstPlace": "First Name",
+      "firstNameError": "First name should be at least 3 characters",
+      "lastLabel": "Last Name",
+      "lastPlace": "Last Name",
+      "lastNameError": "Last name should be at least 3 characters",
+      "phoneLabel": "Phone",
+      "phonePlace": "01234567891",
+      "phoneError": "Phone number should be 11 characters",
+      "emailLabel": "E-mail",
+      "emailPlace": "example@gmail.com",
+      "emailError": "E-mail should contain @",
+      "messageLabel": "Message",
+      "messagePlace": "Write your message..",
+      "messageError": "Message should be at least 50 characters",
+      "subjectHeader": "Select Subject?",
+      "opt1": "General Inquiry",
+      "opt2": "Bulk Orders & Wholesale",
+      "opt3": "Become a Partner",
+      "button": "Submit",
+      "contactInfoHeader": "Contact Information",
+      "contactInfoDes": "Say something to start a conversation",
+      "phone": "+2 012 345 6789",
+      "mail": "hello@growwe.com",
+      "location": "Villa 11, Street 53 off Street 9, Mokattam, Cairo, Egypt."
     }
   }
 }
