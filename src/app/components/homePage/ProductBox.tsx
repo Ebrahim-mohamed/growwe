@@ -17,7 +17,8 @@ export function ProductBox({
   id: string;
 }) {
   return (
-    <div className="rounded-[1.5rem] border-2 border-solid border-[#E6E6E6] flex-1 max-w-[35.5rem] overflow-hidden justify-self-stretch bg-[#E6E6E6]">
+    <div className="flex flex-col rounded-[1.5rem] border-2 border-[#E6E6E6] bg-[#E6E6E6] flex-1 overflow-hidden h-[38rem]">
+      {" "}
       <div>
         <Image
           alt="product image"

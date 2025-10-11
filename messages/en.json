@@ -26,7 +26,10 @@
       "ProductTitle": "FEATURED PRODUCTS",
       "renewable": "Renewable",
       "biodegradable": "Biodegradable",
-      "egyptian": "Egyptian"
+      "egyptian": "Egyptian",
+      "soil": "Soilless Growing Medium",
+      "mulch": "Mulch",
+      "link": "Know more"
     },
     "smartSection": {
       "smarterTitle": "The Smarter Growing Medium",
