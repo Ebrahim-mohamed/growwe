@@ -3,6 +3,8 @@
 import { useRef, useEffect } from "react";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper as SwiperType } from "swiper";
+import type { NavigationOptions } from "swiper/types";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -11,81 +13,30 @@ import { useTranslations } from "next-intl";
 import { ProductBox } from "./ProductBox";
 import Image from "next/image";
 import Link from "next/link";
+import { productSectionType } from "@/app/types/product";
 
-const products = [
-  {
-    header: "Soil Alternative Compressed - 5 Kg Block",
-    price: "350",
-    type: "Block",
-    brief:
-      "One block of compressed soil alternative weighing 5Kg to be expanded by watering to 80m2.",
-    img: "/product.png",
-    id: "1",
-  },
-  {
-    header: "Soil Alternative Compressed - 5 Kg Block",
-    price: "350",
-    type: "Block",
-    brief:
-      "One block of compressed soil alternative weighing 5Kg to be expanded by watering to 80m2.",
-    img: "/product.png",
-    id: "2",
-  },
-  {
-    header: "Soil Alternative Compressed - 5 Kg Block",
-    price: "350",
-    type: "Block",
-    brief:
-      "One block of compressed soil alternative weighing 5Kg to be expanded by watering to 80m2. One block of compressed soil alternative weighing 5Kg to be expanded by watering to 80m2.",
-    img: "/product.png",
-    id: "3",
-  },
-  {
-    header: "Soil Alternative Compressed - 5 Kg Block",
-    price: "350",
-    type: "Block",
-    brief:
-      "One block of compressed soil alternative weighing 5Kg to be expanded by watering to 80m2. One block of compressed soil alternative weighing 5Kg to be expanded by watering to 80m2.",
-    img: "/product.png",
-    id: "4",
-  },
-  {
-    header: "Soil Alternative Compressed - 5 Kg Block",
-    price: "350",
-    type: "Block",
-    brief:
-      "One block of compressed soil alternative weighing 5Kg to be expanded by watering to 80m2.",
-    img: "/product.png",
-    id: "5",
-  },
-  {
-    header: "Soil Alternative Compressed - 5 Kg Block",
-    price: "350",
-    type: "Block",
-    brief:
-      "One block of compressed soil alternative weighing 5Kg to be expanded by watering to 80m2.",
-    img: "/product.png",
-    id: "6",
-  },
-];
-
-export function MulchProducts() {
+export function MulchAndSoilProducts(content: productSectionType) {
   const t = useTranslations("homePage.productsSection");
 
   // ✅ Refs for navigation buttons
   const prevRef = useRef<HTMLDivElement | null>(null);
   const nextRef = useRef<HTMLDivElement | null>(null);
-  const swiperRef = useRef<any>(null);
+  const swiperRef = useRef<SwiperType | null>(null);
 
   useEffect(() => {
     if (
       swiperRef.current &&
       swiperRef.current.params &&
       prevRef.current &&
-      nextRef.current
+      nextRef.current &&
+      swiperRef.current.params.navigation
     ) {
-      swiperRef.current.params.navigation.prevEl = prevRef.current;
-      swiperRef.current.params.navigation.nextEl = nextRef.current;
+      const navigation = swiperRef.current.params
+        .navigation as NavigationOptions;
+
+      navigation.prevEl = prevRef.current;
+      navigation.nextEl = nextRef.current;
+
       swiperRef.current.navigation.init();
       swiperRef.current.navigation.update();
     }
@@ -95,13 +46,13 @@ export function MulchProducts() {
     <div className="flex flex-col">
       <div className="flex items-end  gap-2">
         <h2 className="text-[#E5AC71] text-[2.5rem] font-black">
-          {t("mulch")}
+          {t(content.header)}
         </h2>
         <Link
-          href="#"
+          href={content.to}
           className="text-[#5B5757] text-[1.4rem] font-normal block"
         >
-          {t("link")}
+          {t(content.link)}
         </Link>
       </div>
       <div className="mt-[1.5rem] relative">
@@ -121,16 +72,9 @@ export function MulchProducts() {
           }}
           className="flex gap-4 h-full"
         >
-          {products.map((product) => (
+          {content.products.map((product) => (
             <SwiperSlide key={product.id} className="mb-[3rem]">
-              <ProductBox
-                brief={product.brief}
-                header={product.header}
-                price={product.price}
-                type={product.type}
-                id={product.id}
-                img={product.img}
-              />
+              <ProductBox {...product} />
             </SwiperSlide>
           ))}
         </Swiper>

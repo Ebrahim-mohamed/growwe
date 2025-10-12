@@ -1,6 +1,62 @@
 import { useTranslations } from "next-intl";
-import { MulchProducts } from "./Mulch.Products";
-import { SoilProducts } from "./SoilProducts";
+import { MulchAndSoilProducts } from "./MulchAndSoilProducts";
+
+const products = [
+  {
+    header: "Soil Alternative Compressed - 5 Kg Block",
+    price: "350",
+    type: "Block",
+    description:
+      "One block of compressed soil alternative weighing 5Kg to be expanded by watering to 80m2.",
+    img: "/product.png",
+    id: "1",
+  },
+  {
+    header: "Soil Alternative Compressed - 5 Kg Block",
+    price: "350",
+    type: "Block",
+    description:
+      "One block of compressed soil alternative weighing 5Kg to be expanded by watering to 80m2.",
+    img: "/product.png",
+    id: "2",
+  },
+  {
+    header: "Soil Alternative Compressed - 5 Kg Block",
+    price: "350",
+    type: "Block",
+    description:
+      "One block of compressed soil alternative weighing 5Kg to be expanded by watering to 80m2. One block of compressed soil alternative weighing 5Kg to be expanded by watering to 80m2.",
+    img: "/product.png",
+    id: "3",
+  },
+  {
+    header: "Soil Alternative Compressed - 5 Kg Block",
+    price: "350",
+    type: "Block",
+    description:
+      "One block of compressed soil alternative weighing 5Kg to be expanded by watering to 80m2. One block of compressed soil alternative weighing 5Kg to be expanded by watering to 80m2.",
+    img: "/product.png",
+    id: "4",
+  },
+  {
+    header: "Soil Alternative Compressed - 5 Kg Block",
+    price: "350",
+    type: "Block",
+    description:
+      "One block of compressed soil alternative weighing 5Kg to be expanded by watering to 80m2.",
+    img: "/product.png",
+    id: "5",
+  },
+  {
+    header: "Soil Alternative Compressed - 5 Kg Block",
+    price: "350",
+    type: "Block",
+    description:
+      "One block of compressed soil alternative weighing 5Kg to be expanded by watering to 80m2.",
+    img: "/product.png",
+    id: "6",
+  },
+];
 
 export function Products() {
   const t = useTranslations("homePage.productsSection");
@@ -16,8 +72,21 @@ export function Products() {
         </p>
         <div className="bg-[#1010104f] w-full h-[0.1rem] mt-[0.5rem]" />
       </div>
-      <SoilProducts />
-      <MulchProducts />
+      {/* <SoilProducts />
+      <MulchProducts /> */}
+      <MulchAndSoilProducts
+        header="soil"
+        link="link"
+        to="#"
+        products={products}
+      />
+      <div className="bg-[#1010104f] w-full h-[0.1rem] my-[2rem]" />
+      <MulchAndSoilProducts
+        header="mulch"
+        link="link"
+        to="#"
+        products={products}
+      />
     </div>
   );
 }
