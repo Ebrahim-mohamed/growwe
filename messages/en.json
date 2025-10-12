@@ -193,5 +193,36 @@
       "mail": "hello@growwe.com",
       "location": "Villa 11, Street 53 off Street 9, Mokattam, Cairo, Egypt."
     }
+  },
+  "informationMulchAndSoil": {
+    "hero": {
+      "soil": "SOILLESS GROWING MEDIUM",
+      "mulch": "MULCH"
+    },
+    "secondSection": {
+      "soilHeader": "Soilless Growing Medium",
+      "soilPra1": "GROWWE peat is a soilless growing media. It’s a biodegradable soil alternative produced from natural resources. GROWWE is a sustainable eco-friendly solution that utilizes natural organic resources to contribute to organic agriculture, while enhancing soil quality for horticulture, landscaping and farming.",
+      "mulchHeader": "Soilless Growing Medium",
+      "mulchPra1": "GROWWE mulch is a 100% natural organic material applied to the surface of soil, used in gardening and landscaping. GROWWE mulch is a 100% organic, free from chemicals, that helps nourish the soil and support its aeration while improve its quality. Mulch is a protective layer for the soil that helps retain moisture, improve soil structure and protect plants.",
+      "mulchPra2": "Our premium mulch is designed to provide growers and landscapers with a reliable, sustainable solution for soil coverage and crop protection. Made from 100% natural materials, it enhances soil moisture retention, regulates temperature, and helps control weed growth while gradually enriching the soil as it decomposes. With its consistent quality and easy application, our mulch is an effective way to improve plant health, reduce maintenance, and support environmentally responsible cultivation practices."
+    },
+    "thirdSection": {
+      "soilBox1": "Higher Productivity",
+      "soilBox2": "Peatmoss Free",
+      "soilBox3": "Tanin Free",
+      "soilBox4": "Mold Resistant",
+      "soilBox5": "Easy to Use",
+      "soilBox6": "Structure Stability",
+      "soilMainPra": "Suitable for Professional Growers",
+      "soilDes": "Greenhouses & Nurseries",
+      "mulchBox1": "Water Retention",
+      "mulchBox2": "Weed suppression",
+      "mulchBox3": "Soil Protection",
+      "mulchBox4": "Soil Improvement",
+      "mulchBox5": "Reduce Soil Erosion",
+      "mulchBox6": "Temperature Regulation",
+      "mulchMainPra": "Ideal for Growers and Landscapers",
+      "mulchDes": "Landscaping and Gardening"
+    }
   }
 }

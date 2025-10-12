@@ -9,7 +9,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { ProductBox } from "./ProductBox";
 import Image from "next/image";
 import Link from "next/link";
@@ -17,7 +17,7 @@ import { productSectionType } from "@/app/types/product";
 
 export function MulchAndSoilProducts(content: productSectionType) {
   const t = useTranslations("homePage.productsSection");
-
+  const locale = useLocale();
   // ✅ Refs for navigation buttons
   const prevRef = useRef<HTMLDivElement | null>(null);
   const nextRef = useRef<HTMLDivElement | null>(null);
@@ -49,7 +49,7 @@ export function MulchAndSoilProducts(content: productSectionType) {
           {t(content.header)}
         </h2>
         <Link
-          href={content.to}
+          href={`/${locale}/${content.to}`}
           className="text-[#5B5757] text-[1.4rem] font-normal block"
         >
           {t(content.link)}

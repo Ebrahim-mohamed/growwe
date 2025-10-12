@@ -77,14 +77,14 @@ export function Products() {
       <MulchAndSoilProducts
         header="soil"
         link="link"
-        to="#"
+        to="soilless-growing"
         products={products}
       />
       <div className="bg-[#1010104f] w-full h-[0.1rem] my-[2rem]" />
       <MulchAndSoilProducts
         header="mulch"
         link="link"
-        to="#"
+        to="mulch"
         products={products}
       />
     </div>
