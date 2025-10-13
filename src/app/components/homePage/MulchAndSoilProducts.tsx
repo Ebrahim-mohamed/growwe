@@ -13,7 +13,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { ProductBox } from "./ProductBox";
 import Image from "next/image";
 import Link from "next/link";
-import { productSectionType } from "@/app/types/product";
+import { productSectionType } from "@/app/types/types";
 
 export function MulchAndSoilProducts(content: productSectionType) {
   const t = useTranslations("homePage.productsSection");

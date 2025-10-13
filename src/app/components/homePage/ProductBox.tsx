@@ -1,5 +1,5 @@
 "use client";
-import { productType } from "@/app/types/product";
+import { productType } from "@/app/types/types";
 import Image from "next/image";
 
 export function ProductBox(product: productType) {

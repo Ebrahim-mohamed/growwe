@@ -202,11 +202,10 @@
     "secondSection": {
       "soilHeader": "Soilless Growing Medium",
       "soilPra1": "GROWWE peat is a soilless growing media. It’s a biodegradable soil alternative produced from natural resources. GROWWE is a sustainable eco-friendly solution that utilizes natural organic resources to contribute to organic agriculture, while enhancing soil quality for horticulture, landscaping and farming.",
-      "mulchHeader": "Soilless Growing Medium",
+      "mulchHeader": "Mulch",
       "mulchPra1": "GROWWE mulch is a 100% natural organic material applied to the surface of soil, used in gardening and landscaping. GROWWE mulch is a 100% organic, free from chemicals, that helps nourish the soil and support its aeration while improve its quality. Mulch is a protective layer for the soil that helps retain moisture, improve soil structure and protect plants.",
-      "mulchPra2": "Our premium mulch is designed to provide growers and landscapers with a reliable, sustainable solution for soil coverage and crop protection. Made from 100% natural materials, it enhances soil moisture retention, regulates temperature, and helps control weed growth while gradually enriching the soil as it decomposes. With its consistent quality and easy application, our mulch is an effective way to improve plant health, reduce maintenance, and support environmentally responsible cultivation practices."
-    },
-    "thirdSection": {
+      "mulchPra2": "Our premium mulch is designed to provide growers and landscapers with a reliable, sustainable solution for soil coverage and crop protection. Made from 100% natural materials, it enhances soil moisture retention, regulates temperature, and helps control weed growth while gradually enriching the soil as it decomposes. With its consistent quality and easy application, our mulch is an effective way to improve plant health, reduce maintenance, and support environmentally responsible cultivation practices.",
+      "advantages": "Advantages",
       "soilBox1": "Higher Productivity",
       "soilBox2": "Peatmoss Free",
       "soilBox3": "Tanin Free",
@@ -223,6 +222,53 @@
       "mulchBox6": "Temperature Regulation",
       "mulchMainPra": "Ideal for Growers and Landscapers",
       "mulchDes": "Landscaping and Gardening"
+    },
+    "thirdSection": {
+      "advantages": "Advantages+",
+      "soilDes": "GROWWE peat  stands out from other soil alternatives because of its distinctive features:",
+      "soilHeader1": "Biological and Structural Stability",
+      "soilDes1": "Growwe is resistant to microbial degradation and its ability to maintain its biological and structural properties over time for plant cultivation.",
+      "soilHeader2": "Re-Usability",
+      "soilDes2": "Because it retains its structure and does not compact easily, GROWWE peat can be reused for several cultivation cycles, providing excellent value.",
+      "soilHeader3": "Root Hair Growth",
+      "soilDes3": "Growwe provides the necessary aeration, consistent moisture, and antifungal properties that healthy roots need to develop. It creates an ideal environment for root formation, allowing root hairs to efficiently absorb water and nutrients once they are introduced through fertilization.",
+      "mulchDes": "GROWWE mulch enhances soil health, reduces maintenance, and promotes stronger plant growth.",
+      "mulchHeader1": "Moisture Retention",
+      "mulchDes1": "Mulch acts as a barrier between soil and air, significantly reducing water loss through evaporation. This consistent moisture level means less frequent watering is required, promoting a more resilient root system.",
+      "mulchHeader2": "Soil Erosion Control",
+      "mulchDes2": "A layer of mulch absorbs the impact of heavy rain and slows the flow of water across the surface. This prevents topsoil, a vital resource, from being washed away.",
+      "mulchHeader3": "Soil Improvement",
+      "mulchDes3": "As organic mulch decomposes, it adds valuable humus and nutrients to the earth. This process improves soil structure, aeration, and fertility over time, creating a healthier growing environment."
+    },
+    "fourthSection": {
+      "soilHeader": "The Smarter Growing Medium",
+      "soilAttachHeader": "Say Yes!",
+      "soilFirstBoxHeader": "100% Organic",
+      "soilFirstBoxDescription": "Biodegradable alternative soil.",
+      "soilSecondBoxHeader": "Soil Aeration",
+      "soilSecondBoxDescription": "High air circulation for soil.",
+      "soilThirdBoxHeader": "Water Retention",
+      "soilThirdBoxDescription": "Absorbs & retains water for longer times.",
+      "soilFourthBoxHeader": "Low EC",
+      "soilFourthBoxDescription": "Low salt levels (safer for sensitive plants)",
+      "soilFifthBoxHeader": "Neutral pH",
+      "soilFifthBoxDescription": "Biodegradable Alternative Soil",
+      "soilSixthBoxHeader": "Add Water",
+      "soilSixthBoxDescription": "Add 18 liters of water per block to get 50 liters volume.",
+      "mulchHeader": "Save Your Soil, Enhance Your Landscape, ",
+      "mulchAttachHeader": "with a Premium Look.",
+      "mulchFirstBoxHeader": "100% Organic",
+      "mulchFirstBoxDescription": "Biodegradable alternative soil.",
+      "mulchSecondBoxHeader": "Soil Aeration",
+      "mulchSecondBoxDescription": "High air circulation for soil.",
+      "mulchThirdBoxHeader": "Water Retention",
+      "mulchThirdBoxDescription": "Absorbs & retains water for longer times.",
+      "mulchFourthBoxHeader": "Weed Suppression",
+      "mulchFourthBoxDescription": "Prevents weed seeds from germinating",
+      "mulchFifthBoxHeader": "Soil Erosion Control",
+      "mulchFifthBoxDescription": "Forms a protective layer.",
+      "mulchSixthBoxHeader": "Less Watering",
+      "mulchSixthBoxDescription": "Reduces watering frequency."
     }
   }
 }

@@ -13,3 +13,11 @@ export type productSectionType = {
   to: string;
   products: productType[];
 };
+
+export type PartTowInSecondSectionType = {
+  header: string;
+  boxes1: string[];
+  boxes2: string[];
+  mainPra: string;
+  des: string;
+};
