@@ -12,13 +12,23 @@ interface IProduct {
   type: string;
   quantity: number;
   img: string;
+  productOrder: number;
 }
 export function ProductCard(product: IProduct) {
   const t = useTranslations("products.productsSection");
   const [chosen, setChosen] = useState(0);
   return (
-    <div className="flex items-center justify-center gap-4 w-full">
-      <div className="flex-1">
+    <div
+      className={`flex items-center justify-center gap-4 w-full relative ${
+        product.productOrder % 2 !== 0 && " flex-row-reverse"
+      }`}
+    >
+      <div
+        className={` absolute w-dvw top-0 h-full ${
+          product.productOrder % 2 !== 0 && " bg-[#FCF7F1]"
+        }`}
+      ></div>
+      <div className="flex-1 z-40">
         <Image
           alt="product image"
           src={`/${product.img}.png`}
@@ -27,7 +37,7 @@ export function ProductCard(product: IProduct) {
           className="w-[100%]"
         />
       </div>
-      <div className="flex flex-col h-full justify-between gap-[2rem] flex-1">
+      <div className="flex flex-col h-full justify-between gap-[2rem] flex-1 z-40">
         <div className="text-[3rem]">
           <h1 className="text-[#426B1F]  font-semibold mb-[0.5rem]">
             {product.name}

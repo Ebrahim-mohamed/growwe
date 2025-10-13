@@ -32,6 +32,16 @@ const products = [
     quantity: 12,
     img: "product",
   },
+  {
+    id: "4",
+    name: "Soil Alternative Compressed",
+    price: 350,
+    des: "Boosts plant growth with superior water retention (10x its weight) and natural aeration for healthier roots, while being 100% organic, sustainable, and biodegradable—reducing irrigation needs and soil depletion.Perfect for gardening, farming, and eco-conscious growers seeking a chemical-free, renewable alternative to traditional soil! 🌱♻️",
+    size: 5,
+    type: "Block",
+    quantity: 12,
+    img: "product",
+  },
 ];
 export function ProductsSection() {
   const t = useTranslations("products.productsSection");
@@ -39,7 +49,7 @@ export function ProductsSection() {
     <div className="p-[var(--section-Padding)]">
       <MostUseHeader header={t("products")} />
       <div className="flex flex-col w-full mt-[3rem] gap-[1rem]">
-        {products.map((product) => (
+        {products.map((product, index) => (
           <ProductCard
             // des={product.des}
             // id={product.id}
@@ -52,6 +62,7 @@ export function ProductsSection() {
             // key={product.id}
             {...product}
             key={product.id}
+            productOrder={index}
           />
         ))}
       </div>

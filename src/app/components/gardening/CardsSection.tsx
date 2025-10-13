@@ -31,7 +31,10 @@ const cards2 = [
 export function CardsSection() {
   const t = useTranslations("gardening.cardsSection");
   return (
-    <div className="p-[var(--section-Padding)] flex flex-col items-center justify-center gap-[1.5rem] w-full">
+    <div className="p-[var(--section-Padding)] flex flex-col items-center justify-center gap-[1.5rem] w-full bg-[#F8FFF5]">
+      <h1 className="text-[#387023] text-[4rem] font-bold mb-[2.5rem] text-center">
+        {t("header")}
+      </h1>
       <div className="flex items-center w-full justify-between gap-[1rem]">
         {cards1.map((card) => (
           <Card

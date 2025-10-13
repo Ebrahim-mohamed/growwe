@@ -117,6 +117,17 @@
       "quantity": "Quantity",
       "egp": "EGP",
       "add": "Add To Cart"
+    },
+    "calculator": {
+      "title": "Calculator",
+      "des": "Calculate the quantity you need to order to cover your planting area",
+      "selection": "Select Product",
+      "width": "Width",
+      "depth": "Depth",
+      "length": "Length",
+      "numberOfBags": "No. of Bags",
+      "mulch": "Mulch",
+      "peat": "Peat"
     }
   },
   "gardening": {
@@ -144,6 +155,7 @@
       "des2": "Pre-planting hack: Solarize soil with clear plastic for 2 weeks, then amend with palm peat to kill weeds and boost acidity."
     },
     "cardsSection": {
+      "header": "Gardening Tips",
       "header1": "Landscaping",
       "des1": "hello my name is ibrahim hello my name is kareem hello my name is rasha hello my name is bassuni",
       "header2": "Pruning plants",
