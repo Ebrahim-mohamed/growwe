@@ -156,19 +156,33 @@
     },
     "cardsSection": {
       "header": "Gardening Tips",
-      "header1": "Landscaping",
-      "des1": "hello my name is ibrahim hello my name is kareem hello my name is rasha hello my name is bassuni",
-      "header2": "Pruning plants",
-      "des2": "hello my name is ibrahim hello my name is kareem hello my name is rasha hello my name is bassuni",
-      "header3": "irrigation & Drainage",
-      "des3": "hello my name is ibrahim hello my name is kareem hello my name is rasha hello my name is bassuni",
-      "header4": "Garden Maintenance",
-      "des4": "hello my name is ibrahim hello my name is kareem hello my name is rasha hello my name is bassuni",
-      "header5": "Green Technology",
-      "des5": "hello my name is ibrahim hello my name is kareem hello my name is rasha hello my name is bassuni",
-      "header6": "Urban Gardening",
-      "des6": "hello my name is ibrahim hello my name is kareem hello my name is rasha hello my name is bassuni",
+      "header1": "Organic Farming& Hydroponic",
+      "des1": "The Future of Sustainable Agriculture in Egypt",
+      "header2": "Mulching in Agriculture",
+      "des2": "Types, Benefits, and Best Practices",
+      "header3": "Landscaping",
+      "des3": "Designing Sustainable and Beautiful Outdoor Spaces",
+      "header4": "Pruning Plants",
+      "des4": "Techniques, Benefits, and Best Practices",
+      "header5": "Irrigation",
+      "des5": "Importance, Methods, and Best Practices in Agriculture",
+      "header6": "Fertilizers",
+      "des6": "Types, Uses, and Role in Modern Agriculture",
       "button": "Read More"
+    },
+    "crops": {
+      "header": "Best Crops for",
+      "header2": "GROWWE Soilless Media",
+      "tomatoes": "Tomatoes",
+      "peppers": "Peppers",
+      "strawberries": "Strawberries",
+      "grgr": "Grgr",
+      "cucumbers": "Cucumbers"
+    },
+    "articles": {
+      "article1": {
+        "header": "hello"
+      }
     }
   },
   "contact": {

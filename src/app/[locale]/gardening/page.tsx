@@ -1,3 +1,4 @@
+import { BestCrops } from "@/app/components/gardening/BestCrops";
 import { CardsSection } from "@/app/components/gardening/CardsSection";
 import { GardeningSection } from "@/app/components/gardening/GardeningSection";
 import { Hero } from "@/app/components/gardening/Hero";
@@ -10,6 +11,7 @@ export default function Gardening() {
       <GardeningSection />
       <ThirdSection />
       <CardsSection />
+      <BestCrops />
     </div>
   );
 }
