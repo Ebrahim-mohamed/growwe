@@ -19,7 +19,9 @@ export function CertificationBox({
         className="w-[13rem]"
       />
       <h2 className="text-[#387023] text-[2rem] font-bold">{header}</h2>
-      <p className="text-black text-[1.8rem] font-normal">{des}</p>
+      <p className="text-black text-[1.8rem] font-normal max-w-[12rem] text-center">
+        {des}
+      </p>
     </div>
   );
 }

@@ -44,10 +44,10 @@ const products = [
   },
 ];
 export function ProductsSection() {
-  const t = useTranslations("products.productsSection");
+  const t = useTranslations("products.heroSection");
   return (
     <div className="p-[var(--section-Padding)]">
-      <MostUseHeader header={t("products")} />
+      <MostUseHeader header={t("title")} />
       <div className="flex flex-col w-full mt-[3rem] gap-[1rem]">
         {products.map((product, index) => (
           <ProductCard

@@ -4,7 +4,7 @@ import Image from "next/image";
 export function Partners() {
   const t = useTranslations("homePage.partnersSection");
   return (
-    <div className=" flex items-start justify-center gap-4 p-[var(--section-Padding)]">
+    <div className=" flex items-start justify-center gap-4 p-[var(--section-Padding)] bg-[#F8FFF5]">
       <div>
         <Image
           alt="partners images"

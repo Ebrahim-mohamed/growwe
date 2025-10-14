@@ -23,7 +23,7 @@ export default function Signup() {
     <div>
       <Hero bg="login-hero" img="add-user" title={t("header")} />
       <FormSection header={t("header")} des={t("des")}>
-        <div className="w-[60%] p-6 bg-white rounded-[1.5rem] ">
+        <div className="w-[60%] p-10 bg-white rounded-[1.5rem] ">
           <form
             onSubmit={handleSubmit(onSignUp)}
             className="w-full items-center justify-center gap-[1.5rem] flex flex-col"
@@ -117,7 +117,7 @@ export default function Signup() {
             </div>
             <button
               type="submit"
-              className="bg-[#426B1F] text-[1.2rem] text-white font-medium px-4 py-2 block rounded-[1rem] cursor-pointer"
+              className="bg-[#426B1F] text-[1.2rem] text-white font-medium px-6 py-2 block rounded-[4rem] cursor-pointer mt-[2rem]"
             >
               {t("button")}
             </button>

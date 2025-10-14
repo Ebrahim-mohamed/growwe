@@ -30,7 +30,7 @@ export function Calculator() {
   }, [width, length, depth, type]);
 
   return (
-    <div className="p-[var(--section-Padding)]">
+    <div className="px-[var(--section-Padding)] py-[3rem]">
       <MostUseHeader header={t("title")} des={t("des")} />
 
       <div className="flex w-full justify-between gap-[2rem] mt-[3rem] flex-col lg:flex-row">
@@ -40,24 +40,7 @@ export function Calculator() {
             {t("selection")}
           </h1>
           <form className="flex flex-col gap-[0.5rem]">
-            <div className="flex items-center gap-[0.5rem]">
-              <input
-                type="radio"
-                id="mulch"
-                name="type"
-                value="mulch"
-                checked={type === "mulch"}
-                onChange={() => setType("mulch")}
-              />
-              <label
-                htmlFor="mulch"
-                className="text-black text-[2rem] font-normal"
-              >
-                {t("mulch")}
-              </label>
-            </div>
-
-            <div className="flex items-center gap-[0.5rem]">
+            <div className="flex items-center gap-[1rem]">
               <input
                 type="radio"
                 id="peat"
@@ -73,11 +56,28 @@ export function Calculator() {
                 {t("peat")}
               </label>
             </div>
+
+            <div className="flex items-center gap-[1rem]">
+              <input
+                type="radio"
+                id="mulch"
+                name="type"
+                value="mulch"
+                checked={type === "mulch"}
+                onChange={() => setType("mulch")}
+              />
+              <label
+                htmlFor="mulch"
+                className="text-black text-[2rem] font-normal"
+              >
+                {t("mulch")}
+              </label>
+            </div>
           </form>
         </div>
 
         {/* Inputs and Result */}
-        <div className="flex flex-1 justify-between gap-[1.5rem] flex-wrap">
+        <div className="flex flex-1 justify-between gap-[2.5rem] flex-wrap mb-[2.1rem]">
           {[
             { label: t("width"), value: width, setter: setWidth },
             { label: t("length"), value: length, setter: setLength },
@@ -106,7 +106,7 @@ export function Calculator() {
             <h1 className="text-[2rem] font-normal text-black">
               {t("numberOfBags")}
             </h1>
-            <div className="w-full border-[2px] border-green-600 rounded-[1.25rem] text-[1.5rem] font-medium py-[0.5rem] px-[1rem] text-center">
+            <div className="w-full  bg-[#F8FFF5] border-[2px] border-[#E6E7ED] rounded-[1.25rem] text-[1.5rem] font-medium py-[0.5rem] px-[1rem] text-center">
               {result}
             </div>
           </div>

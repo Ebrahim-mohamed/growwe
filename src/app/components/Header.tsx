@@ -27,7 +27,7 @@ export function Header() {
           <NavTab name={t(link)} to={link} key={link} />
         ))}
       </div>
-      <div className="flex items-center justify-end gap-8 flex-1">
+      <div className="flex items-center justify-end gap-10 flex-1">
         <p className="text-white text-[1.5rem] hover:cursor-pointer">
           {t("lang")}
         </p>
@@ -36,7 +36,7 @@ export function Header() {
             alt="cart image"
             src="/cart.png"
             priority
-            className="w-[1.5rem] "
+            className="w-[1.8rem] "
             width={20}
             height={20}
           />
@@ -52,7 +52,7 @@ export function Header() {
             alt="profile image"
             src="/profile.png"
             priority
-            className="w-[1.8rem]"
+            className="w-[1.7rem]"
             width={20}
             height={20}
           />

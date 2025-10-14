@@ -50,7 +50,7 @@ export function MulchAndSoilProducts(content: productSectionType) {
         </h2>
         <Link
           href={`/${locale}/${content.to}`}
-          className="text-[#5B5757] text-[1.4rem] font-normal block"
+          className="text-[#5B5757] text-[1.2rem] font-normal block mb-[0.5rem]"
         >
           {t(content.link)}
         </Link>
@@ -60,7 +60,6 @@ export function MulchAndSoilProducts(content: productSectionType) {
           modules={[Navigation, Pagination, Scrollbar, A11y]}
           spaceBetween={20}
           slidesPerView={3}
-          pagination={{ clickable: true }}
           loop={true}
           breakpoints={{
             320: { slidesPerView: 1 },

@@ -70,7 +70,7 @@ export function Products() {
         <p className="text-black text-[1rem] font-medium">
           {t("renewable")}.{t("biodegradable")}.{t("egyptian")}.
         </p>
-        <div className="bg-[#1010104f] w-full h-[0.1rem] mt-[0.5rem]" />
+        <div className="bg-[#E6E6E6] w-full h-[0.1rem] mt-[0.5rem]" />
       </div>
       {/* <SoilProducts />
       <MulchProducts /> */}
@@ -80,7 +80,7 @@ export function Products() {
         to="soilless-growing"
         products={products}
       />
-      <div className="bg-[#1010104f] w-full h-[0.1rem] my-[2rem]" />
+      <div className="bg-[#E6E6E6] w-full h-[0.1rem] my-[2rem]" />
       <MulchAndSoilProducts
         header="mulch"
         link="link"

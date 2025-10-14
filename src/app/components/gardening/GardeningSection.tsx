@@ -5,7 +5,7 @@ import Image from "next/image";
 export function GardeningSection() {
   const t = useTranslations("gardening.gardeningSection");
   return (
-    <div className="p-[var(--section-Padding)]">
+    <div className="p-[var(--section-Padding)] bg-[#FCF7F1]">
       <MostUseHeader header={t("title")} des={t("des1")} />
       <div className=" flex items-center justify-between w-full gap-2 mt-[2rem]">
         <div className="text-[2.5rem] text-black flex-1">

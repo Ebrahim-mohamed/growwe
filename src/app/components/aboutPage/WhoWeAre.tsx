@@ -13,7 +13,7 @@ export function WhoWeAre() {
         height={400}
         className="absolute top-[18%] right-0 w-[40rem]"
       />
-      <div className="flex w-full items-center justify-between">
+      <div className="flex w-full items-center justify-between mb-[3rem]">
         <div className="text-[2.5rem] max-w-[50%]">
           <h1 className="text-[#E5AC71] font-bold">{t("whoHeader")}</h1>
           <p className="text-[#426B1F] font-semibold">{t("whoDes")}</p>

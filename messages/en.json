@@ -29,7 +29,7 @@
       "egyptian": "Egyptian",
       "soil": "Soilless Growing Medium",
       "mulch": "Mulch",
-      "link": "Know more"
+      "link": "know more"
     },
     "smartSection": {
       "smarterTitle": "The Smarter Growing Medium",
@@ -116,7 +116,7 @@
       "products": "Products",
       "quantity": "Quantity",
       "egp": "EGP",
-      "add": "Add To Cart"
+      "add": "Add to Cart"
     },
     "calculator": {
       "title": "Calculator",
@@ -176,7 +176,7 @@
       "tomatoes": "Tomatoes",
       "peppers": "Peppers",
       "strawberries": "Strawberries",
-      "grgr": "Grgr",
+      "lettuce": "Lettuce",
       "cucumbers": "Cucumbers"
     },
     "articles": {
@@ -310,12 +310,12 @@
       "passwordError": "Please enter your password",
       "minPasswordError": "Password must be 8 characters at least",
       "button": "Log In",
-      "have'tAccount": "Don't have an account ?",
+      "have'tAccount": "Don't have an account? ",
       "signUp": "SignUp",
-      "forget": "Forget your password ?"
+      "forget": "Forget your password?"
     },
     "signup": {
-      "header": "sign up",
+      "header": "CREATE PROFILE",
       "des": "Easily make orders, reorder, track orders and get our latest offers!",
       "userNamePlaceholder": "Your name",
       "userNameLabel": "Your name",

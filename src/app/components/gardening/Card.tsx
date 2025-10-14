@@ -41,13 +41,13 @@ export function Card({
           isin ? " opacity-[100%] " : " opacity-0 "
         } transition duration-[0.5s] `}
       />
-      <div className="w-[7rem] h-[7rem] rounded-full bg-[#D7F0D9] z-40 flex items-center justify-center">
+      <div className="w-fit h-auto rounded-full bg-[#E9EFE9] z-40 flex items-center justify-center p-6">
         <Image
           alt="service image"
           src={`/gardening/tips/${bg}.svg`}
           width={100}
           height={100}
-          className="w-[4rem] h-[4rem] rounded-full "
+          className="w-[3rem] h-[3rem] rounded-full "
         />
       </div>
       <h1 className="text-[1.5rem] font-bold max-w-[13rem] text-center z-40">
@@ -57,7 +57,7 @@ export function Card({
         {des}
       </p>
       <Link
-        className="px-[1.5rem] py-[0.2rem] rounded-[0.5rem] bg-[#E8F5E9] text-[1rem] text-[#387023] hover:cursor-pointer flex items-center justify-center gap-1 z-40"
+        className="px-[1.5rem] py-[0.2rem] rounded-[0.5rem] bg-[#E9EFE9] text-[1rem] text-[#387023] hover:cursor-pointer flex items-center justify-center gap-1 z-40"
         href={`/${locale}/articles/${articleNumber}`}
       >
         &#10010;
