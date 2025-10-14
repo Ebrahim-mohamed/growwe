@@ -1,10 +1,12 @@
+"use client";
 import Image from "next/image";
 import { NavTab } from "./NavTab";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import Link from "next/link";
 
 const navTabs = ["about", "products", "gardening", "contact"];
 export function Header() {
+  const locale = useLocale();
   const t = useTranslations("header");
   return (
     <div className="flex items-center justify-between gap-1 p-10 bg-transparent absolute top-0 left-0 w-full z-50">
@@ -39,7 +41,13 @@ export function Header() {
             height={20}
           />
         </div>
-        <div>
+        <Link
+          href={
+            localStorage.getItem("user")
+              ? `/${locale}/profile`
+              : `/${locale}/login`
+          }
+        >
           <Image
             alt="profile image"
             src="/profile.png"
@@ -48,7 +56,7 @@ export function Header() {
             width={20}
             height={20}
           />
-        </div>
+        </Link>
       </div>
     </div>
   );

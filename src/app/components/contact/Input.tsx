@@ -2,11 +2,13 @@ export function Input({
   label,
   errorMessage,
   place,
+  type,
   ...props
 }: {
   label: string;
   errorMessage?: string;
   place: string;
+  type?: string;
 }) {
   return (
     <div className="w-full flex flex-col items-start justify-start gap-[0.5rem] relative">
@@ -20,6 +22,7 @@ export function Input({
       ) : (
         <input
           {...props}
+          type={type}
           placeholder={place}
           className="placeholder:font-normal placeholder:text-[1.1rem] placeholder:text-[#8D8D8D] w-full outline-0 focus:outline-0"
         />

@@ -296,5 +296,70 @@
       "mulchSixthBoxHeader": "Less Watering",
       "mulchSixthBoxDescription": "Reduces watering frequency."
     }
+  },
+  "auth": {
+    "login": {
+      "header": "Login",
+      "des": "Easily make orders, reorder, track orders and get our latest offers!",
+      "userNamePlaceholder": "Your name",
+      "userNameLabel": "Your name",
+      "userNameError": "Please enter your name",
+      "minUserNameError": "user name must be 3 characters at least",
+      "passwordPlaceholder": "Your password",
+      "passwordLabel": "Your password",
+      "passwordError": "Please enter your password",
+      "minPasswordError": "Password must be 8 characters at least",
+      "button": "Log In",
+      "have'tAccount": "Don't have an account ?",
+      "signUp": "SignUp",
+      "forget": "Forget your password ?"
+    },
+    "signup": {
+      "header": "sign up",
+      "des": "Easily make orders, reorder, track orders and get our latest offers!",
+      "userNamePlaceholder": "Your name",
+      "userNameLabel": "Your name",
+      "userNameError": "Please enter your name",
+      "minUserNameError": "user name must be 3 characters at least",
+      "passwordPlaceholder": "Your password",
+      "passwordLabel": "Your password",
+      "passwordError": "Please enter your password",
+      "minPasswordError": "Password must be 8 characters at least",
+      "emailPlaceholder": "Your E-mail",
+      "emailLabel": "Your E-mail",
+      "emailError": "E-mail should contain @",
+      "phonePlaceholder": "Your phone number",
+      "phoneLabel": "Your phone number",
+      "phoneError": "Please enter your phone number",
+      "minPhoneError": "Phone number must be 8 characters at least",
+      "addressPlaceholder": "Your address",
+      "addressLabel": "Your address",
+      "addressError": "Please enter your address",
+      "minAddressError": "Address must be 10 characters at least",
+      "countryPlaceholder": "Your country",
+      "countryLabel": "Your country",
+      "countryError": "Please enter your country",
+      "minCountryError": "Country must be 3 characters at least",
+      "cityPlaceholder": "Your city",
+      "cityLabel": "Your city",
+      "cityError": "Please enter your city",
+      "minCityError": "City must be 3 characters at least",
+      "areaPlaceholder": "Your area",
+      "areaLabel": "Your area",
+      "areaError": "Please enter your area",
+      "minAreaError": "Area must be 3 characters at least",
+      "shipping": "Shipping information",
+      "personal": "Personal information",
+      "partner": "Become a partner",
+      "commercial": "attach the commercial",
+      "button": "Sign Up"
+    },
+    "profile": {
+      "header": "YOUR PROFILE",
+      "des": "What’s on your mind today?"
+    },
+    "forget": {
+      "header": ""
+    }
   }
 }
