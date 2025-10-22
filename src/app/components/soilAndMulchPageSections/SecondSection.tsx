@@ -28,7 +28,7 @@ export function SecondSection({
         {t(title)}
       </h1>
       <div>
-        <div className="flex items-center gap-2 w-full justify-between">
+        <div className="flex items-center gap-2 w-full justify-between max-[550px]:flex-col">
           <p className="text-[1.6rem]">{t(pra1)}</p>
           <Image
             alt="mulch image"

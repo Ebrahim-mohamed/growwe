@@ -46,7 +46,7 @@ export function Smarter() {
         src="/home/smartIcon.png"
         width={500}
         height={500}
-        className="absolute top-0 left-0 w-[13rem]"
+        className="absolute top-0 left-0 w-[13rem] max-[700px]:hidden"
       />
       <h1 className="text-[#387023] text-[3rem] font-black mb-20 text-center">
         {t("smarterTitle")}

@@ -38,7 +38,7 @@ export function ProductCard(product: IProduct) {
         />
       </div>
       <div className="flex flex-col h-full justify-between gap-[2rem] flex-1 z-40">
-        <div className="text-[3rem]">
+        <div className="text-[3rem] max-[1250px]:text-[2rem]">
           <h1 className="text-[#426B1F]  font-semibold -mb-[0.5rem]">
             {product.name}
           </h1>
@@ -46,11 +46,13 @@ export function ProductCard(product: IProduct) {
             {product.size}Kg {product.type}
           </p>
         </div>
-        <div className="text-black text-[1.4rem] font-medium">
+        <div className="text-black text-[1.4rem] font-medium max-[1000px]:text-[1.2rem]">
           {product.des}
         </div>
-        <div className=" flex items-center justify-start gap-[1rem]">
-          <p className="text-[1.8rem] font-bold">{t("quantity")}</p>
+        <div className=" flex items-center justify-between gap-[1rem] w-full">
+          <p className="text-[1.8rem] font-bold max-[1200px]:text-[1.3rem] ">
+            {t("quantity")}
+          </p>
           <div className="w-[8rem] h-[2rem] rounded-[4rem] border flex items-center justify-between p-[0.5rem] text-[1.5rem]">
             <button
               onClick={() => setChosen((pre) => pre + 1)}
@@ -66,7 +68,7 @@ export function ProductCard(product: IProduct) {
               -
             </button>
           </div>
-          <div className="text-black text-[2rem] font-bold">
+          <div className="text-black text-[2rem] font-bold max-[1300px]:text-[1.5rem] max-[1200px]:text-[1.2rem] max-[1000px]:text-[1rem]">
             {t("egp")} {product.price}
           </div>
           <button className="px-4 py-2 text-white bg-black rounded-[4rem]">

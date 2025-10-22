@@ -21,7 +21,7 @@ export function Card({
   const locale = useLocale();
   return (
     <div
-      className={` flex flex-col items-center justify-center gap-[0.8rem]  flex-1 aspect-[568/527] p-[1.5rem]  ${
+      className={` flex flex-col items-center justify-center gap-[0.8rem]  flex-1  p-[1.5rem]  ${
         isin ? " text-white " : " text-black "
       } shadow-[0_0_10px_rgba(0,0,0,0.12)] p-[0.5rem] rounded-[0.8rem] bg-white transition duration-[0.5s] relative overflow-hidden`}
       onMouseEnter={() => setIsin(true)}

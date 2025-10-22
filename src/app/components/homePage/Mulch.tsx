@@ -9,7 +9,7 @@ export function Mulch() {
         {t("title")}
       </h1>
       <p className="text-[1.8rem] mb-[1rem] text-center">{t("des")}</p>
-      <div className="flex items-center gap-2 w-full justify-between">
+      <div className="flex items-center gap-2 w-full justify-between max-[550px]:flex-col">
         <p className="text-[2rem]">{t("content")}</p>
         <Image
           alt="mulch image"

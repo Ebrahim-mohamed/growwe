@@ -4,7 +4,11 @@
     "about": "About Us",
     "products": "Products",
     "gardening": "Gardening",
-    "contact": "Contact Us"
+    "contact": "Contact Us",
+    "aboutProduct": {
+      "mulch": "About mulch",
+      "peat": "About peat"
+    }
   },
   "footer": {
     "p": "GROWWE is a biodegradable soil alternative produced in Egypt from natural resources. GROWWE is a a sustainable eco-friendly solution developed with British technology by a license from Scaletek UK. GROWWE utilizes natural organic resources to contribute to organic agriculture while enhancing soil quality for horticulture, landscaping and farming.",

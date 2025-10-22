@@ -47,7 +47,7 @@ export function CardsSection() {
       <h1 className="text-[#387023] text-[4rem] font-bold mb-[2.5rem] text-center">
         {t("header")}
       </h1>
-      <div className="flex items-center w-full justify-between gap-[1rem]">
+      <div className="flex items-stretch w-full justify-between gap-[1rem]">
         {cards1.map((card) => (
           <Card
             des={t(card.des)}
@@ -59,7 +59,7 @@ export function CardsSection() {
           />
         ))}
       </div>
-      <div className="flex items-center w-full justify-between gap-[1rem]">
+      <div className="flex items-stretch w-full justify-between gap-[1rem]">
         {cards2.map((card) => (
           <Card
             des={t(card.des)}

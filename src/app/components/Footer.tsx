@@ -17,7 +17,7 @@ export function Footer() {
           height={300}
         />
       </div>
-      <div className="flex w-full items-start justify-between">
+      <div className="flex w-full items-start justify-between max-[480px]:flex-col max-[480px]:gap-[1.5rem]">
         <div className="w-[28rem]">
           <p className="text-[1rem] font-light leading-[1.5rem]">{t("p")}</p>
         </div>

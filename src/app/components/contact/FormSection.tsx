@@ -40,8 +40,8 @@ export function FormSection() {
   return (
     <div className="w-full p-[var(--section-Padding)] flex items-center flex-col justify-center gap-[1.5rem]">
       <MostUseHeader header={t("header")} des={t("des")} />
-      <div className="flex items-stretch justify-between w-full rounded-[0.6rem] shadow-[0_0_60px_30px_rgba(0,0,0,0.03)] gap-[3rem] overflow-hidden py-[1.5rem] pl-[1.5rem] pr-[5rem]">
-        <div className="w-[45%] bg-[#426B1F] text-white py-[1.5rem] px-[2.2rem] rounded-[0.6rem]">
+      <div className="flex items-stretch justify-between w-full rounded-[0.6rem] shadow-[0_0_60px_30px_rgba(0,0,0,0.03)] gap-[3rem] overflow-hidden py-[1.5rem] pl-[1.5rem] pr-[5rem] max-[550px]:flex-col">
+        <div className="w-[45%] bg-[#426B1F] text-white py-[1.5rem] px-[2.2rem] rounded-[0.6rem] max-[550px]:w-full">
           <div className="mb-[4rem] ">
             <h2 className="text-[2.5rem] font-semibold">
               {t("contactInfoHeader")}

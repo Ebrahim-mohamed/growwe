@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export function ProductBox(product: productType) {
   return (
-    <div className="flex flex-col rounded-[1.5rem] border-2 border-[#E6E6E6] bg-[#E6E6E6] flex-1 overflow-hidden h-[38rem]">
+    <div className="flex flex-col rounded-[1.5rem] border-2 border-[#E6E6E6] bg-[#E6E6E6] flex-1 overflow-hidden max-[550px]:max-w-[34rem]">
       {" "}
       <div>
         <Image
@@ -33,7 +33,7 @@ export function ProductBox(product: productType) {
             />
           </button>
         </div>
-        <div className="text-[1rem] text-[#6D6D6D] font-normal">
+        <div className="text-[1.2rem] text-[#6D6D6D] font-normal">
           {product.description.substring(0, 200)}
         </div>
       </div>
