@@ -10,7 +10,7 @@ const features = [
 export function MulchFeatures() {
   const t = useTranslations("homePage.mulch");
   return (
-    <div className="p-[var(--section-Padding)] bg-[url('/home/mulch.png')] w-full flex items-center justify-center max-[550px]:flex-col">
+    <div className="p-[var(--section-Padding)] bg-[url('/home/mulchBen.png')] w-full flex items-center justify-center max-[550px]:flex-col bg-no-repeat bg-cover">
       <div className="flex items-center justify-center w-full">
         <div className="max-w-[25rem] text-[#FFFDFD] text-[4rem] font-black max-[550px]:max-w-full">
           {t("features")}

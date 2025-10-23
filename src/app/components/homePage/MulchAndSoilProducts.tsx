@@ -45,20 +45,20 @@ export function MulchAndSoilProducts(content: productSectionType) {
   return (
     <div className="flex flex-col">
       <div className="flex items-end  gap-2">
-        <h2 className="text-[#E5AC71] text-[2.5rem] font-black">
+        <h2 className="text-[#E5AC71] text-[2.5rem] font-black ml-[7rem]">
           {t(content.header)}
         </h2>
-        {/* <Link
+        <Link
           href={`/${locale}/${content.to}`}
-          className="text-[#5B5757] text-[1.2rem] font-normal block mb-[0.5rem]"
+          className="text-[#5B5757] text-[1.2rem] font-normal block mb-[0.5rem] pl-[0.5rem]"
         >
           {t(content.link)}
-        </Link> */}
+        </Link>
       </div>
-      <div className="mt-[1.5rem] relative ">
+      <div className="mt-[1.5rem] relative px-[5rem]">
         <Swiper
           modules={[Navigation, Pagination, Scrollbar, A11y]}
-          spaceBetween={20}
+          spaceBetween={-15}
           slidesPerView={3}
           loop={true}
           breakpoints={{
@@ -84,7 +84,7 @@ export function MulchAndSoilProducts(content: productSectionType) {
         {/* Custom Navigation Arrows */}
         <div
           ref={prevRef}
-          className="custom-prev text-[2rem] font-bold absolute top-1/2 -left-17 max-[1000px]:-left-7 -translate-y-1/2 bg-[#E6E6E6]  rounded-full  flex items-center justify-center cursor-pointer  transition z-10  p-2"
+          className="custom-prev text-[2rem] font-bold absolute top-1/2 -left-0 max-[1000px]:-left-7 -translate-y-1/2 bg-[#E6E6E6]  rounded-full  flex items-center justify-center cursor-pointer  transition z-10  p-2"
         >
           <Image
             alt="right arrow"
@@ -96,7 +96,7 @@ export function MulchAndSoilProducts(content: productSectionType) {
         </div>
         <div
           ref={nextRef}
-          className="custom-next text-[2rem] font-bold absolute top-1/2 -right-17 max-[1000px]:-right-7 -translate-y-1/2 bg-[#E6E6E6]   rounded-full  flex items-center justify-center cursor-pointer  transition z-10 p-2"
+          className="custom-next text-[2rem] font-bold absolute top-1/2 -right-0 max-[1000px]:-right-7 -translate-y-1/2 bg-[#E6E6E6]   rounded-full  flex items-center justify-center cursor-pointer  transition z-10 p-2"
         >
           <Image
             alt="right arrow"

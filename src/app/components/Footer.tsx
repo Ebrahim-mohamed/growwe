@@ -7,18 +7,18 @@ const SocialLinks = ["facebook", "instagram", "tiktok", "linkedin", "youtube"];
 export function Footer() {
   const t = useTranslations("footer");
   return (
-    <div className=" flex flex-col gap-[3rem] p-10 bg-[var(--green-color)] text-white">
+    <div className=" flex flex-col gap-[1rem] p-10 bg-[var(--green-color)] text-white">
       <div>
         <Image
           alt="logo image"
-          src="/logo.svg"
-          className="w-[20rem]"
+          src="/logo.png"
+          className="w-[15rem] mb-[1rem]"
           width={300}
           height={300}
         />
       </div>
       <div className="flex w-full items-start justify-between max-[480px]:flex-col max-[480px]:gap-[1.5rem]">
-        <div className="w-[28rem]">
+        <div className="w-[40rem]">
           <p className="text-[1rem] font-light leading-[1.5rem]">{t("p")}</p>
         </div>
         <div>
@@ -43,7 +43,7 @@ export function Footer() {
         </div>
       </div>
       <div className="flex w-full justify-end items-center">
-        <div className="flex items-center justify-center gap-[4rem]">
+        <div className="flex items-center justify-center gap-[2rem]">
           {SocialLinks.map((link) => (
             <SocialIcon img={link} key={link} to="#" />
           ))}
@@ -51,8 +51,8 @@ export function Footer() {
       </div>
       <div className="flex items-center justify-between w-full font-normal">
         <div className="flex items-center justify-center gap-[3rem] text-[1.2rem] ">
-          <Link href="#">{t("terms")}</Link>
           <Link href="#">{t("privacy")}</Link>
+          <Link href="#">{t("terms")}</Link>
         </div>
         <p className="text-[0.9rem]">{t("copyRight")}</p>
       </div>

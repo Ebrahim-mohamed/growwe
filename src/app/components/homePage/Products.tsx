@@ -1,9 +1,9 @@
 import { useTranslations } from "next-intl";
 import { MulchAndSoilProducts } from "./MulchAndSoilProducts";
-
+import { mirza } from "@/app/[locale]/layout";
 const products = [
   {
-    header: "Soil Alternative Compressed - 5 Kg Block",
+    header: "Soil Alternative- 5 Kg Block",
     price: "350",
     type: "Block",
     description:
@@ -12,7 +12,7 @@ const products = [
     id: "1",
   },
   {
-    header: "Soil Alternative Compressed - 5 Kg Block",
+    header: "Soil Alternative- 5 Kg Block",
     price: "350",
     type: "Block",
     description:
@@ -21,25 +21,25 @@ const products = [
     id: "2",
   },
   {
-    header: "Soil Alternative Compressed - 5 Kg Block",
+    header: "Soil Alternative - 5 Kg Block",
     price: "350",
     type: "Block",
     description:
-      "One block of compressed soil alternative weighing 5Kg to be expanded by watering to 80m2. One block of compressed soil alternative weighing 5Kg to be expanded by watering to 80m2.",
+      "One block of compressed soil alternative weighing 5Kg to be expanded by watering to 80m2.",
     img: "/product.png",
     id: "3",
   },
   {
-    header: "Soil Alternative Compressed - 5 Kg Block",
+    header: "Soil Alternative - 5 Kg Block",
     price: "350",
     type: "Block",
     description:
-      "One block of compressed soil alternative weighing 5Kg to be expanded by watering to 80m2. One block of compressed soil alternative weighing 5Kg to be expanded by watering to 80m2.",
+      "One block of compressed soil alternative weighing 5Kg to be expanded by watering to 80m2.",
     img: "/product.png",
     id: "4",
   },
   {
-    header: "Soil Alternative Compressed - 5 Kg Block",
+    header: "Soil Alternative - 5 Kg Block",
     price: "350",
     type: "Block",
     description:
@@ -48,7 +48,7 @@ const products = [
     id: "5",
   },
   {
-    header: "Soil Alternative Compressed - 5 Kg Block",
+    header: "Soil Alternative - 5 Kg Block",
     price: "350",
     type: "Block",
     description:
@@ -64,7 +64,7 @@ export function Products() {
     <div className="p-[var(--section-Padding)] relative">
       {/* Section Header */}
       <div className="flex flex-col justify-center items-center gap-1 w-full mb-[2rem]">
-        <h1 className="text-black text-[3.5rem] font-black">
+        <h1 className={`text-black text-[4rem] font-black  ${mirza.className}`}>
           {t("ProductTitle")}
         </h1>
         <p className="text-black text-[1rem] font-medium">

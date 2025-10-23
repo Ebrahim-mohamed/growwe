@@ -6,12 +6,12 @@ const smarterBox = [
   {
     header: "smartFirstBoxHeader",
     des: "smartFirstBoxDescription",
-    img: "First",
+    img: "Second",
   },
   {
     header: "smartSecondBoxHeader",
     des: "smartSecondBoxDescription",
-    img: "Second",
+    img: "First",
   },
   {
     header: "smartThirdBoxHeader",
@@ -23,12 +23,12 @@ const smarterBox2 = [
   {
     header: "smartFourthBoxHeader",
     des: "smartFourthBoxDescription",
-    img: "Fourth",
+    img: "Fifth",
   },
   {
     header: "smartFifthBoxHeader",
     des: "smartFifthBoxDescription",
-    img: "Fifth",
+    img: "Fourth",
   },
   {
     header: "smartSixthBoxHeader",
@@ -46,13 +46,17 @@ export function Smarter() {
         src="/home/smartIcon.png"
         width={500}
         height={500}
-        className="absolute top-0 left-0 w-[13rem] max-[700px]:hidden"
+        className="absolute top-0 left-0 w-[20rem] max-[700px]:hidden"
       />
       <h1 className="text-[#387023] text-[3rem] font-black mb-20 text-center">
-        {t("smarterTitle")}
+        {t.rich("smarterTitle", {
+          second: (chunk) => (
+            <span className="text-[#E5AC71] italic">{chunk}</span>
+          ),
+        })}
       </h1>
       <div className="flex flex-col gap-[2rem] items-center justify-center">
-        <div className="flex  gap-[2rem] justify-between items-center w-full">
+        <div className="flex  gap-[1rem] justify-start items-start w-full">
           {smarterBox.map((box) => (
             <SmarterBox
               des={t(box.des)}
@@ -62,7 +66,7 @@ export function Smarter() {
             />
           ))}
         </div>
-        <div className="flex gap-[2rem]  justify-between items-center w-full">
+        <div className="flex gap-[1rem]  justify-start items-start w-full">
           {smarterBox2.map((box) => (
             <SmarterBox
               des={t(box.des)}

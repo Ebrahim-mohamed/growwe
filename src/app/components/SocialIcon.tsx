@@ -9,7 +9,7 @@ export function SocialIcon({ img, to }: { img: string; to: string }) {
         src={`/home/${img}.svg`}
         width={200}
         height={200}
-        className="w-[2.7rem]"
+        className="w-[2rem]"
       />
     </Link>
   );

@@ -1,6 +1,369 @@
 {
-  "lang": { "lang": "EN" },
-  "HomePage": {
-    "title": "اهلا"
+  "header": {
+    "lang": "EN",
+    "about": "من نحن؟",
+    "products": "منتجاتنا",
+    "gardening": "دليل الزراعة",
+    "contact": "تواصل معنا",
+    "aboutProduct": {
+      "mulch": "عن منتجات المالش",
+      "peat": "عن منتجات البيت"
+    }
+  },
+  "footer": {
+    "p": "جرووي هو وسط زراعي عضوي بديل للتربة يصنع في مصر من مواد طبيعية. يعتبر الوسط الزراعي البديل للتربة من جرووي حلا مستداما وصديقا للبيئة تم تطويره بتكنولوجيا بريطانية بترخيص من شركة Scaleup UK. يستخدم جرووي مواد طبيعية ليساهم في الزراعة العضوية ويحسن من جودة التربة المستخدمة لزراعة المحاصيل وزراعة وتنسيق الحدائق.",
+    "link": "روابط",
+    "about": "من نحن؟",
+    "products": "منتجاتنا",
+    "gardening": "دليل الزراعة",
+    "contact": "تواصل معنا",
+    "email": "hello@growwe.com",
+    "phone1": "+2 (02) 2488 0000",
+    "phone2": "+2 (010) 1200 3000",
+    "copyRight": "© 2025 GROWWE. جميع الحقوق محفوظة.",
+    "terms": "شروط الاسنخدام",
+    "privacy": "سياسة الخصوصية"
+  },
+  "homePage": {
+    "title": "زراعة النباتات الجميلة طريقك لحياة جميلة | الحياة الجميلة تبدأ بزراعة النباتات الجميلة نبني حياة جميلة من الزراعة",
+    "productsSection": {
+      "ProductTitle": "FEATURED PRODUCTS",
+      "renewable": "Renewable",
+      "biodegradable": "Biodegradable",
+      "egyptian": "Egyptian",
+      "soil": "Soilless Growing Medium",
+      "mulch": "Mulch",
+      "link": "know more"
+    },
+    "smartSection": {
+      "smarterTitle": "وسط زراعي مثالي بديل للنربة",
+      "smartFirstBoxHeader": "100% طبيعية",
+      "smartFirstBoxDescription": "وسط زراعي عضوي بديل للتربة",
+      "smartSecondBoxHeader": "تهوية مثالية للتربة",
+      "smartSecondBoxDescription": "زيادة المحصول بجذور أقوى",
+      "smartThirdBoxHeader": "الاحتفاظ بالرطوبة",
+      "smartThirdBoxDescription": "يقلل عدد مرات الري لاحتفاظه بالمياه لفترة أطول",
+      "smartFourthBoxHeader": "منخفض الملوحة",
+      "smartFourthBoxDescription": "مستوى ملوحة منخفض مما يوفر بيئة مثالية للنباتات الحساسة",
+      "smartFifthBoxHeader": "محايد الحموضة",
+      "smartFifthBoxDescription": "مستوى pH 5.5 - 6.5 يوفر بيئة مثالية للنمو",
+      "smartSixthBoxHeader": "أَضف مياه",
+      "smartSixthBoxDescription": "أضف 18 لتر من المياه لكل 5 كجم لتحصل على 50 لتر من التربة"
+    },
+    "plantsSection": {
+      "header": "وسط مثالي لنباتاتك",
+      "des": "مثالي لزراعة الحدائق، الزراعة المائية، المشاتل، الزراعة المنزلية.",
+      "secHeader": "أفضل استخدامات",
+      "firstUse": "إنبات البذور ✅",
+      "secondUse": "تحسين جودة التربة ✅",
+      "thirdUse": "الزراعة المنزلية ✅",
+      "forthUse": "الزراعة المائية ✅"
+    },
+    "partnersSection": {
+      "header": "نسعد بشراكتكم. ضاعف أرباحك الان",
+      "firstP": "استفد بالعروض الخاصة والحصرية عندما تصبح شريكا لدينا وتطلب كمية كبيرة من الوسط الزراعي البديل للتربة من جرووي",
+      "secondP": "احصل على خصومات خاصة، أولوية الحصول على العرض، دعم فني مخصص حسب احتياجاتك",
+      "thirdP": "شاركنا الآن وضاعف أرباحك مع جرووي🌱",
+      "button": "شاركنا الآن"
+    },
+    "mulch": {
+      "title": "المالش",
+      "des": "سر الزراعة الحديثة",
+      "content": "المالش هو عبارة عن غطاء للتربة ويعتبر طبقة واقية تفرش فوق سطح التربة لتحسين جودتها وحمايتها. ويستخدم بشكل أساسي في الحدائق والمساحات الخضراء ليعطي شكلا جماليا ويحسن من جودة التربة. يعتبر المالش حلاً مثالياً للعناية بالتربة والنباتات، حيث يجمع بين الحماية العملية والجمال الطبيعي والتوفير الاقتصادي. يصنع المالش من مواد طبيعية وعضوية ويمكن إعادة استخدامه.",
+      "features": "فوائد استخدام المالش",
+      "feat1": "توفير المياه ✅",
+      "feat2": "منع نمو الحشائش الضارة ✅",
+      "feat3": "تقليل تكاليف الزراعة على المدى الطويل ✅",
+      "feat4": "يقلل من تعرض النباتات للأمراض ✅",
+      "feat5": "يحسن جودة التربة ✅"
+    }
+  },
+  "about": {
+    "heroSection": {
+      "title": "عن جرووي",
+      "natural": "طبيعي",
+      "sustainable": "مستدام",
+      "egyptian": "مصري"
+    },
+    "whoWeAreSection": {
+      "whoHeader": "من نحن",
+      "whoDes": "نحن ملتزمون ومهتمون بإنتاج وسط زراعي بديل للتربة عالي الجودة مصنوع من موارد مصر الطبيعية الغنية.",
+      "why": "WHY GROWWE?",
+      "organic": "100% Organic",
+      "sustainable": "100% Sustainable",
+      "egyptian": "100% Egyptian",
+      "missionHeader": "مهمتنا",
+      "missionSecHeader": "صديق للبيئة ,مستدام ,وسط زراعي عضوي بديل للتربة",
+      "missionDes": "نهدف إلى توفير وسائط زراعية صديقة للبيئة ومستدامة، تمكن المزارعين ومنسقي الحدائق وأصحاب مشاريع الأعمال الزراعية من زراعة نباتات عالية الجودة مع حماية البيئة.",
+      "visionHeader": "رؤيتنا",
+      "visionSecHeader": "طبيعي ,إبداعي ,منتج",
+      "visionDes": "نطمح لقيادة التحول العالمي نحو الزراعة المستدامة من خلال تطوير حلول زراعية متطورة مستمدة من النباتات، تكون صديقة للبيئة وتساهم في زيادة وتحسين الإنتاجية الزراعية."
+    },
+    "certificationSection": {
+      "title": "شهاداتانا",
+      "iso1": "ISO 9001",
+      "quality": "Quality Management",
+      "iso2": "ISO 14001",
+      "environmental": "Environmental Management",
+      "omri": "OMRI Certification",
+      "organicUse": "Approved for organic use"
+    }
+  },
+  "products": {
+    "heroSection": {
+      "title": "منتجاتنا",
+      "premium": "Premium",
+      "efficient": "Efficient",
+      "cost": "Cost-Effective"
+    },
+    "productsSection": {
+      "products": "Products",
+      "quantity": "Quantity",
+      "egp": "EGP",
+      "add": "Add to Cart"
+    },
+    "calculator": {
+      "title": "Calculator",
+      "des": "Calculate the quantity you need to order to cover your planting area",
+      "selection": "Select Product",
+      "width": "Width",
+      "depth": "Depth",
+      "length": "Length",
+      "numberOfBags": "No. of Bags",
+      "mulch": "Mulch",
+      "peat": "Peat"
+    }
+  },
+  "gardening": {
+    "heroSection": {
+      "title": "دليل الزراعة",
+      "p1": "مزرعتك أفضل ,",
+      "p2": "محاصيلك أفضل وأكثر"
+    },
+    "gardeningSection": {
+      "title": "العناية بالحدائق",
+      "des1": "تربة صحية لمحاصيل أفضل!",
+      "header": "Ideal for Acid-Loving Plants",
+      "des2": "Alternative soil is slightly acidic (pH ~5.5-6.5)—perfect for blueberries, azaleas, and ferns. For neutral-pH plants, balance with a bit of garden lime."
+    },
+    "thirdSection": {
+      "header1": "Boost Seed Starting Success",
+      "des1": "Alternative soil is sterile and lightweight—perfect for seed trays! Mix with vermiculite (3:1 ratio) to prevent damping-off disease and promote strong seedling roots.",
+      "header2": "Pro Tips for Starting Seeds in Alternative Soil",
+      "point1": "Pre-Moisten: Always soak alternative soil before sowing!",
+      "point2": "Mix for Drainage: Add 20% perlite or vermiculite to prevent compaction.",
+      "point3": "Warmth is Key: Use a heat mat (75–80°F) for tropical seeds (e.g., orchids).",
+      "point4": "Cover for Humidity: Stretch plastic wrap over trays until germination.",
+      "point5": "Transplant Early: Palm peat breaks down fast—move seedlings once 2–4 true leaves appear.",
+      "header3": "Strawberries",
+      "des2": "Pre-planting hack: Solarize soil with clear plastic for 2 weeks, then amend with palm peat to kill weeds and boost acidity."
+    },
+    "cardsSection": {
+      "header": "Gardening Tips",
+      "header1": "Organic Farming& Hydroponic",
+      "des1": "The Future of Sustainable Agriculture in Egypt",
+      "header2": "Mulching in Agriculture",
+      "des2": "Types, Benefits, and Best Practices",
+      "header3": "Landscaping",
+      "des3": "Designing Sustainable and Beautiful Outdoor Spaces",
+      "header4": "Pruning Plants",
+      "des4": "Techniques, Benefits, and Best Practices",
+      "header5": "Irrigation",
+      "des5": "Importance, Methods, and Best Practices in Agriculture",
+      "header6": "Fertilizers",
+      "des6": "Types, Uses, and Role in Modern Agriculture",
+      "button": "Read More"
+    },
+    "crops": {
+      "header": "Best Crops for",
+      "header2": "GROWWE Soilless Media",
+      "tomatoes": "Tomatoes",
+      "peppers": "Peppers",
+      "strawberries": "Strawberries",
+      "lettuce": "Lettuce",
+      "cucumbers": "Cucumbers"
+    },
+    "articles": {
+      "article1": {
+        "header": "hello"
+      }
+    }
+  },
+  "contact": {
+    "heroSection": {
+      "title": "CONTACT US"
+    },
+    "formSection": {
+      "header": "تواصل معنا",
+      "des": "لديك استفسار أو طلب للشراكة؟ اترك رسالتك وسنتواصل معك!",
+      "footer": "*أوافق على تخزين المعلومات والبيانات المرسلة لجرووي للرد على أسئلتي.",
+      "firstLabel": "الاسم الأول",
+      "firstPlace": "الاسم الأول",
+      "firstNameError": "يجب ان يحتوي الاسم الاول علي 3 احرف علي الاقل",
+      "lastLabel": "الاسم الأخير",
+      "lastPlace": "الاسم الأخير",
+      "lastNameError": "يجب ان يحتوي الاسم الاخير علي 3 احرف علي الاقل",
+      "phoneLabel": "رقم التليفون",
+      "phonePlace": "01234567891",
+      "phoneError": "يجب ان يحتوي رقم الهاتف علي 11 رقم علي الاقل",
+      "emailLabel": "البريد الالكتروني",
+      "emailPlace": "example@gmail.com",
+      "emailError": "يجب ان يحتوي البريد الالكتروني علي @",
+      "messageLabel": "الرسالة",
+      "messagePlace": "اترك رسالتك..",
+      "messageError": "Message should be at least 50 characters",
+      "subjectHeader": "اختر موضوعا؟",
+      "opt1": "سؤال عام ",
+      "opt2": "طلب كميات كبيرة وطلبات الجملة",
+      "opt3": "كن شريكا",
+      "button": "ارسال",
+      "contactInfoHeader": "معلومات التواصل",
+      "contactInfoDes": "اترك رسالتك لنبدأ المحادثة",
+      "phone": "+2 012 345 6789",
+      "mail": "hello@growwe.com",
+      "location": "فيلا 11، شارع 53 متفرع من شارع 9 ، المقطم، القاهرة، مصر"
+    }
+  },
+  "informationMulchAndSoil": {
+    "hero": {
+      "soil": "وسط زراعي بديل للتربة",
+      "mulch": "المالش"
+    },
+    "secondSection": {
+      "soilHeader": "وسط زراعي بديل التربة",
+      "soilPra1": "جرووي بيت هو وسط زراعي عضوي بديل للتربة يصنع في مصر من مواد طبيعية. يعتبر الوسط الزراعي البديل للتربة من جرووي حلا مستداما وصديقا للبيئة تم تطويره بتكنولوجيا بريطانية بترخيص من شركة Scaleup UK. يستخدم جرووي مواد طبيعية ليساهم في الزراعة العضوية ويحسن من جودة التربة المستخدمة لزراعة المحاصيل وزراعة وتنسيق الحدائق.",
+      "mulchHeader": "المالش",
+      "mulchPra1": "مالش جرووي هومادة طبيعية عضوية طبيعية 100٪ تستخدم لتغطية التربة، وتُستخدم في أعمال زراعة وتنسيق الحدائق . مالش جرووي عضوي 100٪ وخالي من المواد الكيميائية، مما يساعد على تغذية التربة وتحسين تهويتها مع تحسين جودتها.",
+      "mulchPra2": "يمالش جرووي طبقة وقائية للتربة تساعد في الاحتفاظ بالرطوبة، وتحسين بنية التربة، وحماية النباتات.",
+      "advantages": "المميزات",
+      "soilBox1": "إنتاجية أكبر",
+      "soilBox2": "خالي من البيتموس",
+      "soilBox3": "خالي من التانين",
+      "soilBox4": "مقاوم للتعفن",
+      "soilBox5": "سهل الاستخدام",
+      "soilBox6": "قوام متماسك",
+      "soilMainPra": "مناسب للمزارعين المحترفين",
+      "soilDes": "الصوب الزراعية والمشاتل",
+      "mulchBox1": "Water Retention",
+      "mulchBox2": "Weed suppression",
+      "mulchBox3": "Soil Protection",
+      "mulchBox4": "Soil Improvement",
+      "mulchBox5": "Reduce Soil Erosion",
+      "mulchBox6": "Temperature Regulation",
+      "mulchMainPra": "Ideal for Growers and Landscapers",
+      "mulchDes": "Landscaping and Gardening"
+    },
+    "thirdSection": {
+      "advantages": "مميزات إضافية",
+      "soilDes": "يتميز جرووي بيت عن بدائل التربة الأخرى بهذه الخصائص المميزة:",
+      "soilHeader1": "عضوي ومتماسك القوام",
+      "soilDes1": "يتميز جرووي بيت بمقاومته للتحلل الميكروبي، وقدرته على الحفاظ على خصائصه البيولوجية وتماسك قوامه مع مرور الوقت، مما يجعله وسطًا مثاليًا لزراعة النباتات.",
+      "soilHeader2": "يعاد استخادمه",
+      "soilDes2": "بفضل حفاظه على تماسك قوامه وعدم التحلل بسهولة؛ يمكن اعادة استخدام جرووي بيت لعدة دورات زراعية مقدما نتائج ممتازة.",
+      "soilHeader3": "نمو الجذور",
+      "soilDes3": "يوفِّر جرووي بيت التهوية اللازمة، والرطوبة المناسبة، ومقاومة الفطريات التي تحتاجها الجذور للنمو. كما يوفر بيئةً مثاليةً لتشكُّل الجذور، مما يسمح للشعيرات الجذرية بامتصاص الماء والعناصر الغذائية بكفاءة فور إضافتها عبر التسميد.",
+      "mulchDes": "GROWWE mulch enhances soil health, reduces maintenance, and promotes stronger plant growth.",
+      "mulchHeader1": "Moisture Retention",
+      "mulchDes1": "Mulch acts as a barrier between soil and air, significantly reducing water loss through evaporation. This consistent moisture level means less frequent watering is required, promoting a more resilient root system.",
+      "mulchHeader2": "Soil Erosion Control",
+      "mulchDes2": "A layer of mulch absorbs the impact of heavy rain and slows the flow of water across the surface. This prevents topsoil, a vital resource, from being washed away.",
+      "mulchHeader3": "Soil Improvement",
+      "mulchDes3": "As organic mulch decomposes, it adds valuable humus and nutrients to the earth. This process improves soil structure, aeration, and fertility over time, creating a healthier growing environment."
+    },
+    "fourthSection": {
+      "soilHeader": "استخدام أفضل وسط زراعي بديل للتربة",
+      "soilAttachHeader": "ابدأ الآن!",
+      "soilFirstBoxHeader": "100% طبيعية",
+      "soilFirstBoxDescription": "وسط زراعي عضوي بديل للتربة",
+      "soilSecondBoxHeader": "تهوية مثالية للتربة",
+      "soilSecondBoxDescription": "زيادة المحصول بجذور أقوى",
+      "soilThirdBoxHeader": "الاحتفاظ بالرطوبة",
+      "soilThirdBoxDescription": "يقلل عدد مرات الري لاحتفاظه بالمياه لفترة أطول",
+      "soilFourthBoxHeader": "منخفض الملوحة",
+      "soilFourthBoxDescription": "مستوى ملوحة منخفض مما يوفر بيئة مثالية للنباتات الحساسة",
+      "soilFifthBoxHeader": "محايد الحموضة",
+      "soilFifthBoxDescription": "مستوى pH 5.5 - 6.5 يوفر بيئة مثالية للنمو",
+      "soilSixthBoxHeader": "أَضف مياه",
+      "soilSixthBoxDescription": "أضف 18 لتر من المياه لكل 5 كجم لتحصل على 50 لتر من التربة",
+      "mulchHeader": "Save Your Soil, Enhance Your Landscape, ",
+      "mulchAttachHeader": "with a Premium Look.",
+      "mulchFirstBoxHeader": "100% Organic",
+      "mulchFirstBoxDescription": "Biodegradable alternative soil.",
+      "mulchSecondBoxHeader": "Soil Aeration",
+      "mulchSecondBoxDescription": "High air circulation for soil.",
+      "mulchThirdBoxHeader": "Water Retention",
+      "mulchThirdBoxDescription": "Absorbs & retains water for longer times.",
+      "mulchFourthBoxHeader": "Weed Suppression",
+      "mulchFourthBoxDescription": "Prevents weed seeds from germinating",
+      "mulchFifthBoxHeader": "Soil Erosion Control",
+      "mulchFifthBoxDescription": "Forms a protective layer.",
+      "mulchSixthBoxHeader": "Less Watering",
+      "mulchSixthBoxDescription": "Reduces watering frequency."
+    }
+  },
+  "auth": {
+    "login": {
+      "header": "تسجيل الدخول",
+      "des": "اطلب بسهولة، اطلب مرة أخرى، تتبع طلباتك واحصل على أحدث العروض!",
+      "userNamePlaceholder": "البريد الالكتروني",
+      "userNameLabel": "البريد الالكتروني",
+      "userNameError": "من فضلك ادخل بريدك الالكتروني",
+      "minUserNameError": "يجب ان يحنوي البريد الالكتروني علي @",
+      "passwordPlaceholder": "كلمة السر",
+      "passwordLabel": "كلمة السر",
+      "passwordError": "من فضلك ادخل كلمة السر",
+      "minPasswordError": "يجب ان تحتوي كلمة السر علي 8 احرف علي الاقل",
+      "button": "تسجيل الدخول",
+      "have'tAccount": "ليس لديك حساب؟ ",
+      "signUp": "أنشئ حساب",
+      "forget": "هل نسيت كلمة السر؟"
+    },
+    "signup": {
+      "header": "أنشئ حساب",
+      "des": "اطلب بسهولة، اطلب مرة أخرى، تتبع طلباتك، احصل على أحدث العروض",
+      "userNamePlaceholder": "الاسم الأول ",
+      "userNameLabel": "الاسم الأول",
+      "userNameError": "من فضلك ادخل اسمك",
+      "minUserNameError": "يجب ان يحنوي اسمك علي 3 احرف علي الاقل",
+      "passwordPlaceholder": "كلمة السر",
+      "passwordLabel": "كلمة السر",
+      "passwordError": "من فضلك ادخل كلمة السر",
+      "minPasswordError": "يجب ان تحتوي كلمة السر علي 8 احرف علي الاقل",
+      "emailPlaceholder": "البريد الالكتروني",
+      "emailLabel": "البريد الالكتروني",
+      "emailError": "يجب ان يحتوي البريد الالكتروني علي @",
+      "phonePlaceholder": "رقم التليفون",
+      "phoneLabel": "رقم التليفون",
+      "phoneError": "من فضلك ادخل رقم التليفون",
+      "minPhoneError": "يجب ان يحتوي رقم التليفون علي 8 ارقام علي الاقل",
+      "addressPlaceholder": "العنوان",
+      "addressLabel": "العنوان",
+      "addressError": "من فضلك ادخل العنوان",
+      "minAddressError": "يجب ان يحنوي العنوان علي 8 احرف علي الاقل",
+      "countryPlaceholder": "البلد",
+      "countryLabel": "البلد",
+      "countryError": "من فضلك اخل البلد",
+      "minCountryError": "يحب ان تحتوي البلد علي 3 احرف علي الاقل",
+      "cityPlaceholder": "",
+      "cityLabel": "المدينة",
+      "cityError": "من فضلك ادخل المدينة",
+      "minCityError": "يحب ان تحتوي المدينة علي 3 احرف علي الاقل",
+      "areaPlaceholder": "المنطقة/الحي",
+      "areaLabel": "المنطقة/الحي",
+      "areaError": "من فضلك ادخل المنطقة/الحي",
+      "minAreaError": "يحب ان تحتوي المنطقة/الحي علي 3 احرف علي الاقل",
+      "shipping": "بيانات الشحن",
+      "personal": "البيانات الضخصية",
+      "partner": "كن شريكا",
+      "commercial": "attach the commercial",
+      "button": "أنشئ حسابك"
+    },
+    "profile": {
+      "header": "YOUR PROFILE",
+      "des": "What’s on your mind today?"
+    },
+    "forget": {
+      "header": ""
+    }
   }
 }

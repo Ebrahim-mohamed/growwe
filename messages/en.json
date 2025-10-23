@@ -6,8 +6,8 @@
     "gardening": "Gardening",
     "contact": "Contact Us",
     "aboutProduct": {
-      "mulch": "About mulch",
-      "peat": "About peat"
+      "mulch": "Mulch",
+      "peat": "Peat"
     }
   },
   "footer": {
@@ -21,11 +21,12 @@
     "phone1": "+2 (02) 2488 0000",
     "phone2": "+2 (010) 1200 3000",
     "copyRight": "© 2025 GROWWE. All rights reserved.",
-    "terms": "Terms of Use",
+    "terms": "Refunds and Returns Policy",
     "privacy": "Privacy Policy"
   },
   "homePage": {
     "title": "Creating a good life | from growing good plants",
+    "shop": "Shop Now",
     "productsSection": {
       "ProductTitle": "FEATURED PRODUCTS",
       "renewable": "Renewable",
@@ -36,7 +37,7 @@
       "link": "know more"
     },
     "smartSection": {
-      "smarterTitle": "The Smarter Growing Medium",
+      "smarterTitle": "The <second>Smarter</second> Growing Medium",
       "smartFirstBoxHeader": "100% Organic",
       "smartFirstBoxDescription": "Biodegradable alternative soil.",
       "smartSecondBoxHeader": "Soil Aeration",
@@ -46,7 +47,7 @@
       "smartFourthBoxHeader": "Low EC",
       "smartFourthBoxDescription": "Low salt levels (safer for sensitive plants)",
       "smartFifthBoxHeader": "Neutral pH",
-      "smartFifthBoxDescription": "Biodegradable Alternative Soil",
+      "smartFifthBoxDescription": "Ideal pH for crops pH  5.5 - 6.5 ",
       "smartSixthBoxHeader": "Add Water",
       "smartSixthBoxDescription": "Add 18 liters of water per block to get 50 liters volume."
     },
@@ -68,14 +69,15 @@
     },
     "mulch": {
       "title": "Mulch",
-      "des": "The Secret to Smart Gardening",
-      "content": "Mulch is a protective layer of material spread on top of the soil to protect it and decorate your landscape. Think of it like a blanket for your garden. Mulch protects the soil and the plants growing in it. It is natural, organic and reusable.",
+      "des": "The Secret to <second>Smart</second> Gardening",
+      "content": "Mulch is a <second>protective layer</second> of material spread on top of the soil to protect it and decorate your landscape. Think of it like a blanket for your garden. Mulch protects the soil and the plants growing in it. It is <second>natural</second>, <second>organic</second> and <second>reusable</second>.",
       "features": "Mulch Benefits & Features",
       "feat1": "✅ Saves water",
       "feat2": "✅ Controls weeds",
       "feat3": "✅ Reduces plant diseases",
       "feat4": "✅ Improves soil health",
-      "feat5": "✅ Lowers long-term costs"
+      "feat5": "✅ Lowers long-term costs",
+      "know": "know more"
     }
   },
   "about": {

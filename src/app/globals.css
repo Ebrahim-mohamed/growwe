@@ -22,9 +22,10 @@ html {
 }
 @media (max-width: 950px) {
   :root {
-    --section-Padding: 3rem !important;
+    --section-Padding: 4rem !important;
   }
 }
+
 :root {
   --hero-pad-rl: 1rem;
   --hero-pad-tb: 4rem;

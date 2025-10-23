@@ -1,17 +1,21 @@
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 
-export function Partners() {
+export function Partners({ isHome }: { isHome?: boolean }) {
   const t = useTranslations("homePage.partnersSection");
   return (
-    <div className=" flex items-start justify-center gap-4 p-[var(--section-Padding)] bg-[#F8FFF5]">
-      <div className="w-[40%]">
+    <div
+      className={` flex items-start justify-center gap-4 p-[var(--section-Padding)] ${
+        isHome ? " bg-white " : " bg-[#F8FFF5] "
+      } max-[500px]:flex-col`}
+    >
+      <div className="w-[40%] max-[500px]:w-full flex max-[500px]:items-center max-[500px]:justify-center">
         <Image
           alt="partners images"
           src="/home/partners.png"
           width={300}
           height={300}
-          className="max-w-[18rem] w-[100%] aspect-[289/285]"
+          className="max-w-[18rem] w-[100%] max-[500px]:max-w-[50%] aspect-[289/285]"
         />
       </div>
       <div>
