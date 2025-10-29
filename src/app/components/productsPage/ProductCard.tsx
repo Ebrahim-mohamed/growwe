@@ -19,7 +19,7 @@ export function ProductCard(product: IProduct) {
   const [chosen, setChosen] = useState(0);
   return (
     <div
-      className={`flex items-center justify-center gap-4 w-full relative ${
+      className={`flex items-center justify-center gap-4 w-full relative max-[580px]:flex-col py-[1rem] ${
         product.productOrder % 2 !== 0 && " flex-row-reverse"
       }`}
     >

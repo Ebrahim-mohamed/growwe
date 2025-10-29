@@ -1,3 +1,4 @@
+import { mirza } from "@/app/[locale]/layout";
 export function MostUseHeader({
   header,
   des,
@@ -7,7 +8,9 @@ export function MostUseHeader({
 }) {
   return (
     <div className="flex flex-col items-center justify-center ">
-      <h1 className="text-black text-[3.5rem] font-bold mb-[-0.5rem]">
+      <h1
+        className={`text-black text-[3.5rem] font-bold mb-[-0.5rem] ${mirza.className}`}
+      >
         {header}
       </h1>
       {des && <p className="text-[#717171] text-[1.5rem] font-medium">{des}</p>}

@@ -20,13 +20,22 @@ export function Partners({ isHome }: { isHome?: boolean }) {
       </div>
       <div>
         <h1 className="text-[2.5rem] text-[#387023] font-black mb-[2rem] max-[1200px]:text-[2.2rem] max-[1000px]:text-[2rem]">
-          {t("header")}
+          {t.rich("header", {
+            second: (chunk) => (
+              <span className="text-[#E5AC71] italic">{chunk}</span>
+            ),
+          })}
         </h1>
         <div className="flex flex-col gap-4">
-          <p className="text-[1.5rem] text-black font-medium">{t("firstP")}</p>
-          <p className="text-[1.5rem] text-black font-medium">{t("secondP")}</p>
+          <p className="text-[1.8rem] text-black font-medium">
+            {t.rich("p", {
+              second: (chunk) => (
+                <span className="text-[#426B1F] font-bold">{chunk}</span>
+              ),
+            })}
+          </p>
           <div className="flex items-center w-full justify-between">
-            <p className="text-[1.5rem] text-black font-black">{t("thirdP")}</p>
+            <p className="text-[1.8rem] text-black font-black">{t("thirdP")}</p>
             <button className="bg-black text-white text-[1rem] flex items-start justify-center p-[1rem] rounded-[1rem] hover:cursor-pointer">
               {t("button")}
             </button>

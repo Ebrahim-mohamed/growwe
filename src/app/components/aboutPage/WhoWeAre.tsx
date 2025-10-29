@@ -11,9 +11,9 @@ export function WhoWeAre() {
         src="/about/strawberry.png"
         width={400}
         height={400}
-        className="absolute top-[18%] right-0 w-[40rem] max-[400px]:hidden"
+        className="absolute top-[18%] right-0 w-[40rem] max-[380px]:hidden"
       />
-      <div className="flex w-full items-center justify-between mb-[3rem] max-[550px]:flex-col">
+      <div className="flex w-full items-center justify-between mb-[1.5rem] max-[550px]:flex-col max-[550px]:gap-[1rem]">
         <div className="text-[2.5rem] max-w-[50%] max-[550px]:max-w-full">
           <h1 className="text-[#E5AC71] font-bold">{t("whoHeader")}</h1>
           <p className="text-[#426B1F] font-semibold">{t("whoDes")}</p>

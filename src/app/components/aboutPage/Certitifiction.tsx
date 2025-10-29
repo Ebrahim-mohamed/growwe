@@ -20,11 +20,11 @@ const certifications = [
 export function Certification() {
   const t = useTranslations("about.certificationSection");
   return (
-    <div className="p-[var(--section-Padding)]">
-      <h1 className="text-[#E5AC71] text-[3rem] font-bold text-center mb-[4rem]">
+    <div className="px-[var(--section-Padding)] pb-[var(--section-Padding)] flex flex-col items-center">
+      <h1 className="text-[#E5AC71] text-[3rem] font-bold text-center mb-[6rem]">
         {t("title")}
       </h1>
-      <div className="flex items-center justify-between w-full">
+      <div className="flex items-start justify-between w-full max-[550px]:flex-col max-[550px]:gap-[1.5rem] max-w-[80%]">
         {certifications.map((cer) => (
           <CertificationBox
             header={t(cer.title)}

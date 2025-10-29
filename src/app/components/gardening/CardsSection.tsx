@@ -1,6 +1,6 @@
 import { useTranslations } from "next-intl";
 import { Card } from "./Card";
-const cards1 = [
+const cards = [
   {
     header: "header1",
     des: "des1",
@@ -19,8 +19,6 @@ const cards1 = [
     img: "landscap",
     Number: 3,
   },
-];
-const cards2 = [
   {
     header: "header4",
     des: "des4",
@@ -47,20 +45,8 @@ export function CardsSection() {
       <h1 className="text-[#387023] text-[4rem] font-bold mb-[2.5rem] text-center">
         {t("header")}
       </h1>
-      <div className="flex items-stretch w-full justify-between gap-[1rem]">
-        {cards1.map((card) => (
-          <Card
-            des={t(card.des)}
-            header={t(card.header)}
-            bg={card.img}
-            articleNumber={card.Number}
-            buttonName={t("button")}
-            key={card.header}
-          />
-        ))}
-      </div>
-      <div className="flex items-stretch w-full justify-between gap-[1rem]">
-        {cards2.map((card) => (
+      <div className="grid grid-col-3 items-stretch w-full justify-between gap-[1rem] max-[500px]:grid-col-2">
+        {cards.map((card) => (
           <Card
             des={t(card.des)}
             header={t(card.header)}
