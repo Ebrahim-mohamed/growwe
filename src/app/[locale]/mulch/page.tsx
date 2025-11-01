@@ -1,7 +1,9 @@
 import { FourthSection } from "@/app/components/soilAndMulchPageSections/FourthSection";
 import { Hero } from "@/app/components/soilAndMulchPageSections/Hero";
 import { SecondSection } from "@/app/components/soilAndMulchPageSections/SecondSection";
+import { TableSection } from "@/app/components/soilAndMulchPageSections/TableSection";
 import { ThirdSection } from "@/app/components/soilAndMulchPageSections/ThirdSection";
+import { useTranslations } from "next-intl";
 
 const paragrphs = [
   { head: "mulchHeader1", des: "mulchDes1" },
@@ -13,12 +15,12 @@ const soilBox = [
   {
     header: "mulchFirstBoxHeader",
     des: "mulchFirstBoxDescription",
-    img: "First",
+    img: "Second",
   },
   {
     header: "mulchSecondBoxHeader",
     des: "mulchSecondBoxDescription",
-    img: "Second",
+    img: "First",
   },
   {
     header: "mulchThirdBoxHeader",
@@ -30,12 +32,12 @@ const soilBox2 = [
   {
     header: "mulchFourthBoxHeader",
     des: "mulchFourthBoxDescription",
-    img: "Fourth",
+    img: "Spe1",
   },
   {
     header: "mulchFifthBoxHeader",
     des: "mulchFifthBoxDescription",
-    img: "Fifth",
+    img: "Spe2",
   },
   {
     header: "mulchSixthBoxHeader",
@@ -46,6 +48,9 @@ const soilBox2 = [
 const firstBoxes = ["mulchBox1", "mulchBox2", "mulchBox3", "mulchBox4"];
 const secondBoxes = ["mulchBox5", "mulchBox6"];
 export default function Mulch() {
+  const tableHeader = useTranslations(
+    "informationMulchAndSoil.tableSection.mulchTable1"
+  );
   return (
     <div>
       <Hero title="mulch" />
@@ -66,6 +71,12 @@ export default function Mulch() {
         boxes1={soilBox}
         boxes2={soilBox2}
       />
+      <div className="w-full p-[var(--section-Padding)] flex flex-col gap-[2rem] items-center justify-center">
+        <h1 className="text-[#387023] text-[2.5rem] font-black text-center mb-[3rem]">
+          {tableHeader("header")}
+        </h1>
+        <TableSection tableNumber={1} rowsNumber={8} type="mulch" />
+      </div>
     </div>
   );
 }

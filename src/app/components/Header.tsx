@@ -98,7 +98,7 @@ export function Header() {
         </button>
 
         {/* Cart Icon */}
-        <div>
+        <Link href={`/${locale}/cart`}>
           <Image
             alt="cart image"
             src="/cart.png"
@@ -107,7 +107,7 @@ export function Header() {
             width={20}
             height={20}
           />
-        </div>
+        </Link>
 
         {/* Profile Icon */}
         <Link

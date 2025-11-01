@@ -270,7 +270,7 @@
       "mulchDes3": "As organic mulch decomposes, it adds valuable humus and nutrients to the earth. This process improves soil structure, aeration, and fertility over time, creating a healthier growing environment."
     },
     "fourthSection": {
-      "soilHeader": "The Smarter Growing Medium",
+      "soilHeader": "The <second>Smarter</second> Growing Medium",
       "soilAttachHeader": "Say Yes!",
       "soilFirstBoxHeader": "100% Organic",
       "soilFirstBoxDescription": "Biodegradable alternative soil.",
@@ -284,8 +284,8 @@
       "soilFifthBoxDescription": "Biodegradable Alternative Soil",
       "soilSixthBoxHeader": "Add Water",
       "soilSixthBoxDescription": "Add 18 liters of water per block to get 50 liters volume.",
-      "mulchHeader": "Save Your Soil, Enhance Your Landscape, ",
-      "mulchAttachHeader": "with a Premium Look.",
+      "mulchHeader": "with a <second>Premium</second> Look.",
+      "mulchAttachHeader": "Save Your Soil, Enhance Your Landscape, ",
       "mulchFirstBoxHeader": "100% Organic",
       "mulchFirstBoxDescription": "Biodegradable alternative soil.",
       "mulchSecondBoxHeader": "Soil Aeration",
@@ -298,6 +298,256 @@
       "mulchFifthBoxDescription": "Forms a protective layer.",
       "mulchSixthBoxHeader": "Less Watering",
       "mulchSixthBoxDescription": "Reduces watering frequency."
+    },
+    "tableSection": {
+      "mulchTable1": {
+        "header": "Specifications",
+        "headers": {
+          "head1": "Parameter",
+          "head2": "Values"
+        },
+        "row1": {
+          "cell1": "Material",
+          "cell2": "Material"
+        },
+        "row2": {
+          "cell1": "Weight of bale",
+          "cell2": "22.5 ± 1kg "
+        },
+        "row3": {
+          "cell1": "Dimensions of bale",
+          "cell2": "30x55x110 cm"
+        },
+        "row4": {
+          "cell1": "Particle Size",
+          "cell2": "25 - 35 mm"
+        },
+        "row5": {
+          "cell1": "Moisture content 10 –",
+          "cell2": "10 - 15%"
+        },
+        "row6": {
+          "cell1": "Bulck density",
+          "cell2": " 40 - 50kg/m3"
+        },
+        "row7": {
+          "cell1": "pH",
+          "cell2": "5.5 - 6.5"
+        },
+        "row8": {
+          "cell1": "EC",
+          "cell2": "0.5 - 0.7 mS/cm"
+        }
+      },
+      "soilTable1": {
+        "header": "Technical Features",
+        "headers": {
+          "head1": "Macro / Micronutrients",
+          "head2": "Values",
+          "head3": "Test Method"
+        },
+        "row1": {
+          "cell1": "EC washed (ms/cm)",
+          "cell2": "0.1",
+          "cell3": "NF EN 13038"
+        },
+        "row2": {
+          "cell1": "pH washed",
+          "cell2": "5.6",
+          "cell3": "NF EN 13037"
+        },
+        "row3": {
+          "cell1": "Dry bulk density (kg/m3)",
+          "cell2": "107",
+          "cell3": "NF EN 12580"
+        },
+        "row4": {
+          "cell1": "Organic Content of dry matter (%)",
+          "cell2": "91.6",
+          "cell3": "NF EN 13039"
+        },
+        "row5": {
+          "cell1": "Particle size (mm)",
+          "cell2": "1 – 8",
+          "cell3": "-"
+        },
+        "row6": {
+          "cell1": "Fiber Content (%)",
+          "cell2": "2 – 5 ",
+          "cell3": "-"
+        },
+        "row7": {
+          "cell1": "Expansion Ratio (l/kg)",
+          "cell2": "12 – 15",
+          "cell3": "-"
+        },
+        "row8": {
+          "cell1": "WHC (ml/100gm)",
+          "cell2": "600 - 700",
+          "cell3": "-"
+        },
+        "row9": {
+          "cell1": "Oxygen uptake (mmol O2/kg o.m./h)",
+          "cell2": "7",
+          "cell3": "-"
+        }
+      },
+      "soilTable2": {
+        "headers": {
+          "head1": "Macro / Micronutrients",
+          "head2": "Values",
+          "head3": "Test Method"
+        },
+        "row1": {
+          "cell1": "N-NO3- (mg/l)",
+          "cell2": "<0.050",
+          "cell3": "NF EN ISO 11885"
+        },
+        "row2": {
+          "cell1": "P (mg/l)",
+          "cell2": "1.01",
+          "cell3": "NF EN ISO 11732"
+        },
+        "row3": {
+          "cell1": "SO42- (mg/l)",
+          "cell2": "33",
+          "cell3": "NF EN ISO 11885"
+        },
+        "row4": {
+          "cell1": "Cl- (mg/l)",
+          "cell2": "9.7",
+          "cell3": "NF EN ISO 11885"
+        },
+        "row5": {
+          "cell1": "N-NH4+ (mg/l)",
+          "cell2": "0.11",
+          "cell3": "NF EN ISO 11732"
+        },
+        "row6": {
+          "cell1": "K+ (mg/l)",
+          "cell2": "89.26",
+          "cell3": "NF EN ISO 11885"
+        },
+        "row7": {
+          "cell1": "Mg2+ (mg/l)",
+          "cell2": "119.26",
+          "cell3": "NF EN ISO 11885"
+        },
+        "row8": {
+          "cell1": "Ca2+ (mg/l)",
+          "cell2": "183.31",
+          "cell3": "NF EN ISO 11885"
+        },
+        "row9": {
+          "cell1": "Na+ (mg/l)",
+          "cell2": "78.71",
+          "cell3": "NF EN ISO 11885"
+        }
+      },
+      "soilTable3": {
+        "headers": {
+          "head1": "Metallic Trace Elements",
+          "head2": "Values",
+          "head3": "Test Method"
+        },
+        "row1": {
+          "cell1": "Cadmium (mg / kg MS)",
+          "cell2": "0.07",
+          "cell3": "NF EN ISO 11885"
+        },
+        "row2": {
+          "cell1": "Chrome (mg / kg MS)",
+          "cell2": "4.88",
+          "cell3": "NF EN ISO 11885"
+        },
+        "row3": {
+          "cell1": "Copper (mg / kg MS)",
+          "cell2": "5.25",
+          "cell3": "NF EN ISO 11885"
+        },
+        "row4": {
+          "cell1": "Mercury (mg / kg MS)",
+          "cell2": "<0.0.11",
+          "cell3": "NF EN ISO 12338"
+        },
+        "row5": {
+          "cell1": "Nickel (mg / kg MS)",
+          "cell2": "<0.27",
+          "cell3": "NF EN ISO 11885"
+        },
+        "row6": {
+          "cell1": "Lead (mg / kg MS)",
+          "cell2": "<0.53",
+          "cell3": "NF EN ISO 11885"
+        },
+        "row7": {
+          "cell1": "Zinc (mg / kg MS)",
+          "cell2": "13.6",
+          "cell3": "NF EN ISO 11885"
+        },
+        "row8": {
+          "cell1": "Chromium + Copper + Nickel + Zinc (mg/kg MS)",
+          "cell2": "24",
+          "cell3": "NF EN ISO 11885"
+        }
+      },
+      "soilTable4": {
+        "headers": {
+          "head1": "Pathogens Organisms",
+          "head2": "Values",
+          "head3": "Test Method"
+        },
+        "row1": {
+          "cell1": "Escherichia coli (UFC/g MB)",
+          "cell2": "<100",
+          "cell3": "NF ISO 16649-2"
+        },
+        "row2": {
+          "cell1": "Clostridium perfringens (UFC/g MB)",
+          "cell2": "<100",
+          "cell3": "NF EN ISO 7937"
+        },
+        "row3": {
+          "cell1": "Enterococcus (/ g MB)",
+          "cell2": "40",
+          "cell3": "NF EN ISO 7899-1"
+        },
+        "row4": {
+          "cell1": "Other microorganisms",
+          "cell2": "-",
+          "cell3": "-"
+        },
+        "row5": {
+          "cell1": "Listeria monocytogenes",
+          "cell2": "Not detected",
+          "cell3": "NF EN ISO 11290-1"
+        },
+        "row6": {
+          "cell1": "Salmonella",
+          "cell2": "Not detected",
+          "cell3": "NF EN ISO 6579-1"
+        },
+        "row7": {
+          "cell1": "Helminth eggs",
+          "cell2": "Absence",
+          "cell3": "FD X33-040"
+        },
+        "row8": {
+          "cell1": "Biological Analysis",
+          "cell2": "Not detected",
+          "cell3": "DNA Multiscan"
+        },
+        "row9": {
+          "cell1": "Nematodes",
+          "cell2": "Not detected",
+          "cell3": "Nematodes t.b.v. RHP"
+        },
+        "row10": {
+          "cell1": "Pesticides",
+          "cell2": "Not detected",
+          "cell3": "LC-MSMS , GC-MSMS"
+        }
+      }
     }
   },
   "auth": {
@@ -363,6 +613,18 @@
     },
     "forget": {
       "header": ""
+    }
+  },
+  "cart": {
+    "heroSection": {
+      "title": "SHOPPING CART"
+    },
+    "shoppingSection": {
+      "title": "Welcome to your shopping cart",
+      "return": "Shopping Continue",
+      "cartHead": "Shopping cart",
+      "itemsNumber": "You have {number} item in your cart",
+      "checkout": "Checkout"
     }
   }
 }
