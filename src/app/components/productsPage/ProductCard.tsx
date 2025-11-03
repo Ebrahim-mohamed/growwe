@@ -19,7 +19,7 @@ export function ProductCard(product: IProduct) {
   const [chosen, setChosen] = useState(0);
   return (
     <div
-      className={`flex items-center justify-center gap-4 w-full relative max-[580px]:flex-col py-[1rem] ${
+      className={`flex items-center justify-center gap-[5rem] w-full relative max-[580px]:flex-col py-[5rem] ${
         product.productOrder % 2 !== 0 && " flex-row-reverse"
       }`}
     >
@@ -28,16 +28,16 @@ export function ProductCard(product: IProduct) {
           product.productOrder % 2 !== 0 && " bg-[#FCF7F1]"
         }`}
       ></div>
-      <div className="flex-1 z-40">
-        <Image
-          alt="product image"
-          src={`/${product.img}.png`}
-          width={500}
-          height={700}
-          className="w-[100%]"
-        />
-      </div>
-      <div className="flex flex-col h-full justify-between gap-[2rem] flex-1 z-40">
+
+      <Image
+        alt="product image"
+        src={`/${product.img}.png`}
+        width={500}
+        height={700}
+        className="w-[25rem] h-[36rem] z-50"
+      />
+
+      <div className="flex flex-col h-full justify-between gap-[2rem] flex-1 z-40 max-w-[45rem]">
         <div className="text-[3rem] max-[1250px]:text-[2rem]">
           <h1 className="text-[#426B1F]  font-semibold -mb-[0.5rem]">
             {product.name}

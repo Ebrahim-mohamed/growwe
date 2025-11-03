@@ -30,7 +30,7 @@ export function Calculator() {
   }, [width, length, depth, type]);
 
   return (
-    <div className="px-[var(--section-Padding)] py-[3rem]">
+    <div className="p-[var(--section-Padding)] pb-[7rem] ">
       <MostUseHeader header={t("title")} des={t("des")} />
 
       <div className="flex w-full justify-between gap-[2rem] mt-[3rem] flex-col lg:flex-row">

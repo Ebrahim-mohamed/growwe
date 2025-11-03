@@ -9,7 +9,13 @@ export function MostUseHeader({
   return (
     <div className="flex flex-col items-center justify-center ">
       <h1
-        className={`text-black text-[3.5rem] font-bold mb-[-0.5rem] ${mirza.className}`}
+        className={` font-bold mb-[-0.5rem] ${
+          header !== "Calculator" && mirza.className
+        } ${
+          header === "Calculator"
+            ? " text-[#E5AC71] text-[4.5rem] "
+            : " text-black text-[3.5rem] "
+        }`}
       >
         {header}
       </h1>

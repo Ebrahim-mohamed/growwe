@@ -225,6 +225,14 @@
     }
   },
   "informationMulchAndSoil": {
+    "mulchHeader": "GROWWE MULCH",
+    "mulchDes1": "Hydrate .",
+    "mulchDes2": " Decorate ",
+    "mulchDes3": ". Improve Soil",
+    "soilHeader": "GROWWE PEAT",
+    "soilDes1": "Renewable.",
+    "soilDes2": " Biodegradable.",
+    "soilDes3": "Egyptian",
     "hero": {
       "soil": "وسط زراعي بديل للتربة",
       "mulch": "المالش"

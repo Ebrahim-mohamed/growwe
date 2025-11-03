@@ -10,7 +10,7 @@ const products = [
     size: 5,
     type: "Block",
     quantity: 12,
-    img: "product",
+    img: "product1",
   },
   {
     id: "2",
@@ -20,7 +20,7 @@ const products = [
     size: 5,
     type: "Block",
     quantity: 12,
-    img: "product",
+    img: "product2",
   },
   {
     id: "3",
@@ -30,7 +30,7 @@ const products = [
     size: 5,
     type: "Block",
     quantity: 12,
-    img: "product",
+    img: "product3",
   },
   {
     id: "4",
@@ -40,13 +40,13 @@ const products = [
     size: 5,
     type: "Block",
     quantity: 12,
-    img: "product",
+    img: "product4",
   },
 ];
 export function ProductsSection() {
   const t = useTranslations("products.heroSection");
   return (
-    <div className="p-[var(--section-Padding)]">
+    <div className="p-[var(--section-Padding)] pb-0">
       <MostUseHeader header={t("title")} />
       <div className="flex flex-col w-full mt-[3rem] gap-[1rem]">
         {products.map((product, index) => (

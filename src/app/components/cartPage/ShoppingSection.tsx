@@ -35,7 +35,7 @@ export function ShoppingSection() {
                 price={320}
                 que={1}
               />
-              <div className="flex w-full justify-end">
+              <div className="flex w-full justify-end mt-[1rem]">
                 <button className="text-[1.5rem] font-bold text-white bg-black rounded-[1.5rem] py-[0.5rem] px-[1rem] cursor-pointer">
                   {t("checkout")}
                 </button>

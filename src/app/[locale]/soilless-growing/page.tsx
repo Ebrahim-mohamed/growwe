@@ -1,4 +1,5 @@
 import { FourthSection } from "@/app/components/soilAndMulchPageSections/FourthSection";
+import { Header } from "@/app/components/soilAndMulchPageSections/Header";
 import { Hero } from "@/app/components/soilAndMulchPageSections/Hero";
 import { SecondSection } from "@/app/components/soilAndMulchPageSections/SecondSection";
 import { TableSection } from "@/app/components/soilAndMulchPageSections/TableSection";
@@ -54,6 +55,7 @@ export default function SoillessGrowing() {
   return (
     <div>
       <Hero title="soil" />
+      <Header type="soil" />
       <SecondSection
         img="soil"
         title="soilHeader"
@@ -70,7 +72,7 @@ export default function SoillessGrowing() {
         boxes1={soilBox}
         boxes2={soilBox2}
       />
-      <div className="w-full p-[var(--section-Padding)] flex flex-col gap-[2rem] items-center justify-center">
+      <div className="w-full p-[var(--section-Padding)] flex flex-col gap-[2rem] items-center justify-center bg-[#F8F9FB]">
         <h1 className="text-[#387023] text-[2.5rem] font-black text-center mb-[3rem]">
           {tableHeader("header")}
         </h1>

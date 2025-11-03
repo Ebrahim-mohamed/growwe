@@ -9,7 +9,7 @@ export function Partners({ isHome }: { isHome?: boolean }) {
         isHome ? " bg-white " : " bg-[#F8FFF5] "
       } max-[500px]:flex-col`}
     >
-      <div className="w-[40%] max-[500px]:w-full flex max-[500px]:items-center max-[500px]:justify-center">
+      <div className="w-[40%] max-[500px]:w-full flex max-[500px]:items-center max-[500px]:justify-center z-100">
         <Image
           alt="partners images"
           src="/home/partners.png"
@@ -18,7 +18,7 @@ export function Partners({ isHome }: { isHome?: boolean }) {
           className="max-w-[18rem] w-[100%] max-[500px]:max-w-[50%] aspect-[289/285]"
         />
       </div>
-      <div>
+      <div className="z-100">
         <h1 className="text-[2.5rem] text-[#387023] font-black mb-[2rem] max-[1200px]:text-[2.2rem] max-[1000px]:text-[2rem]">
           {t.rich("header", {
             second: (chunk) => (

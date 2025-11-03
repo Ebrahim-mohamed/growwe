@@ -22,7 +22,11 @@ export function TableSection({
   );
   return (
     <div className="w-full ">
-      <Table className="w-full border-separate border-spacing-2">
+      <Table
+        className={`w-full border-separate border-spacing-2 ${
+          type === "mulch" && " px-[12rem] "
+        }`}
+      >
         <TableHeader>
           <TableRow>
             {Array.from({ length: type === "soil" ? 3 : 2 }).map((_, index) => (
@@ -44,10 +48,12 @@ export function TableSection({
             <TableRow
               key={index}
               className={`text-[1.7rem] font-normal  ${
-                index % 2 === 1 && " bg-[#F1F3F6] "
+                index % 2 === 1 ? " bg-[#F1F3F6] " : " bg-white "
               } `}
             >
-              <TableCell>{tableTranslation(`row${index + 1}.cell1`)}</TableCell>
+              <TableCell className="pl-[4rem]">
+                {tableTranslation(`row${index + 1}.cell1`)}
+              </TableCell>
               <TableCell className="text-center">
                 {tableTranslation(`row${index + 1}.cell2`)}
               </TableCell>
