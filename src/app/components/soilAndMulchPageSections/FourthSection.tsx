@@ -11,18 +11,31 @@ export function FourthSection(content: contentType) {
   const t = useTranslations("informationMulchAndSoil.fourthSection");
   return (
     <div className="p-[var(--section-Padding)] bg-[#FCF7F1]  overflow-hidden">
-      <div className="relative text-[#387023] text-[3rem] font-black">
-        <h2 className="absolute -top-[80%] left-[18%]">
-          {t(content.attachedHeader)}
-        </h2>
-        <h1 className=" mb-20 text-center">
-          {t.rich(content.header, {
-            second: (chunk) => (
-              <span className="italic text-[#E5AC71]">{chunk}</span>
-            ),
-          })}
-        </h1>
-      </div>
+      {content.header === "soilHeader" ? (
+        <div className="relative text-[#387023] text-[3rem] font-black">
+          <h2 className="absolute -top-[80%] left-[18%]">
+            {t(content.attachedHeader)}
+          </h2>
+          <h1 className=" mb-20 text-center">
+            {t.rich(content.header, {
+              second: (chunk) => (
+                <span className="italic text-[#E5AC71]">{chunk}</span>
+              ),
+            })}
+          </h1>
+        </div>
+      ) : (
+        <div className="relative text-[#387023] text-[3rem] font-black">
+          <h2 className="text-center">{t(content.header)}</h2>
+          <h1 className=" mb-20 ml-[45rem] text-center">
+            {t.rich(content.attachedHeader, {
+              second: (chunk) => (
+                <span className="italic text-[#E5AC71]">{chunk}</span>
+              ),
+            })}
+          </h1>
+        </div>
+      )}
       <div className="flex flex-col gap-[2rem] items-center justify-center">
         <div className="flex  gap-[2rem] justify-between items-center w-full">
           {content.boxes1.map((box) => (

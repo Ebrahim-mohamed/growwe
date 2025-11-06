@@ -4,7 +4,9 @@ import { Hero } from "@/app/components/soilAndMulchPageSections/Hero";
 import { SecondSection } from "@/app/components/soilAndMulchPageSections/SecondSection";
 import { TableSection } from "@/app/components/soilAndMulchPageSections/TableSection";
 import { ThirdSection } from "@/app/components/soilAndMulchPageSections/ThirdSection";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
+import Image from "next/image";
+import Link from "next/link";
 
 const paragrphs = [
   { head: "mulchHeader1", des: "mulchDes1" },
@@ -49,6 +51,7 @@ const soilBox2 = [
 const firstBoxes = ["mulchBox1", "mulchBox2", "mulchBox3", "mulchBox4"];
 const secondBoxes = ["mulchBox5", "mulchBox6"];
 export default function Mulch() {
+  const locale = useLocale();
   const tableHeader = useTranslations(
     "informationMulchAndSoil.tableSection.mulchTable1"
   );
@@ -73,7 +76,21 @@ export default function Mulch() {
         boxes1={soilBox}
         boxes2={soilBox2}
       />
-      <div className="w-full p-[var(--section-Padding)] flex flex-col gap-[2rem] items-center justify-center bg-[#F8F9FB]">
+      <div className="w-full p-[var(--section-Padding)] flex flex-col gap-[2rem] items-center justify-center bg-[#F8F9FB] relative">
+        <Link
+          href={locale == "en" ? "/mulch-en.pdf" : "/mulch-ar.pdf"}
+          className="w-[4rem] aspect-square absolute top-[5rem] right-[5rem] cursor-pointer"
+          download
+        >
+          <Image
+            alt="pdf image"
+            width={500}
+            height={500}
+            src="/mulchAndSoil/pdf.png"
+            className="w-full"
+          />
+        </Link>
+
         <h1 className="text-[#387023] text-[2.5rem] font-black text-center mb-[3rem]">
           {tableHeader("header")}
         </h1>

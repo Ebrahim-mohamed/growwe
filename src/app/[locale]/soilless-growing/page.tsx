@@ -4,7 +4,9 @@ import { Hero } from "@/app/components/soilAndMulchPageSections/Hero";
 import { SecondSection } from "@/app/components/soilAndMulchPageSections/SecondSection";
 import { TableSection } from "@/app/components/soilAndMulchPageSections/TableSection";
 import { ThirdSection } from "@/app/components/soilAndMulchPageSections/ThirdSection";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
+import Image from "next/image";
+import Link from "next/link";
 
 const paragrphs = [
   { head: "soilHeader1", des: "soilDes1" },
@@ -49,6 +51,7 @@ const soilBox2 = [
 const firstBoxes = ["soilBox1", "soilBox2", "soilBox3", "soilBox4"];
 const secondBoxes = ["soilBox5", "soilBox6"];
 export default function SoillessGrowing() {
+  const locale = useLocale();
   const tableHeader = useTranslations(
     "informationMulchAndSoil.tableSection.soilTable1"
   );
@@ -72,10 +75,25 @@ export default function SoillessGrowing() {
         boxes1={soilBox}
         boxes2={soilBox2}
       />
-      <div className="w-full p-[var(--section-Padding)] flex flex-col gap-[2rem] items-center justify-center bg-[#F8F9FB]">
+      <div className="w-full p-[var(--section-Padding)] flex flex-col gap-[2rem] items-center justify-center bg-[#F8F9FB] relative">
+        <Link
+          href={locale == "en" ? "/peat-en.pdf" : "/peat-ar.pdf"}
+          className="w-[4rem] aspect-square absolute top-[5rem] right-[5rem] cursor-pointer"
+          download
+        >
+          <Image
+            alt="pdf image"
+            width={500}
+            height={500}
+            src="/mulchAndSoil/pdf.png"
+            className="w-full"
+          />
+        </Link>
+
         <h1 className="text-[#387023] text-[2.5rem] font-black text-center mb-[3rem]">
           {tableHeader("header")}
         </h1>
+
         <TableSection tableNumber={1} rowsNumber={9} type="soil" />
         <TableSection tableNumber={2} rowsNumber={9} type="soil" />
         <TableSection tableNumber={3} rowsNumber={8} type="soil" />

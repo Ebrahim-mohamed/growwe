@@ -45,7 +45,11 @@ export function MulchAndSoilProducts(content: productSectionType) {
   return (
     <div className="flex flex-col">
       <div className="flex items-end  gap-2">
-        <h2 className="text-[#E5AC71] text-[2.5rem] font-black ml-[7rem]">
+        <h2
+          className={`text-[#E5AC71] text-[2.5rem] font-black ${
+            locale === "en" ? " ml-[7rem] " : " mr-[7rem] "
+          }`}
+        >
           {t(content.header)}
         </h2>
         <Link

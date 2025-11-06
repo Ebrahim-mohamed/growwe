@@ -1,9 +1,10 @@
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { MissionAndVisionCard } from "./MissionAndVisionCard";
 import Image from "next/image";
 const whySec = ["organic", "sustainable", "egyptian"];
 export function WhoWeAre() {
   const t = useTranslations("about.whoWeAreSection");
+  const locale = useLocale();
   return (
     <div className="flex flex-col gap-[1rem] p-[var(--section-Padding)] relative">
       <Image
@@ -11,7 +12,9 @@ export function WhoWeAre() {
         src="/about/strawberry.png"
         width={400}
         height={400}
-        className="absolute top-[18%] right-0 w-[40rem] max-[380px]:hidden"
+        className={`absolute top-[18%] ${
+          locale === "en" ? " right-0 " : " left-0 "
+        } w-[40rem] max-[380px]:hidden`}
       />
       <div className="flex w-full items-center justify-between mb-[1.5rem] max-[550px]:flex-col max-[550px]:gap-[1rem]">
         <div className="text-[2.5rem] max-w-[50%] max-[550px]:max-w-full">

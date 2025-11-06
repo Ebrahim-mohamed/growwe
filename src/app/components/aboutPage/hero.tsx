@@ -1,8 +1,9 @@
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import { mirza } from "@/app/[locale]/layout";
 export function Hero() {
   const t = useTranslations("about.heroSection");
+  const locale = useLocale();
   return (
     <div className="bg-[url('/about/hero.png')] bg-cover w-dvw h-dvh p-[var(--section-Padding)]  flex items-end justify-start relative">
       <Image
@@ -10,7 +11,9 @@ export function Hero() {
         src="/about/leaves.png"
         width={200}
         height={200}
-        className="absolute bottom-0 right-[3rem] w-[18rem] max-[700px]:hidden"
+        className={`absolute bottom-0 ${
+          locale === "en" ? " right-[3rem] " : " left-[3rem] "
+        } w-[18rem] max-[700px]:hidden`}
       />
       <div className={`${mirza.className} -mb-[1.5rem]`}>
         <h1 className="text-[6rem] text-[#E5AC71] font-bold -mb-[1rem]">

@@ -16,8 +16,8 @@ export function MulchFeatures() {
           {t("features")}
         </div>
       </div>
-      <div className="flex flex-col items-start justify-center gap-[2rem] w-full p-8 relative">
-        <div className="bg-[#101010] opacity-[0.35] absolute top-0 left-0 w-[80%] h-full rounded-[1rem]"></div>
+      <div className="flex flex-col items-start justify-center gap-[2rem] w-full p-8 relative bg-[rgba(16,16,16,0.4)] rounded-[1rem] p-[2rem]">
+        {/* <div className="bg-[#101010] opacity-[0.35] absolute top-0 left-0 w-[80%] h-full rounded-[1rem]"></div> */}
         {features.map((feat) => (
           <MulchPrag pra={t(feat.title)} key={feat.title} />
         ))}
