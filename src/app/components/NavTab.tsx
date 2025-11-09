@@ -29,7 +29,7 @@ export function NavTab({
     onClose?.();
   };
 
-  if (name === "Products") {
+  if (name === "Products" || name === "منتجاتنا") {
     return (
       <div
         onMouseEnter={() => setIsHovering(true)}

@@ -205,7 +205,7 @@
       "lastNameError": "Last name should be at least 3 characters",
       "phoneLabel": "Phone",
       "phonePlace": "01234567891",
-      "phoneError": "Phone number should be 11 characters",
+      "phoneNumberError": "Phone number should be 11 characters",
       "emailLabel": "E-mail",
       "emailPlace": "example@gmail.com",
       "emailError": "E-mail should contain @",
@@ -635,6 +635,13 @@
       "cartHead": "Shopping cart",
       "itemsNumber": "You have {number} item in your cart",
       "checkout": "Checkout"
+    }
+  },
+  "profile": {
+    "heroSection": {
+      "title": "YOUR PROFILE",
+      "header": "YOUR PROFILE",
+      "des": "Your personal information and ordering log. "
     }
   }
 }

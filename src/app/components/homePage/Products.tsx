@@ -8,7 +8,7 @@ const products = [
     type: "Block",
     description:
       "One block of compressed soil alternative weighing 5Kg to be expanded by watering to 80m2.",
-    img: "/product.png",
+    img: "/product1.png",
     id: "1",
   },
   {
@@ -17,7 +17,7 @@ const products = [
     type: "Block",
     description:
       "One block of compressed soil alternative weighing 5Kg to be expanded by watering to 80m2.",
-    img: "/product.png",
+    img: "/product1.png",
     id: "2",
   },
   {
@@ -26,7 +26,7 @@ const products = [
     type: "Block",
     description:
       "One block of compressed soil alternative weighing 5Kg to be expanded by watering to 80m2.",
-    img: "/product.png",
+    img: "/product1.png",
     id: "3",
   },
   {
@@ -35,7 +35,7 @@ const products = [
     type: "Block",
     description:
       "One block of compressed soil alternative weighing 5Kg to be expanded by watering to 80m2.",
-    img: "/product.png",
+    img: "/product1.png",
     id: "4",
   },
   {
@@ -44,7 +44,7 @@ const products = [
     type: "Block",
     description:
       "One block of compressed soil alternative weighing 5Kg to be expanded by watering to 80m2.",
-    img: "/product.png",
+    img: "/product1.png",
     id: "5",
   },
   {
@@ -53,7 +53,7 @@ const products = [
     type: "Block",
     description:
       "One block of compressed soil alternative weighing 5Kg to be expanded by watering to 80m2.",
-    img: "/product.png",
+    img: "/product1.png",
     id: "6",
   },
 ];

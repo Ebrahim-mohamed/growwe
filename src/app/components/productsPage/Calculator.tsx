@@ -12,21 +12,25 @@ export function Calculator() {
   const [depth, setDepth] = useState<number | "">("");
   const [result, setResult] = useState<number>(0);
 
-  // ✅ Automatically recalculate whenever inputs or type change
   useEffect(() => {
     if (!width || !length || !depth || !type) {
       setResult(0);
       return;
     }
 
-    // Convert to cubic meters (if inputs are in cm)
-    const volume = (Number(width) * Number(length) * Number(depth)) / 1000000;
+    const L = Number(length);
+    const W = Number(width);
+    const D = Number(depth);
 
-    // Bag volume per type
-    const bagVolume = type === "mulch" ? 0.05 : 0.04; // adjust as needed
+    let calculatedBags = 0;
 
-    const numberOfBags = Math.ceil(volume / bagVolume);
-    setResult(numberOfBags);
+    if (type === "mulch") {
+      calculatedBags = (L * W * D * 121) / 35;
+    } else if (type === "peat") {
+      calculatedBags = (L * W * D * 75) / 5;
+    }
+
+    setResult(Math.ceil(calculatedBags));
   }, [width, length, depth, type]);
 
   return (
@@ -34,11 +38,11 @@ export function Calculator() {
       <MostUseHeader header={t("title")} des={t("des")} />
 
       <div className="flex w-full justify-between gap-[2rem] mt-[3rem] flex-col lg:flex-row">
-        {/* Type Selection */}
         <div className="flex flex-col gap-[0.5rem]">
           <h1 className="text-[2rem] font-normal text-black">
             {t("selection")}
           </h1>
+
           <form className="flex flex-col gap-[0.5rem]">
             <div className="flex items-center gap-[1rem]">
               <input
@@ -76,7 +80,6 @@ export function Calculator() {
           </form>
         </div>
 
-        {/* Inputs and Result */}
         <div className="flex flex-1 justify-between gap-[2.5rem] flex-wrap mb-[2.1rem]">
           {[
             { label: t("width"), value: width, setter: setWidth },
@@ -101,12 +104,11 @@ export function Calculator() {
             </div>
           ))}
 
-          {/* Result */}
           <div className="flex flex-1 flex-col items-center justify-center gap-[1rem] min-w-[200px]">
             <h1 className="text-[2rem] font-normal text-black">
               {t("numberOfBags")}
             </h1>
-            <div className="w-full  bg-[#F8FFF5] border-[2px] border-[#E6E7ED] rounded-[1.25rem] text-[1.5rem] font-medium py-[0.5rem] px-[1rem] text-center">
+            <div className="w-full bg-[#F8FFF5] border-[2px] border-[#E6E7ED] rounded-[1.25rem] text-[1.5rem] font-medium py-[0.5rem] px-[1rem] text-center">
               {result}
             </div>
           </div>

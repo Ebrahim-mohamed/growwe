@@ -6,8 +6,8 @@
     "gardening": "دليل الزراعة",
     "contact": "تواصل معنا",
     "aboutProduct": {
-      "mulch": "عن منتجات المالش",
-      "peat": "عن منتجات البيت"
+      "mulch": "منتجات المالش",
+      "peat": "منتجات البيت"
     }
   },
   "footer": {
@@ -124,15 +124,15 @@
       "add": "Add to Cart"
     },
     "calculator": {
-      "title": "Calculator",
-      "des": "Calculate the quantity you need to order to cover your planting area",
-      "selection": "Select Product",
-      "width": "Width",
-      "depth": "Depth",
-      "length": "Length",
-      "numberOfBags": "No. of Bags",
-      "mulch": "Mulch",
-      "peat": "Peat"
+      "title": "الالة الحاسبة",
+      "des": "احسب الكمية التي تحتاج لطلبها لتغطية منطقة الزراعة الخاصة بك",
+      "selection": "اختر المنتج",
+      "width": "العرض",
+      "depth": "العمق",
+      "length": "الطول",
+      "numberOfBags": "عدد الشنط",
+      "mulch": "مالش",
+      "peat": "بيت"
     }
   },
   "gardening": {
@@ -144,46 +144,47 @@
     "gardeningSection": {
       "title": "العناية بالحدائق",
       "des1": "تربة صحية لمحاصيل أفضل!",
-      "header": "Ideal for Acid-Loving Plants",
-      "des2": "Alternative soil is slightly acidic (pH ~5.5-6.5)—perfect for blueberries, azaleas, and ferns. For neutral-pH plants, balance with a bit of garden lime."
+      "header": "مثالي للنباتات المحبة للحموضة",
+      "des2": "التربة البديلة تكون حمضية قليلًا (درجة حموضة تقريبًا 5.5 - 6.5) — وهذا يجعلها مثالية لزراعة التوت الأزرق (Blueberries)، والأزالية، والسرخسيات. أما للنباتات التي تفضل تربة معتدلة (درجة حموضة متعادلة)، فيمكن موازنتها بإضافة قليل من الجير الزراعي."
     },
     "thirdSection": {
-      "header1": "Boost Seed Starting Success",
-      "des1": "Alternative soil is sterile and lightweight—perfect for seed trays! Mix with vermiculite (3:1 ratio) to prevent damping-off disease and promote strong seedling roots.",
-      "header2": "Pro Tips for Starting Seeds in Alternative Soil",
-      "point1": "Pre-Moisten: Always soak alternative soil before sowing!",
-      "point2": "Mix for Drainage: Add 20% perlite or vermiculite to prevent compaction.",
-      "point3": "Warmth is Key: Use a heat mat (75–80°F) for tropical seeds (e.g., orchids).",
-      "point4": "Cover for Humidity: Stretch plastic wrap over trays until germination.",
-      "point5": "Transplant Early: Palm peat breaks down fast—move seedlings once 2–4 true leaves appear.",
-      "header3": "Strawberries",
-      "des2": "Pre-planting hack: Solarize soil with clear plastic for 2 weeks, then amend with palm peat to kill weeds and boost acidity."
+      "header1": "سرع انبات البذور بنجاح",
+      "des1": "الوسط بديل التربة معقم وخفيف الوزن، مثالي لصواني الشتلات امزجها مع الفيرموكلايت بنسبة (3 : 1) لمنع الذبول أو التلف أو حدوث الأمراض، وتحسين قوة الجذور",
+      "header2": "نصائح احترافية للانبات في الوسط بديل التربة",
+      "point1": "بللها بالماء أولا .. انقع التربة البديلة قبل البدء في استخدامها",
+      "point2": "امزج لتحسين الصرف: أضِف 20% من البيرلايت أو الفيرموكيوليت لمنع انضغاط التربة.",
+      "point3": "اعتدال الحرارة عامل مهم .. استخدم حصيرة شتلات حرارية (24-27 درجة مئوية) لانبات البذور الاستوائية",
+      "point4": "استخدم غطاء للتربة .. للحفاظ على رطوبة التربة استخدم ملش للتربة (عضوي او غير عضوي)",
+      "point5": "ازرعها سريعا .. تنبت البذور في الوسط بديل التربة سريعا، انقل الشتلات بعد ظهور 2 – 4 ورقات ......",
+      "header3": "الفراولة",
+      "des2": "نصائح للانبات: قم بتغطية التربة بغطاء شفاف من البلاستيك لمدة أسبوعين، ثم استخدم الوسط البديل للتربة من جرووي لقتل الحشائش الضارة وتحسين جودة التربة."
     },
     "cardsSection": {
-      "header": "Gardening Tips",
-      "header1": "Organic Farming& Hydroponic",
-      "des1": "The Future of Sustainable Agriculture in Egypt",
-      "header2": "Mulching in Agriculture",
-      "des2": "Types, Benefits, and Best Practices",
-      "header3": "Landscaping",
-      "des3": "Designing Sustainable and Beautiful Outdoor Spaces",
-      "header4": "Pruning Plants",
-      "des4": "Techniques, Benefits, and Best Practices",
-      "header5": "Irrigation",
-      "des5": "Importance, Methods, and Best Practices in Agriculture",
-      "header6": "Fertilizers",
-      "des6": "Types, Uses, and Role in Modern Agriculture",
-      "button": "Read More"
+      "header": "دليل الزراعة",
+      "header1": "الزراعة العضوية والمائية",
+      "des1": "الطريق نحو الزراعة المستدامة في مصر",
+      "header2": "استخدام المالش في الزراعة",
+      "des2": "أنواعه، فوائده، ودوره في الزراعة العضوية والمستدامة",
+      "header3": "المساحات الخضراء",
+      "des3": "تصميم مستدام وتجميل المساحات الخارجية",
+      "header4": "تقليم النباتات",
+      "des4": "الطرق والفوائد والتطبيقات العملية",
+      "header5": "الري",
+      "des5": "الأهمية والوسائل والتطبيقات العملية في الزراعة",
+      "header6": "المخصبات والمحسنات",
+      "des6": "الأنواع والاستخدامات ودورها في الزراعة الحديثة",
+      "button": "اقرأ أكثر"
     },
     "crops": {
-      "header": "Best Crops for",
-      "header2": "GROWWE Soilless Media",
-      "tomatoes": "Tomatoes",
-      "peppers": "Peppers",
-      "strawberries": "Strawberries",
-      "lettuce": "Lettuce",
-      "cucumbers": "Cucumbers"
+      "header": "أفضل المحاصيل لـ",
+      "header2": "وسائط GROWWE الخالية من التربة",
+      "tomatoes": "طماطم",
+      "peppers": "فلفل",
+      "strawberries": "فراولة",
+      "lettuce": "خس",
+      "cucumbers": "خيار"
     },
+
     "articles": {
       "article1": {
         "header": "hello"
@@ -192,7 +193,7 @@
   },
   "contact": {
     "heroSection": {
-      "title": "CONTACT US"
+      "title": "تواصل معنا"
     },
     "formSection": {
       "header": "تواصل معنا",
@@ -206,13 +207,13 @@
       "lastNameError": "يجب ان يحتوي الاسم الاخير علي 3 احرف علي الاقل",
       "phoneLabel": "رقم التليفون",
       "phonePlace": "01234567891",
-      "phoneError": "يجب ان يحتوي رقم الهاتف علي 11 رقم علي الاقل",
+      "phoneNumberError": "يجب ان يحتوي رقم الهاتف علي 11 رقم علي الاقل",
       "emailLabel": "البريد الالكتروني",
       "emailPlace": "example@gmail.com",
       "emailError": "يجب ان يحتوي البريد الالكتروني علي @",
       "messageLabel": "الرسالة",
       "messagePlace": "اترك رسالتك..",
-      "messageError": "Message should be at least 50 characters",
+      "messageError": "يجب أن تكون الرسالة مكونة من 50 حرفًا على الأقل",
       "subjectHeader": "اختر موضوعا؟",
       "opt1": "سؤال عام ",
       "opt2": "طلب كميات كبيرة وطلبات الجملة",
@@ -226,17 +227,18 @@
     }
   },
   "informationMulchAndSoil": {
-    "mulchHeader": "GROWWE MULCH",
-    "mulchDes1": "Hydrate .",
-    "mulchDes2": " Decorate ",
-    "mulchDes3": ". Improve Soil",
-    "soilHeader": "GROWWE PEAT",
-    "soilDes1": "Renewable.",
-    "soilDes2": " Biodegradable.",
-    "soilDes3": "Egyptian",
+    "mulchHeader": "جرووى مالش",
+    "mulchDes1": "رطب .",
+    "mulchDes2": "جمل ",
+    "mulchDes3": ". حسن التربة",
+    "soilHeader": "جرووى بيت",
+    "soilDes1": "متجدد.",
+    "soilDes2": "عضوي.",
+    "soilDes3": "مصري",
     "hero": {
       "soil": "وسط زراعي بديل للتربة",
-      "mulch": "المالش"
+      "mulch": "المالش",
+      "shop": "تسوق الان"
     },
     "secondSection": {
       "soilHeader": "وسط زراعي بديل التربة",
@@ -253,14 +255,14 @@
       "soilBox6": "قوام متماسك",
       "soilMainPra": "مناسب للمزارعين المحترفين",
       "soilDes": "الصوب الزراعية والمشاتل",
-      "mulchBox1": "Water Retention",
-      "mulchBox2": "Weed suppression",
-      "mulchBox3": "Soil Protection",
-      "mulchBox4": "Soil Improvement",
-      "mulchBox5": "Reduce Soil Erosion",
-      "mulchBox6": "Temperature Regulation",
-      "mulchMainPra": "Ideal for Growers and Landscapers",
-      "mulchDes": "Landscaping and Gardening"
+      "mulchBox1": "احتفاظ بالماء",
+      "mulchBox2": "قمع نمو الأعشاب الضارة",
+      "mulchBox3": "حماية التربة",
+      "mulchBox4": "تحسين التربة",
+      "mulchBox5": "تقليل تآكل التربة",
+      "mulchBox6": "تنظيم درجة الحرارة",
+      "mulchMainPra": "مثالي للمزارعين ومصممي الحدائق",
+      "mulchDes": "تنسيق الحدائق والزراعة"
     },
     "thirdSection": {
       "advantages": "مميزات إضافية",
@@ -271,13 +273,13 @@
       "soilDes2": "بفضل حفاظه على تماسك قوامه وعدم التحلل بسهولة؛ يمكن اعادة استخدام جرووي بيت لعدة دورات زراعية مقدما نتائج ممتازة.",
       "soilHeader3": "نمو الجذور",
       "soilDes3": "يوفِّر جرووي بيت التهوية اللازمة، والرطوبة المناسبة، ومقاومة الفطريات التي تحتاجها الجذور للنمو. كما يوفر بيئةً مثاليةً لتشكُّل الجذور، مما يسمح للشعيرات الجذرية بامتصاص الماء والعناصر الغذائية بكفاءة فور إضافتها عبر التسميد.",
-      "mulchDes": "GROWWE mulch enhances soil health, reduces maintenance, and promotes stronger plant growth.",
-      "mulchHeader1": "Moisture Retention",
-      "mulchDes1": "Mulch acts as a barrier between soil and air, significantly reducing water loss through evaporation. This consistent moisture level means less frequent watering is required, promoting a more resilient root system.",
-      "mulchHeader2": "Soil Erosion Control",
-      "mulchDes2": "A layer of mulch absorbs the impact of heavy rain and slows the flow of water across the surface. This prevents topsoil, a vital resource, from being washed away.",
-      "mulchHeader3": "Soil Improvement",
-      "mulchDes3": "As organic mulch decomposes, it adds valuable humus and nutrients to the earth. This process improves soil structure, aeration, and fertility over time, creating a healthier growing environment."
+      "mulchDes": "المالش من GROWWE يعزز صحة التربة، يقلل من الحاجة للصيانة، ويدعم نموًا أقوى للنبات.",
+      "mulchHeader1": "احتفاظ بالرطوبة",
+      "mulchDes1": "يعمل المالش كحاجز بين التربة والهواء، مما يقلل بشكل كبير فقدان الماء عن طريق التبخر. هذا يساعد على الحفاظ على مستوى رطوبة ثابت، ويقلل من الحاجة للري المتكرر، مما يدعم نظام جذور أقوى وأكثر قدرة.",
+      "mulchHeader2": "التحكم في تآكل التربة",
+      "mulchDes2": "طبقة المالش تمتص تأثير الأمطار الغزيرة وتبطئ حركة الماء على السطح. هذا يمنع انجراف الطبقة السطحية من التربة، وهي عنصر أساسي لخصوبتها.",
+      "mulchHeader3": "تحسين التربة",
+      "mulchDes3": "عند تحلل المالش العضوي، يضيف مواد عضوية وعناصر غذائية قيمة للتربة. هذا يحسن بنية التربة وتهويتها وخصوبتها مع مرور الوقت، مما يخلق بيئة نمو أكثر صحة."
     },
     "fourthSection": {
       "soilHeader": "استخدام أفضل وسط زراعي بديل للتربة",
@@ -294,20 +296,274 @@
       "soilFifthBoxDescription": "مستوى pH 5.5 - 6.5 يوفر بيئة مثالية للنمو",
       "soilSixthBoxHeader": "أَضف مياه",
       "soilSixthBoxDescription": "أضف 18 لتر من المياه لكل 5 كجم لتحصل على 50 لتر من التربة",
-      "mulchHeader": "Save Your Soil, Enhance Your Landscape, ",
-      "mulchAttachHeader": "with a Premium Look.",
-      "mulchFirstBoxHeader": "100% Organic",
-      "mulchFirstBoxDescription": "Biodegradable alternative soil.",
-      "mulchSecondBoxHeader": "Soil Aeration",
-      "mulchSecondBoxDescription": "High air circulation for soil.",
-      "mulchThirdBoxHeader": "Water Retention",
-      "mulchThirdBoxDescription": "Absorbs & retains water for longer times.",
-      "mulchFourthBoxHeader": "Weed Suppression",
-      "mulchFourthBoxDescription": "Prevents weed seeds from germinating",
-      "mulchFifthBoxHeader": "Soil Erosion Control",
-      "mulchFifthBoxDescription": "Forms a protective layer.",
-      "mulchSixthBoxHeader": "Less Watering",
-      "mulchSixthBoxDescription": "Reduces watering frequency."
+      "mulchHeader": "حافظ على تربتك، وطور حديقتك،",
+      "mulchAttachHeader": "بمظهر فاخر.",
+      "mulchFirstBoxHeader": "عضوي 100%",
+      "mulchFirstBoxDescription": "تربة بديلة قابلة للتحلل البيولوجي.",
+      "mulchSecondBoxHeader": "تهوية التربة",
+      "mulchSecondBoxDescription": "دورة هواء عالية للتربة.",
+      "mulchThirdBoxHeader": "احتفاظ بالماء",
+      "mulchThirdBoxDescription": "يمتص الماء ويحتفظ به لفترات أطول.",
+      "mulchFourthBoxHeader": "منع الأعشاب الضارة",
+      "mulchFourthBoxDescription": "يمنع بذور الأعشاب من الإنبات.",
+      "mulchFifthBoxHeader": "مكافحة تآكل التربة",
+      "mulchFifthBoxDescription": "يشكل طبقة واقية.",
+      "mulchSixthBoxHeader": "تقليل الري",
+      "mulchSixthBoxDescription": "يقلل من تكرار الري."
+    },
+    "tableSection": {
+      "mulchTable1": {
+        "header": "المواصفات",
+        "headers": {
+          "head1": "المعيار",
+          "head2": "القيمة"
+        },
+        "row1": {
+          "cell1": "المادة",
+          "cell2": "المادة"
+        },
+        "row2": {
+          "cell1": "وزن البالة",
+          "cell2": "22.5 ± 1 كجم"
+        },
+        "row3": {
+          "cell1": "أبعاد البالة",
+          "cell2": "30 × 55 × 110 سم"
+        },
+        "row4": {
+          "cell1": "حجم الجزيئات",
+          "cell2": "25 - 35 مم"
+        },
+        "row5": {
+          "cell1": "محتوى الرطوبة",
+          "cell2": "10 - 15%"
+        },
+        "row6": {
+          "cell1": "الكثافة الحجمية",
+          "cell2": "40 - 50 كجم/م³"
+        },
+        "row7": {
+          "cell1": "الحموضة (pH)",
+          "cell2": "5.5 - 6.5"
+        },
+        "row8": {
+          "cell1": "التوصيل الكهربائي (EC)",
+          "cell2": "0.5 - 0.7 mS/cm"
+        }
+      },
+
+      "soilTable1": {
+        "header": "الخصائص الفنية",
+        "headers": {
+          "head1": "العناصر الكبرى / الصغرى",
+          "head2": "القيمة",
+          "head3": "طريقة الاختبار"
+        },
+        "row1": {
+          "cell1": "EC بعد الغسل (ms/cm)",
+          "cell2": "0.1",
+          "cell3": "NF EN 13038"
+        },
+        "row2": {
+          "cell1": "الحموضة بعد الغسل (pH)",
+          "cell2": "5.6",
+          "cell3": "NF EN 13037"
+        },
+        "row3": {
+          "cell1": "الكثافة الجافة (kg/m3)",
+          "cell2": "107",
+          "cell3": "NF EN 12580"
+        },
+        "row4": {
+          "cell1": "المحتوى العضوي (%)",
+          "cell2": "91.6",
+          "cell3": "NF EN 13039"
+        },
+        "row5": {
+          "cell1": "حجم الجزيئات (mm)",
+          "cell2": "1 – 8",
+          "cell3": "-"
+        },
+        "row6": {
+          "cell1": "محتوى الألياف (%)",
+          "cell2": "2 – 5",
+          "cell3": "-"
+        },
+        "row7": {
+          "cell1": "نسبة التمدد (لتر/كجم)",
+          "cell2": "12 – 15",
+          "cell3": "-"
+        },
+        "row8": {
+          "cell1": "سعة الاحتفاظ بالماء (ml/100gm)",
+          "cell2": "600 - 700",
+          "cell3": "-"
+        },
+        "row9": {
+          "cell1": "استهلاك الأكسجين (mmol O2/kg o.m./h)",
+          "cell2": "7",
+          "cell3": "-"
+        }
+      },
+
+      "soilTable2": {
+        "headers": {
+          "head1": "العناصر الكبرى / الصغرى",
+          "head2": "القيمة",
+          "head3": "طريقة الاختبار"
+        },
+        "row1": {
+          "cell1": "N-NO3- (mg/l)",
+          "cell2": "<0.050",
+          "cell3": "NF EN ISO 11885"
+        },
+        "row2": {
+          "cell1": "P (mg/l)",
+          "cell2": "1.01",
+          "cell3": "NF EN ISO 11732"
+        },
+        "row3": {
+          "cell1": "SO42- (mg/l)",
+          "cell2": "33",
+          "cell3": "NF EN ISO 11885"
+        },
+        "row4": {
+          "cell1": "Cl- (mg/l)",
+          "cell2": "9.7",
+          "cell3": "NF EN ISO 11885"
+        },
+        "row5": {
+          "cell1": "N-NH4+ (mg/l)",
+          "cell2": "0.11",
+          "cell3": "NF EN ISO 11732"
+        },
+        "row6": {
+          "cell1": "K+ (mg/l)",
+          "cell2": "89.26",
+          "cell3": "NF EN ISO 11885"
+        },
+        "row7": {
+          "cell1": "Mg2+ (mg/l)",
+          "cell2": "119.26",
+          "cell3": "NF EN ISO 11885"
+        },
+        "row8": {
+          "cell1": "Ca2+ (mg/l)",
+          "cell2": "183.31",
+          "cell3": "NF EN ISO 11885"
+        },
+        "row9": {
+          "cell1": "Na+ (mg/l)",
+          "cell2": "78.71",
+          "cell3": "NF EN ISO 11885"
+        }
+      },
+
+      "soilTable3": {
+        "headers": {
+          "head1": "العناصر المعدنية النزرة",
+          "head2": "القيمة",
+          "head3": "طريقة الاختبار"
+        },
+        "row1": {
+          "cell1": "الكادميوم (mg/kg)",
+          "cell2": "0.07",
+          "cell3": "NF EN ISO 11885"
+        },
+        "row2": {
+          "cell1": "الكروم (mg/kg)",
+          "cell2": "4.88",
+          "cell3": "NF EN ISO 11885"
+        },
+        "row3": {
+          "cell1": "النحاس (mg/kg)",
+          "cell2": "5.25",
+          "cell3": "NF EN ISO 11885"
+        },
+        "row4": {
+          "cell1": "الزئبق (mg/kg)",
+          "cell2": "<0.11",
+          "cell3": "NF EN ISO 12338"
+        },
+        "row5": {
+          "cell1": "النيكل (mg/kg)",
+          "cell2": "<0.27",
+          "cell3": "NF EN ISO 11885"
+        },
+        "row6": {
+          "cell1": "الرصاص (mg/kg)",
+          "cell2": "<0.53",
+          "cell3": "NF EN ISO 11885"
+        },
+        "row7": {
+          "cell1": "الزنك (mg/kg)",
+          "cell2": "13.6",
+          "cell3": "NF EN ISO 11885"
+        },
+        "row8": {
+          "cell1": "إجمالي (الكروم + النحاس + النيكل + الزنك) (mg/kg)",
+          "cell2": "24",
+          "cell3": "NF EN ISO 11885"
+        }
+      },
+
+      "soilTable4": {
+        "headers": {
+          "head1": "الكائنات الممرضة",
+          "head2": "القيمة",
+          "head3": "طريقة الاختبار"
+        },
+        "row1": {
+          "cell1": "إيشيريشيا كولاي (UFC/g)",
+          "cell2": "<100",
+          "cell3": "NF ISO 16649-2"
+        },
+        "row2": {
+          "cell1": "كلوستريديوم بيرفرنجنز (UFC/g)",
+          "cell2": "<100",
+          "cell3": "NF EN ISO 7937"
+        },
+        "row3": {
+          "cell1": "إنتيروكوكوس (/g)",
+          "cell2": "40",
+          "cell3": "NF EN ISO 7899-1"
+        },
+        "row4": {
+          "cell1": "كائنات دقيقة أخرى",
+          "cell2": "-",
+          "cell3": "-"
+        },
+        "row5": {
+          "cell1": "ليستيريا مونوسيتوجينس",
+          "cell2": "غير مكتشف",
+          "cell3": "NF EN ISO 11290-1"
+        },
+        "row6": {
+          "cell1": "سالمونيلا",
+          "cell2": "غير مكتشف",
+          "cell3": "NF EN ISO 6579-1"
+        },
+        "row7": {
+          "cell1": "بيض الديدان",
+          "cell2": "غياب",
+          "cell3": "FD X33-040"
+        },
+        "row8": {
+          "cell1": "التحليل البيولوجي",
+          "cell2": "غير مكتشف",
+          "cell3": "DNA Multiscan"
+        },
+        "row9": {
+          "cell1": "النيماتودا",
+          "cell2": "غير مكتشف",
+          "cell3": "Nematodes t.b.v. RHP"
+        },
+        "row10": {
+          "cell1": "المبيدات",
+          "cell2": "غير مكتشف",
+          "cell3": "LC-MSMS , GC-MSMS"
+        }
+      }
     }
   },
   "auth": {
@@ -373,6 +629,19 @@
     },
     "forget": {
       "header": ""
+    }
+  },
+
+  "cart": {
+    "heroSection": {
+      "title": "سلة التسوق"
+    },
+    "shoppingSection": {
+      "title": "مرحبًا بك في سلة التسوق الخاصة بك",
+      "return": "متابعة التسوق",
+      "cartHead": "سلة التسوق",
+      "itemsNumber": "لديك {number} عنصر في سلتك",
+      "checkout": "الدفع"
     }
   }
 }
