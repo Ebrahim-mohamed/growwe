@@ -1,4 +1,4 @@
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { FourthSectionBox } from "./FourthSectionBox";
 
 interface contentType {
@@ -9,11 +9,16 @@ interface contentType {
 }
 export function FourthSection(content: contentType) {
   const t = useTranslations("informationMulchAndSoil.fourthSection");
+  const locale = useLocale();
   return (
     <div className="p-[var(--section-Padding)] bg-[#FCF7F1]  overflow-hidden">
       {content.header === "soilHeader" ? (
         <div className="relative text-[#387023] text-[3rem] font-black">
-          <h2 className="absolute -top-[80%] left-[18%]">
+          <h2
+            className={`absolute -top-[80%] ${
+              locale === "en" ? " left-[18%] " : " right-[18%] "
+            }`}
+          >
             {t(content.attachedHeader)}
           </h2>
           <h1 className=" mb-20 text-center">
@@ -27,7 +32,11 @@ export function FourthSection(content: contentType) {
       ) : (
         <div className="relative text-[#387023] text-[3rem] font-black">
           <h2 className="text-center">{t(content.header)}</h2>
-          <h1 className=" mb-20 ml-[45rem] text-center">
+          <h1
+            className={` mb-20 ${
+              locale === "en" ? " ml-[45rem] " : " mr-[45rem] "
+            } text-center`}
+          >
             {t.rich(content.attachedHeader, {
               second: (chunk) => (
                 <span className="italic text-[#E5AC71]">{chunk}</span>

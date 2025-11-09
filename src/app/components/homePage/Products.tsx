@@ -1,4 +1,4 @@
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { MulchAndSoilProducts } from "./MulchAndSoilProducts";
 import { mirza } from "@/app/[locale]/layout";
 const products = [
@@ -60,11 +60,16 @@ const products = [
 
 export function Products() {
   const t = useTranslations("homePage.productsSection");
+  const locale = useLocale();
   return (
     <div className="p-[var(--section-Padding)] relative">
       {/* Section Header */}
       <div className="flex flex-col justify-center items-center gap-1 w-full mb-[2rem]">
-        <h1 className={`text-black text-[4rem] font-black  ${mirza.className}`}>
+        <h1
+          className={`text-black ${
+            locale === "en" ? " text-[4rem] " : " text-[5rem] "
+          } font-black  ${mirza.className}`}
+        >
           {t("ProductTitle")}
         </h1>
         <p className="text-black text-[1rem] font-medium">

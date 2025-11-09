@@ -1,20 +1,27 @@
-import { Inter, Mirza } from "next/font/google";
+import { Inter, Mirza, Tajawal } from "next/font/google";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 
-// Base font for body text
+// English font
 const inter = Inter({
   subsets: ["latin"],
   display: "swap",
 });
 
-// Font for Arabic or stylized titles
+// Arabic font
+const tajawal = Tajawal({
+  subsets: ["arabic", "latin"],
+  weight: ["300", "400", "500", "700"],
+  display: "swap",
+});
+
+// Optional decorative title font
 const mirza = Mirza({
   subsets: ["arabic", "latin"],
-  weight: ["400", "500", "700"], // include any weights you need
+  weight: ["400", "500", "700"],
   display: "swap",
 });
 
@@ -35,7 +42,7 @@ export default async function LocaleLayout({
     <html
       lang={locale}
       dir={locale === "ar" ? "rtl" : "ltr"}
-      className={inter.className}
+      className={locale === "ar" ? tajawal.className : inter.className}
     >
       <body className="relative overflow-x-hidden">
         <NextIntlClientProvider locale={locale}>
@@ -48,5 +55,4 @@ export default async function LocaleLayout({
   );
 }
 
-// ✅ Export the Mirza className so you can use it anywhere
 export { mirza };

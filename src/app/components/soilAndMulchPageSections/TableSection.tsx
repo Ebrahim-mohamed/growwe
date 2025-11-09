@@ -25,11 +25,7 @@ export function TableSection({
 
   return (
     <div className="w-full">
-      <Table
-        className={`w-full table-fixed border-separate border-spacing-2 ${
-          type === "mulch" ? "px-[12rem]" : ""
-        }`}
-      >
+      <Table className={`w-full table-fixed border-separate border-spacing-2 `}>
         {/* Column Widths (this is what makes the first column larger) */}
         <colgroup>
           {isSoil ? (

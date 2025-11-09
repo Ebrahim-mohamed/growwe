@@ -1,6 +1,7 @@
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import { SmarterBox } from "./SmarterBox";
+import Link from "next/link";
 
 const smarterBox = [
   {
@@ -39,6 +40,7 @@ const smarterBox2 = [
 
 export function Smarter() {
   const t = useTranslations("homePage.smartSection");
+  const locale = useLocale();
   return (
     <div className="p-[var(--section-Padding)] bg-[#FCF7F1] relative overflow-hidden">
       <Image
@@ -54,6 +56,12 @@ export function Smarter() {
             <span className="text-[#E5AC71] italic">{chunk}</span>
           ),
         })}
+        <Link
+          href={`/${locale}/soilless-growing`}
+          className="text-[1.5rem] text-[#5B5757] font-normal"
+        >
+          {t("know")}
+        </Link>
       </h1>
       <div className="flex flex-col gap-[2rem] items-center justify-center">
         <div className="flex  gap-[1rem] justify-start items-start w-full">

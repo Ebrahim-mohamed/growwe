@@ -1,4 +1,4 @@
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import { PartTowInSecondSection } from "./PartTowInSecondSection";
 
@@ -22,9 +22,14 @@ export function SecondSection({
   secondBoxes: string[];
 }) {
   const t = useTranslations("informationMulchAndSoil.secondSection");
+  const locale = useLocale();
   return (
     <div className="p-[var(--section-Padding)]   text-black w-full">
-      <h1 className="text-[4rem] font-bold  text-[#E5AC71] max-w-[35rem]">
+      <h1
+        className={`text-[4rem] font-bold  text-[#E5AC71] ${
+          locale == "en" ? " max-w-[35rem] " : " max-w-[28rem] "
+        }`}
+      >
         {t(title)}
       </h1>
       <div>

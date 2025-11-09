@@ -75,10 +75,12 @@ export default function SoillessGrowing() {
         boxes1={soilBox}
         boxes2={soilBox2}
       />
-      <div className="w-full p-[var(--section-Padding)] flex flex-col gap-[2rem] items-center justify-center bg-[#F8F9FB] relative">
+      <div className="w-full py-[var(--section-Padding)] px-[15rem] flex flex-col gap-[2rem] items-center justify-center bg-[#F8F9FB] relative">
         <Link
           href={locale == "en" ? "/peat-en.pdf" : "/peat-ar.pdf"}
-          className="w-[4rem] aspect-square absolute top-[5rem] right-[5rem] cursor-pointer"
+          className={`w-[4rem] aspect-square absolute top-[5rem] ${
+            locale === "en" ? " right-[17rem] " : " left-[17rem] "
+          } cursor-pointer`}
           download
         >
           <Image

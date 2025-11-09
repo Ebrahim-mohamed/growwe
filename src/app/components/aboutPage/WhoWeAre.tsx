@@ -7,15 +7,27 @@ export function WhoWeAre() {
   const locale = useLocale();
   return (
     <div className="flex flex-col gap-[1rem] p-[var(--section-Padding)] relative">
-      <Image
-        alt="strawberry image"
-        src="/about/strawberry.png"
-        width={400}
-        height={400}
-        className={`absolute top-[18%] ${
-          locale === "en" ? " right-0 " : " left-0 "
-        } w-[40rem] max-[380px]:hidden`}
-      />
+      {locale === "en" ? (
+        <Image
+          alt="strawberry image"
+          src="/about/strawberry.png"
+          width={400}
+          height={400}
+          className={`absolute top-[18%] ${
+            locale === "en" ? " right-0 " : " left-0 "
+          } w-[40rem] max-[380px]:hidden`}
+        />
+      ) : (
+        <Image
+          alt="strawberry image"
+          src="/about/strawberry1.png"
+          width={400}
+          height={400}
+          className={`absolute top-[18%] ${
+            locale === "en" ? " right-0 " : " left-0 "
+          } w-[22rem] max-[380px]:hidden`}
+        />
+      )}
       <div className="flex w-full items-center justify-between mb-[1.5rem] max-[550px]:flex-col max-[550px]:gap-[1rem]">
         <div className="text-[2.5rem] max-w-[50%] max-[550px]:max-w-full">
           <h1 className="text-[#E5AC71] font-bold">{t("whoHeader")}</h1>

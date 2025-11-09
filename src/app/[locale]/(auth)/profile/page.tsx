@@ -1,6 +1,7 @@
 import { MostUseHeader } from "@/app/components/MostUseHeader";
 import { Hero } from "@/app/components/profilePage/HeroSection";
 import { PersonalData } from "@/app/components/profilePage/PersonalData";
+import { ProfileTabs } from "@/app/components/profilePage/ProfileTabs";
 import { useTranslations } from "next-intl";
 
 export default function Profile() {
@@ -8,7 +9,7 @@ export default function Profile() {
   return (
     <div>
       <Hero />
-      <div className="p-[var(--section-Padding)]">
+      <div className="pt-[var(--section-Padding)] px-[var(--section-Padding)]">
         <MostUseHeader header={t("header")} des={t("des")} isNOtWhite />
       </div>
       <PersonalData
@@ -17,6 +18,7 @@ export default function Profile() {
         name="ebrahim"
         number="01099507353"
       />
+      <ProfileTabs />
     </div>
   );
 }
