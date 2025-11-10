@@ -48,19 +48,18 @@ export function NavTab({
           <DropdownMenuContent
             align={locale === "en" ? "start" : "end"}
             sideOffset={8}
+            style={{ direction: locale === "ar" ? "rtl" : "ltr" }}
             className="bg-white shadow-md rounded-lg p-2"
           >
             <DropdownMenuItem
-              dir={locale == "en" ? " ltr " : " rtl "}
               onClick={() => handleNavigate(`/${locale}/soilless-growing`)}
-              className="hover:cursor-pointer max-[800px]:text-[1.5rem] text-[1.2rem] font-bold hover:underline text-center"
+              className="hover:cursor-pointer max-[800px]:text-[1.5rem] text-[1.2rem] font-bold hover:underline !text-right"
             >
               {aboutT("peat")}
             </DropdownMenuItem>
             <DropdownMenuItem
-              dir={locale == "en" ? " ltr " : " rtl "}
               onClick={() => handleNavigate(`/${locale}/mulch`)}
-              className="hover:cursor-pointer max-[800px]:text-[1.5rem] text-[1.2rem] font-bold hover:underline text-center"
+              className="hover:cursor-pointer max-[800px]:text-[1.5rem] text-[1.2rem] font-bold hover:underline !text-right"
             >
               {aboutT("mulch")}
             </DropdownMenuItem>
