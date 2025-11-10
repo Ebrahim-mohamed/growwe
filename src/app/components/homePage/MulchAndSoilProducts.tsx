@@ -47,7 +47,9 @@ export function MulchAndSoilProducts(content: productSectionType) {
       <div className="flex items-end  gap-2">
         <h2
           className={`text-[#E5AC71] text-[2.5rem] font-black min-[500px]:flex items-end  ${
-            locale === "en" ? " ml-[12rem] " : " mr-[12rem] "
+            locale === "en"
+              ? " min-[600px]:ml-[12rem] "
+              : " min-[600px]:mr-[12rem] "
           }`}
         >
           {t(content.header)}
@@ -59,7 +61,7 @@ export function MulchAndSoilProducts(content: productSectionType) {
           </Link>
         </h2>
       </div>
-      <div className="mt-[1.5rem] relative px-[10rem]">
+      <div className="mt-[1.5rem] relative min-[600px]:px-[10rem] ">
         <Swiper
           modules={[Navigation, Pagination, Scrollbar, A11y]}
           spaceBetween={-15}
