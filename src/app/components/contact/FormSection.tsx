@@ -40,8 +40,8 @@ export function FormSection() {
   return (
     <div className="w-full p-[var(--section-Padding)] flex items-center flex-col justify-center gap-[1.5rem]">
       <MostUseHeader header={t("header")} des={t("des")} />
-      <div className="flex items-stretch justify-between w-full rounded-[0.6rem] shadow-[0_0_60px_30px_rgba(0,0,0,0.03)] gap-[3rem] overflow-hidden py-[1.5rem] pl-[1.5rem] pr-[5rem] max-[550px]:flex-col">
-        <div className="w-[45%] bg-[#426B1F] text-white py-[1.5rem] px-[2.2rem] rounded-[0.6rem] max-[550px]:w-full">
+      <div className="flex items-stretch justify-between w-full rounded-[0.6rem] shadow-[0_0_60px_30px_rgba(0,0,0,0.03)] gap-[3rem] overflow-hidden py-[1.5rem] pl-[1.5rem] pr-[5rem] max-[550px]:pr-[1.5rem] max-[550px]:flex-col max-[550px]:items-center ">
+        <div className="w-[45%]  bg-[#426B1F] text-white py-[1.5rem] px-[2.2rem] rounded-[0.6rem] max-[550px]:w-full">
           <div className="mb-[4rem] ">
             <h2 className="text-[2.5rem] font-semibold">
               {t("contactInfoHeader")}
@@ -99,7 +99,7 @@ export function FormSection() {
               <h1 className="text-black text-[1.1rem] font-semibold mb-[1.2rem]">
                 {t("subjectHeader")}
               </h1>
-              <div className="flex items-center justify-between w-full">
+              <div className="flex items-center justify-between w-full max-[550px]:flex-col max-[550px]:items-start max-[550px]:gap-[1rem]">
                 {options.map((opt) => (
                   <RadioDiv
                     value={t(opt)}

@@ -5,7 +5,7 @@ export function Hero() {
   const t = useTranslations("about.heroSection");
   const locale = useLocale();
   return (
-    <div className="bg-[url('/about/hero.png')] bg-cover w-dvw h-dvh p-[var(--section-Padding)]  flex items-end justify-start relative">
+    <div className="bg-[url('/about/hero.png')] bg-cover w-dvw h-dvh p-[var(--section-Padding)]  flex items-end justify-start relative bg-center">
       <Image
         alt="leaf image"
         src="/about/leaves.png"

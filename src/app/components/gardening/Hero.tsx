@@ -5,10 +5,10 @@ export function Hero() {
   const t = useTranslations("gardening.heroSection");
   const locale = useLocale();
   return (
-    <div className="bg-[url('/gardening/hero.png')] bg-cover w-dvw h-dvh p-[var(--section-Padding)]  flex items-end justify-start">
-      <div className="flex items-end justify-between max-[500px]:flex-col max-[500px]:gap-[3rem] w-full -mb-[1.5rem]">
-        <div className={`${mirza.className} `}>
-          <h1 className="text-[5rem] text-[#E5AC71] font-bold -mb-[1rem]">
+    <div className="bg-[url('/gardening/hero.png')] bg-cover w-dvw h-dvh p-[var(--section-Padding)]  flex items-end max-[500px]:items-center justify-between ">
+      <div className="flex items-end justify-between max-[500px]:flex-col max-[500px]:items-center max-[500px]:gap-[3rem] w-full -mb-[1.5rem]">
+        <div className={`${mirza.className} max-[500px]:text-center`}>
+          <h1 className="text-[5rem] text-[#E5AC71] font-bold -mb-[1rem] ">
             {t("title")}
           </h1>
           <div className="font-medium text-[3.5rem] text-white">

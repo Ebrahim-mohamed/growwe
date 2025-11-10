@@ -6,12 +6,12 @@ export function Hero({ title }: { title: string }) {
   const locale = useLocale();
   return (
     <div
-      className=" bg-cover w-dvw h-dvh p-[var(--section-Padding)]  flex items-end justify-start relative"
+      className=" bg-cover w-dvw h-dvh p-[var(--section-Padding)]  flex items-end max-[500px]:items-center justify-between  relative"
       style={{ backgroundImage: `url(/mulchAndSoil/${title}-hero.png)` }}
     >
-      <div className="flex items-end justify-between max-[500px]:flex-col max-[500px]:gap-[3rem] w-full -mb-[1.5rem]">
+      <div className="flex items-end justify-between max-[500px]:flex-col max-[500px]:items-center max-[500px]:gap-[3rem] w-full -mb-[1.5rem]">
         <p
-          className={` text-[5rem] font-black text-white ${mirza.className} mb-[-1rem]`}
+          className={` text-[5rem] font-black text-white ${mirza.className} mb-[-1rem] max-[500px]:text-center`}
         >
           {t(title)}
         </p>
