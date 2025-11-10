@@ -12,7 +12,7 @@ export function ProductBox(product: productType) {
           src={product.img}
           width={500}
           height={300}
-          className="w-[32rem]"
+          className="w-full"
         />
       </div>
       <div className=" p-[1rem]">
