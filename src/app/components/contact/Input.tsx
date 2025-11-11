@@ -18,7 +18,7 @@ export function Input({
       <label
         className={`text-black ${
           locale === "en"
-            ? " placeholder:text-[1.1rem] "
+            ? " placeholder:text-[1.5rem] "
             : " placeholder:text-[1.3rem] "
         } font-medium`}
       >
@@ -30,7 +30,7 @@ export function Input({
           placeholder={place}
           className={`placeholder:font-normal ${
             locale === "en"
-              ? " placeholder:text-[1.1rem] "
+              ? " placeholder:text-[1.5rem] "
               : " placeholder:text-[1.3rem] "
           } placeholder:text-[#8D8D8D] w-full outline-0 focus:outline-0 max-h-[10rem] min-h-[2rem]`}
         />
@@ -41,7 +41,7 @@ export function Input({
           placeholder={place}
           className={`placeholder:font-normal ${
             locale === "en"
-              ? " placeholder:text-[1.1rem] "
+              ? " placeholder:text-[1.5rem] "
               : " placeholder:text-[1.3rem] "
           } placeholder:text-[#8D8D8D] w-full outline-0 focus:outline-0`}
         />

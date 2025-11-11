@@ -1,6 +1,6 @@
 import { useLocale, useTranslations } from "next-intl";
 import Link from "next/link";
-import { mirza } from "@/app/[locale]/layout";
+
 export function Hero({ title }: { title: string }) {
   const t = useTranslations("informationMulchAndSoil.hero");
   const locale = useLocale();
@@ -11,7 +11,7 @@ export function Hero({ title }: { title: string }) {
     >
       <div className="flex items-end justify-between max-[500px]:flex-col max-[500px]:items-center max-[500px]:gap-[3rem] w-full -mb-[1.5rem]">
         <p
-          className={` text-[5rem] font-black text-white ${mirza.className} mb-[-1rem] max-[500px]:text-center`}
+          className={` text-[5rem] font-black text-white font-[ClassicoURW] mb-[-1rem] max-[500px]:text-center`}
         >
           {t(title)}
         </p>

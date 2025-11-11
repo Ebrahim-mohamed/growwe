@@ -1,4 +1,4 @@
-import { Certification } from "@/app/components/aboutPage/Certitifiction";
+import { EndSection } from "@/app/components/aboutPage/EndSection";
 import { Hero } from "@/app/components/aboutPage/hero";
 import { VideoSection } from "@/app/components/aboutPage/VideoSection";
 import { WhoWeAre } from "@/app/components/aboutPage/WhoWeAre";
@@ -9,7 +9,7 @@ export default function About() {
       <Hero />
       <WhoWeAre />
       <VideoSection />
-      <Certification />
+      <EndSection />
     </div>
   );
 }

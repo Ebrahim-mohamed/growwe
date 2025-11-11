@@ -1,4 +1,4 @@
-import { Inter, Mirza, Tajawal } from "next/font/google";
+import { Inter, Tajawal } from "next/font/google";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
@@ -19,11 +19,6 @@ const tajawal = Tajawal({
 });
 
 // Optional decorative title font
-const mirza = Mirza({
-  subsets: ["arabic", "latin"],
-  weight: ["400", "500", "700"],
-  display: "swap",
-});
 
 export default async function LocaleLayout({
   children,
@@ -54,5 +49,3 @@ export default async function LocaleLayout({
     </html>
   );
 }
-
-export { mirza };

@@ -40,22 +40,10 @@ export function FormSection() {
   return (
     <div className="w-full p-[var(--section-Padding)] flex items-center flex-col justify-center gap-[1.5rem]">
       <MostUseHeader header={t("header")} des={t("des")} />
-      <div className="flex items-stretch justify-between w-full rounded-[0.6rem] shadow-[0_0_60px_30px_rgba(0,0,0,0.03)] gap-[3rem] overflow-hidden py-[1.5rem] pl-[1.5rem] pr-[5rem] max-[550px]:pr-[1.5rem] max-[550px]:flex-col max-[550px]:items-center ">
-        <div className="w-[45%]  bg-[#426B1F] text-white py-[1.5rem] px-[2.2rem] rounded-[0.6rem] max-[550px]:w-full">
-          <div className="mb-[4rem] ">
-            <h2 className="text-[2.5rem] font-semibold">
-              {t("contactInfoHeader")}
-            </h2>
-            <p className="text-[#C9C9C9] text-[1.5rem] font-normal">
-              {t("contactInfoDes")}
-            </p>
-          </div>
-          <div className="flex flex-col gap-[3rem]">
-            {info.map((inf) => (
-              <InfoBox icon={inf} name={t(inf)} key={inf} />
-            ))}
-          </div>
-        </div>
+      <div className="flex items-stretch justify-between w-[60%] rounded-[0.6rem] shadow-[0_0_60px_30px_rgba(0,0,0,0.03)] gap-[3rem] overflow-hidden py-[1.5rem] pl-[1.5rem] pr-[5rem] max-[550px]:pr-[1.5rem] max-[550px]:flex-col max-[550px]:items-center ">
+        {/* <div className="w-[45%]  bg-[#426B1F] text-white py-[1.5rem] px-[2.2rem] rounded-[0.6rem] max-[550px]:w-full flex items-center justify-center">
+          <p className="text-[5rem] italic font-[ClassicoURW]">{t("say")}</p>
+        </div> */}
         <div className="flex-1 p-[1.5rem]">
           <form
             onSubmit={handleSubmit(submit)}
@@ -95,7 +83,7 @@ export function FormSection() {
                 place={t("phonePlace")}
               />
             </div>
-            <div className="relative">
+            {/* <div className="relative">
               <h1 className="text-black text-[1.1rem] font-semibold mb-[1.2rem]">
                 {t("subjectHeader")}
               </h1>
@@ -113,7 +101,7 @@ export function FormSection() {
                   {t(errors.subject?.message)}
                 </p>
               )}
-            </div>
+            </div> */}
             <Input
               label={t("messageLabel")}
               {...register("message")}
@@ -133,7 +121,7 @@ export function FormSection() {
           </form>
         </div>
       </div>
-      <p className="text-black text-[1.5rem]">{t("footer")}</p>
+      <p className="text-black text-[1.3rem]">{t("footer")}</p>
     </div>
   );
 }

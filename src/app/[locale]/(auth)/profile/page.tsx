@@ -10,7 +10,7 @@ export default function Profile() {
     <div>
       <Hero />
       <div className="pt-[var(--section-Padding)] px-[var(--section-Padding)]">
-        <MostUseHeader header={t("header")} des={t("des")} isNOtWhite />
+        <MostUseHeader header={t("header")} des={t("des")} />
       </div>
       <PersonalData
         email="ebmo3112002@gmail.com"

@@ -1,6 +1,9 @@
+"use client";
+
 import { useLocale, useTranslations } from "next-intl";
 import { MulchAndSoilProducts } from "./MulchAndSoilProducts";
-import { mirza } from "@/app/[locale]/layout";
+import { useEffect } from "react";
+
 const products = [
   {
     header: "Soil Alternative- 5 Kg Block",
@@ -61,31 +64,50 @@ const products = [
 export function Products() {
   const t = useTranslations("homePage.productsSection");
   const locale = useLocale();
+
+  useEffect(() => {
+    async function checkIfEgypt() {
+      try {
+        const res = await fetch("https://ipapi.co/json/");
+        const data = await res.json();
+        console.log(data);
+        const isEgypt = data.country_name === "Egypt";
+
+        console.log("Is user in Egypt?", isEgypt);
+      } catch (error) {
+        console.log("Failed to detect location");
+      }
+    }
+
+    checkIfEgypt();
+  }, []);
+
   return (
     <div className="p-[var(--section-Padding)] relative">
       {/* Section Header */}
-      <div className="flex flex-col justify-center items-center gap-1 w-full mb-[2rem]">
+      <div className="flex flex-col justify-center items-center w-full mb-[2rem]">
         <h1
           className={`text-black ${
             locale === "en" ? " text-[4rem] " : " text-[5rem] "
-          } font-black  ${mirza.className}`}
+          } font-black font-[ClassicoURW]`}
         >
           {t("ProductTitle")}
         </h1>
-        <p className="text-black text-[1rem] font-medium">
+        <p className="text-black text-[1.5rem] font-medium">
           {t("renewable")}.{t("biodegradable")}.{t("egyptian")}.
         </p>
         <div className="bg-[#E6E6E6] w-full h-[0.1rem] mt-[0.5rem]" />
       </div>
-      {/* <SoilProducts />
-      <MulchProducts /> */}
+
       <MulchAndSoilProducts
         header="soil"
         link="link"
         to="soilless-growing"
         products={products}
       />
+
       <div className="bg-[#E6E6E6] w-full h-[0.1rem] my-[2rem]" />
+
       <MulchAndSoilProducts
         header="mulch"
         link="link"

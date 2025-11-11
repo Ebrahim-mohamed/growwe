@@ -26,6 +26,19 @@ html {
   }
 }
 
+@font-face {
+  font-family: "ClassicoURW";
+  src: url("/fonts/URWClassico-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ClassicoURW";
+  src: url("/fonts/URWClassico-Bold.ttf") format("truetype");
+  font-weight: 700; /* bold */
+  font-style: normal;
+}
+/* font-[ClassicoURW] */
 :root {
   --hero-pad-rl: 1rem;
   --hero-pad-tb: 4rem;

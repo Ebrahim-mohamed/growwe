@@ -1,6 +1,5 @@
 import { useTranslations } from "next-intl";
-import Image from "next/image";
-import { mirza } from "@/app/[locale]/layout";
+
 export function Hero() {
   const t = useTranslations("contact.heroSection");
   return (
@@ -13,7 +12,7 @@ export function Hero() {
         className="w-[70rem] absolute top-0 left-0 z-30"
       /> */}
       <p
-        className={` text-[5rem] font-black text-white leading-[6.75rem] ${mirza.className} `}
+        className={` text-[5rem] font-black text-white leading-[6.75rem] font-[ClassicoURW] `}
       >
         {t("title")}
       </p>

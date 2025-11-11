@@ -1,4 +1,3 @@
-import { mirza } from "@/app/[locale]/layout";
 export function MostUseHeader({
   header,
   des,
@@ -9,11 +8,9 @@ export function MostUseHeader({
   isNOtWhite?: boolean;
 }) {
   return (
-    <div className="flex flex-col items-center justify-center ">
+    <div className="flex flex-col items-center justify-center font-[ClassicoURW]">
       <h1
         className={` font-bold mb-[-0.5rem] ${
-          header !== "Calculator" && mirza.className
-        } ${
           header === "Calculator" || isNOtWhite
             ? " text-[#E5AC71] text-[4.5rem] "
             : " text-black text-[3.5rem] "

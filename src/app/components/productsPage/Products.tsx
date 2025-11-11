@@ -47,7 +47,14 @@ export function ProductsSection() {
   const t = useTranslations("products.heroSection");
   return (
     <div className="p-[var(--section-Padding)] pb-0">
-      <MostUseHeader header={t("title")} />
+      <MostUseHeader header={t("products")} />
+      <div className="flex items-center gap-[0.1rem] justify-center font-medium text-[1.5rem] text-black max-[1200px]:text-[3rem] max-[450px]:text-[2.5rem] max-[400px]:text-[2rem]">
+        <p>{t("premium")}</p>
+
+        <p>{t("efficient")}</p>
+
+        <p>{t("cost")}</p>
+      </div>
       <div className="flex flex-col w-full mt-[3rem] gap-[1rem]">
         {products.map((product, index) => (
           <ProductCard

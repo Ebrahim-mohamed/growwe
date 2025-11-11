@@ -25,9 +25,9 @@ export function Calculator() {
     let calculatedBags = 0;
 
     if (type === "mulch") {
-      calculatedBags = (L * W * D * 121) / 35;
+      calculatedBags = (L * W * D * 121) / 100;
     } else if (type === "peat") {
-      calculatedBags = (L * W * D * 75) / 5;
+      calculatedBags = (L * W * D * 75) / 500;
     }
 
     setResult(Math.ceil(calculatedBags));
@@ -82,16 +82,32 @@ export function Calculator() {
 
         <div className="flex flex-1 justify-between gap-[2.5rem] flex-wrap mb-[2.1rem]">
           {[
-            { label: t("width"), value: width, setter: setWidth },
-            { label: t("length"), value: length, setter: setLength },
-            { label: t("depth"), value: depth, setter: setDepth },
+            {
+              label: t("width"),
+              unit: t("meterUnit"),
+              value: width,
+              setter: setWidth,
+            },
+            {
+              label: t("length"),
+              unit: t("meterUnit"),
+              value: length,
+              setter: setLength,
+            },
+            {
+              label: t("depth"),
+              unit: t("centiUnit"),
+              value: depth,
+              setter: setDepth,
+            },
           ].map((item, idx) => (
             <div
               key={idx}
               className="flex flex-1 flex-col items-center justify-center gap-[1rem] min-w-[200px]"
             >
               <h1 className="text-[2rem] font-normal text-black">
-                {item.label}
+                {item.label}{" "}
+                <span className="text-[1.5rem] text-[#777]">{item.unit}</span>
               </h1>
               <input
                 type="number"
@@ -99,16 +115,16 @@ export function Calculator() {
                 onChange={(e) =>
                   item.setter(e.target.value ? Number(e.target.value) : "")
                 }
-                className="w-full border-[2px] border-[#E6E7ED] rounded-[1.25rem] text-[1.5rem] font-medium py-[0.5rem] px-[1rem] outline-0"
+                className="w-full border-[2px] min-h-[5rem]  border-[#E6E7ED] rounded-[1.25rem] text-[1.5rem] font-medium py-[0.5rem] px-[1rem] outline-0"
               />
             </div>
           ))}
 
           <div className="flex flex-1 flex-col items-center justify-center gap-[1rem] min-w-[200px]">
             <h1 className="text-[2rem] font-normal text-black">
-              {t("numberOfBags")}
+              {type === "mulch" ? t("numberOfBags") : t("numberOfMeter")}
             </h1>
-            <div className="w-full bg-[#F8FFF5] border-[2px] border-[#E6E7ED] rounded-[1.25rem] text-[1.5rem] font-medium py-[0.5rem] px-[1rem] text-center">
+            <div className="w-full bg-[#F8FFF5] min-h-[5rem] flex items-center justify-center border-[2px] border-[#E6E7ED] rounded-[1.25rem] text-[1.5rem] font-medium py-[0.5rem] px-[1rem] text-center">
               {result}
             </div>
           </div>

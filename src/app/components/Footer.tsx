@@ -7,12 +7,12 @@ const SocialLinks = ["facebook", "instagram", "tiktok", "linkedin", "youtube"];
 export function Footer() {
   const t = useTranslations("footer");
   return (
-    <div className=" flex flex-col gap-[1rem] p-10 bg-[var(--green-color)] text-white">
+    <div className=" flex flex-col gap-[1rem] px-10 py-18 bg-[var(--green-color)] text-white">
       <div>
         <Image
           alt="logo image"
           src="/logo.png"
-          className="w-[15rem] mb-[1rem]"
+          className="w-[13rem] mb-[1rem]"
           width={300}
           height={300}
         />
@@ -31,22 +31,12 @@ export function Footer() {
             ))}
           </div>
         </div>
-        <div>
-          <h2 className="text-[1.5rem] font-bold mb-[0.8rem]">
-            {t("contact")}
-          </h2>
-          <div className="text-[1rem] font-normal">
-            <p>{t("email")}</p>
-            <p>{t("phone1")}</p>
-            <p>{t("phone2")}</p>
+        <div className="flex  justify-end items-center">
+          <div className="flex items-center justify-center gap-[2rem]">
+            {SocialLinks.map((link) => (
+              <SocialIcon img={link} key={link} to="#" />
+            ))}
           </div>
-        </div>
-      </div>
-      <div className="flex w-full justify-end items-center">
-        <div className="flex items-center justify-center gap-[2rem]">
-          {SocialLinks.map((link) => (
-            <SocialIcon img={link} key={link} to="#" />
-          ))}
         </div>
       </div>
       <div className="flex items-center justify-between w-full font-normal">

@@ -36,7 +36,7 @@ export function Header() {
             width={100}
             height={100}
             priority
-            className="w-[18rem]"
+            className="w-[15rem]"
           />
         </Link>
       </div>

@@ -4,13 +4,15 @@ export function MissionAndVisionCard({
   des,
 }: {
   header: string;
-  secHeader: string;
+  secHeader?: string;
   des: string;
 }) {
   return (
     <div
       className={`flex flex-col gap-[0.5rem] max-w-[60%] max-[380px]:max-w-full ${
-        header === "OUR MISSION" ? " mb-[4rem] " : "  "
+        header === "OUR MISSION" || header === "CIRCULAR BIOECONOMY"
+          ? " mb-[4rem] "
+          : "  "
       } ${header === "OUR VISION" ? " max-[550px]:max-w-full " : "  "}`}
     >
       <h1 className="text-[2.5rem] text-[#E5AC71] font-bold">{header}</h1>

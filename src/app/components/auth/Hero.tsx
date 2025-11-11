@@ -11,10 +11,10 @@ export function Hero({
 }) {
   return (
     <div
-      className=" bg-cover w-dvw h-dvh p-[var(--section-Padding)]  flex items-end justify-start relative overflow-hidden"
+      className=" bg-cover w-dvw h-dvh p-[var(--section-Padding)]  flex items-end justify-start relative overflow-hidden "
       style={{ backgroundImage: `url(/auth/${bg}.png)` }}
     >
-      <p className=" text-[5rem] font-black text-white leading-[6.75rem]">
+      <p className=" text-[5rem] font-black text-white leading-[6.75rem] font-[ClassicoURW]">
         {title}
       </p>
     </div>

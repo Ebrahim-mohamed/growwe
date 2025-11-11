@@ -11,13 +11,13 @@
     }
   },
   "footer": {
-    "p": "GROWWE is a biodegradable soil alternative produced in Egypt from natural resources. GROWWE is a a sustainable eco-friendly solution developed with British technology by a license from Scaletek UK. GROWWE utilizes natural organic resources to contribute to organic agriculture while enhancing soil quality for horticulture, landscaping and farming.",
+    "p": "GROWWE is dedicated to producing high-quality agricultural products from rich natural resources. GROWWE provides sustainable eco-friendly solutions developed with British technology by a license from Scaletek UK.",
     "link": "Links",
     "about": "About Us",
     "products": "Products",
     "gardening": "Gardening Guide",
     "contact": "Contact Us",
-    "email": "hello@growwe.com",
+    "email": "info@growwe.com",
     "phone1": "+2 (02) 2488 0000",
     "phone2": "+2 (010) 1200 3000",
     "copyRight": "© 2025 GROWWE. All rights reserved.",
@@ -31,13 +31,13 @@
       "ProductTitle": "FEATURED PRODUCTS",
       "renewable": "Renewable",
       "biodegradable": "Biodegradable",
-      "egyptian": "Egyptian",
-      "soil": "Soilless Growing Medium",
+      "egyptian": "Peat-Free",
+      "soil": "Soilless Growing Media",
       "mulch": "Mulch",
       "link": "know more"
     },
     "smartSection": {
-      "smarterTitle": "The <second>Smarter</second> Growing Medium",
+      "smarterTitle": "The <second>Smarter</second> Growing Media",
       "smartFirstBoxHeader": "100% Organic",
       "smartFirstBoxDescription": "Biodegradable alternative soil.",
       "smartSecondBoxHeader": "Soil Aeration",
@@ -89,37 +89,34 @@
     },
     "whoWeAreSection": {
       "whoHeader": "WHO WE ARE",
-      "whoDes": "We are dedicated to producing high-quality alternative soil from Egypt’s rich natural resources.",
+      "whoDes": "We are dedicated to producing high-quality alternative soil from rich natural resources.",
       "why": "WHY GROWWE?",
-      "organic": "100% Organic",
-      "sustainable": "100% Sustainable",
-      "egyptian": "100% Egyptian",
+      "organic": "100% Innovative",
+      "sustainable": "100% Organic",
+      "egyptian": "100% Sustainable",
       "missionHeader": "OUR MISSION",
       "missionSecHeader": "ECO-Friendly, Sustainable, Organic Growing Media",
       "missionDes": "We aim to provide eco-friendly, sustainable growing media that empowers farmers, gardeners, and agricultural businesses to grow premium quality plants while protecting the environment.",
       "visionHeader": "OUR VISION",
       "visionSecHeader": "Natural, Innovative, Productive",
-      "visionDes": "To lead the global shift toward sustainable cultivation by innovating plant-based solutions that are kind to the earth and productive for farmers."
+      "visionDes": "To lead the global shift toward sustainable cultivation by innovating plant-based solutions that are kind to the earth and productive for farmers.",
+      "newHeader": "CIRCULAR BIOECONOMY",
+      "newDes": "We support a circular bioeconomy, an innovative model that integrates the waste-reducing principles of a circular economy with the use of renewable biological resources to create a sustainable system where materials are continually repurposed, minimizing environmental impact and building a more resilient future."
     },
-    "certificationSection": {
-      "title": "OUR CERTIFICATIONS",
-      "iso1": "ISO 9001",
-      "quality": "Quality Management",
-      "iso2": "ISO 14001",
-      "environmental": "Environmental Management",
-      "omri": "OMRI Certification",
-      "organicUse": "Approved for organic use"
+    "endSection": {
+      "header": "THE UNSDG GUIDES",
+      "pra": "Based on our unwavering commitment to global sustainability, our actions and strategies are directly guided by the principles and objectives outlined in the United Nations Sustainable Development Goals (UNSDGs)."
     }
   },
   "products": {
     "heroSection": {
-      "title": "PRODUCTS",
-      "premium": "Premium",
-      "efficient": "Efficient",
-      "cost": "Cost-Effective"
+      "title": "ONLINE STORE",
+      "products": "SHOP NOW",
+      "premium": "Premium. ",
+      "efficient": "Efficient. ",
+      "cost": "Cost-Effective."
     },
     "productsSection": {
-      "products": "Products",
       "quantity": "Quantity",
       "egp": "EGP",
       "add": "Add to Cart"
@@ -131,7 +128,10 @@
       "width": "Width",
       "depth": "Depth",
       "length": "Length",
-      "numberOfBags": "No. of Bags",
+      "meterUnit": "(m)",
+      "centiUnit": "(cm)",
+      "numberOfBags": "No. of Kilos",
+      "numberOfMeter": "No. of Blocks",
       "mulch": "Mulch",
       "peat": "Peat"
     }
@@ -162,7 +162,7 @@
     "cardsSection": {
       "header": "Gardening Tips",
       "header1": "Organic Farming& Hydroponic",
-      "des1": "The Future of Sustainable Agriculture in Egypt",
+      "des1": "The Future of Sustainable Agriculture",
       "header2": "Mulching in Agriculture",
       "des2": "Types, Benefits, and Best Practices",
       "header3": "Landscaping",
@@ -221,8 +221,9 @@
       "contactInfoHeader": "Contact Information",
       "contactInfoDes": "Say something to start a conversation",
       "phone": "+2 012 345 6789",
-      "mail": "hello@growwe.com",
-      "location": "Villa 11, Street 53 off Street 9, Mokattam, Cairo, Egypt."
+      "mail": "info@growwe.com",
+      "location": "Villa 11, Street 53 off Street 9, Mokattam, Cairo, Egypt.",
+      "say": "Say something to start a conversation!"
     }
   },
   "informationMulchAndSoil": {
@@ -230,18 +231,18 @@
     "mulchDes1": "Hydrate. ",
     "mulchDes2": "Decorate. ",
     "mulchDes3": "Improve Soil.",
-    "soilHeader": "GROWWE PEAT",
+    "soilHeader": "GROWWE GROWING MEDIA",
     "soilDes1": "Renewable. ",
     "soilDes2": "Biodegradable. ",
-    "soilDes3": "Egyptian.",
+    "soilDes3": "Peat-free.",
     "hero": {
-      "soil": "SOILLESS GROWING MEDIUM",
+      "soil": "SOILLESS GROWING MEDIA",
       "mulch": "MULCH",
       "shop": "Shop Now"
     },
     "secondSection": {
-      "soilHeader": "Soilless Growing Medium",
-      "soilPra1": "GROWWE peat is a soilless growing media. It’s a biodegradable soil alternative produced from natural resources. GROWWE is a sustainable eco-friendly solution that utilizes natural organic resources to contribute to organic agriculture, while enhancing soil quality for horticulture, landscaping and farming.",
+      "soilHeader": "Soilless Growing Media",
+      "soilPra1": "GROWWE soilless growing media is a biodegradable soil alternative, produced from natural resources. GROWWE is a sustainable eco-friendly solution that utilizes natural organic resources to contribute to organic agriculture, while enhancing soil quality for horticulture, landscaping and farming.",
       "mulchHeader": "Mulch",
       "mulchPra1": "GROWWE mulch is a 100% natural organic material applied to the surface of soil, used in gardening and landscaping. GROWWE mulch is a 100% organic, free from chemicals, that helps nourish the soil and support its aeration while improve its quality. Mulch is a protective layer for the soil that helps retain moisture, improve soil structure and protect plants.",
       "mulchPra2": "Our premium mulch is designed to provide growers and landscapers with a reliable, sustainable solution for soil coverage and crop protection. Made from 100% natural materials, it enhances soil moisture retention, regulates temperature, and helps control weed growth while gradually enriching the soil as it decomposes. With its consistent quality and easy application, our mulch is an effective way to improve plant health, reduce maintenance, and support environmentally responsible cultivation practices.",
@@ -265,11 +266,11 @@
     },
     "thirdSection": {
       "advantages": "Advantages+",
-      "soilDes": "GROWWE peat  stands out from other soil alternatives because of its distinctive features:",
+      "soilDes": "GROWWE Soilless Growing Media stands out from other soil alternatives because of its distinctive features:",
       "soilHeader1": "Biological and Structural Stability",
       "soilDes1": "Growwe is resistant to microbial degradation and its ability to maintain its biological and structural properties over time for plant cultivation.",
       "soilHeader2": "Re-Usability",
-      "soilDes2": "Because it retains its structure and does not compact easily, GROWWE peat can be reused for several cultivation cycles, providing excellent value.",
+      "soilDes2": "Because it retains its structure and does not compact easily, GROWWE Soilless Growing Media can be reused for several cultivation cycles, providing excellent value.",
       "soilHeader3": "Root Hair Growth",
       "soilDes3": "Growwe provides the necessary aeration, consistent moisture, and antifungal properties that healthy roots need to develop. It creates an ideal environment for root formation, allowing root hairs to efficiently absorb water and nutrients once they are introduced through fertilization.",
       "mulchDes": "GROWWE mulch enhances soil health, reduces maintenance, and promotes stronger plant growth.",
@@ -281,7 +282,7 @@
       "mulchDes3": "As organic mulch decomposes, it adds valuable humus and nutrients to the earth. This process improves soil structure, aeration, and fertility over time, creating a healthier growing environment."
     },
     "fourthSection": {
-      "soilHeader": "The <second>Smarter</second> Growing Medium",
+      "soilHeader": "The <second>Smarter</second> Growing Media",
       "soilAttachHeader": "Say Yes!",
       "soilFirstBoxHeader": "100% Organic",
       "soilFirstBoxDescription": "Biodegradable alternative soil.",

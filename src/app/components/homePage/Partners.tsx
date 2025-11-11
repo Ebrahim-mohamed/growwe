@@ -1,8 +1,10 @@
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
+import Link from "next/link";
 
 export function Partners({ isHome }: { isHome?: boolean }) {
   const t = useTranslations("homePage.partnersSection");
+  const locale = useLocale();
   return (
     <div
       className={` flex items-start justify-center gap-4 p-[var(--section-Padding)] ${
@@ -36,9 +38,20 @@ export function Partners({ isHome }: { isHome?: boolean }) {
           </p>
           <div className="flex items-center w-full justify-between">
             <p className="text-[1.8rem] text-black font-black">{t("thirdP")}</p>
-            <button className="bg-black text-white text-[1rem] flex items-start justify-center p-[1rem] rounded-[1rem] hover:cursor-pointer">
+            <Link
+              href={`/${locale}/contact`}
+              className="bg-black text-white text-[1.2rem] flex items-start justify-center p-[1rem] rounded-[1rem] hover:cursor-pointer"
+            >
+              <Image
+                alt="hands image"
+                src="/home/hands.png"
+                width={100}
+                height={100}
+                className="w-[2.5rem]  mr-[0.3rem]"
+              />
+
               {t("button")}
-            </button>
+            </Link>
           </div>
         </div>
       </div>

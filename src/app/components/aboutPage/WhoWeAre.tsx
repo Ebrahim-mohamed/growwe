@@ -1,6 +1,7 @@
 import { useLocale, useTranslations } from "next-intl";
 import { MissionAndVisionCard } from "./MissionAndVisionCard";
 import Image from "next/image";
+
 const whySec = ["organic", "sustainable", "egyptian"];
 export function WhoWeAre() {
   const t = useTranslations("about.whoWeAreSection");
@@ -44,6 +45,8 @@ export function WhoWeAre() {
           ))}
         </div>
       </div>
+
+      <MissionAndVisionCard header={t("newHeader")} des={t("newDes")} />
       <MissionAndVisionCard
         header={t("missionHeader")}
         secHeader={t("missionSecHeader")}
