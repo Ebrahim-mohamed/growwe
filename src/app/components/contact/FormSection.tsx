@@ -7,6 +7,7 @@ import * as z from "zod";
 import { Input } from "./Input";
 import { RadioDiv } from "./RadioDiv";
 import { InfoBox } from "./InfoBox";
+import Image from "next/image";
 const contactSchema = z.object({
   firstName: z.string().min(3, { message: "firstNameError" }),
   lastName: z.string().min(3, { message: "lastNameError" }),
@@ -40,10 +41,16 @@ export function FormSection() {
   return (
     <div className="w-full p-[var(--section-Padding)] flex items-center flex-col justify-center gap-[1.5rem]">
       <MostUseHeader header={t("header")} des={t("des")} />
-      <div className="flex items-stretch justify-between w-[60%] rounded-[0.6rem] shadow-[0_0_60px_30px_rgba(0,0,0,0.03)] gap-[3rem] overflow-hidden py-[1.5rem] pl-[1.5rem] pr-[5rem] max-[550px]:pr-[1.5rem] max-[550px]:flex-col max-[550px]:items-center ">
-        {/* <div className="w-[45%]  bg-[#426B1F] text-white py-[1.5rem] px-[2.2rem] rounded-[0.6rem] max-[550px]:w-full flex items-center justify-center">
-          <p className="text-[5rem] italic font-[ClassicoURW]">{t("say")}</p>
-        </div> */}
+      <div className="flex items-stretch justify-between w-[80%] rounded-[0.6rem] shadow-[0_0_60px_30px_rgba(0,0,0,0.03)] gap-[3rem] overflow-hidden py-[1.5rem] pl-[1.5rem] pr-[5rem] max-[550px]:pr-[1.5rem] max-[550px]:flex-col max-[550px]:items-center ">
+        <div className="w-[45%]  text-white py-[1.5rem] px-[2.2rem] rounded-[0.6rem] max-[550px]:w-full flex items-center justify-center">
+          <Image
+            alt="image"
+            src="/contact/say.jpg"
+            width={400}
+            height={400}
+            className="w-full h-full rounded-[0.6rem]"
+          />
+        </div>
         <div className="flex-1 p-[1.5rem]">
           <form
             onSubmit={handleSubmit(submit)}
