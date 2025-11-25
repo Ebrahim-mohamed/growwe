@@ -25,10 +25,9 @@ type Order = {
   unitPrice: number;
   totalPrice: number;
   status: string; // e.g., Pending, Completed, Canceled
-  Date: string;
 };
 
-export default function Orders() {
+export default function OrdersTable() {
   const [orders, setOrders] = useState<Order[]>([]);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -51,7 +50,7 @@ export default function Orders() {
   }, []);
 
   return (
-    <div className="w-full min-h-screen bg-gray-50 p-6 flex flex-col gap-6">
+    <div className="w-full min-h-screen p-6 flex flex-col gap-6">
       <h1 className="text-2xl font-semibold text-gray-800">
         Orders Management
       </h1>
@@ -64,7 +63,7 @@ export default function Orders() {
 
       {!isLoading && (
         <div className="w-full border rounded-2xl shadow-lg bg-white overflow-hidden">
-          <div className="max-h-[calc(100vh-12rem)] overflow-auto">
+          <div className="w-full overflow-auto">
             <Table className="text-[0.95rem] border-collapse w-full">
               <TableHeader className="sticky top-0 bg-gray-50 z-20 shadow-sm">
                 <TableRow className="border-b-2 border-gray-200">
@@ -84,7 +83,6 @@ export default function Orders() {
                   <TableHead className="px-4 py-2 text-center">
                     Status
                   </TableHead>
-                  <TableHead className="px-4 py-2 text-center">Date</TableHead>
                 </TableRow>
               </TableHeader>
 
@@ -129,9 +127,6 @@ export default function Orders() {
                             {order.status}
                           </span>
                         )}
-                      </TableCell>
-                      <TableCell className="px-4 py-2 text-center">
-                        {order.Date}
                       </TableCell>
                     </TableRow>
                   ))

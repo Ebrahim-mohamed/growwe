@@ -16,6 +16,7 @@ type User = {
   firstName: string;
   lastName: string;
   email: string;
+  phone: string;
   country: string;
   address: string;
   postalCode: string;
@@ -33,7 +34,7 @@ export default function Users() {
   const fetchUsers = async () => {
     setIsLoading(true);
     try {
-      const res = await fetch("https://api.ebmksa.com/users");
+      const res = await fetch(" /users");
       if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
       const data = await res.json();
       setUsers(data);
@@ -53,7 +54,7 @@ export default function Users() {
     if (!confirm("Are you sure you want to delete this user?")) return;
     setIsSubmitting(true);
     try {
-      const res = await fetch(`https://api.ebmksa.com/users/${id}`, {
+      const res = await fetch(` /users/${id}`, {
         method: "DELETE",
       });
       if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
@@ -86,15 +87,13 @@ export default function Users() {
                   <TableHead className="px-4 py-2">First Name</TableHead>
                   <TableHead className="px-4 py-2">Last Name</TableHead>
                   <TableHead className="px-4 py-2">Email</TableHead>
-                  <TableHead className="px-4 py-2">Country</TableHead>
+                  <TableHead className="px-4 py-2">phone</TableHead>
                   <TableHead className="px-4 py-2">Address</TableHead>
-                  <TableHead className="px-4 py-2">Postal Code</TableHead>
+                  <TableHead className="px-4 py-2">Country</TableHead>
                   <TableHead className="px-4 py-2">City</TableHead>
+                  <TableHead className="px-4 py-2">Postal Code</TableHead>
                   <TableHead className="px-4 py-2 text-center">
                     Orders
-                  </TableHead>
-                  <TableHead className="px-4 py-2 text-center">
-                    Logged In
                   </TableHead>
                   <TableHead className="px-4 py-2 text-center">
                     Delete
@@ -120,27 +119,19 @@ export default function Users() {
                           {user.email}
                         </a>
                       </TableCell>
-                      <TableCell className="px-4 py-2">
-                        {user.country}
-                      </TableCell>
+                      <TableCell className="px-4 py-2">{user.phone}</TableCell>
                       <TableCell className="px-4 py-2">
                         {user.address}
                       </TableCell>
                       <TableCell className="px-4 py-2">
-                        {user.postalCode}
+                        {user.country}
                       </TableCell>
                       <TableCell className="px-4 py-2">{user.city}</TableCell>
-                      <TableCell className="px-4 py-2 text-center">
-                        {user.ordersCount}
+                      <TableCell className="px-4 py-2">
+                        {user.postalCode}
                       </TableCell>
                       <TableCell className="px-4 py-2 text-center">
-                        {user.isLoggedIn ? (
-                          <span className="text-green-600 font-medium">
-                            Yes
-                          </span>
-                        ) : (
-                          <span className="text-red-600 font-medium">No</span>
-                        )}
+                        {user.ordersCount}
                       </TableCell>
 
                       <TableCell className="px-4 py-2 text-center">

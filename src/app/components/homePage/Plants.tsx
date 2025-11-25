@@ -6,7 +6,7 @@ const uses2 = ["secondUse", "forthUse"];
 export function Plants() {
   const t = useTranslations("homePage.plantsSection");
   return (
-    <div className=" p-[var(--section-Padding)] bg-[url('/home/plants.png')]  relative bg-no-repeat bg-cover">
+    <div className=" p-[var(--section-Padding)] bg-[url('/home/plants.png')]  relative bg-no-repeat bg-cover min-h-[60rem] flex items-center justify-center">
       <div className="absolute top-0 left-0 h-full w-full bg-[#101010] opacity-[0.6] z-10" />
       <Image
         alt="flower image"

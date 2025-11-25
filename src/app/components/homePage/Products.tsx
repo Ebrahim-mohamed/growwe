@@ -2,7 +2,8 @@
 
 import { useLocale, useTranslations } from "next-intl";
 import { MulchAndSoilProducts } from "./MulchAndSoilProducts";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { NotEgyptProductSection } from "./NotEgyptProductSection";
 
 const products = [
   {
@@ -64,7 +65,7 @@ const products = [
 export function Products() {
   const t = useTranslations("homePage.productsSection");
   const locale = useLocale();
-
+  const [isEgypt, setIsEgypt] = useState(false);
   useEffect(() => {
     async function checkIfEgypt() {
       try {
@@ -72,7 +73,7 @@ export function Products() {
         const data = await res.json();
         console.log(data);
         const isEgypt = data.country_name === "Egypt";
-
+        setIsEgypt(isEgypt);
         console.log("Is user in Egypt?", isEgypt);
       } catch (error) {
         console.log("Failed to detect location");
@@ -81,7 +82,42 @@ export function Products() {
 
     checkIfEgypt();
   }, []);
+  if (!isEgypt) {
+    return (
+      <div className="p-[var(--section-Padding)] relative">
+        {/* Section Header */}
+        <div className="flex flex-col justify-center items-center w-full mb-[2rem]">
+          <h1
+            className={`text-black ${
+              locale === "en" ? " text-[4rem] " : " text-[5rem] "
+            } font-black font-[ClassicoURW]`}
+          >
+            {t("ProductTitle")}
+          </h1>
+          <p className="text-black text-[1.5rem] font-medium">
+            {t("renewable")}.{t("biodegradable")}.{t("egyptian")}.
+          </p>
+          <div className="bg-[#E6E6E6] w-full h-[0.1rem] mt-[0.5rem]" />
+        </div>
 
+        <div className="flex flex-col gap-[1.5rem]">
+          <NotEgyptProductSection
+            title="peatTitle"
+            des="peatDes"
+            type="peat"
+            img="peat"
+          />
+          <div className="w-full h-[0.1rem] bg-[#E6E6E6]"></div>
+          <NotEgyptProductSection
+            title="mulchTitle"
+            des="mulchDes"
+            type="mulch"
+            img="mulch"
+          />
+        </div>
+      </div>
+    );
+  }
   return (
     <div className="p-[var(--section-Padding)] relative">
       {/* Section Header */}

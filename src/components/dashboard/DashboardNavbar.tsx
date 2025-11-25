@@ -16,7 +16,7 @@ export function DashboardNavbar() {
       <NavLink name="Users" to="users" />
       <NavLink name="Products" to="products" />
       <NavLink name="Orders" to="orders" />
-      <NavLink name="Transactions" to="transactions" />
+      <NavLink name="News" to="news" />
     </div>
   );
 }

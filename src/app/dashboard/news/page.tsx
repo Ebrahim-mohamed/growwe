@@ -16,101 +16,92 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { ProductForm } from "./ProductForm";
 import Link from "next/link";
+// import { NewsForm } from "./NewsForm"; // Will be used later for add/edit
 
-type Product = {
+type News = {
   _id: string;
-  productImage: string; // image filename or URL
-  nameEN: string;
-  nameAR: string;
+  newsImage: string;
+  titleEN: string;
+  titleAR: string;
   desEN: string;
   desAR: string;
-  price: number;
-  quantity: number;
-  typeEN: string;
-  typeAR: string;
-  size: string;
-  unitEN: string;
-  unitAR: string;
 };
 
-export default function Products() {
-  const [products, setProducts] = useState<Product[]>([]);
-  const [editingProduct, setEditingProduct] = useState<Product | null>(null);
+export default function NewsPage() {
+  const [newsList, setNewsList] = useState<News[]>([]);
+  const [editingNews, setEditingNews] = useState<News | null>(null);
   const [open, setOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  // Fetch products
-  const fetchProducts = async (): Promise<void> => {
+  // Fetch news (dummy fetch example)
+  const fetchNews = async (): Promise<void> => {
     setIsLoading(true);
     try {
-      const res = await fetch(" /products");
+      const res = await fetch("/news");
       if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
       const data = await res.json();
-      setProducts(data);
+      setNewsList(data);
     } catch (error) {
-      console.error("Error fetching products:", error);
+      console.error("Error fetching news:", error);
     } finally {
       setIsLoading(false);
     }
   };
 
   useEffect(() => {
-    fetchProducts();
+    fetchNews();
   }, []);
 
-  // Add or Edit product
+  // Add or edit news
   const handleAddOrEdit = async (formData: FormData) => {
     setIsSubmitting(true);
     try {
-      const url = editingProduct
-        ? ` /products/${editingProduct._id}`
-        : " /products";
-      const method = editingProduct ? "PUT" : "POST";
+      const url = editingNews ? `/news/${editingNews._id}` : "/news";
+      const method = editingNews ? "PUT" : "POST";
 
       const res = await fetch(url, { method, body: formData });
       if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
-      alert(editingProduct ? "Product updated!" : "Product added!");
-      setEditingProduct(null);
+      alert(editingNews ? "News updated!" : "News added!");
+      setEditingNews(null);
       setOpen(false);
-      await fetchProducts();
+      await fetchNews();
     } catch (error) {
       console.error(error);
-      alert("Failed to save product");
+      alert("Failed to save news");
     } finally {
       setIsSubmitting(false);
     }
   };
 
-  // Delete product
+  // Delete news
   const onDelete = async (id: string) => {
-    if (!confirm("Are you sure you want to delete this product?")) return;
+    if (!confirm("Are you sure you want to delete this news item?")) return;
     try {
-      const res = await fetch(` /products/${id}`, {
+      const res = await fetch(`/news/${id}`, {
         method: "DELETE",
       });
       if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
-      alert("Product deleted!");
-      await fetchProducts();
+      alert("News deleted!");
+      await fetchNews();
     } catch (error) {
       console.error(error);
-      alert("Failed to delete product");
+      alert("Failed to delete news");
     }
   };
 
   const handleDialogChange = (isOpen: boolean) => {
     setOpen(isOpen);
-    if (!isOpen) setEditingProduct(null);
+    if (!isOpen) setEditingNews(null);
   };
 
   return (
     <div className="w-full min-h-screen bg-gray-50 p-6 flex flex-col gap-6">
-      {/* Header + Add Product */}
+      {/* Header + Add News */}
       <div className="flex items-center gap-6 w-full">
         <h1 className="text-2xl font-semibold text-gray-800">
-          Products Management
+          News Management
         </h1>
 
         <Dialog open={open} onOpenChange={handleDialogChange}>
@@ -120,41 +111,31 @@ export default function Products() {
               className="px-5 py-2.5 bg-green-600 text-white font-medium text-base rounded-xl hover:bg-green-700 transition disabled:opacity-50 disabled:cursor-not-allowed"
               disabled={isSubmitting}
             >
-              + Add Product
+              + Add News
             </button>
           </DialogTrigger>
 
           <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">
             <DialogHeader>
               <DialogTitle className="text-xl font-semibold">
-                {editingProduct ? "Edit Product" : "Add a New Product"}
+                {editingNews ? "Edit News" : "Add a New News Item"}
               </DialogTitle>
             </DialogHeader>
 
             <div className="mt-4">
-              <ProductForm
-                defaultValues={
-                  editingProduct
-                    ? {
-                        nameEN: editingProduct.nameEN,
-                        nameAR: editingProduct.nameAR,
-                        desEN: editingProduct.desEN,
-                        desAR: editingProduct.desAR,
-                        price: editingProduct.price,
-                        quantity: editingProduct.quantity,
-                        typeEN: editingProduct.typeEN,
-                        typeAR: editingProduct.typeAR,
-                        size: editingProduct.size,
-                        unitEN: editingProduct.unitEN,
-                        unitAR: editingProduct.unitAR,
-                        productImage: undefined,
-                      }
-                    : undefined
-                }
+              {/* <NewsForm
+                defaultValues={editingNews ? {
+                  titleEN: editingNews.titleEN,
+                  titleAR: editingNews.titleAR,
+                  desEN: editingNews.desEN,
+                  desAR: editingNews.desAR,
+                  newsImage: undefined,
+                } : undefined}
                 onSubmit={handleAddOrEdit}
                 isSubmitting={isSubmitting}
-                isEditing={!!editingProduct}
-              />
+                isEditing={!!editingNews}
+              /> */}
+              <p className="text-gray-500">News form goes here...</p>
             </div>
           </DialogContent>
         </Dialog>
@@ -163,7 +144,7 @@ export default function Products() {
       {/* Loading State */}
       {isLoading && (
         <div className="w-full text-center py-10 text-gray-500">
-          Loading products...
+          Loading news...
         </div>
       )}
 
@@ -175,19 +156,10 @@ export default function Products() {
               <TableHeader className="sticky top-0 bg-gray-50 z-20 shadow-sm">
                 <TableRow className="border-b-2 border-gray-200">
                   <TableHead className="px-4 py-2">Image</TableHead>
-                  <TableHead className="px-4 py-2">Name (EN)</TableHead>
-                  <TableHead className="px-4 py-2">Name (AR)</TableHead>
+                  <TableHead className="px-4 py-2">Title (EN)</TableHead>
+                  <TableHead className="px-4 py-2">Title (AR)</TableHead>
                   <TableHead className="px-4 py-2">Description (EN)</TableHead>
                   <TableHead className="px-4 py-2">Description (AR)</TableHead>
-                  <TableHead className="px-4 py-2 text-center">Price</TableHead>
-                  <TableHead className="px-4 py-2 text-center">
-                    Quantity
-                  </TableHead>
-                  <TableHead className="px-4 py-2">Type (EN)</TableHead>
-                  <TableHead className="px-4 py-2">Type (AR)</TableHead>
-                  <TableHead className="px-4 py-2">Size</TableHead>
-                  <TableHead className="px-4 py-2">Unit (EN)</TableHead>
-                  <TableHead className="px-4 py-2">Unit (AR)</TableHead>
                   <TableHead className="px-4 py-2 text-center">Edit</TableHead>
                   <TableHead className="px-4 py-2 text-center">
                     Delete
@@ -196,12 +168,12 @@ export default function Products() {
               </TableHeader>
 
               <TableBody>
-                {products.length > 0 ? (
-                  products.map((p) => (
-                    <TableRow key={p._id} className="hover:bg-blue-50">
+                {newsList.length > 0 ? (
+                  newsList.map((n) => (
+                    <TableRow key={n._id} className="hover:bg-blue-50">
                       <TableCell className="px-4 py-2">
                         <Link
-                          href={` /uploads/${p.productImage}`}
+                          href={`/uploads/${n.newsImage}`}
                           target="_blank"
                           className="text-green-600 hover:underline"
                         >
@@ -209,26 +181,15 @@ export default function Products() {
                         </Link>
                       </TableCell>
 
-                      <TableCell className="px-4 py-2">{p.nameEN}</TableCell>
-                      <TableCell className="px-4 py-2">{p.nameAR}</TableCell>
-                      <TableCell className="px-4 py-2">{p.desEN}</TableCell>
-                      <TableCell className="px-4 py-2">{p.desAR}</TableCell>
-                      <TableCell className="px-4 py-2 text-center">
-                        {p.price}
-                      </TableCell>
-                      <TableCell className="px-4 py-2 text-center">
-                        {p.quantity}
-                      </TableCell>
-                      <TableCell className="px-4 py-2">{p.typeEN}</TableCell>
-                      <TableCell className="px-4 py-2">{p.typeAR}</TableCell>
-                      <TableCell className="px-4 py-2">{p.size}</TableCell>
-                      <TableCell className="px-4 py-2">{p.unitEN}</TableCell>
-                      <TableCell className="px-4 py-2">{p.unitAR}</TableCell>
+                      <TableCell className="px-4 py-2">{n.titleEN}</TableCell>
+                      <TableCell className="px-4 py-2">{n.titleAR}</TableCell>
+                      <TableCell className="px-4 py-2">{n.desEN}</TableCell>
+                      <TableCell className="px-4 py-2">{n.desAR}</TableCell>
 
                       <TableCell className="px-4 py-2 text-center">
                         <button
                           onClick={() => {
-                            setEditingProduct(p);
+                            setEditingNews(n);
                             setOpen(true);
                           }}
                           className="px-3 py-1 bg-blue-600 text-white rounded-md hover:bg-blue-700"
@@ -239,7 +200,7 @@ export default function Products() {
 
                       <TableCell className="px-4 py-2 text-center">
                         <button
-                          onClick={() => onDelete(p._id)}
+                          onClick={() => onDelete(n._id)}
                           className="px-3 py-1 bg-red-600 text-white rounded-md hover:bg-red-700"
                         >
                           Delete
@@ -250,10 +211,10 @@ export default function Products() {
                 ) : (
                   <TableRow>
                     <TableCell
-                      colSpan={14}
+                      colSpan={7}
                       className="text-center py-10 text-gray-400"
                     >
-                      No products found. Click Add Product to start.
+                      No news found. Click Add News to start.
                     </TableCell>
                   </TableRow>
                 )}

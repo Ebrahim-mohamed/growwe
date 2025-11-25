@@ -41,8 +41,8 @@ export function Footer() {
       </div>
       <div className="flex items-center justify-between w-full font-normal">
         <div className="flex items-center justify-center gap-[3rem] text-[1.2rem] ">
-          <Link href="#">{t("privacy")}</Link>
-          <Link href="#">{t("terms")}</Link>
+          <Link href="privacy-policy">{t("privacy")}</Link>
+          <Link href="refund">{t("terms")}</Link>
         </div>
         <p className="text-[0.9rem]">{t("copyRight")}</p>
       </div>

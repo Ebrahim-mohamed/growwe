@@ -25,6 +25,7 @@
     "privacy": "Privacy Policy"
   },
   "homePage": {
+    "quote": "Get a Quote",
     "title": "Creating a good life | from growing good plants",
     "shop": "Shop Now",
     "productsSection": {
@@ -138,6 +139,7 @@
   },
   "gardening": {
     "heroSection": {
+      "quote": "Get a Quote",
       "title": "GARDENING",
       "p": "Your Garden is Greener,Your Crops are Healthier.",
       "shop": "Shop Now"
@@ -236,6 +238,7 @@
     "soilDes2": "Biodegradable. ",
     "soilDes3": "Peat-free.",
     "hero": {
+      "quote": "Get a Quote",
       "soil": "SOILLESS GROWING MEDIA",
       "mulch": "MULCH",
       "shop": "Shop Now"
@@ -645,5 +648,92 @@
       "header": "YOUR PROFILE",
       "des": "Your personal information and ordering log. "
     }
+  },
+  "notEgyptSection": {
+    "peat": {
+      "peatTitle": "Soilless Growing Media",
+      "peatDes": "GROWWE peat is a soilless growing media. It’s a biodegradable soil alternative produced from natural resources. GROWWE is a sustainable eco-friendly solution that utilizes natural organic resources to contribute to organic agriculture, while enhancing soil quality for horticulture, landscaping and farming.",
+      "know": "  know more"
+    },
+    "mulch": {
+      "mulchTitle": "Mulch",
+      "mulchDes": "GROWWE mulch is a 100% natural organic material applied to the surface of soil, used in gardening and landscaping.  GROWWE mulch is free from chemicals, that helps nourish the soil and support its aeration while improve its quality. Mulch is a protective layer for the soil that helps retain moisture, improve soil structure and protect plants. ",
+      "know": "  know more"
+    }
+  },
+  "refund": {
+    "title": "Refunds and Returns Policy",
+    "point1": "Refund and return period is 30 days from delivery",
+    "point2": "No refunds or exchanges after 30 days",
+    "point3": "Only unopened and unused products in original sealed packaging can be returned",
+    "point4": "Opened or compromised packaging is not accepted",
+    "point5": "Returned items must be in original condition with no damage, moisture, or contamination",
+    "point6": "Proof of purchase is required for all returns",
+    "point7": "Gift cards cannot be returned",
+    "point8": "Sale or clearance items cannot be returned",
+    "point9": "Opened or used products cannot be returned",
+    "point10": "Customers must request an RMA number before returning any item",
+    "point11": "Returns sent without an RMA number will not be accepted",
+    "point12": "Customers are responsible for return shipping costs",
+    "point13": "Shipping costs are non-refundable",
+    "point14": "Customers should use trackable shipping and insurance for returns",
+    "point15": "Growwe is not responsible for returns lost or damaged in transit",
+    "point16": "Return addresses differ by region and will be provided by customer service",
+    "point17": "Refunds are issued only after the item is received and inspected",
+    "point18": "Refunds are processed to the original payment method",
+    "point19": "Banks and card companies may require extra time to post refunds",
+    "point20": "Partial refunds may be issued for late returns",
+    "point21": "Partial refunds may be issued for items with minor damage",
+    "point22": "Outbound shipping fees from free or discounted shipping may be deducted",
+    "point23": "Exchanges are only available for defective items or incorrect items sent by Growwe",
+    "point24": "Customers must contact support to request an exchange for defective or wrong items",
+    "point25": "Growwe covers shipping costs for defective or incorrect items",
+    "point26": "Damaged or defective items must be reported within 7 days of delivery",
+    "point27": "Photos of the damaged item and packaging must be provided",
+    "point28": "Damaged or defective items qualify for a replacement or full refund",
+    "point29": "If an item is marked as a gift, the recipient receives a gift credit upon return",
+    "point30": "If an item was not marked as a gift, the refund goes to the original purchaser",
+    "point31": "Customers can contact Growwe at hello@growwe.com",
+    "point32": "A contact form is available on the website",
+    "point33": "Customers must provide their order number for assistance"
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "point1": "Growwe is committed to protecting your privacy and handling your data responsibly",
+    "point2": "By using the Growwe website you agree to the practices described in this policy",
+    "point3": "Growwe is the data controller responsible for your personal data",
+    "point4": "You can contact us at hello@growwe.com",
+    "point5": "We collect personal data you provide when filling forms or communicating with us",
+    "point6": "We collect technical data such as IP address, browser type, and device information",
+    "point7": "We collect data about your visit including pages viewed and interactions",
+    "point8": "We may receive information about you from third-party service providers",
+    "point9": "Our website uses cookies to improve user experience and site performance",
+    "point10": "You can block cookies through your browser settings",
+    "point11": "We use your information to process orders, manage accounts, and provide customer support",
+    "point12": "We use your information to improve our services and maintain website security",
+    "point13": "We use your information for marketing only with your consent",
+    "point14": "We may process data to comply with legal obligations",
+    "point15": "For EEA users, data is processed based on contract, consent, legitimate interest, or legal compliance",
+    "point16": "Your data may be transferred internationally for business operations",
+    "point17": "We take all reasonable steps to ensure safe handling of transferred data",
+    "point18": "We may share data with trusted service providers who assist our operations",
+    "point19": "We may disclose data when required by law or government authorities",
+    "point20": "We may share data during business sales or acquisitions",
+    "point21": "We do not sell your personal data to any third parties",
+    "point22": "We use security measures to protect your personal data",
+    "point23": "Payment transactions are encrypted using SSL technology",
+    "point24": "Data transmission over the internet cannot be guaranteed as fully secure",
+    "point25": "You are responsible for any data sent to our website at your own risk",
+    "point26": "We retain personal data only for as long as necessary for legal or business reasons",
+    "point27": "You may have rights to access, correct, delete, or restrict processing of your data",
+    "point28": "You may object to data processing under certain conditions",
+    "point29": "You may request transfer of your data to another organization",
+    "point30": "We may need to verify your identity before processing your request",
+    "point31": "You can file complaints with us regarding data handling",
+    "point32": "EEA users may submit complaints to their local supervisory authority",
+    "point33": "Our website may contain links to third-party websites we do not control",
+    "point34": "We are not responsible for the privacy practices of external websites",
+    "point35": "We may update this privacy policy occasionally",
+    "point36": "Changes will be posted on this page and communicated when appropriate"
   }
 }

@@ -11,7 +11,7 @@ export function PartTowInSecondSection(data: PartTowInSecondSectionType) {
       </h1>
       <div className="flex gap-3 items-stretch">
         <div className="flex flex-col gap-3 w-full  mt-[0.5rem] justify-between h-full">
-          <div className="flex-1 text-[#387023]">
+          <div className="flex-1 text-[#387023] mb-[1rem]">
             <h3 className="text-[2.4rem] max-[1200px]:text-[1.5rem] font-black ">
               {t(data.mainPra)}
             </h3>

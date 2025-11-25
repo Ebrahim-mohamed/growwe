@@ -9,11 +9,9 @@ export function MissionAndVisionCard({
 }) {
   return (
     <div
-      className={`flex flex-col gap-[0.5rem] max-w-[60%] max-[380px]:max-w-full ${
-        header === "OUR MISSION" || header === "CIRCULAR BIOECONOMY"
-          ? " mb-[4rem] "
-          : "  "
-      } ${header === "OUR VISION" ? " max-[550px]:max-w-full " : "  "}`}
+      className={`flex flex-col gap-[0.5rem] max-w-[60%] max-[380px]:max-w-full  ${
+        header === "OUR VISION" ? " mb-[2rem] " : " mb-[6rem] "
+      }  ${header === "OUR VISION" ? " max-[550px]:max-w-full " : "  "}`}
     >
       <h1 className="text-[2.5rem] text-[#E5AC71] font-bold">{header}</h1>
       <h2 className="text-[2rem] text-[#426B1F] font-semibold">{secHeader}</h2>

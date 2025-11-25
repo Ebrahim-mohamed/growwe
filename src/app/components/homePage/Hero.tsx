@@ -2,10 +2,28 @@
 import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 export function Hero() {
   const t = useTranslations("homePage");
   const locale = useLocale();
+  const [isEgypt, setIsEgypt] = useState(false);
+  useEffect(() => {
+    async function checkIfEgypt() {
+      try {
+        const res = await fetch("https://ipapi.co/json/");
+        const data = await res.json();
+        console.log(data);
+        const isEgypt = data.country_name === "Egypt";
+        setIsEgypt(isEgypt);
+        console.log("Is user in Egypt?", isEgypt);
+      } catch (error) {
+        console.log("Failed to detect location");
+      }
+    }
+
+    checkIfEgypt();
+  }, []);
   return (
     <div className="bg-[url('/home/hero.png')] bg-cover w-dvw h-dvh p-[var(--section-Padding)]  flex items-end max-[500px]:items-center justify-between max-[500px]:bg-right">
       <div className="flex items-end justify-between max-[500px]:flex-col max-[500px]:items-center max-[500px]:gap-[3rem] w-full">
@@ -28,12 +46,21 @@ export function Hero() {
             className="w-[3.5rem] mb-[0.75rem] max-[550px]:hidden"
           />
         </div>
-        <Link
-          href={`/${locale}/products`}
-          className="bg-[#FF0606] text-white rounded-[2.5rem] text-[2.3rem] font-bold py-[0.2rem] px-[1.5rem] mb-[0.75rem] mr-[0.75rem]"
-        >
-          {t("shop")}
-        </Link>
+        {isEgypt ? (
+          <Link
+            href={`/${locale}/products`}
+            className="bg-[#FF0606] text-white rounded-[2.5rem] text-[2.3rem] font-bold py-[0.2rem] px-[1.5rem] mb-[0.75rem] mr-[0.75rem]"
+          >
+            {t("shop")}
+          </Link>
+        ) : (
+          <Link
+            href={`/${locale}/contact`}
+            className="bg-[#FF0606] text-white rounded-[2.5rem] text-[2.3rem] font-bold py-[0.2rem] px-[1.5rem] mb-[0.75rem] mr-[0.75rem]"
+          >
+            {t("quote")}
+          </Link>
+        )}
       </div>
     </div>
   );
