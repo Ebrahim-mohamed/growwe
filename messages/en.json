@@ -7,7 +7,7 @@
     "contact": "Contact Us",
     "aboutProduct": {
       "mulch": "Mulch",
-      "peat": "Peat"
+      "peat": "Soilless Media"
     }
   },
   "footer": {
@@ -134,7 +134,7 @@
       "numberOfBags": "No. of Kilos",
       "numberOfMeter": "No. of Blocks",
       "mulch": "Mulch",
-      "peat": "Peat"
+      "peat": "Soilless Media"
     }
   },
   "gardening": {
@@ -155,10 +155,10 @@
       "des1": "Alternative soil is sterile and lightweight—perfect for seed trays! ",
       "header2": "Tips for Starting Seeds in Alternative Soil",
       "point1": "<second>1. Pre-Moisten:</second> Always soak alternative soil before sowing!",
-      "point2": "<second>2. Watering Schedule:</second> Be mindful of your watering schedule, as peat retains moisture for longer times. ",
+      "point2": "<second>2. Watering Schedule:</second> Be mindful of your watering schedule, as Soilless Media retains moisture for longer times. ",
       "point3": "<second>3. Transplant Early:</second> Move seedlings once 2–4 true leaves appear.",
       "point4": "<second>4. Snip the weakest sprouts</second> to avoid overcrowding.",
-      "point5": "<second>5. Reuse Responsibly:</second> Peat is a durable material that can last for 2-3 growing cycles.",
+      "point5": "<second>5. Reuse Responsibly:</second> Soilless Media is a durable material that can last for 2-3 growing cycles.",
       "des2": "Grow Smarter. Start with Growwe."
     },
     "cardsSection": {
@@ -652,7 +652,7 @@
   "notEgyptSection": {
     "peat": {
       "peatTitle": "Soilless Growing Media",
-      "peatDes": "GROWWE peat is a soilless growing media. It’s a biodegradable soil alternative produced from natural resources. GROWWE is a sustainable eco-friendly solution that utilizes natural organic resources to contribute to organic agriculture, while enhancing soil quality for horticulture, landscaping and farming.",
+      "peatDes": "GROWWE soilless growing media is a biodegradable soil alternative produced from natural resources. GROWWE is a sustainable eco-friendly solution that utilizes natural organic resources to contribute to organic agriculture, while enhancing soil quality for horticulture, landscaping and farming.",
       "know": "  know more"
     },
     "mulch": {
@@ -735,5 +735,324 @@
     "point34": "We are not responsible for the privacy practices of external websites",
     "point35": "We may update this privacy policy occasionally",
     "point36": "Changes will be posted on this page and communicated when appropriate"
+  },
+  "template1": {
+    "heroSection": {
+      "title": "Organic Farming and Hydroponics",
+      "des": "The Future of Sustainable Agriculture"
+    },
+    "section1": {
+      "title": "Organic Farming and Hydroponics",
+      "des": "The Future of Sustainable Agriculture",
+      "pra1": "Agriculture is at the heart of human survival, yet conventional farming faces challenges such as soil degradation, water scarcity, and environmental pollution. As the world moves toward sustainable solutions, two innovative approaches are gaining global attention: organic farming and hydroponics. Both systems aim to reduce environmental impact, improve food quality, and ensure food security",
+      "pra2": "This article explores the benefits, challenges, and future of organic farming and hydroponics, with a special focus on how they complement each other in building sustainable agriculture."
+    },
+    "section2": {
+      "title1": "What is Organic Farming?",
+      "pra1": "Organic farming is a method of agriculture that relies on natural processes and avoids synthetic fertilizers, pesticides, genetically modified organisms (GMOs), and growth hormones. The goal is to maintain long-term soil fertility, protect biodiversity, and produce healthier food.",
+      "title2": "Benefits of Organic Farming",
+      "point1": "Healthier Soil: Organic fertilizers improve soil structure, water retention, and microbial activity.",
+      "point2": "Environmental Protection: Avoids harmful chemicals, reduces pollution, and lowers greenhouse gas emissions.",
+      "point3": "Biodiversity: Supports beneficial insects, pollinators, and microorganisms.",
+      "point4": "Safer Food: Free from chemical residues, often higher in antioxidants.",
+      "point5": "Economic Value: High demand globally, sold at premium prices."
+    },
+    "section3": {
+      "title1": "What are Hydroponics?",
+      "pra1": "Hydroponics is a soilless farming system where plants grow in nutrient-rich water instead of soil. It uses inert media like cocopeat or rockwool to support roots. Hydroponics is popular for saving water, maximizing yields, and enabling urban farming",
+      "title2": "Benefits of Hydroponics",
+      "point1": "Water Efficiency: Uses up to 90% less water than traditional farming.",
+      "point2": "Space-Saving: Vertical farming maximizes production per square meter.",
+      "point3": "Faster Growth: Nutrients are delivered directly to roots.",
+      "point4": "Fewer Pesticides: Reduced risk of soil-borne pests.",
+      "point5": "Year-Round Production: Crops can grow regardless of season.",
+      "title3": "Challenges of Hydroponics",
+      "pra2": "High initial investment, technical knowledge required, and dependency on energy in some systems."
+    },
+    "section4": {
+      "title1": "Organic Farming vs. Hydroponics: A Complementary Future",
+      "pra1": "Organic farming focuses on soil health and biodiversity, while hydroponics optimizes water and space. Combining both, known as organic hydroponics or bioponics, is an emerging field using organic nutrient solutions instead of synthetic ones.",
+      "pra2": "Organic Farming and Hydroponics in Egypt",
+      "pra3": "Egypt’s challenges of water scarcity and desertification make both systems essential. Organic farming reduces chemical dependency and supports exports, while hydroponics offers efficient vegetable production in cities and deserts. Startups and research centers are already promoting both as part of Egypt’s agricultural strategy. "
+    },
+    "section5": {
+      "head": "Types of Organic Farming",
+      "mainPra": "Organic farming is not a one-size-fits-all method; it includes different approaches depending on the resources available, climate, and market demand. The most common forms include:",
+      "title1": "Integrated Organic Farming",
+      "pra1": "A comprehensive approach that maintains soil fertility and lowers the need for outside inputs by integrating crops, animals, and farm waste recycling (such as composting).",
+      "title2": "Pure Organic Farming",
+      "pra2": "A more stringent version that exclusively uses biological control techniques, bio-pesticides, and natural fertilizers, avoiding any chemical inputs.",
+      "title3": "Urban and Small-Scale Organic Farming",
+      "pra3": "Popular in urban areas with little space. Organic hydroponics, vertical farming, and rooftop gardens are frequently included.",
+      "title4": "Soilless Organic Farming",
+      "pra4": "A modern approach where plants are grown in soilless growing media (soilless substrates) such as cocopeat, perlite, or rockwool, combined with organic nutrient solutions.  This method maintains the principles of organic farming (avoiding synthetic chemicals) while saving water and maximizing yields.",
+      "title5": "Advantages: ",
+      "pra5": "Uses less water, suitable for arid regions, and supports year-round production.",
+      "title6": "Challenge: ",
+      "pra6": "Organic certification for hydroponics is still debated in some regions, but demand for eco-friendly soilless systems is growing rapidly."
+    },
+    "section6": {
+      "title": "Conclusion",
+      "pra": "Organic farming ensures soil health and biodiversity, while hydroponics provides efficient, high-yield, and water-saving production. Together, they form the future of sustainable agriculture, especially in Egypt."
+    },
+    "section7": {
+      "head": "Frequently Asked Questions FAQs",
+      "title1": "What is organic farming and how does it differ from conventional farming?",
+      "pra1": "Organic farming avoids synthetic fertilizers, pesticides, and GMOs, relying instead on natural methods like compost, crop rotation, and biological pest control. Conventional farming often uses chemicals for faster yields, while organic farming focuses on long-term soil and environmental health.",
+      "title2": "What are the main benefits of organic farming for soil health and the environment?",
+      "pra2": "It improves soil fertility, enhances biodiversity, reduces chemical pollution, and lowers greenhouse gas emissions. Organic farming also promotes water conservation and safer food production.",
+      "title3": "Which crops can be grown using organic farming methods?",
+      "pra3": "Most crops—vegetables, fruits, grains, and herbs—can be grown organically as long as natural soil amendments and pest management practices are followed.",
+      "title4": "What are the main challenges faced in organic farming?",
+      "pra4": "Lower initial yields, higher labor costs, expensive certification, and lack of awareness in some regions.",
+      "title5": "What types of fertilizers are allowed in organic farming?",
+      "pra5": "Compost, green manure, animal manure, biofertilizers, and natural mineral sources like rock phosphate are permitted.",
+      "title6": "How does organic farming help with pest and disease control without chemicals?",
+      "pra6": "Farmers use crop rotation, resistant varieties, natural predators, neem oil, and biological control agents to manage pests sustainably.",
+      "title7": "Can organic farming be done in greenhouses or soilless systems (hydroponics)?",
+      "pra7": "Yes, but it requires organic nutrient solutions and strict compliance with organic standards. Some certification bodies limit soilless systems.",
+      "title8": "How does organic farming z and sustainable agriculture?",
+      "pra8": "By avoiding chemicals, organic farms provide habitats for pollinators, beneficial insects, and microorganisms, ensuring ecosystem balance.",
+      "title9": "What role does compost and mulching play in organic farming?",
+      "pra9": "Compost improves soil fertility and microbial activity, while mulching conserves moisture, suppresses weeds, and regulates soil temperature.",
+      "title10": "How does organic farming impact water conservation and soil fertility?",
+      "pra10": "It reduces water runoff, increases water retention, and maintains long-term soil fertility through organic matter.",
+      "title11": "What are the future prospects of organic farming worldwide?",
+      "pra11": "Organic farming is growing rapidly due to rising demand for healthy, eco-friendly food. "
+    }
+  },
+  "template2": {
+    "heroSection": {
+      "title": "Mulching in Agriculture",
+      "des": "Types, Benefits, and Best Practices"
+    },
+    "section1": {
+      "title": "Mulching in Agriculture",
+      "des": "Types, Benefits, and Best Practices ",
+      "pra1": "Mulching is one of the most effective and widely used agricultural techniques for improving soil health, water conservation, and boosting crop yields. By covering the soil with organic or inorganic materials, mulching helps farmers protect crops, save resources, and enhance sustainability. The forms of mulching, their advantages and disadvantages, and their place in contemporary agriculture—including its use in soilless growing methods and organic farming—are all covered in this article."
+    },
+    "section2": {
+      "title1": "Mulch & Mulching",
+      "pra1": "Mulch is a layer of material applied to the surface of soil, primarily used in gardening. While mulching in agriculture is the practice of covering the soil surface around plants. Mulch can be made from different materials such as coconut, straw, compost, plastic films, or crop residues. The main purpose is to protect the soil, retain moisture, regulate temperature, and improve crop performance.",
+      "title2": "Benefits of Organic Farming",
+      "point1": "Moisture conservation: The high water retention of mulch keeps the soil moist by reducing evaporation.",
+      "point2": "Weed Control: Prevents weed germination by blocking sunlight.",
+      "point3": "Controlling the temperature of the soil: keeps it warm in the winter and cool in the summer.",
+      "point4": "Safer Food: Free from chemical residues, often higher in antioxidants.",
+      "point5": "Increase Soil Fertility: As organic mulches break down, nutrients are added to the soil.",
+      "point6": "Improve soil aeration: Produce perfect aeration for soil & roots.",
+      "point7": "Decrease Soil Erosion: Prevents soil erosion from water and wind.",
+      "point8": "Improve Crop Quality: Reduces contamination and disease by keeping fruits and vegetables away from the soil."
+    },
+    "section3": {
+      "title1": "Mulching in Organic Farming",
+      "title2": "Mulching in Soilless Growing Media and Hydroponics",
+      "point1": "Provides a natural alternative to synthetic herbicides for weed control.",
+      "point2": "Enriches soil naturally as organic mulch decomposes.",
+      "point3": "Protects soil biodiversity by maintaining a stable microclimate.",
+      "point4": "Helps farmers reduce input costs over time.",
+      "point5": "In cocopeat or perlite systems, mulching with organic materials helps reduce water loss and regulate temperature.",
+      "point6": " In hydroponics with containers, mulching prevents algae growth on the surface and improves root-zone stability.",
+      "point7": "It can also act as an extra insulation layer to protect plants in controlled environments."
+    },
+    "section4": {
+      "title1": "Challenges of Mulching",
+      "title2": "Best Practices for Mulching",
+      "point1": "Pest Habitat: Organic mulches may attract insects or rodents.",
+      "point2": "Enriches soil naturally as organic mulch decomposes.",
+      "point3": "High Cost: Inorganic mulches like plastic films require investment.",
+      "point4": "Labor Intensive: Application and maintenance need extra effort.",
+      "point5": "Soil Temperature Fluctuations: Dark plastic mulches may overheat soil in hot climates.",
+      "point6": "Choose mulch type based on crop needs and climate conditions.",
+      "point7": "Apply mulch after soil has warmed in spring to avoid cold stress.",
+      "point8": "Keep mulch 5–10 cm away from plant stems to prevent rot.",
+      "point9": "Use a combination of organic and inorganic mulch for maximum benefits.",
+      "point10": "Regularly monitor mulch layers and replace or adjust as needed."
+    },
+    "section5": {
+      "head": "Types of Mulching",
+      "mainPra": "Organic farming is not a one-size-fits-all method; it includes different approaches depending on the resources available, climate, and market demand. The most common forms include:",
+      "title1": "Integrated Organic Farming",
+      "pra1": "A comprehensive approach that maintains soil fertility and lowers the need for outside inputs by integrating crops, animals, and farm waste recycling (such as composting).",
+      "title2": "Pure Organic Farming",
+      "pra2": "A more stringent version that exclusively uses biological control techniques, bio-pesticides, and natural fertilizers, avoiding any chemical inputs.",
+      "title3": "Urban and Small-Scale Organic Farming",
+      "pra3": "Popular in urban areas with little space. Organic hydroponics, vertical farming, and rooftop gardens are frequently included.",
+      "title4": "Soilless Organic Farming",
+      "pra4": "A modern approach where plants are grown in soilless growing media (soilless substrates) such as cocopeat, perlite, or rockwool, combined with organic nutrient solutions.  This method maintains the principles of organic farming (avoiding synthetic chemicals) while saving water and maximizing yields.",
+      "title5": "Advantages: ",
+      "pra5": "Uses less water, suitable for arid regions, and supports year-round production.",
+      "title6": "Challenge: ",
+      "pra6": "Organic certification for hydroponics is still debated in some regions, but demand for eco-friendly soilless systems is growing rapidly."
+    },
+    "section6": {
+      "title": "Conclusion",
+      "pra": "Mulching is a powerful agricultural practice that improves soil health, conserves water, and boosts crop yields. With different types—organic, inorganic, and living—mulching can be tailored to crop and climate needs. Its role in organic farming and even in soilless systems makes it a key strategy for sustainable agriculture."
+    },
+    "section7": {
+      "head": "Frequently Asked Questions FAQs",
+      "title1": "What is the best mulch for vegetables?",
+      "pra1": "Organic mulches like straw or compost are best as they decompose and enrich the soil.",
+      "title2": "Can mulching reduce water use in agriculture?",
+      "pra2": "Yes, mulching can cut water loss by up to 50%, making it essential in arid regions.",
+      "title3": " Is plastic mulch eco-friendly?",
+      "pra3": "Plastic mulch is effective but not eco-friendly due to disposal problems. Biodegradable plastic mulches are a sustainable alternative.",
+      "title4": "How thick should mulch be applied?",
+      "pra4": "A 5–8 cm layer is ideal for most crops to balance moisture retention and airflow."
+    }
+  },
+  "template3": {
+    "heroSection": {
+      "title": "Landscaping",
+      "des": "Designing Sustainable and Beautiful Outdoor Spaces"
+    },
+    "section1": {
+      "title": "Landscaping",
+      "des": "Designing Sustainable and Beautiful Outdoor Spaces",
+      "pra1": "Landscaping is more than just arranging plants and flowers. It is the art and science of designing, planning, and maintaining outdoor spaces to achieve both aesthetic beauty and functional use. From private gardens to public parks and urban developments, landscaping plays a vital role in improving environmental quality and enhancing human well-being.",
+      "pra2": "Arranging flowers and plants is only one aspect of landscaping. It is the art and science of creating, organizing, and caring for outdoor areas to provide both practical utility and visual appeal. In order to improve the quality of the environment and human well-being, landscaping is essential in urban developments, public parks, and private gardens."
+    },
+    "section2": {
+      "title1": "What is Landscaping?",
+      "pra1": "Landscape design is the act of adjusting the apparent features of outdoor design, such as gardens, yards, and public spaces, by combining natural and artificial materials. It mixes art, horticulture, and environmental design to create useful and aesthetically pleasing spaces.",
+      "title2": "Importance of Landscaping ",
+      "point1": " Environmental Value: Improves air quality, reduces heat, and prevents soil erosion.",
+      "point2": "Aesthetic Appeal: Enhances beauty and increases property value.",
+      "point3": "Social Impact: Provides recreational spaces and improves quality of life.",
+      "point4": "Climate Adaptation: Helps cities manage heat islands, flooding, and water use."
+    },
+    "section3": {
+      "title1": "Elements of Landscaping",
+      "point1": "Hardscape: Non-living elements such as walkways, patios, fences, walls, and decorative stones.",
+      "point2": "Softscape: Living elements including trees, shrubs, flowers, turf, and ground covers.",
+      "point3": "Water Features: Fountains, ponds, waterfalls, and artificial lakes that add tranquility and beauty.",
+      "point4": "Lighting: Outdoor lighting enhances safety, highlights design, and creates ambiance at night."
+    },
+    "section4": {
+      "title1": "Benefits of Landscaping",
+      "title2": "Challenges in Landscaping",
+      "title3": "Best Practices for Landscaping Design",
+      "point1": "Increases Property Value: Homes with well-designed landscapes sell faster and at higher prices.",
+      "point2": "Improves Health & Well-being: Green spaces reduce stress and encourage outdoor activities.",
+      "point3": "Environmental Protection: Supports biodiversity and reduces carbon footprint.",
+      "point4": "Water & Soil Management: Prevents runoff, improves infiltration, and conserves water.",
+      "point5": "High installation and maintenance costs.",
+      "point6": "Water scarcity in arid regions.Pest and disease management.",
+      "point7": "Climate change impacts on plant survival.",
+      "point8": "Use native and drought-resistant plants to save water.",
+      "point9": "Combine hardscape and softscape elements for balance.",
+      "point10": "Install drip irrigation systems for efficiency.",
+      "point11": "Plan for seasonal changes to maintain year-round beauty.",
+      "point12": "Integrate sustainable materials and renewable energy (e.g., solar lighting)."
+    },
+    "section5": {
+      "head": "Types of Landscaping",
+      "title1": "Residential Landscaping",
+      "pra1": "Focuses on private gardens, backyards, and rooftops to create comfortable, personalized outdoor living spaces.",
+      "title2": "Commercial Landscaping",
+      "pra2": "Used in hotels, office buildings, malls, and resorts to attract visitors and provide functional green spaces.",
+      "title3": "Urban Landscaping",
+      "pra3": "Designs for parks, streetscapes, and public spaces that improve city livability and environmental sustainability.",
+      "title4": "Sustainable Landscaping",
+      "pra4": "Eco-friendly designs that use native plants, water-efficient irrigation, renewable materials, and minimal chemical inputs."
+    },
+    "section6": {
+      "title": "Conclusion",
+      "pra": "Landscaping is a powerful tool to transform outdoor spaces into beautiful, functional, and sustainable environments. Whether for homes, businesses, or cities, landscaping improves aesthetics, protects the environment, and enhances quality of life. With smart design and eco-friendly practices, it becomes an essential part of sustainable development."
+    },
+    "section7": {
+      "head": "Frequently Asked Questions FAQs",
+      "title1": "What is the difference between hardscape and softscape?",
+      "pra1": "Hardscape refers to non-living elements (stone, concrete, wood), while softscape includes plants and other living features.",
+      "title2": "Can landscaping save water?",
+      "pra2": "Yes, using mulch, drip irrigation, and native plants reduces water consumption significantly.",
+      "title3": "Is landscaping expensive?",
+      "pra3": "Costs vary depending on design complexity, materials, and maintenance, but sustainable designs can save money long-term.",
+      "title4": "What is sustainable landscaping?",
+      "pra4": "It’s an eco-friendly approach that minimizes water use, avoids chemicals, and supports biodiversity."
+    }
+  },
+  "template4": {
+    "heroSection": {
+      "title": "Pruning Plants",
+      "des": "echniques, Benefits, and Best Practices"
+    },
+    "section1": {
+      "title": "Pruning Plants ",
+      "des": "Techniques, Benefits, and Best Practices",
+      "pra1": "Pruning is one of the most important gardening and farming activities for promoting healthy plant development, increasing yields, and improving aesthetics. Pruning allows plants to direct their energy toward productive development by carefully removing undesirable or unhealthy sections. This article explores the importance, techniques, timing, and benefits of pruning, with practical tips for gardeners, farmers, and landscapers."
+    },
+    "section2": {
+      "title1": "What is Pruning?",
+      "pra1": "Pruning is the practice of selectively cutting away certain parts of a plant—such as branches, buds, or roots—to improve health, control shape, and enhance productivity. It is commonly applied in fruit trees, shrubs, ornamental plants, and even vegetables.",
+      "title2": "Why is Pruning Important? ",
+      "point1": "Health: Removes diseased, damaged, or dead branches.",
+      "point2": "Growth Control: Shapes plants and prevents overcrowding.",
+      "point3": "Productivity: Encourages flowering and fruiting.",
+      "point4": "Safety: Prevents hazards from overgrown or weak branches.",
+      "point5": "Aesthetics: Improves appearance in landscaping and gardening."
+    },
+    "section3": {
+      "title1": "Tools Used in Pruning",
+      "title2": "Best Time to Prune Plants",
+      "point1": " Hand pruners (secateurs) for small branches.",
+      "point2": " Loppers for thicker branches.",
+      "point3": " Pruning saws for large limbs.",
+      "point4": "Hedge shears for shaping.",
+      "point5": "Sterilization tools to prevent disease spread.",
+      "point6": "Winter (Dormant Season): Best for most trees and shrubs to encourage strong spring growth",
+      "point7": "Spring: For shaping and removing frost damage.",
+      "point8": "After Flowering: For shrubs that bloom on old wood (e.g., lilacs).",
+      "point9": "Year-Round: For removing diseased or damaged branches immediately."
+    },
+    "section4": {
+      "title1": "Benefits of Pruning",
+      "title2": "Challenges of Pruning",
+      "point1": "Increases fruit and flower production.",
+      "point2": "Extends plant lifespan.",
+      "point3": "Reduces risk of pests and diseases.",
+      "point4": "Improves air circulation and sunlight penetration.",
+      "point5": "Enhances garden design and structure.",
+      "point6": "Over-pruning can weaken plants.",
+      "point7": " Incorrect timing may reduce flowering or yields",
+      "point8": " Improper cuts can lead to infections.",
+      "point9": " Requires skill and knowledge for different species."
+    },
+    "section5": {
+      "head": "Types of Pruning",
+      "title1": "Thinning",
+      "pra1": "Selective removal of entire branches to improve light penetration and air circulation.",
+      "title2": "Heading",
+      "pra2": "Cutting back shoots or branches to stimulate new, denser growth.",
+      "title3": "Pinching",
+      "pra3": "Removing soft tips of shoots with fingers to encourage bushier growth.",
+      "title4": "Shearing",
+      "pra4": "Trimming the outer growth of hedges and ornamental plants for shape.",
+      "title5": "Rejuvenation Pruning",
+      "pra5": "Severe cutting back of old shrubs or trees to promote fresh growth."
+    },
+    "section6": {
+      "title": "Conclusion",
+      "pra": "Pruning is a vital gardening and farming technique that promotes healthier, more productive, and aesthetically pleasing plants. By applying the right methods, tools, and timing, pruning becomes a sustainable practice that supports both home gardening and large-scale agriculture."
+    },
+    "section7": {
+      "head": "Frequently Asked Questions FAQs",
+      "title1": "Is pruning necessary for all plants?",
+      "pra1": "Not all, but most benefit from occasional pruning, especially fruit trees, shrubs, and decorative plants.",
+      "title2": "Can pruning hurt a plant?",
+      "pra2": "Yes, if done excessively or at the wrong time, pruning can stress plants.",
+      "title3": "What is the difference between pruning and trimming?",
+      "pra3": "Pruning focuses on plant health and growth, while trimming is mainly for shaping and aesthetics.",
+      "title4": "Do I need to sterilize tools between plants?",
+      "pra4": "Yes, sterilizing prevents the spread of pests and diseases."
+    },
+    "section8": {
+      "head": "Best Practices for Effective Pruning",
+      "point1": "Always use sharp, clean tools.",
+      "point2": "Avoid heavy pruning during active growth unless necessary.",
+      "point3": "Cut at a slight angle above a bud to prevent rot.",
+      "point4": "Don’t remove more than 25–30% of the plant at once.",
+      "point5": "Learn species-specific requirements (fruit trees vs. ornamentals)."
+    }
   }
 }

@@ -14,7 +14,7 @@ export function Hero({ title }: { title: string }) {
         const data = await res.json();
         console.log(data);
         const isEgypt = data.country_name === "Egypt";
-        // setIsEgypt(isEgypt);
+        setIsEgypt(isEgypt);
         console.log("Is user in Egypt?", isEgypt);
       } catch (error) {
         console.log("Failed to detect location");

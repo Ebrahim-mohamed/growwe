@@ -1,15 +1,13 @@
-import Image from "next/image";
-
 export function VideoSection() {
   return (
-    <div className="px-[var(--section-Padding)] w-full relative">
-      <Image
-        alt="video placeholder"
-        src="/about/video-placeholder.png"
-        width={1000}
-        height={1000}
-        className="w-full h-auto"
-      />
+    <div className="p-[var(--section-Padding)] w-full">
+      <iframe
+        className="w-full h-[800px] rounded-lg"
+        src="https://www.youtube.com/embed/DRphzO38cN4"
+        title="YouTube video player"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowFullScreen
+      ></iframe>
     </div>
   );
 }
