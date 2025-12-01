@@ -751,21 +751,21 @@
       "title1": "What is Organic Farming?",
       "pra1": "Organic farming is a method of agriculture that relies on natural processes and avoids synthetic fertilizers, pesticides, genetically modified organisms (GMOs), and growth hormones. The goal is to maintain long-term soil fertility, protect biodiversity, and produce healthier food.",
       "title2": "Benefits of Organic Farming",
-      "point1": "Healthier Soil: Organic fertilizers improve soil structure, water retention, and microbial activity.",
-      "point2": "Environmental Protection: Avoids harmful chemicals, reduces pollution, and lowers greenhouse gas emissions.",
-      "point3": "Biodiversity: Supports beneficial insects, pollinators, and microorganisms.",
-      "point4": "Safer Food: Free from chemical residues, often higher in antioxidants.",
-      "point5": "Economic Value: High demand globally, sold at premium prices."
+      "point1": "<second>Healthier Soil:</second> Organic fertilizers improve soil structure, water retention, and microbial activity.",
+      "point2": "<second>Environmental Protection:</second> Avoids harmful chemicals, reduces pollution, and lowers greenhouse gas emissions.",
+      "point3": "<second>Biodiversity:</second> Supports beneficial insects, pollinators, and microorganisms.",
+      "point4": "<second>Safer Food:</second> Free from chemical residues, often higher in antioxidants.",
+      "point5": "<second>Economic Value:</second> High demand globally, sold at premium prices."
     },
     "section3": {
       "title1": "What are Hydroponics?",
       "pra1": "Hydroponics is a soilless farming system where plants grow in nutrient-rich water instead of soil. It uses inert media like cocopeat or rockwool to support roots. Hydroponics is popular for saving water, maximizing yields, and enabling urban farming",
       "title2": "Benefits of Hydroponics",
-      "point1": "Water Efficiency: Uses up to 90% less water than traditional farming.",
-      "point2": "Space-Saving: Vertical farming maximizes production per square meter.",
-      "point3": "Faster Growth: Nutrients are delivered directly to roots.",
-      "point4": "Fewer Pesticides: Reduced risk of soil-borne pests.",
-      "point5": "Year-Round Production: Crops can grow regardless of season.",
+      "point1": "<second>Water Efficiency:</second> Uses up to 90% less water than traditional farming.",
+      "point2": "<second>Space-Saving:</second> Vertical farming maximizes production per square meter.",
+      "point3": "<second>Faster Growth:</second> Nutrients are delivered directly to roots.",
+      "point4": "<second>Fewer Pesticides:</second> Reduced risk of soil-borne pests.",
+      "point5": "<second>Year-Round Production:</second> Crops can grow regardless of season.",
       "title3": "Challenges of Hydroponics",
       "pra2": "High initial investment, technical knowledge required, and dependency on energy in some systems."
     },
@@ -835,24 +835,26 @@
       "title1": "Mulch & Mulching",
       "pra1": "Mulch is a layer of material applied to the surface of soil, primarily used in gardening. While mulching in agriculture is the practice of covering the soil surface around plants. Mulch can be made from different materials such as coconut, straw, compost, plastic films, or crop residues. The main purpose is to protect the soil, retain moisture, regulate temperature, and improve crop performance.",
       "title2": "Benefits of Organic Farming",
-      "point1": "Moisture conservation: The high water retention of mulch keeps the soil moist by reducing evaporation.",
-      "point2": "Weed Control: Prevents weed germination by blocking sunlight.",
-      "point3": "Controlling the temperature of the soil: keeps it warm in the winter and cool in the summer.",
-      "point4": "Safer Food: Free from chemical residues, often higher in antioxidants.",
-      "point5": "Increase Soil Fertility: As organic mulches break down, nutrients are added to the soil.",
-      "point6": "Improve soil aeration: Produce perfect aeration for soil & roots.",
-      "point7": "Decrease Soil Erosion: Prevents soil erosion from water and wind.",
-      "point8": "Improve Crop Quality: Reduces contamination and disease by keeping fruits and vegetables away from the soil."
+      "point1": "<second>Moisture conservation:</second> The high water retention of mulch keeps the soil moist by reducing evaporation.",
+      "point2": "<second>Weed Control:</second> Prevents weed germination by blocking sunlight.",
+      "point3": "<second>Controlling the temperature of the soil:</second> keeps it warm in the winter and cool in the summer.",
+      "point4": "<second>Safer Food:</second> Free from chemical residues, often higher in antioxidants.",
+      "point5": "<second>Increase Soil Fertility:</second> As organic mulches break down, nutrients are added to the soil.",
+      "point6": "<second>Improve soil aeration:</second> Produce perfect aeration for soil & roots.",
+      "point7": "<second>Decrease Soil Erosion:</second> Prevents soil erosion from water and wind.",
+      "point8": "<second>Improve Crop Quality:</second> Reduces contamination and disease by keeping fruits and vegetables away from the soil."
     },
     "section3": {
       "title1": "Mulching in Organic Farming",
       "title2": "Mulching in Soilless Growing Media and Hydroponics",
+      "mainPra": "In organic farming, mulching is essential because it:",
+      "mainPra2": "Although mulching is traditionally linked to soil-based farming, it can also be applied in soilless systems:",
       "point1": "Provides a natural alternative to synthetic herbicides for weed control.",
       "point2": "Enriches soil naturally as organic mulch decomposes.",
       "point3": "Protects soil biodiversity by maintaining a stable microclimate.",
       "point4": "Helps farmers reduce input costs over time.",
       "point5": "In cocopeat or perlite systems, mulching with organic materials helps reduce water loss and regulate temperature.",
-      "point6": " In hydroponics with containers, mulching prevents algae growth on the surface and improves root-zone stability.",
+      "point6": "In hydroponics with containers, mulching prevents algae growth on the surface and improves root-zone stability.",
       "point7": "It can also act as an extra insulation layer to protect plants in controlled environments."
     },
     "section4": {
@@ -909,17 +911,17 @@
     "section1": {
       "title": "Landscaping",
       "des": "Designing Sustainable and Beautiful Outdoor Spaces",
-      "pra1": "Landscaping is more than just arranging plants and flowers. It is the art and science of designing, planning, and maintaining outdoor spaces to achieve both aesthetic beauty and functional use. From private gardens to public parks and urban developments, landscaping plays a vital role in improving environmental quality and enhancing human well-being.",
+      "pra1": "Landscaping is more than just arranging plants and flowers. It is the art and science of designing, planning, and maintaining outdoor spaces to achieve both <second>aesthetic beauty</second> and <second>functional use</second>. From private gardens to public parks and urban developments, landscaping plays a vital role in improving environmental quality and enhancing human well-being.",
       "pra2": "Arranging flowers and plants is only one aspect of landscaping. It is the art and science of creating, organizing, and caring for outdoor areas to provide both practical utility and visual appeal. In order to improve the quality of the environment and human well-being, landscaping is essential in urban developments, public parks, and private gardens."
     },
     "section2": {
       "title1": "What is Landscaping?",
       "pra1": "Landscape design is the act of adjusting the apparent features of outdoor design, such as gardens, yards, and public spaces, by combining natural and artificial materials. It mixes art, horticulture, and environmental design to create useful and aesthetically pleasing spaces.",
       "title2": "Importance of Landscaping ",
-      "point1": " Environmental Value: Improves air quality, reduces heat, and prevents soil erosion.",
-      "point2": "Aesthetic Appeal: Enhances beauty and increases property value.",
-      "point3": "Social Impact: Provides recreational spaces and improves quality of life.",
-      "point4": "Climate Adaptation: Helps cities manage heat islands, flooding, and water use."
+      "point1": "<second>Environmental Value:</second> Improves air quality, reduces heat, and prevents soil erosion.",
+      "point2": "<second>Aesthetic Appeal:</second> Enhances beauty and increases property value.",
+      "point3": "<second>Social Impact:</second> Provides recreational spaces and improves quality of life.",
+      "point4": "<second>Climate Adaptation:</second> Helps cities manage heat islands, flooding, and water use."
     },
     "section3": {
       "title1": "Elements of Landscaping",
@@ -986,11 +988,11 @@
       "title1": "What is Pruning?",
       "pra1": "Pruning is the practice of selectively cutting away certain parts of a plant—such as branches, buds, or roots—to improve health, control shape, and enhance productivity. It is commonly applied in fruit trees, shrubs, ornamental plants, and even vegetables.",
       "title2": "Why is Pruning Important? ",
-      "point1": "Health: Removes diseased, damaged, or dead branches.",
-      "point2": "Growth Control: Shapes plants and prevents overcrowding.",
-      "point3": "Productivity: Encourages flowering and fruiting.",
-      "point4": "Safety: Prevents hazards from overgrown or weak branches.",
-      "point5": "Aesthetics: Improves appearance in landscaping and gardening."
+      "point1": "<second>Health:</second> Removes diseased, damaged, or dead branches.",
+      "point2": "<second>Growth Control:</second> Shapes plants and prevents overcrowding.",
+      "point3": "<second>Productivity:</second> Encourages flowering and fruiting.",
+      "point4": "<second>Safety:</second> Prevents hazards from overgrown or weak branches.",
+      "point5": "<second>Aesthetics:</second> Improves appearance in landscaping and gardening."
     },
     "section3": {
       "title1": "Tools Used in Pruning",
