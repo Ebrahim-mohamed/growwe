@@ -14,7 +14,7 @@ export function Section7({ articleNumber }: { articleNumber: string }) {
           <div key={index}>
             <p className="text-[1.8rem] font-bold">
               {" "}
-              Q{index + 1} : {t(`title${index + 1}`)}
+              {index + 1} : {t(`title${index + 1}`)}
             </p>
             <p className="text-[1.8rem] ">{t(`pra${index + 1}`)}</p>
           </div>

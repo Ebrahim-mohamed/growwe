@@ -26,7 +26,7 @@ export function Header() {
   };
 
   return (
-    <div className="flex items-center justify-between gap-[2rem] py-10 px-[var(--section-Padding)] bg-transparent absolute top-0 left-0 w-full z-50">
+    <div className="flex items-center justify-between gap-[2rem] py-10 px-[var(--section-Padding)] absolute top-0 left-0 w-full z-50 bg-gradient-to-b from-black to-transparent">
       {/* Logo */}
       <div className="flex-1">
         <Link href="/">

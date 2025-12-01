@@ -7,13 +7,13 @@ export function Section1({ articleNumber }: { articleNumber: string }) {
     <div className="flex flex-col gap-4 w-full p-[var(--section-Padding)]">
       {articleNumber !== "3" ? (
         <div>
-          <div className="text-[2.5rem]">
+          <div className="text-[2.5rem] mb-[3rem]">
             <h1 className="font-bold">{t("title")}</h1>
             <p className="text-[#426B1F] font-normal">{t("des")}</p>
           </div>
-          <div className="flex w-full items-center justify-between gap-4 text-[1.8rem]">
+          <div className="flex w-full items-center justify-between gap-[6rem] text-[1.8rem]">
             <p className="flex-1">{t("pra1")}</p>
-            <div className="w-[35%]">
+            <div className="w-[20%]">
               <Image
                 alt="article image"
                 src={`/articles/article${articleNumber}-section1.png`}
@@ -24,7 +24,7 @@ export function Section1({ articleNumber }: { articleNumber: string }) {
             </div>
           </div>
           {articleNumber === "1" && (
-            <p className="text-[1.8rem]">{t("pra2")}</p>
+            <p className="text-[1.8rem] mt-[1rem]">{t("pra2")}</p>
           )}
         </div>
       ) : (

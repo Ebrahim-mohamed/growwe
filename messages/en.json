@@ -786,10 +786,8 @@
       "pra3": "Popular in urban areas with little space. Organic hydroponics, vertical farming, and rooftop gardens are frequently included.",
       "title4": "Soilless Organic Farming",
       "pra4": "A modern approach where plants are grown in soilless growing media (soilless substrates) such as cocopeat, perlite, or rockwool, combined with organic nutrient solutions.  This method maintains the principles of organic farming (avoiding synthetic chemicals) while saving water and maximizing yields.",
-      "title5": "Advantages: ",
-      "pra5": "Uses less water, suitable for arid regions, and supports year-round production.",
-      "title6": "Challenge: ",
-      "pra6": "Organic certification for hydroponics is still debated in some regions, but demand for eco-friendly soilless systems is growing rapidly."
+      "pra5": "<second>Advantages:</second> Uses less water, suitable for arid regions, and supports year-round production.",
+      "pra6": "<second>Challenge:</second> Organic certification for hydroponics is still debated in some regions, but demand for eco-friendly soilless systems is growing rapidly."
     },
     "section6": {
       "title": "Conclusion",
@@ -873,19 +871,16 @@
     },
     "section5": {
       "head": "Types of Mulching",
-      "mainPra": "Organic farming is not a one-size-fits-all method; it includes different approaches depending on the resources available, climate, and market demand. The most common forms include:",
-      "title1": "Integrated Organic Farming",
-      "pra1": "A comprehensive approach that maintains soil fertility and lowers the need for outside inputs by integrating crops, animals, and farm waste recycling (such as composting).",
-      "title2": "Pure Organic Farming",
-      "pra2": "A more stringent version that exclusively uses biological control techniques, bio-pesticides, and natural fertilizers, avoiding any chemical inputs.",
-      "title3": "Urban and Small-Scale Organic Farming",
-      "pra3": "Popular in urban areas with little space. Organic hydroponics, vertical farming, and rooftop gardens are frequently included.",
-      "title4": "Soilless Organic Farming",
-      "pra4": "A modern approach where plants are grown in soilless growing media (soilless substrates) such as cocopeat, perlite, or rockwool, combined with organic nutrient solutions.  This method maintains the principles of organic farming (avoiding synthetic chemicals) while saving water and maximizing yields.",
-      "title5": "Advantages: ",
-      "pra5": "Uses less water, suitable for arid regions, and supports year-round production.",
-      "title6": "Challenge: ",
-      "pra6": "Organic certification for hydroponics is still debated in some regions, but demand for eco-friendly soilless systems is growing rapidly."
+      "title1": "Organic Mulch",
+      "mainPra1": "Made from organic materials that break down over time.",
+      "pra1": "<second>Examples:</second> Straw, hay, wood chips, compost, leaves, crop waste, and manure are a few examples.",
+      "pra2": "<second>Advantages:</second> Benefits include increased microbial activity, improved soil fertility, and environmental friendliness.",
+      "pra3": "<second>Disadvantages:</second> Requires frequent refilling and, if left unchecked, may draw pests.",
+      "title2": "Inorganic Mulch",
+      "mainPra2": "Made from synthetic or non-decomposable materials.",
+      "pra4": "<second>Examples:</second> Pebbles, gravel, plastic sheets, and landscape cloth.",
+      "pra5": "<second>Advantages:</second> Long-lasting, highly effective for weed control and moisture retention.",
+      "pra6": "<second>Disadvantages:</second> Non-biodegradable, disposal issues, can increase soil temperature excessively"
     },
     "section6": {
       "title": "Conclusion",
@@ -925,10 +920,10 @@
     },
     "section3": {
       "title1": "Elements of Landscaping",
-      "point1": "Hardscape: Non-living elements such as walkways, patios, fences, walls, and decorative stones.",
-      "point2": "Softscape: Living elements including trees, shrubs, flowers, turf, and ground covers.",
-      "point3": "Water Features: Fountains, ponds, waterfalls, and artificial lakes that add tranquility and beauty.",
-      "point4": "Lighting: Outdoor lighting enhances safety, highlights design, and creates ambiance at night."
+      "point1": "<second>Hardscape:</second> Non-living elements such as walkways, patios, fences, walls, and decorative stones.",
+      "point2": "<second>Softscape:</second> Living elements including trees, shrubs, flowers, turf, and ground covers.",
+      "point3": "<second>Water Features:</second> Fountains, ponds, waterfalls, and artificial lakes that add tranquility and beauty.",
+      "point4": "<second>Lighting:</second> Outdoor lighting enhances safety, highlights design, and creates ambiance at night."
     },
     "section4": {
       "title1": "Benefits of Landscaping",
@@ -1002,10 +997,10 @@
       "point3": " Pruning saws for large limbs.",
       "point4": "Hedge shears for shaping.",
       "point5": "Sterilization tools to prevent disease spread.",
-      "point6": "Winter (Dormant Season): Best for most trees and shrubs to encourage strong spring growth",
-      "point7": "Spring: For shaping and removing frost damage.",
-      "point8": "After Flowering: For shrubs that bloom on old wood (e.g., lilacs).",
-      "point9": "Year-Round: For removing diseased or damaged branches immediately."
+      "point6": "<second>Winter (Dormant Season):</second> Best for most trees and shrubs to encourage strong spring growth",
+      "point7": "<second>Spring:</second> For shaping and removing frost damage.",
+      "point8": "<second>After Flowering:</second> For shrubs that bloom on old wood (e.g., lilacs).",
+      "point9": "<second>Year-Round:</second> For removing diseased or damaged branches immediately."
     },
     "section4": {
       "title1": "Benefits of Pruning",

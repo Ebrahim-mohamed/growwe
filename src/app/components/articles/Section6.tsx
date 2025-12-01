@@ -6,15 +6,17 @@ export function Section6({ articleNumber }: { articleNumber: string }) {
 
   return (
     <div
-      className="bg-cover  p-[var(--section-Padding)]  text-white relative"
+      className="bg-cover p-[var(--section-Padding)] text-white relative h-[33rem] flex items-center"
       style={{
         backgroundImage: `url(/articles/section6-${articleNumber}.png)`,
       }}
     >
-      <div className="absolute top-0 left-0 w-full h-full bg-[#00000099] z-30"></div>
+      <div className="relative z-50">
+        <h1 className="text-[3.5rem] font-bold">{t("title")}</h1>
+        <p className="text-[2.5rem]">{t("pra")}</p>
+      </div>
 
-      <h1 className="text-[3.5rem] font-bold z-50">{t("title")}</h1>
-      <p className="text-[2.5rem] z-50">{t("pra")}</p>
+      <div className="absolute top-0 left-0 w-full h-full bg-[#00000099] z-30"></div>
     </div>
   );
 }
