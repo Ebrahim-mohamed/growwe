@@ -23,7 +23,7 @@ export function Section1({ articleNumber }: { articleNumber: string }) {
               />
             </div>
           </div>
-          {articleNumber === "1" && (
+          {(articleNumber === "1" || articleNumber === "5") && (
             <p className="text-[1.8rem] mt-[1rem]">{t("pra2")}</p>
           )}
         </div>

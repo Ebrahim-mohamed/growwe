@@ -1,11 +1,17 @@
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 import { SocialIcon } from "./SocialIcon";
 const links = ["about", "products", "gardening", "contact"];
-const SocialLinks = ["facebook", "instagram", "tiktok", "linkedin", "youtube"];
+const SocialLinks = [
+  { name: "facebook", url: "https://www.facebook.com/growweofficial" },
+  { name: "instagram", url: "https://www.instagram.com/growweofficial/" },
+  { name: "tiktok", url: "https://www.tiktok.com/@growweofficial" },
+  { name: "linkedin", url: "https://www.linkedin.com/company/growweofficial/" },
+];
 export function Footer() {
   const t = useTranslations("footer");
+  const locale = useLocale();
   return (
     <div className=" flex flex-col gap-[1rem] px-10 py-18 bg-[var(--green-color)] text-white">
       <div>
@@ -34,15 +40,15 @@ export function Footer() {
         <div className="flex  justify-end items-center">
           <div className="flex items-center justify-center gap-[2rem]">
             {SocialLinks.map((link) => (
-              <SocialIcon img={link} key={link} to="#" />
+              <SocialIcon img={link.name} key={link.name} to={link.url} />
             ))}
           </div>
         </div>
       </div>
       <div className="flex items-center justify-between w-full font-normal">
         <div className="flex items-center justify-center gap-[3rem] text-[1.2rem] ">
-          <Link href="privacy-policy">{t("privacy")}</Link>
-          <Link href="refund">{t("terms")}</Link>
+          <Link href={`/${locale}/privacy-policy`}>{t("privacy")}</Link>
+          <Link href={`/${locale}/refund`}>{t("terms")}</Link>
         </div>
         <p className="text-[0.9rem]">{t("copyRight")}</p>
       </div>

@@ -23,7 +23,9 @@ export function Section3({ articleNumber }: { articleNumber: string }) {
         </div>
       )}
       <div className="flex flex-col gap-[3rem]">
-        {articleNumber === "4" || articleNumber === "2" ? (
+        {articleNumber === "4" ||
+        articleNumber === "2" ||
+        articleNumber === "5" ? (
           <div>
             <h1 className="text-[#426B1F] text-[2.5rem] font-bold">
               {t("title1")}
@@ -71,14 +73,14 @@ export function Section3({ articleNumber }: { articleNumber: string }) {
                   ? 5
                   : articleNumber === "4"
                   ? 4
-                  : articleNumber === "2"
+                  : articleNumber === "2" || articleNumber === "5"
                   ? 3
                   : 4,
             }).map((_, index) => (
               <li key={index} className="text-[1.8rem] ">
                 {t.rich(
                   `point${
-                    articleNumber === "2"
+                    articleNumber === "2" || articleNumber === "5"
                       ? index + 5
                       : articleNumber === "4"
                       ? index + 6

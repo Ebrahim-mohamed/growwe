@@ -1,4 +1,10 @@
 import { useTranslations } from "next-intl";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 export function Section7({ articleNumber }: { articleNumber: string }) {
   const t = useTranslations(`template${articleNumber}.section7`);
@@ -7,19 +13,21 @@ export function Section7({ articleNumber }: { articleNumber: string }) {
       <div>
         <h1 className="text-[#426B1F] text-[2.5rem] font-bold">{t("head")}</h1>
       </div>
-      <div className="flex flex-col gap-[1.5rem]">
+      <Accordion className="w-full" type="single" collapsible>
         {Array.from({
           length: articleNumber === "1" ? 11 : 4,
         }).map((_, index) => (
-          <div key={index}>
-            <p className="text-[1.8rem] font-bold">
+          <AccordionItem key={index} value={`${index}`}>
+            <AccordionTrigger className="text-[1.8rem] font-bold">
               {" "}
               {index + 1} : {t(`title${index + 1}`)}
-            </p>
-            <p className="text-[1.8rem] ">{t(`pra${index + 1}`)}</p>
-          </div>
+            </AccordionTrigger>
+            <AccordionContent className="text-[1.8rem] ">
+              {t(`pra${index + 1}`)}
+            </AccordionContent>
+          </AccordionItem>
         ))}
-      </div>
+      </Accordion>
     </div>
   );
 }

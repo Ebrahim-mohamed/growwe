@@ -38,16 +38,21 @@ export function Section5({ articleNumber }: { articleNumber: string }) {
         </div>
       ) : (
         <div className="flex flex-col gap-[3rem]">
-          {Array.from({ length: articleNumber === "4" ? 5 : 4 }).map(
-            (_, index) => (
-              <div key={index} className="flex flex-col ">
-                <h2 className="text-[#426B1F] font-bold text-[2rem]">
-                  {t(`title${index + 1}`)}
-                </h2>
-                <p className=" text-[1.5rem]">{t(`pra${index + 1}`)}</p>
-              </div>
-            )
-          )}
+          {Array.from({
+            length:
+              articleNumber === "4" || articleNumber === "5"
+                ? 5
+                : articleNumber === "6"
+                ? 3
+                : 4,
+          }).map((_, index) => (
+            <div key={index} className="flex flex-col ">
+              <h2 className="text-[#426B1F] font-bold text-[2rem]">
+                {t(`title${index + 1}`)}
+              </h2>
+              <p className=" text-[1.5rem]">{t(`pra${index + 1}`)}</p>
+            </div>
+          ))}
         </div>
       )}
       {articleNumber === "1" && (

@@ -107,6 +107,27 @@
     "endSection": {
       "header": "THE UNSDG GUIDES",
       "pra": "Based on our unwavering commitment to global sustainability, our actions and strategies are directly guided by the principles and objectives outlined in the United Nations Sustainable Development Goals (UNSDGs)."
+    },
+    "awardBox1": {
+      "head": "TECHNOLOGY PRIZES",
+      "year": "WINNER 2024",
+      "prize": "PIONEERING & SOPHISTICATED INNOVATIONS",
+      "prize2": "Serving the Agriculture Sector Category",
+      "pra": "KHALIFA INT.AWARD FOR DATE PALM",
+      "subPra": "and agricultural innovation"
+    },
+    "awardBox2": {
+      "year": "WINNER 2024",
+      "prize": "INNOVATIVE TECHNOLOGY EXCELLENCE",
+      "prize2": "prize Category",
+      "pra": "NATIONAL CENTER FOR PALMS & DATES",
+      "subPra": "International Prize"
+    },
+    "awardBox3": {
+      "year": "WINNER 2024",
+      "prize": "CONTINUITY AND RESILIENCE INNOVATION",
+      "prize2": "Africa Award",
+      "pra": "BUSINESS CONTINUITY INSTITUTE"
     }
   },
   "products": {
@@ -1011,9 +1032,9 @@
       "point4": "Improves air circulation and sunlight penetration.",
       "point5": "Enhances garden design and structure.",
       "point6": "Over-pruning can weaken plants.",
-      "point7": " Incorrect timing may reduce flowering or yields",
-      "point8": " Improper cuts can lead to infections.",
-      "point9": " Requires skill and knowledge for different species."
+      "point7": "Incorrect timing may reduce flowering or yields",
+      "point8": "Improper cuts can lead to infections.",
+      "point9": "Requires skill and knowledge for different species."
     },
     "section5": {
       "head": "Types of Pruning",
@@ -1050,6 +1071,158 @@
       "point3": "Cut at a slight angle above a bud to prevent rot.",
       "point4": "Don’t remove more than 25–30% of the plant at once.",
       "point5": "Learn species-specific requirements (fruit trees vs. ornamentals)."
+    }
+  },
+  "template5": {
+    "heroSection": {
+      "title": "Irrigation",
+      "des": "Importance, Methods, and Best Practices in Agriculture"
+    },
+    "section1": {
+      "title": "Irrigation",
+      "des": "Importance, Methods, and Best Practices in Agriculture",
+      "pra1": "Irrigation is a vital practice in agriculture and landscaping. It ensures that plants receive sufficient water for healthy growth, higher yields, and sustainability, particularly in locations with irregular rainfall.",
+      "pra2": "This article explains the types of irrigation systems, their advantages, challenges, and modern techniques that make farming and gardening more efficient."
+    },
+    "section2": {
+      "title1": "What is Irrigation?",
+      "pra1": "Irrigation is the artificial application of water to soil or plants in order to support growth when rainfall is insufficient. It plays a critical role in both small gardens and large-scale agriculture, ensuring consistent moisture levels for healthy crops.",
+      "title2": "Why is Irrigation Important?",
+      "point1": "<second>Ensures Plant Survival</second> in dry seasons or arid regions.",
+      "point2": "<second>Improves Crop Yield</second> and quality",
+      "point3": "<second>Maintains Soil Fertility</second> by aiding nutrient absorption.",
+      "point4": "<second>Supports Landscaping</second> by keeping lawns, parks, and gardens green.",
+      "point5": "<second>Reduces Risk</second> of crop failure caused by drought"
+    },
+    "section3": {
+      "title1": "Modern Irrigation Technologies",
+      "title2": "Best Time for Irrigation",
+      "point1": "<second>Smart irrigation controllers</second> using sensors and weather data",
+      "point2": "<second>Automated drip systems</second> with timers.",
+      "point3": "<second>Hydroponic irrigation</second> in soilless systems.",
+      "point4": "<second>Recycled water systems</second> for sustainable farming",
+      "point5": "<second>Early morning or late afternoon</second> to reduce evaporation.",
+      "point6": "Avoid watering during midday heat.",
+      "point7": "Frequency depends on soil type, crop, and climate."
+    },
+    "section4": {
+      "title1": "Benefits of Irrigation",
+      "title2": "Challenges of Irrigation",
+      "title3": "Sustainable Irrigation Practices",
+      "point1": "Increases agricultural productivity.",
+      "point2": "Conserves water (with efficient systems)",
+      "point3": "Supports year-round farming.",
+      "point4": "Improves crop quality and consistency.",
+      "point5": "Reduces dependence on unpredictable rainfall.",
+      "point6": "High installation and maintenance costs (modern systems).",
+      "point7": "Over-irrigation can cause root rot and nutrient leaching.",
+      "point8": "Salinization of soil in poorly drained areas.",
+      "point9": "Limited water resources in drought-prone regions.",
+      "point10": "Use <second>drip irrigation</second> for water efficiency.",
+      "point11": "Adopt <second>rainwater harvesting</second> for irrigation supply.",
+      "point12": "Install <second>soil moisture sensors</second> to avoid overwatering.",
+      "point13": "Practice <second>crop rotation and mulching</second> to conserve soil moisture.",
+      "point14": "Regular maintenance of irrigation systems to reduce water loss."
+    },
+    "section5": {
+      "head": "Types of Irrigation Systems",
+      "title1": "Surface Irrigation",
+      "pra1": "Traditional method where water flows over the soil surface by gravity",
+      "title2": "Drip Irrigation",
+      "pra2": "Delivers water directly to the plant roots through tubes and emitters.",
+      "title3": "Sprinkler Irrigation",
+      "pra3": "Water is sprayed into the air like rainfall.",
+      "title4": "Subsurface Irrigation",
+      "pra4": "Water is delivered below the soil surface through buried pipes.",
+      "title5": "Manual Irrigation",
+      "pra5": "Watering cans or hoses are used for small gardens."
+    },
+    "section6": {
+      "title": "Conclusion",
+      "pra": "Irrigation is the backbone of modern agriculture and landscaping. By choosing the right system, applying water efficiently, and adopting sustainable practices, farmers and gardeners can ensure healthy plant growth while conserving valuable water resources."
+    },
+    "section7": {
+      "head": "Frequently Asked Questions FAQs",
+      "title1": "What is the most water-efficient irrigation system?",
+      "pra1": "Drip irrigation is the most efficient, delivering water directly to plant roots.",
+      "title2": "How often should I irrigate crops?",
+      "pra2": "It depends on the crop type, soil, and climate, but generally 2–3 times per week for most vegetables.",
+      "title3": "Can irrigation be harmful?",
+      "pra3": "Yes, over-irrigation can cause waterlogging, salinity, and plant diseases.",
+      "title4": "What is the role of irrigation in hydroponics?",
+      "pra4": "In hydroponics, irrigation provides nutrient-rich water directly to plant roots, replacing soil completely."
+    }
+  },
+  "template6": {
+    "heroSection": {
+      "title": "Fertilizers",
+      "des": "Types, Uses, and Role in Modern Agriculture"
+    },
+    "section1": {
+      "title": "Fertilizers",
+      "des": "Types, Uses, and Role in Modern Agriculture",
+      "pra1": "Fertilizers are essential in modern farming to replenish soil nutrients and ensure healthy plant growth. As global food demand increases, fertilizers help farmers achieve higher yields and better-quality crops. However, understanding their types, benefits, and environmental impacts is crucial for sustainable agriculture."
+    },
+    "section2": {
+      "title1": "What are Fertilizers?",
+      "pra1": "Fertilizers are natural or synthetic substances added to soil or plant roots to provide essential nutrients such as nitrogen, phosphorus, and potassium (NPK). They help improve soil fertility and boost crop production.",
+      "title2": "Why Are Fertilizers Important?",
+      "point1": "<second>Replenish Soil Nutrients</second> lost after continuous cropping.",
+      "point2": "<second>Improves Crop Yield</second> to meet growing food demand.",
+      "point3": "<second>Enhance Food Quality</second> by improving nutrient content in crops",
+      "point4": "<second>Support Modern Farming</second> practices like hydroponics and greenhouse cultivation"
+    },
+    "section3": {
+      "title2": "Common Nutrients in Fertilizers",
+      "title1": "Fertilizers in Soilless and Hydroponic Systems",
+      "point1": "<second>Nitrogen (N):</second> Promotes leafy growth",
+      "point2": "<second>Phosphorus (P):</second> Supports root development and flowering.",
+      "point3": "<second>Potassium (K):</second> Improves disease resistance and overall plant health",
+      "point4": "<second>Micronutrients:</second> Zinc, iron, manganese, and boron support plant metabolism.",
+      "pra1": "In hydroponics, fertilizers are dissolved in water to provide plants with essential nutrients directly. This method ensures efficient absorption and eliminates soil-related issues, making it highly effective for urban and controlled-environment farming."
+    },
+    "section4": {
+      "title1": "Benefits of Fertilizers",
+      "title2": "Challenges and Environmental Concerns",
+      "title3": "Best Practices for Using Fertilizers",
+      "point1": "Boost crop productivity.",
+      "point2": "Improve food quality and nutrition.",
+      "point3": "Support continuous farming cycles.",
+      "point4": "Enable cultivation in nutrient-poor soils",
+      "point5": "Essential for hydroponics and urban farming.",
+      "point6": "Over-fertilization leads to water pollution (eutrophication).",
+      "point7": "Long-term use of chemicals can degrade soil health.",
+      "point8": "High costs for organic fertilizers in some regions.",
+      "point9": "Risk of greenhouse gas emissions from nitrogen-based fertilizers.",
+      "point10": "Follow <second>soil testing</second> before applying fertilizers.",
+      "point11": "Use the <second>right dose at the right time</second>",
+      "point12": "Combine organic and chemical fertilizers for balanced nutrition.",
+      "point13": "Apply <second>slow-release fertilizers</second> to minimize nutrient loss.",
+      "point14": "Adopt <second>precision farming</second> technologies to optimize applications."
+    },
+    "section5": {
+      "head": "Types of Fertilizers",
+      "title1": "Organic Fertilizers",
+      "pra1": "Derived from natural materials like compost, manure, bone meal, and seaweed.",
+      "title2": "Inorganic (Chemical) Fertilizers",
+      "pra2": "Produced synthetically, often containing concentrated NPK.",
+      "title3": "Biofertilizers",
+      "pra3": "Contain living microorganisms like bacteria, fungi, or algae that enhance nutrient availability."
+    },
+    "section6": {
+      "title": "Conclusion",
+      "pra": "Fertilizers are vital for boosting agricultural productivity and ensuring food security. However, sustainable use through balanced application, integration of organic and biofertilizers, and modern precision farming is key to protecting soil and the environment."
+    },
+    "section7": {
+      "head": "Frequently Asked Questions FAQs",
+      "title1": "What is the difference between organic and chemical fertilizers?",
+      "pra1": "Organic fertilizers are natural and eco-friendly, while chemical fertilizers are synthetic and provide faster results.",
+      "title2": "Can fertilizers harm the environment?",
+      "pra2": "Yes, excessive use of chemical fertilizers can pollute water and damage soil health.",
+      "title3": "Which fertilizer is best for vegetables?",
+      "pra3": "A balanced NPK fertilizer combined with compost is ideal for most vegetables.",
+      "title4": "Do hydroponics require fertilizers?",
+      "pra4": "Yes, but in liquid nutrient form designed specifically for soilless systems."
     }
   }
 }

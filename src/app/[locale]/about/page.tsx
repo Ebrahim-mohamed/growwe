@@ -1,3 +1,4 @@
+import { AwardSection } from "@/app/components/aboutPage/AwardSection";
 import { EndSection } from "@/app/components/aboutPage/EndSection";
 import { Hero } from "@/app/components/aboutPage/hero";
 import { VideoSection } from "@/app/components/aboutPage/VideoSection";
@@ -10,6 +11,7 @@ export default function About() {
       <WhoWeAre />
       <VideoSection />
       <EndSection />
+      <AwardSection />
     </div>
   );
 }

@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export function SocialIcon({ img, to }: { img: string; to: string }) {
   return (
-    <Link href={to} className="hover:cursor-pointer">
+    <Link href={to} className="hover:cursor-pointer" target="_blank">
       <Image
         alt="social media platform icon"
         src={`/home/${img}.svg`}
