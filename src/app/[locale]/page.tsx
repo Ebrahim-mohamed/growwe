@@ -16,8 +16,8 @@ export default function HomePage() {
       <Plants />
       <Mulch />
       <MulchFeatures />
-      <Partners isHome />
       <NewsSection />
+      <Partners isHome />
     </div>
   );
 }

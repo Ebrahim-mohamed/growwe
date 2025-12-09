@@ -24,7 +24,6 @@ export function Header() {
     const nextLocale = locale === "en" ? "ar" : "en";
     router.push(`/${nextLocale}${pathname.replace(/^\/(en|ar)/, "")}`);
   };
-
   return (
     <div className="flex items-center justify-between gap-[2rem] py-10 px-[var(--section-Padding)] absolute top-0 left-0 w-full z-50 bg-gradient-to-b from-black to-transparent">
       {/* Logo */}
@@ -108,7 +107,18 @@ export function Header() {
             height={20}
           />
         </Link>
-
+        {pathname.includes("article") && (
+          <button>
+            <Image
+              alt="cart image"
+              src="/openArticle.jpg"
+              priority
+              className="w-[1.8rem]"
+              width={20}
+              height={20}
+            />
+          </button>
+        )}
         {/* Profile Icon */}
         <Link
           href={

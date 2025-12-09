@@ -41,6 +41,7 @@ export default async function LocaleLayout({
     >
       <body className="relative overflow-x-hidden">
         <NextIntlClientProvider locale={locale}>
+          {/* <div className="fixed bg-white top-[9rem] left-0 w-[20rem] h-[43rem]"></div> */}
           <Header />
           {children}
           <Footer />
