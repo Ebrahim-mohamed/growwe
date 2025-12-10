@@ -21,7 +21,7 @@ import Link from "next/link";
 
 type Product = {
   _id: string;
-  productImage: string; // image filename or URL
+  productImage: string; // filename from backend
   nameEN: string;
   nameAR: string;
   desEN: string;
@@ -42,16 +42,19 @@ export default function Products() {
   const [isLoading, setIsLoading] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  // Fetch products
-  const fetchProducts = async (): Promise<void> => {
+  const API_BASE = "http://localhost:3001"; // backend URL
+
+  // Fetch products from backend
+  const fetchProducts = async () => {
     setIsLoading(true);
     try {
-      const res = await fetch(" /products");
-      if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
+      const res = await fetch(`${API_BASE}/products`);
+      if (!res.ok) throw new Error("Failed to fetch products");
       const data = await res.json();
       setProducts(data);
-    } catch (error) {
-      console.error("Error fetching products:", error);
+    } catch (err) {
+      console.error(err);
+      alert("Error fetching products");
     } finally {
       setIsLoading(false);
     }
@@ -66,18 +69,19 @@ export default function Products() {
     setIsSubmitting(true);
     try {
       const url = editingProduct
-        ? ` /products/${editingProduct._id}`
-        : " /products";
+        ? `${API_BASE}/products/${editingProduct._id}`
+        : `${API_BASE}/products`;
       const method = editingProduct ? "PUT" : "POST";
 
       const res = await fetch(url, { method, body: formData });
-      if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
+      if (!res.ok) throw new Error("Failed to save product");
+
       alert(editingProduct ? "Product updated!" : "Product added!");
       setEditingProduct(null);
       setOpen(false);
       await fetchProducts();
-    } catch (error) {
-      console.error(error);
+    } catch (err) {
+      console.error(err);
       alert("Failed to save product");
     } finally {
       setIsSubmitting(false);
@@ -85,24 +89,19 @@ export default function Products() {
   };
 
   // Delete product
-  const onDelete = async (id: string) => {
+  const handleDelete = async (id: string) => {
     if (!confirm("Are you sure you want to delete this product?")) return;
     try {
-      const res = await fetch(` /products/${id}`, {
+      const res = await fetch(`${API_BASE}/products/${id}`, {
         method: "DELETE",
       });
-      if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
+      if (!res.ok) throw new Error("Failed to delete product");
       alert("Product deleted!");
       await fetchProducts();
-    } catch (error) {
-      console.error(error);
+    } catch (err) {
+      console.error(err);
       alert("Failed to delete product");
     }
-  };
-
-  const handleDialogChange = (isOpen: boolean) => {
-    setOpen(isOpen);
-    if (!isOpen) setEditingProduct(null);
   };
 
   return (
@@ -113,7 +112,13 @@ export default function Products() {
           Products Management
         </h1>
 
-        <Dialog open={open} onOpenChange={handleDialogChange}>
+        <Dialog
+          open={open}
+          onOpenChange={(open) => {
+            setOpen(open);
+            if (!open) setEditingProduct(null);
+          }}
+        >
           <DialogTrigger asChild>
             <button
               onClick={() => setOpen(true)}
@@ -147,8 +152,12 @@ export default function Products() {
                         size: editingProduct.size,
                         unitEN: editingProduct.unitEN,
                         unitAR: editingProduct.unitAR,
-                        productImage: undefined,
                       }
+                    : undefined
+                }
+                previewImage={
+                  editingProduct?.productImage
+                    ? `${API_BASE}/uploads/${editingProduct.productImage}`
                     : undefined
                 }
                 onSubmit={handleAddOrEdit}
@@ -160,7 +169,7 @@ export default function Products() {
         </Dialog>
       </div>
 
-      {/* Loading State */}
+      {/* Loading */}
       {isLoading && (
         <div className="w-full text-center py-10 text-gray-500">
           Loading products...
@@ -201,14 +210,13 @@ export default function Products() {
                     <TableRow key={p._id} className="hover:bg-blue-50">
                       <TableCell className="px-4 py-2">
                         <Link
-                          href={` /uploads/${p.productImage}`}
+                          href={`${API_BASE}/uploads/${p.productImage}`}
                           target="_blank"
                           className="text-green-600 hover:underline"
                         >
                           View Image
                         </Link>
                       </TableCell>
-
                       <TableCell className="px-4 py-2">{p.nameEN}</TableCell>
                       <TableCell className="px-4 py-2">{p.nameAR}</TableCell>
                       <TableCell className="px-4 py-2">{p.desEN}</TableCell>
@@ -224,7 +232,6 @@ export default function Products() {
                       <TableCell className="px-4 py-2">{p.size}</TableCell>
                       <TableCell className="px-4 py-2">{p.unitEN}</TableCell>
                       <TableCell className="px-4 py-2">{p.unitAR}</TableCell>
-
                       <TableCell className="px-4 py-2 text-center">
                         <button
                           onClick={() => {
@@ -236,10 +243,9 @@ export default function Products() {
                           Edit
                         </button>
                       </TableCell>
-
                       <TableCell className="px-4 py-2 text-center">
                         <button
-                          onClick={() => onDelete(p._id)}
+                          onClick={() => handleDelete(p._id)}
                           className="px-3 py-1 bg-red-600 text-white rounded-md hover:bg-red-700"
                         >
                           Delete

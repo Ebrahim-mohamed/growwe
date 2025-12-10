@@ -17,7 +17,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import Link from "next/link";
-// import { NewsForm } from "./NewsForm"; // Will be used later for add/edit
+import { NewsForm } from "./NewsForm";
 
 type News = {
   _id: string;
@@ -28,23 +28,25 @@ type News = {
   desAR: string;
 };
 
-export default function NewsPage() {
+export default function News() {
   const [newsList, setNewsList] = useState<News[]>([]);
   const [editingNews, setEditingNews] = useState<News | null>(null);
   const [open, setOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  // Fetch news (dummy fetch example)
-  const fetchNews = async (): Promise<void> => {
+  const API_BASE = "http://localhost:3001"; // Backend URL
+
+  const fetchNews = async () => {
     setIsLoading(true);
     try {
-      const res = await fetch("/news");
-      if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
+      const res = await fetch(`${API_BASE}/news`);
+      if (!res.ok) throw new Error("Failed to fetch news");
       const data = await res.json();
       setNewsList(data);
-    } catch (error) {
-      console.error("Error fetching news:", error);
+    } catch (err) {
+      console.error(err);
+      alert("Failed to load news");
     } finally {
       setIsLoading(false);
     }
@@ -54,57 +56,56 @@ export default function NewsPage() {
     fetchNews();
   }, []);
 
-  // Add or edit news
   const handleAddOrEdit = async (formData: FormData) => {
     setIsSubmitting(true);
     try {
-      const url = editingNews ? `/news/${editingNews._id}` : "/news";
+      const url = editingNews
+        ? `${API_BASE}/news/${editingNews._id}`
+        : `${API_BASE}/news`;
       const method = editingNews ? "PUT" : "POST";
 
       const res = await fetch(url, { method, body: formData });
-      if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
+      if (!res.ok) throw new Error("Failed to save news");
+
       alert(editingNews ? "News updated!" : "News added!");
       setEditingNews(null);
       setOpen(false);
       await fetchNews();
-    } catch (error) {
-      console.error(error);
+    } catch (err) {
+      console.error(err);
       alert("Failed to save news");
     } finally {
       setIsSubmitting(false);
     }
   };
 
-  // Delete news
-  const onDelete = async (id: string) => {
+  const handleDelete = async (id: string) => {
     if (!confirm("Are you sure you want to delete this news item?")) return;
     try {
-      const res = await fetch(`/news/${id}`, {
-        method: "DELETE",
-      });
-      if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
+      const res = await fetch(`${API_BASE}/news/${id}`, { method: "DELETE" });
+      if (!res.ok) throw new Error("Failed to delete news");
       alert("News deleted!");
       await fetchNews();
-    } catch (error) {
-      console.error(error);
+    } catch (err) {
+      console.error(err);
       alert("Failed to delete news");
     }
   };
 
-  const handleDialogChange = (isOpen: boolean) => {
-    setOpen(isOpen);
-    if (!isOpen) setEditingNews(null);
-  };
-
   return (
     <div className="w-full min-h-screen bg-gray-50 p-6 flex flex-col gap-6">
-      {/* Header + Add News */}
       <div className="flex items-center gap-6 w-full">
         <h1 className="text-2xl font-semibold text-gray-800">
           News Management
         </h1>
 
-        <Dialog open={open} onOpenChange={handleDialogChange}>
+        <Dialog
+          open={open}
+          onOpenChange={(isOpen) => {
+            setOpen(isOpen);
+            if (!isOpen) setEditingNews(null);
+          }}
+        >
           <DialogTrigger asChild>
             <button
               onClick={() => setOpen(true)}
@@ -123,32 +124,37 @@ export default function NewsPage() {
             </DialogHeader>
 
             <div className="mt-4">
-              {/* <NewsForm
-                defaultValues={editingNews ? {
-                  titleEN: editingNews.titleEN,
-                  titleAR: editingNews.titleAR,
-                  desEN: editingNews.desEN,
-                  desAR: editingNews.desAR,
-                  newsImage: undefined,
-                } : undefined}
+              <NewsForm
+                defaultValues={
+                  editingNews
+                    ? {
+                        titleEN: editingNews.titleEN,
+                        titleAR: editingNews.titleAR,
+                        desEN: editingNews.desEN,
+                        desAR: editingNews.desAR,
+                      }
+                    : undefined
+                }
+                previewImage={
+                  editingNews?.newsImage
+                    ? `${API_BASE}/uploads/${editingNews.newsImage}`
+                    : undefined
+                }
                 onSubmit={handleAddOrEdit}
                 isSubmitting={isSubmitting}
                 isEditing={!!editingNews}
-              /> */}
-              <p className="text-gray-500">News form goes here...</p>
+              />
             </div>
           </DialogContent>
         </Dialog>
       </div>
 
-      {/* Loading State */}
       {isLoading && (
         <div className="w-full text-center py-10 text-gray-500">
           Loading news...
         </div>
       )}
 
-      {/* Table */}
       {!isLoading && (
         <div className="w-full border rounded-2xl shadow-lg bg-white overflow-hidden">
           <div className="max-h-[calc(100vh-12rem)] overflow-auto">
@@ -173,7 +179,7 @@ export default function NewsPage() {
                     <TableRow key={n._id} className="hover:bg-blue-50">
                       <TableCell className="px-4 py-2">
                         <Link
-                          href={`/uploads/${n.newsImage}`}
+                          href={`${API_BASE}/uploads/${n.newsImage}`}
                           target="_blank"
                           className="text-green-600 hover:underline"
                         >
@@ -200,7 +206,7 @@ export default function NewsPage() {
 
                       <TableCell className="px-4 py-2 text-center">
                         <button
-                          onClick={() => onDelete(n._id)}
+                          onClick={() => handleDelete(n._id)}
                           className="px-3 py-1 bg-red-600 text-white rounded-md hover:bg-red-700"
                         >
                           Delete
