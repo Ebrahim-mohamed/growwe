@@ -45,10 +45,10 @@ export function Smarter() {
     <div className="p-[var(--section-Padding)] bg-[#FCF7F1] relative overflow-hidden">
       <Image
         alt="planet image"
-        src="/home/smartIcon.png"
+        src="/home/smartIcon.svg"
         width={500}
         height={500}
-        className="absolute top-0 left-0 w-[20rem] max-[700px]:hidden"
+        className="absolute top-0 left-0 w-[15rem] max-[700px]:hidden"
       />
       <h1 className="text-[#387023] text-[3rem] font-black mb-20 text-center">
         {t.rich("smarterTitle", {
@@ -67,7 +67,7 @@ export function Smarter() {
         <div className="flex  gap-[1rem] justify-start items-start w-full">
           {smarterBox.map((box) => (
             <SmarterBox
-              des={t(box.des)}
+              des={t.rich(box.des, { second: (chunk) => <div>{chunk}</div> })}
               header={t(box.header)}
               img={box.img}
               key={t(box.header)}
@@ -77,7 +77,7 @@ export function Smarter() {
         <div className="flex gap-[1rem]  justify-start items-start w-full">
           {smarterBox2.map((box) => (
             <SmarterBox
-              des={t(box.des)}
+              des={t.rich(box.des, { second: (chunk) => <div>{chunk}</div> })}
               header={t(box.header)}
               img={box.img}
               key={t(box.header)}

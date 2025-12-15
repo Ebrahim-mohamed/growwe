@@ -9,20 +9,21 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import Link from "next/link";
+import { API_BASE_URL } from "@/utils/api";
 
 type User = {
   _id: string;
-  firstName: string;
-  lastName: string;
-  email: string;
-  phone: string;
-  country: string;
-  address: string;
-  postalCode: string;
-  city: string;
-  ordersCount: number; // Number of orders
-  isLoggedIn: boolean; // Login status
+  firstName?: string;
+  lastName?: string;
+  userName?: string;
+  email?: string;
+  phone?: string;
+  country?: string;
+  address?: string;
+  postalCode?: string;
+  city?: string;
+  ordersCount?: number;
+  role?: string;
 };
 
 export default function Users() {
@@ -30,16 +31,16 @@ export default function Users() {
   const [isLoading, setIsLoading] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  // Fetch users
   const fetchUsers = async () => {
     setIsLoading(true);
     try {
-      const res = await fetch(" /users");
+      const res = await fetch(`${API_BASE_URL}/users`);
       if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
       const data = await res.json();
       setUsers(data);
     } catch (error) {
       console.error("Error fetching users:", error);
+      // you can show toast here
     } finally {
       setIsLoading(false);
     }
@@ -49,12 +50,11 @@ export default function Users() {
     fetchUsers();
   }, []);
 
-  // Delete user
   const onDelete = async (id: string) => {
     if (!confirm("Are you sure you want to delete this user?")) return;
     setIsSubmitting(true);
     try {
-      const res = await fetch(` /users/${id}`, {
+      const res = await fetch(`${API_BASE_URL}/users/${id}`, {
         method: "DELETE",
       });
       if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
@@ -87,7 +87,7 @@ export default function Users() {
                   <TableHead className="px-4 py-2">First Name</TableHead>
                   <TableHead className="px-4 py-2">Last Name</TableHead>
                   <TableHead className="px-4 py-2">Email</TableHead>
-                  <TableHead className="px-4 py-2">phone</TableHead>
+                  <TableHead className="px-4 py-2">Phone</TableHead>
                   <TableHead className="px-4 py-2">Address</TableHead>
                   <TableHead className="px-4 py-2">Country</TableHead>
                   <TableHead className="px-4 py-2">City</TableHead>
@@ -106,32 +106,36 @@ export default function Users() {
                   users.map((user) => (
                     <TableRow key={user._id} className="hover:bg-blue-50">
                       <TableCell className="px-4 py-2">
-                        {user.firstName}
+                        {user.firstName || "-"}
                       </TableCell>
                       <TableCell className="px-4 py-2">
-                        {user.lastName}
+                        {user.lastName || "-"}
                       </TableCell>
                       <TableCell className="px-4 py-2">
                         <a
                           href={`mailto:${user.email}`}
                           className="text-blue-600 hover:underline"
                         >
-                          {user.email}
+                          {user.email || "-"}
                         </a>
                       </TableCell>
-                      <TableCell className="px-4 py-2">{user.phone}</TableCell>
                       <TableCell className="px-4 py-2">
-                        {user.address}
+                        {user.phone || "-"}
                       </TableCell>
                       <TableCell className="px-4 py-2">
-                        {user.country}
+                        {user.address || "-"}
                       </TableCell>
-                      <TableCell className="px-4 py-2">{user.city}</TableCell>
                       <TableCell className="px-4 py-2">
-                        {user.postalCode}
+                        {user.country || "-"}
+                      </TableCell>
+                      <TableCell className="px-4 py-2">
+                        {user.city || "-"}
+                      </TableCell>
+                      <TableCell className="px-4 py-2">
+                        {user.postalCode || "-"}
                       </TableCell>
                       <TableCell className="px-4 py-2 text-center">
-                        {user.ordersCount}
+                        {user.ordersCount ?? 0}
                       </TableCell>
 
                       <TableCell className="px-4 py-2 text-center">

@@ -77,7 +77,11 @@ export default function SoillessGrowing() {
       />
       <div className="w-full py-[var(--section-Padding)] min-[1200px]:px-[15rem] max-[1200px]:px-[var(--section-Padding)] flex flex-col gap-[2rem] items-center justify-center bg-[#F8F9FB] relative">
         <Link
-          href={locale == "en" ? "/peat-en.pdf" : "/peat-ar.pdf"}
+          href={
+            locale == "en"
+              ? "/GROWWWE Soilless Growing Media Technical Facts-en.pdf"
+              : "/GROWWWE Soilless Growing Media Technical Facts-ar.pdf"
+          }
           className={`w-[4rem] aspect-square absolute top-[5rem] max-[500px]:top-[3rem] ${
             locale === "en"
               ? " min-[1200px]:right-[17rem] max-[1200px]:right-[7rem] max-[500px]:right-[7rem]"

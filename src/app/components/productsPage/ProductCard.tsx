@@ -1,87 +1,118 @@
 "use client";
-import { useTranslations } from "next-intl";
+
+import { useTranslations, useLocale } from "next-intl";
 import Image from "next/image";
 import { useState } from "react";
+import { Product } from "@/types/product";
 
-interface IProduct {
-  id: string;
-  name: string;
-  price: number;
-  des: string;
-  size: number;
-  type: string;
-  quantity: number;
-  img: string;
+interface ProductCardProps {
+  product: Product;
   productOrder: number;
 }
-export function ProductCard(product: IProduct) {
+
+export function ProductCard({ product, productOrder }: ProductCardProps) {
   const t = useTranslations("products.productsSection");
-  const [chosen, setChosen] = useState(0);
+  const locale = useLocale();
+  const [quantity, setQuantity] = useState(1);
+  const [loading, setLoading] = useState(false);
+
+  // Choose the correct language fields
+  const name = locale === "ar" ? product.nameAR : product.nameEN;
+  const description = locale === "ar" ? product.desAR : product.desEN;
+  const type = locale === "ar" ? product.typeAR : product.typeEN;
+  const unit = locale === "ar" ? product.unitAR : product.unitEN;
+
+  const increase = () => {
+    if (quantity < product.quantity) setQuantity((q) => q + 1);
+  };
+
+  const decrease = () => {
+    if (quantity > 1) setQuantity((q) => q - 1);
+  };
+
+  const addToCart = async () => {
+    setLoading(true);
+    try {
+      const res = await fetch("http://localhost:3001/cart", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          // Add Authorization header if using JWT: Authorization: `Bearer ${token}`
+        },
+        body: JSON.stringify({
+          productId: product._id,
+          quantity,
+        }),
+      });
+
+      if (!res.ok) throw new Error("Failed to add to cart");
+      alert(t("addedSuccessfully"));
+    } catch (err) {
+      console.error(err);
+      alert(t("addFailed"));
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <div
-      className={`flex items-center justify-center gap-[5rem] w-full relative max-[580px]:flex-col py-[5rem] ${
-        product.productOrder % 2 !== 0 && " flex-row-reverse"
+      className={`flex items-center justify-center gap-20 w-full relative max-[580px]:flex-col py-20 ${
+        productOrder % 2 !== 0 ? "flex-row-reverse" : ""
       }`}
     >
+      {/* Background highlight */}
       <div
-        className={` absolute w-dvw top-0 h-full ${
-          product.productOrder % 2 !== 0 && " bg-[#FCF7F1]"
+        className={`absolute w-full top-0 h-full ${
+          productOrder % 2 !== 0 ? "bg-[#FCF7F1]" : ""
         }`}
-      ></div>
-
-      <Image
-        alt="product image"
-        src={`/${product.img}.png`}
-        width={500}
-        height={700}
-        className="w-[25rem] h-[36rem] z-50"
       />
 
-      <div className="flex flex-col h-full justify-between gap-[2rem] flex-1 z-40 max-w-[45rem]">
-        <div className="text-[3rem] max-[1250px]:text-[2rem]">
-          <h1 className="text-[#426B1F]  font-semibold -mb-[0.5rem]">
-            {product.name}
-          </h1>
+      {/* Product image */}
+      <Image
+        alt={name}
+        src={`http://localhost:3001/uploads/${product.productImage}`}
+        width={500}
+        height={700}
+        className="w-[25rem] h-[36rem] object-contain z-50"
+        unoptimized
+      />
+
+      {/* Product info */}
+      <div className="flex flex-col gap-6 flex-1 z-40 max-w-[45rem]">
+        <div>
+          <h1 className="text-[#426B1F] text-3xl font-semibold">{name}</h1>
           <p className="text-[#E5AC71] font-semibold">
-            {product.size}Kg {product.type}
+            {product.size} {unit} · {type}
           </p>
         </div>
-        <div className="text-black text-[1.4rem] font-medium max-[1000px]:text-[1.2rem]">
-          {product.des}
-        </div>
-        <div className=" flex items-center justify-between gap-[1rem] w-full">
-          <p className="text-[1.8rem] font-bold max-[1200px]:text-[1.3rem] ">
-            {t("quantity")}
-          </p>
-          <div className="w-[8rem] h-[2rem] rounded-[4rem] border flex items-center justify-between p-[0.5rem] text-[1.5rem]">
-            <button
-              onClick={() => setChosen((pre) => pre + 1)}
-              className="text-[2rem]"
-            >
+
+        <p className="text-black text-lg">{description}</p>
+
+        <div className="flex items-center justify-between gap-4">
+          {/* Quantity selector */}
+          <div className="flex items-center gap-3 border rounded-full px-3 py-1">
+            <button onClick={decrease} className="text-xl font-bold">
+              −
+            </button>
+            <span>{quantity}</span>
+            <button onClick={increase} className="text-xl font-bold">
               +
             </button>
-            <p>{chosen}</p>
-            <button
-              onClick={() => setChosen((pre) => pre - 1)}
-              className="text-[2rem]"
-            >
-              -
-            </button>
           </div>
-          <div className="text-black text-[2rem] font-bold max-[1300px]:text-[1.5rem] max-[1200px]:text-[1.2rem] max-[1000px]:text-[1rem]">
-            {t("egp")} {product.price}
-          </div>
-          <button className="px-4 py-2 text-white bg-black rounded-[4rem]">
-            {t("add")}
-          </button>
-          <button>
-            <Image
-              alt="cart image"
-              src="/products/cart.png"
-              width={100}
-              height={100}
-              className="w-[4rem]"
-            />
+
+          {/* Price */}
+          <p className="text-xl font-bold">
+            {t("egp")} {product.price * quantity}
+          </p>
+
+          {/* Add to cart button */}
+          <button
+            onClick={addToCart}
+            disabled={loading}
+            className="px-6 py-2 bg-black text-white rounded-full disabled:opacity-50"
+          >
+            {loading ? t("adding") : t("add")}
           </button>
         </div>
       </div>

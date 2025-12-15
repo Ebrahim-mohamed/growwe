@@ -11,13 +11,25 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import { useLocale, useTranslations } from "next-intl";
 import { ProductBox } from "./ProductBox";
-import Image from "next/image";
-import Link from "next/link";
-import { productSectionType } from "@/app/types/types";
+
+export type productSectionType = {
+  header: string; // 'soil' | 'mulch'
+  link: string;
+  to: string;
+  products: {
+    id: string;
+    header: string;
+    description: string;
+    type: string;
+    price: string;
+    img: string;
+  }[];
+};
 
 export function MulchAndSoilProducts(content: productSectionType) {
   const t = useTranslations("homePage.productsSection");
   const locale = useLocale();
+
   // ✅ Refs for navigation buttons
   const prevRef = useRef<HTMLDivElement | null>(null);
   const nextRef = useRef<HTMLDivElement | null>(null);
@@ -43,76 +55,77 @@ export function MulchAndSoilProducts(content: productSectionType) {
   }, []);
 
   return (
-    <div className="flex flex-col">
-      <div className="flex items-end  gap-2">
+    <div className="flex flex-col mb-[2rem]">
+      <div className="flex items-end gap-2">
         <h2
-          className={`text-[#E5AC71] text-[2.5rem] font-black min-[500px]:flex items-end  w-full ${
+          className={`text-[#E5AC71] text-[2.5rem] font-black min-[500px]:flex items-end w-full ${
             locale === "en"
               ? " min-[600px]:ml-[12rem] "
               : " min-[600px]:mr-[12rem] "
           }`}
         >
           {t(content.header)}
-          <Link
+          <a
             href={`/${locale}/${content.to}`}
             className="text-[#5B5757] text-[1.2rem] font-normal block mb-[0.5rem] pl-[0.5rem]"
           >
             {t(content.link)}
-          </Link>
+          </a>
         </h2>
       </div>
-      <div className="mt-[1.5rem] relative min-[600px]:px-[10rem] ">
-        <Swiper
-          modules={[Navigation, Pagination, Scrollbar, A11y]}
-          spaceBetween={-15}
-          slidesPerView={3}
-          loop={true}
-          breakpoints={{
-            320: { slidesPerView: 1 },
-            640: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 },
-          }}
-          onSwiper={(swiper) => {
-            swiperRef.current = swiper;
-          }}
-          className="flex gap-4 h-full items-center justify-center"
-        >
-          {content.products.map((product) => (
-            <SwiperSlide
-              key={product.id}
-              className="mb-[3rem] !items-center !justify-center !flex"
-            >
-              <ProductBox {...product} />
-            </SwiperSlide>
-          ))}
-        </Swiper>
 
-        {/* Custom Navigation Arrows */}
-        <div
-          ref={prevRef}
-          className="custom-prev text-[2rem] font-bold absolute top-1/2 -left-0 max-[1000px]:-left-7 -translate-y-1/2 bg-[#E6E6E6]  rounded-full  flex items-center justify-center cursor-pointer  transition z-10  p-2"
-        >
-          <Image
-            alt="right arrow"
-            width={10}
-            height={10}
-            src="home/leftArrow.svg"
-            className="w-[2.3rem]"
-          />
+      {content.products.length === 0 ? (
+        <p className="text-center text-gray-500 mt-4">
+          {content.header === "soil"
+            ? locale === "en"
+              ? "No soil products available."
+              : "لا توجد منتجات تربة متاحة."
+            : locale === "en"
+            ? "No mulch products available."
+            : "لا توجد منتجات نشارة متاحة."}
+        </p>
+      ) : (
+        <div className="mt-[1.5rem] relative min-[600px]:px-[10rem]">
+          <Swiper
+            modules={[Navigation, Pagination, Scrollbar, A11y]}
+            spaceBetween={-15}
+            slidesPerView={3}
+            loop={true}
+            breakpoints={{
+              320: { slidesPerView: 1 },
+              640: { slidesPerView: 2 },
+              1024: { slidesPerView: 3 },
+            }}
+            onSwiper={(swiper) => {
+              swiperRef.current = swiper;
+            }}
+            className="flex gap-4 h-full items-center justify-center"
+          >
+            {content.products.map((product) => (
+              <SwiperSlide
+                key={product.id}
+                className="mb-[3rem] !items-center !justify-center !flex"
+              >
+                <ProductBox {...product} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+
+          {/* Custom Navigation Arrows */}
+          <div
+            ref={prevRef}
+            className="custom-prev text-[2rem] font-bold absolute top-1/2 -left-0 max-[1000px]:-left-7 -translate-y-1/2 bg-[#E6E6E6] rounded-full flex items-center justify-center cursor-pointer transition z-10 p-2"
+          >
+            &lt;
+          </div>
+          <div
+            ref={nextRef}
+            className="custom-next text-[2rem] font-bold absolute top-1/2 -right-0 max-[1000px]:-right-7 -translate-y-1/2 bg-[#E6E6E6] rounded-full flex items-center justify-center cursor-pointer transition z-10 p-2"
+          >
+            &gt;
+          </div>
         </div>
-        <div
-          ref={nextRef}
-          className="custom-next text-[2rem] font-bold absolute top-1/2 -right-0 max-[1000px]:-right-7 -translate-y-1/2 bg-[#E6E6E6]   rounded-full  flex items-center justify-center cursor-pointer  transition z-10 p-2"
-        >
-          <Image
-            alt="right arrow"
-            width={10}
-            height={10}
-            src="home/rightArrow.svg"
-            className="w-[2.3rem]"
-          />
-        </div>
-      </div>
+      )}
     </div>
   );
 }

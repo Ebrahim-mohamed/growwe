@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { ReactNode } from "react";
 
 export function FourthSectionBox({
   header,
@@ -6,7 +7,7 @@ export function FourthSectionBox({
   img,
 }: {
   header: string;
-  des: string;
+  des: string | ReactNode;
   img: string;
 }) {
   return (

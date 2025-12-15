@@ -30,9 +30,13 @@ export function WhoWeAre() {
         />
       )}
       <div className="flex w-full items-center justify-between mb-[1.5rem] max-[550px]:flex-col max-[550px]:gap-[1rem]">
-        <div className="text-[2.5rem] max-w-[50%] max-[550px]:max-w-full">
-          <h1 className="text-[#E5AC71] font-bold">{t("whoHeader")}</h1>
-          <p className="text-[#426B1F] font-semibold">{t("whoDes")}</p>
+        <div className=" max-w-[60%] max-[550px]:max-w-full">
+          <h1 className="text-[#E5AC71] text-[2.5rem] font-bold">
+            {t("whoHeader")}
+          </h1>
+          <p className="text-[2rem] text-[#426B1F] font-semibold">
+            {t("whoDes")}
+          </p>
         </div>
         <div className="p-16 rounded-[3rem] bg-[#FCF7F1] max-[550px]:w-full">
           <h1 className="text-[#426B1F] text-[2.5rem] font-bold mb-[0.7rem]">

@@ -8,6 +8,7 @@ export type NewsFormType = {
   titleAR: string;
   desEN: string;
   desAR: string;
+  link: string;
   newsImage?: FileList;
 };
 
@@ -55,6 +56,7 @@ export function NewsForm({
       <NewsInput label="Title (AR)" {...register("titleAR")} />
       <NewsInput label="Description (EN)" {...register("desEN")} />
       <NewsInput label="Description (AR)" {...register("desAR")} />
+      <NewsInput label="Link" {...register("link")} />
       <NewsInput
         type="file"
         label={`News Image${isEditing ? " (optional)" : ""}`}

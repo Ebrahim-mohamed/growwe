@@ -3,78 +3,38 @@
 import { useLocale, useTranslations } from "next-intl";
 import { MulchAndSoilProducts } from "./MulchAndSoilProducts";
 import { useEffect, useState } from "react";
-import { NotEgyptProductSection } from "./NotEgyptProductSection";
 
-const products = [
-  {
-    header: "Soil Alternative- 5 Kg Block",
-    price: "350",
-    type: "Block",
-    description:
-      "One block of compressed soil alternative weighing 5Kg to be expanded by watering to 80m2.",
-    img: "/product1.png",
-    id: "1",
-  },
-  {
-    header: "Soil Alternative- 5 Kg Block",
-    price: "350",
-    type: "Block",
-    description:
-      "One block of compressed soil alternative weighing 5Kg to be expanded by watering to 80m2.",
-    img: "/product1.png",
-    id: "2",
-  },
-  {
-    header: "Soil Alternative - 5 Kg Block",
-    price: "350",
-    type: "Block",
-    description:
-      "One block of compressed soil alternative weighing 5Kg to be expanded by watering to 80m2.",
-    img: "/product1.png",
-    id: "3",
-  },
-  {
-    header: "Soil Alternative - 5 Kg Block",
-    price: "350",
-    type: "Block",
-    description:
-      "One block of compressed soil alternative weighing 5Kg to be expanded by watering to 80m2.",
-    img: "/product1.png",
-    id: "4",
-  },
-  {
-    header: "Soil Alternative - 5 Kg Block",
-    price: "350",
-    type: "Block",
-    description:
-      "One block of compressed soil alternative weighing 5Kg to be expanded by watering to 80m2.",
-    img: "/product1.png",
-    id: "5",
-  },
-  {
-    header: "Soil Alternative - 5 Kg Block",
-    price: "350",
-    type: "Block",
-    description:
-      "One block of compressed soil alternative weighing 5Kg to be expanded by watering to 80m2.",
-    img: "/product1.png",
-    id: "6",
-  },
-];
+export type ProductItem = {
+  _id: string;
+  productImage: string;
+  nameEN: string;
+  nameAR: string;
+  desEN: string;
+  desAR: string;
+  price: number;
+  quantity: number;
+  typeEN: string;
+  typeAR: string;
+  size: string;
+  unitEN: string;
+  unitAR: string;
+  category: string; // 'soil' | 'mulch'
+};
 
 export function Products() {
   const t = useTranslations("homePage.productsSection");
   const locale = useLocale();
   const [isEgypt, setIsEgypt] = useState(false);
+  const [soilProducts, setSoilProducts] = useState<ProductItem[]>([]);
+  const [mulchProducts, setMulchProducts] = useState<ProductItem[]>([]);
+  const API_BASE = "http://localhost:3001"; // backend URL
+
   useEffect(() => {
     async function checkIfEgypt() {
       try {
         const res = await fetch("https://ipapi.co/json/");
         const data = await res.json();
-        console.log(data);
-        const isEgypt = data.country_name === "Egypt";
-        setIsEgypt(isEgypt);
-        console.log("Is user in Egypt?", isEgypt);
+        setIsEgypt(data.country_name === "Egypt");
       } catch (error) {
         console.log("Failed to detect location");
       }
@@ -82,6 +42,28 @@ export function Products() {
 
     checkIfEgypt();
   }, []);
+
+  useEffect(() => {
+    async function fetchProducts() {
+      try {
+        const [soilRes, mulchRes] = await Promise.all([
+          fetch(`${API_BASE}/products?category=soil`),
+          fetch(`${API_BASE}/products?category=mulch`),
+        ]);
+
+        const soilData = await soilRes.json();
+        const mulchData = await mulchRes.json();
+
+        setSoilProducts(soilData || []);
+        setMulchProducts(mulchData || []);
+      } catch (error) {
+        console.error("Failed to fetch products", error);
+      }
+    }
+
+    fetchProducts();
+  }, []);
+
   if (!isEgypt) {
     return (
       <div className="p-[var(--section-Padding)] relative">
@@ -100,24 +82,18 @@ export function Products() {
           <div className="bg-[#E6E6E6] w-full h-[0.1rem] mt-[0.5rem]" />
         </div>
 
+        {/* Not Egypt Sections */}
         <div className="flex flex-col gap-[1.5rem]">
-          <NotEgyptProductSection
-            title="peatTitle"
-            des="peatDes"
-            type="peat"
-            img="peat"
-          />
-          <div className="w-full h-[0.1rem] bg-[#E6E6E6]"></div>
-          <NotEgyptProductSection
-            title="mulchTitle"
-            des="mulchDes"
-            type="mulch"
-            img="mulch"
-          />
+          <p className="text-center text-gray-500">
+            {locale === "en"
+              ? "Products are not available for your country."
+              : "المنتجات غير متاحة لبلدك."}
+          </p>
         </div>
       </div>
     );
   }
+
   return (
     <div className="p-[var(--section-Padding)] relative">
       {/* Section Header */}
@@ -135,20 +111,36 @@ export function Products() {
         <div className="bg-[#E6E6E6] w-full h-[0.1rem] mt-[0.5rem]" />
       </div>
 
+      {/* Soil Products */}
       <MulchAndSoilProducts
         header="soil"
         link="link"
         to="soilless-growing"
-        products={products}
+        products={soilProducts.map((p) => ({
+          id: p._id,
+          header: locale === "en" ? p.nameEN : p.nameAR,
+          description: locale === "en" ? p.desEN : p.desAR,
+          type: locale === "en" ? p.typeEN : p.typeAR,
+          price: p.price.toString(),
+          img: `/uploads/${p.productImage}`,
+        }))}
       />
 
       <div className="bg-[#E6E6E6] w-full h-[0.1rem] my-[2rem]" />
 
+      {/* Mulch Products */}
       <MulchAndSoilProducts
         header="mulch"
         link="link"
         to="mulch"
-        products={products}
+        products={mulchProducts.map((p) => ({
+          id: p._id,
+          header: locale === "en" ? p.nameEN : p.nameAR,
+          description: locale === "en" ? p.desEN : p.desAR,
+          type: locale === "en" ? p.typeEN : p.typeAR,
+          price: p.price.toString(),
+          img: `/uploads/${p.productImage}`,
+        }))}
       />
     </div>
   );

@@ -37,7 +37,13 @@ export function Footer() {
             ))}
           </div>
         </div>
-        <div className="flex  justify-end items-center">
+        <div className="flex flex-col gap-[1.5rem]">
+          <Link
+            href="mailto:info@growwe.com"
+            className="text-[1rem] font-medium text-white"
+          >
+            info@growwe.com
+          </Link>
           <div className="flex items-center justify-center gap-[2rem]">
             {SocialLinks.map((link) => (
               <SocialIcon img={link.name} key={link.name} to={link.url} />

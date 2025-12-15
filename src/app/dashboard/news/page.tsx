@@ -17,7 +17,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import Link from "next/link";
-import { NewsForm } from "./NewsForm";
+import { NewsForm, NewsFormType } from "./NewsForm";
 
 type News = {
   _id: string;
@@ -26,9 +26,10 @@ type News = {
   titleAR: string;
   desEN: string;
   desAR: string;
+  link: string;
 };
 
-export default function News() {
+export default function NewsPage() {
   const [newsList, setNewsList] = useState<News[]>([]);
   const [editingNews, setEditingNews] = useState<News | null>(null);
   const [open, setOpen] = useState(false);
@@ -125,6 +126,8 @@ export default function News() {
 
             <div className="mt-4">
               <NewsForm
+                isEditing={!!editingNews}
+                isSubmitting={isSubmitting}
                 defaultValues={
                   editingNews
                     ? {
@@ -132,6 +135,7 @@ export default function News() {
                         titleAR: editingNews.titleAR,
                         desEN: editingNews.desEN,
                         desAR: editingNews.desAR,
+                        link: editingNews.link,
                       }
                     : undefined
                 }
@@ -141,8 +145,6 @@ export default function News() {
                     : undefined
                 }
                 onSubmit={handleAddOrEdit}
-                isSubmitting={isSubmitting}
-                isEditing={!!editingNews}
               />
             </div>
           </DialogContent>
@@ -166,6 +168,7 @@ export default function News() {
                   <TableHead className="px-4 py-2">Title (AR)</TableHead>
                   <TableHead className="px-4 py-2">Description (EN)</TableHead>
                   <TableHead className="px-4 py-2">Description (AR)</TableHead>
+                  <TableHead className="px-4 py-2">Link</TableHead>
                   <TableHead className="px-4 py-2 text-center">Edit</TableHead>
                   <TableHead className="px-4 py-2 text-center">
                     Delete
@@ -191,6 +194,7 @@ export default function News() {
                       <TableCell className="px-4 py-2">{n.titleAR}</TableCell>
                       <TableCell className="px-4 py-2">{n.desEN}</TableCell>
                       <TableCell className="px-4 py-2">{n.desAR}</TableCell>
+                      <TableCell className="px-4 py-2">{n.link}</TableCell>
 
                       <TableCell className="px-4 py-2 text-center">
                         <button
@@ -217,7 +221,7 @@ export default function News() {
                 ) : (
                   <TableRow>
                     <TableCell
-                      colSpan={7}
+                      colSpan={8}
                       className="text-center py-10 text-gray-400"
                     >
                       No news found. Click Add News to start.

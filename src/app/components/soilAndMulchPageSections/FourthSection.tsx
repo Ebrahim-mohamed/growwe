@@ -49,7 +49,7 @@ export function FourthSection(content: contentType) {
         <div className="flex  gap-[2rem] justify-between items-center w-full">
           {content.boxes1.map((box) => (
             <FourthSectionBox
-              des={t(box.des)}
+              des={t.rich(box.des, { second: (chunk) => <div>{chunk}</div> })}
               header={t(box.header)}
               img={box.img}
               key={t(box.header)}
@@ -59,7 +59,7 @@ export function FourthSection(content: contentType) {
         <div className="flex gap-[2rem]  justify-between items-center w-full">
           {content.boxes2.map((box) => (
             <FourthSectionBox
-              des={t(box.des)}
+              des={t.rich(box.des, { second: (chunk) => <div>{chunk}</div> })}
               header={t(box.header)}
               img={box.img}
               key={t(box.header)}

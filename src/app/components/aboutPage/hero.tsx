@@ -16,7 +16,7 @@ export function Hero() {
         } w-[18rem] max-[700px]:hidden`}
       />
       <div className={`font-[ClassicoURW] -mb-[1.5rem]`}>
-        <h1 className="text-[5rem] text-[#E5AC71] font-bold -mb-[1rem]">
+        <h1 className="text-[5rem] text-white font-bold -mb-[1rem]">
           {t("title")}
         </h1>
         {/* <div className="flex items-center justify-center gap-[1rem] font-medium text-[4rem] text-white max-[1200px]:text-[3rem] max-[480px]:text-[2.5rem] max-[400px]:text-[2rem]">

@@ -9,23 +9,29 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import { API_BASE_URL } from "@/utils/api";
 
 type Order = {
   _id: string;
   orderNumber: string;
-  buyer: {
-    firstName: string;
-    lastName: string;
-    phone: string;
-  };
-  product: {
-    name: string;
-  };
+  buyer:
+    | {
+        firstName?: string;
+        lastName?: string;
+        phone?: string;
+        email?: string;
+      }
+    | string; // populated object or id
+  product:
+    | {
+        name?: string;
+      }
+    | string;
   quantity: number;
   unitPrice: number;
   totalPrice: number;
-  status: string; // e.g., Pending, Completed, Canceled
-  Date: string;
+  status: string;
+  createdAt?: string;
 };
 
 export default function Orders() {
@@ -35,7 +41,7 @@ export default function Orders() {
   const fetchOrders = async () => {
     setIsLoading(true);
     try {
-      const res = await fetch(" /orders");
+      const res = await fetch(`${API_BASE_URL}/orders`);
       if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
       const data = await res.json();
       setOrders(data);
@@ -96,22 +102,30 @@ export default function Orders() {
                         {order.orderNumber}
                       </TableCell>
                       <TableCell className="px-4 py-2">
-                        {order.buyer.firstName} {order.buyer.lastName}
+                        {typeof order.buyer === "object"
+                          ? `${order.buyer.firstName || ""} ${
+                              order.buyer.lastName || ""
+                            }`
+                          : "-"}
                       </TableCell>
                       <TableCell className="px-4 py-2">
-                        {order.buyer.phone}
+                        {typeof order.buyer === "object"
+                          ? order.buyer.phone || "-"
+                          : "-"}
                       </TableCell>
                       <TableCell className="px-4 py-2">
-                        {order.product.name}
+                        {typeof order.product === "object"
+                          ? order.product.name || "-"
+                          : "-"}
                       </TableCell>
                       <TableCell className="px-4 py-2 text-center">
                         {order.quantity}
                       </TableCell>
                       <TableCell className="px-4 py-2 text-center">
-                        ${order.unitPrice.toFixed(2)}
+                        ${order.unitPrice?.toFixed?.(2) ?? order.unitPrice}
                       </TableCell>
                       <TableCell className="px-4 py-2 text-center">
-                        ${order.totalPrice.toFixed(2)}
+                        ${order.totalPrice?.toFixed?.(2) ?? order.totalPrice}
                       </TableCell>
                       <TableCell className="px-4 py-2 text-center">
                         {order.status === "Completed" && (
@@ -131,14 +145,14 @@ export default function Orders() {
                         )}
                       </TableCell>
                       <TableCell className="px-4 py-2 text-center">
-                        {order.Date}
+                        {new Date(order.createdAt || "").toLocaleString()}
                       </TableCell>
                     </TableRow>
                   ))
                 ) : (
                   <TableRow>
                     <TableCell
-                      colSpan={8}
+                      colSpan={9}
                       className="text-center py-10 text-gray-400"
                     >
                       No orders found.

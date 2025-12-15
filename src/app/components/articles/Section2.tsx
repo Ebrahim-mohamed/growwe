@@ -17,7 +17,9 @@ export function Section2({ articleNumber }: { articleNumber: string }) {
         <ul className="list-disc pl-8">
           {Array.from({
             length:
-              articleNumber === "1" || articleNumber === "4"
+              articleNumber === "1"
+                ? 4
+                : articleNumber === "4"
                 ? 5
                 : articleNumber === "2"
                 ? 7

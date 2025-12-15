@@ -16,7 +16,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { ProductForm } from "./ProductForm";
+import { ProductForm, ProductFormType } from "./ProductForm";
 import Link from "next/link";
 
 type Product = {
@@ -33,6 +33,7 @@ type Product = {
   size: string;
   unitEN: string;
   unitAR: string;
+  category: string;
 };
 
 export default function Products() {
@@ -44,7 +45,7 @@ export default function Products() {
 
   const API_BASE = "http://localhost:3001"; // backend URL
 
-  // Fetch products from backend
+  // Fetch products
   const fetchProducts = async () => {
     setIsLoading(true);
     try {
@@ -64,19 +65,23 @@ export default function Products() {
     fetchProducts();
   }, []);
 
-  // Add or Edit product
-  const handleAddOrEdit = async (formData: FormData) => {
+  // Add or Update
+  const handleAddOrEdit = async (formData: FormData, productId?: string) => {
     setIsSubmitting(true);
     try {
-      const url = editingProduct
-        ? `${API_BASE}/products/${editingProduct._id}`
+      const url = productId
+        ? `${API_BASE}/products/${productId}`
         : `${API_BASE}/products`;
-      const method = editingProduct ? "PUT" : "POST";
+      const method = productId ? "PUT" : "POST";
 
       const res = await fetch(url, { method, body: formData });
-      if (!res.ok) throw new Error("Failed to save product");
+      if (!res.ok) {
+        const err = await res.json();
+        alert("Error: " + err.error);
+        return;
+      }
 
-      alert(editingProduct ? "Product updated!" : "Product added!");
+      alert(productId ? "Product updated!" : "Product added!");
       setEditingProduct(null);
       setOpen(false);
       await fetchProducts();
@@ -114,9 +119,9 @@ export default function Products() {
 
         <Dialog
           open={open}
-          onOpenChange={(open) => {
-            setOpen(open);
-            if (!open) setEditingProduct(null);
+          onOpenChange={(val) => {
+            setOpen(val);
+            if (!val) setEditingProduct(null);
           }}
         >
           <DialogTrigger asChild>
@@ -140,7 +145,7 @@ export default function Products() {
               <ProductForm
                 defaultValues={
                   editingProduct
-                    ? {
+                    ? ({
                         nameEN: editingProduct.nameEN,
                         nameAR: editingProduct.nameAR,
                         desEN: editingProduct.desEN,
@@ -152,17 +157,18 @@ export default function Products() {
                         size: editingProduct.size,
                         unitEN: editingProduct.unitEN,
                         unitAR: editingProduct.unitAR,
-                      }
+                        category: editingProduct.category as "soil" | "mulch", // assert type
+                      } as Partial<ProductFormType> & { productImage?: string })
                     : undefined
                 }
+                productId={editingProduct?._id}
+                isEditing={!!editingProduct}
+                onSubmit={handleAddOrEdit}
                 previewImage={
                   editingProduct?.productImage
                     ? `${API_BASE}/uploads/${editingProduct.productImage}`
                     : undefined
                 }
-                onSubmit={handleAddOrEdit}
-                isSubmitting={isSubmitting}
-                isEditing={!!editingProduct}
               />
             </div>
           </DialogContent>
@@ -197,6 +203,7 @@ export default function Products() {
                   <TableHead className="px-4 py-2">Size</TableHead>
                   <TableHead className="px-4 py-2">Unit (EN)</TableHead>
                   <TableHead className="px-4 py-2">Unit (AR)</TableHead>
+                  <TableHead className="px-4 py-2">Category</TableHead>
                   <TableHead className="px-4 py-2 text-center">Edit</TableHead>
                   <TableHead className="px-4 py-2 text-center">
                     Delete
@@ -232,6 +239,7 @@ export default function Products() {
                       <TableCell className="px-4 py-2">{p.size}</TableCell>
                       <TableCell className="px-4 py-2">{p.unitEN}</TableCell>
                       <TableCell className="px-4 py-2">{p.unitAR}</TableCell>
+                      <TableCell className="px-4 py-2">{p.category}</TableCell>
                       <TableCell className="px-4 py-2 text-center">
                         <button
                           onClick={() => {

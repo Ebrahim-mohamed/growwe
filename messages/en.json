@@ -40,17 +40,17 @@
     "smartSection": {
       "smarterTitle": "The <second>Smarter</second> Growing Media",
       "smartFirstBoxHeader": "100% Organic",
-      "smartFirstBoxDescription": "Biodegradable alternative soil.",
+      "smartFirstBoxDescription": "Biodegradable <second>alternative soil.</second>",
       "smartSecondBoxHeader": "Soil Aeration",
-      "smartSecondBoxDescription": "High air circulation for soil.",
+      "smartSecondBoxDescription": "High air circulation <second>for soil.</second>",
       "smartThirdBoxHeader": "Water Retention",
-      "smartThirdBoxDescription": "Absorbs & retains water for longer times.",
+      "smartThirdBoxDescription": "Absorbs & retains <second>water for longer times.</second>",
       "smartFourthBoxHeader": "Low EC",
-      "smartFourthBoxDescription": "Low salt levels (safer for sensitive plants)",
+      "smartFourthBoxDescription": "Low salt levels (safer <second> for sensitive plants)</second>",
       "smartFifthBoxHeader": "Neutral pH",
-      "smartFifthBoxDescription": "Ideal pH for crops pH  5.5 - 6.5 ",
+      "smartFifthBoxDescription": "Ideal pH for crops <second> pH  5.5 - 6.5 </second>",
       "smartSixthBoxHeader": "Add Water",
-      "smartSixthBoxDescription": "Add 18 liters of water per block to get 50 liters volume.",
+      "smartSixthBoxDescription": "Add 18 liters of water <second>per block to get</second> <second>50 liters volume.</second>",
       "know": "  know more"
     },
     "plantsSection": {
@@ -90,7 +90,7 @@
     },
     "whoWeAreSection": {
       "whoHeader": "WHO WE ARE",
-      "whoDes": "We are dedicated to producing high-quality alternative soil from rich natural resources.",
+      "whoDes": "GROWWE is dedicated to producing high-quality agricultural products from rich natural resources. GROWWE provides sustainable eco-friendly solutions developed with British technology by a license from Scaletek UK.",
       "why": "WHY GROWWE?",
       "organic": "100% Innovative",
       "sustainable": "100% Organic",
@@ -113,21 +113,21 @@
       "year": "WINNER 2024",
       "prize": "PIONEERING & SOPHISTICATED INNOVATIONS",
       "prize2": "Serving the Agriculture Sector Category",
-      "pra": "KHALIFA INT.AWARD FOR DATE PALM",
+      "pra": "KHALIFA INT.<second> AWARD FOR DATE PALM</second>",
       "subPra": "and agricultural innovation"
     },
     "awardBox2": {
       "year": "WINNER 2024",
       "prize": "INNOVATIVE TECHNOLOGY EXCELLENCE",
       "prize2": "prize Category",
-      "pra": "NATIONAL CENTER FOR PALMS & DATES",
+      "pra": "NATIONAL CENTER <second>FOR PALMS & DATES</second>",
       "subPra": "International Prize"
     },
     "awardBox3": {
       "year": "WINNER 2024",
       "prize": "CONTINUITY AND RESILIENCE INNOVATION",
       "prize2": "Africa Award",
-      "pra": "BUSINESS CONTINUITY INSTITUTE"
+      "pra": "BUSINESS CONTINUITY <second>INSTITUTE</second>"
     }
   },
   "products": {
@@ -161,15 +161,15 @@
   "gardening": {
     "heroSection": {
       "quote": "Get a Quote",
-      "title": "GARDENING",
+      "title": "Horticulture",
       "p": "Your Garden is Greener,Your Crops are Healthier.",
       "shop": "Shop Now"
     },
     "gardeningSection": {
-      "title": "GARDENING",
-      "des1": "Grow Green, Naturally—Healthy Soil for a Healthier Harvest!",
-      "header": "Ideal for Acid-Loving Plants",
-      "des2": "Alternative soil is slightly acidic (pH ~5.5-6.5)—perfect for blueberries, azaleas, and ferns. For neutral-pH plants, balance with a bit of garden lime."
+      "title": "Horticulture",
+      "des1": "Horticulture: Healthy Soil for a Healthier Harvest!",
+      "header": "Ideal for Most Plants",
+      "des2": "Alternative soil has neutral pH ~5.5-6.5 —perfect for berries, tomatoes, mangoes, lychees, azaleas, and ferns. It’s an ideal growing medium for all plant types without altering their nutrient balance ."
     },
     "thirdSection": {
       "header1": "Boost Seed Starting Success",
@@ -183,7 +183,7 @@
       "des2": "Grow Smarter. Start with Growwe."
     },
     "cardsSection": {
-      "header": "Gardening Tips",
+      "header": "Tips and tricks",
       "header1": "Organic Farming& Hydroponic",
       "des1": "The Future of Sustainable Agriculture",
       "header2": "Mulching in Agriculture",
@@ -296,7 +296,7 @@
       "soilHeader2": "Re-Usability",
       "soilDes2": "Because it retains its structure and does not compact easily, GROWWE Soilless Growing Media can be reused for several cultivation cycles, providing excellent value.",
       "soilHeader3": "Root Hair Growth",
-      "soilDes3": "Growwe provides the necessary aeration, consistent moisture, and antifungal properties that healthy roots need to develop. It creates an ideal environment for root formation, allowing root hairs to efficiently absorb water and nutrients once they are introduced through fertilization.",
+      "soilDes3": "Growwe provides the necessary aeration, consistent moisture, and antifungal properties that healthy roots need to develop. It creates an ideal environment for root formation, allowing root hairs to efficiently absorb water and nutrients .",
       "mulchDes": "GROWWE mulch enhances soil health, reduces maintenance, and promotes stronger plant growth.",
       "mulchHeader1": "Moisture Retention",
       "mulchDes1": "Mulch acts as a barrier between soil and air, significantly reducing water loss through evaporation. This consistent moisture level means less frequent watering is required, promoting a more resilient root system.",
@@ -309,17 +309,17 @@
       "soilHeader": "The <second>Smarter</second> Growing Media",
       "soilAttachHeader": "Say Yes!",
       "soilFirstBoxHeader": "100% Organic",
-      "soilFirstBoxDescription": "Biodegradable alternative soil.",
+      "soilFirstBoxDescription": "Biodegradable <second>alternative soil.</second>",
       "soilSecondBoxHeader": "Soil Aeration",
-      "soilSecondBoxDescription": "High air circulation for soil.",
+      "soilSecondBoxDescription": "High air circulation <second>for soil.</second>",
       "soilThirdBoxHeader": "Water Retention",
-      "soilThirdBoxDescription": "Absorbs & retains water for longer times.",
+      "soilThirdBoxDescription": "Absorbs & retains <second>water for longer times.</second>",
       "soilFourthBoxHeader": "Low EC",
-      "soilFourthBoxDescription": "Low salt levels (safer for sensitive plants)",
+      "soilFourthBoxDescription": "Low salt levels (safer <second>for sensitive plants)</second>",
       "soilFifthBoxHeader": "Neutral pH",
-      "soilFifthBoxDescription": "Biodegradable Alternative Soil",
+      "soilFifthBoxDescription": "Ideal pH for crops <second>pH 5.5 - 6.5</second>",
       "soilSixthBoxHeader": "Add Water",
-      "soilSixthBoxDescription": "Add 18 liters of water per block to get 50 liters volume.",
+      "soilSixthBoxDescription": "Add 18 liters of water <second>per block to get</second> <second>50 liters volume.</second>",
       "mulchHeader": "Save Your Soil, Enhance Your Landscape,",
       "mulchAttachHeader": " with a <second>Premium</second> Look.",
       "mulchFirstBoxHeader": "100% Organic",
@@ -378,7 +378,7 @@
       "soilTable1": {
         "header": "Technical Features",
         "headers": {
-          "head1": "Macro / Micronutrients",
+          "head1": "Physical properties",
           "head2": "Values",
           "head3": "Test Method"
         },
@@ -774,9 +774,8 @@
       "title2": "Benefits of Organic Farming",
       "point1": "<second>Healthier Soil:</second> Organic fertilizers improve soil structure, water retention, and microbial activity.",
       "point2": "<second>Environmental Protection:</second> Avoids harmful chemicals, reduces pollution, and lowers greenhouse gas emissions.",
-      "point3": "<second>Biodiversity:</second> Supports beneficial insects, pollinators, and microorganisms.",
-      "point4": "<second>Safer Food:</second> Free from chemical residues, often higher in antioxidants.",
-      "point5": "<second>Economic Value:</second> High demand globally, sold at premium prices."
+      "point3": "<second>Safer Food:</second> Free from chemical residues, often higher in antioxidants.",
+      "point4": "<second>Economic Value:</second> High demand globally, sold at premium prices."
     },
     "section3": {
       "title1": "What are Hydroponics?",

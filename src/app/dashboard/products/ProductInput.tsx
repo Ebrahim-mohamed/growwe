@@ -1,20 +1,20 @@
 import React, { InputHTMLAttributes } from "react";
 
-type ProjectInputProps = {
+type ProductInputProps = {
   label: string;
   errorMessage?: string;
   place?: string;
   type?: string;
 } & InputHTMLAttributes<HTMLInputElement>;
 
-export function ProjectInput({
+export function ProductInput({
   label,
   errorMessage,
   place,
   type,
   disabled,
   ...props
-}: ProjectInputProps) {
+}: ProductInputProps) {
   return (
     <div className="w-full flex flex-col gap-2 relative">
       <label className="text-black text-[1rem] font-normal">{label}</label>
