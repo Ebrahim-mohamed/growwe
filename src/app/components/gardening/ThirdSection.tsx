@@ -3,7 +3,7 @@ import { useTranslations } from "next-intl";
 export function ThirdSection() {
   const t = useTranslations("gardening.thirdSection");
   return (
-    <div className="p-[var(--section-Padding)] bg-[url('/gardening/third.jpg')]  text-white relative  items-center justify-center flex flex-col w-full min-h-[60rem] bg-cover bg-center">
+    <div className="p-[var(--section-Padding)] bg-[url('/gardening/third.webp')]  text-white relative  items-center justify-center flex flex-col w-full min-h-[60rem] bg-cover bg-center">
       <div className="absolute top-0 left-0 w-full h-full opacity-[0.6] bg-black" />
       <div className="flex flex-col gap-[2.5rem] ">
         <div className="z-20">

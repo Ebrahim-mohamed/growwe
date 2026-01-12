@@ -17,21 +17,21 @@ export function NewBox({ news }: { news: News }) {
   const locale = useLocale();
 
   return (
-    <div className="flex-1 bg-[#F4F4F4] max-w-[30rem] rounded-[0.5rem] overflow-hidden">
-      <Image
+    <div className="flex-1 bg-[#F4F4F4] min-[800px]:max-w-[30rem] max-[800px]:w-[80%] rounded-[0.5rem] overflow-hidden">
+      <img
         src={`${API_BASE}/uploads/${news.newsImage}`}
         alt="news image"
-        width={600}
-        height={400}
+        // width={600}
+        // height={400}
         className="w-full object-cover"
       />
 
       <div className="p-[1.5rem] flex flex-col gap-3">
-        <h2 className="text-[1.4rem] font-medium">
+        <h2 className="text-[1.5rem] font-medium">
           {locale === "en" ? news.titleEN : news.titleAR}
         </h2>
 
-        <p className="text-[#494949]">
+        <p className="text-[#494949] text-[1.2rem]">
           {locale === "en" ? news.desEN : news.desAR}
         </p>
 

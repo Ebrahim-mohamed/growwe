@@ -49,7 +49,7 @@ export function NewsSection() {
             : "لا يوجد اخبار حتي الان"}
         </p>
       ) : (
-        <div className="flex items-stretch justify-between gap-[1rem] max-[550px]:flex-col max-[550px]:items-center">
+        <div className="flex items-stretch justify-between gap-[1rem] max-[800px]:flex-col max-[800px]:items-center max-[800px]:gap-[2rem] ">
           {news.map((n) => (
             <NewBox key={n._id} news={n} />
           ))}

@@ -37,7 +37,7 @@ export async function apiFetch(input: RequestInfo, init: RequestInit = {}) {
   const token = getAccessToken();
   if (token) (init.headers as any).Authorization = `Bearer ${token}`;
   const res = await fetch(
-    input.toString().startsWith("http") ? input : `${API_BASE_URL}${input}`,
+    input.toString().startsWith("https") ? input : `${API_BASE_URL}${input}`,
     { ...init, credentials: "include" }
   );
   if (res.status === 401) {
@@ -46,7 +46,9 @@ export async function apiFetch(input: RequestInfo, init: RequestInit = {}) {
     if (newToken) {
       (init.headers as any).Authorization = `Bearer ${newToken}`;
       return fetch(
-        input.toString().startsWith("http") ? input : `${API_BASE_URL}${input}`,
+        input.toString().startsWith("https")
+          ? input
+          : `${API_BASE_URL}${input}`,
         { ...init, credentials: "include" }
       );
     }

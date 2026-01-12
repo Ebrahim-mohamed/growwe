@@ -3,7 +3,7 @@ import { useTranslations } from "next-intl";
 export function Hero() {
   const t = useTranslations("contact.heroSection");
   return (
-    <div className="bg-[url('/contact/hero.png')] bg-cover w-dvw h-dvh p-[var(--section-Padding)]  flex items-end justify-start relative">
+    <div className="bg-[url('/contact/hero.webp')] bg-cover w-dvw h-dvh p-[var(--section-Padding)]  flex items-end justify-start relative">
       {/* <Image
         alt="arrow image"
         src="/contact/arrow.png"

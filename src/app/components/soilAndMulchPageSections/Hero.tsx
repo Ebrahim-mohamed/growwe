@@ -26,7 +26,7 @@ export function Hero({ title }: { title: string }) {
   return (
     <div
       className=" bg-cover w-dvw h-dvh p-[var(--section-Padding)]  flex items-end max-[1000px]:items-center justify-between  relative"
-      style={{ backgroundImage: `url(/mulchAndSoil/${title}-hero.png)` }}
+      style={{ backgroundImage: `url(/mulchAndSoil/${title}-hero.webp)` }}
     >
       <div className="flex items-end justify-between max-[1000px]:flex-col max-[1000px]:items-center max-[1000px]:gap-[3rem] w-full -mb-[1.5rem]">
         <h1

@@ -7,13 +7,13 @@ export function ProductBox(product: productType) {
     <div className="flex flex-col rounded-[0.5rem]  w-[90%]  overflow-hidden max-[550px]:max-w-[34rem] border-2 border-[#E6E6E6]">
       {" "}
       <div className="w-full h-[25rem] bg-white">
-        {/* <Image
+        <img
           alt="product image"
-          src={`http://localhost:3002/${product.img}`}
-          width={500}
-          height={300}
+          src={`http://localhost:3002${product.img}`}
+          // width={500}
+          // height={300}
           className="w-full h-full"
-        /> */}
+        />
       </div>
       <div className=" p-[1rem]  bg-[#FAFAF5]">
         <div className="flex items-center justify-between gap-2 ">

@@ -3,7 +3,7 @@ import { useTranslations } from "next-intl";
 export function Hero() {
   const t = useTranslations("products.heroSection");
   return (
-    <div className="bg-[url('/products/hero.png')] bg-cover w-dvw h-dvh p-[var(--section-Padding)]  flex items-end justify-start">
+    <div className="bg-[url('/products/hero.webp')] bg-cover w-dvw h-dvh p-[var(--section-Padding)]  flex items-end justify-start">
       <div className={`font-[ClassicoURW] `}>
         <h1 className="text-[5rem] text-[#E5AC71] font-bold -mb-[1rem]">
           {t("title")}

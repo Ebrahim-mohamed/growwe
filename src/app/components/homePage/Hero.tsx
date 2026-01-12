@@ -25,7 +25,7 @@ export function Hero() {
     checkIfEgypt();
   }, []);
   return (
-    <div className="bg-[url('/home/hero.png')] bg-cover w-dvw h-dvh p-[var(--section-Padding)]  flex items-end max-[1000px]:items-center justify-between max-[500px]:bg-right">
+    <div className="bg-[url('/home/hero.webp')] bg-cover w-dvw h-dvh p-[var(--section-Padding)]  flex items-end max-[1000px]:items-center justify-between max-[500px]:bg-right">
       <div className="flex items-end justify-between max-[1000px]:flex-col max-[1000px]:items-center max-[1000px]:gap-[3rem] w-full">
         <div className="flex items-end justify-start gap-[1rem] max-[1000px]:items-center ">
           <p className=" text-[4rem] max-[1000px]:text-[3.5rem]  font-black text-white leading-[5.5rem] max-[1200px]:text-[4rem] max-[1200px]:leading-[5rem] max-[500px]:text-[3rem] max-[1000px]:text-center">
