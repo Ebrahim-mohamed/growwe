@@ -3,7 +3,7 @@ import Image from "next/image";
 import { SmarterBox } from "./SmarterBox";
 import Link from "next/link";
 
-const smarterBox = [
+const smarterBoxes = [
   {
     header: "smartFirstBoxHeader",
     des: "smartFirstBoxDescription",
@@ -19,8 +19,6 @@ const smarterBox = [
     des: "smartThirdBoxDescription",
     img: "Third",
   },
-];
-const smarterBox2 = [
   {
     header: "smartFourthBoxHeader",
     des: "smartFourthBoxDescription",
@@ -48,7 +46,7 @@ export function Smarter() {
         src="/home/smartIcon.svg"
         width={500}
         height={500}
-        className="absolute top-0 left-0 w-[15rem] max-[700px]:hidden"
+        className="absolute top-0 left-0 w-[15rem] max-[1000px]:hidden"
       />
       <h1 className="text-[#387023] text-[3rem] font-black mb-20 text-center">
         {t.rich("smarterTitle", {
@@ -64,18 +62,8 @@ export function Smarter() {
         </Link>
       </h1>
       <div className="flex flex-col gap-[2rem] items-center justify-center">
-        <div className="flex  gap-[1rem] justify-start items-start w-full">
-          {smarterBox.map((box) => (
-            <SmarterBox
-              des={t.rich(box.des, { second: (chunk) => <div>{chunk}</div> })}
-              header={t(box.header)}
-              img={box.img}
-              key={t(box.header)}
-            />
-          ))}
-        </div>
-        <div className="flex gap-[1rem]  justify-start items-start w-full">
-          {smarterBox2.map((box) => (
+        <div className="grid grid-cols-3 max-[1000px]:grid-cols-2  gap-[2rem] justify-between items-start max-[1000px]:items-center w-full">
+          {smarterBoxes.map((box) => (
             <SmarterBox
               des={t.rich(box.des, { second: (chunk) => <div>{chunk}</div> })}
               header={t(box.header)}

@@ -24,7 +24,9 @@ export function NeededArticle({ articleNumber }: { articleNumber: string }) {
             />
           </div>
           <div>
-            <Section1 articleNumber={articleNumber} />
+            <div className="max-[550px]:w-[90%]">
+              <Section1 articleNumber={articleNumber} />
+            </div>
 
             <Section2 articleNumber={articleNumber} />
           </div>
@@ -35,7 +37,7 @@ export function NeededArticle({ articleNumber }: { articleNumber: string }) {
             <Section1 articleNumber={articleNumber} />
           ) : (
             <div className="relative">
-              <div className="absolute right-0 top-[30%]  h-[50rem] ">
+              <div className="absolute right-0 top-[30%] max-[800px]:top-[20%] h-[50rem]  ">
                 <Image
                   alt="article image"
                   src={`/articles/article3-section1.png`}
@@ -44,7 +46,7 @@ export function NeededArticle({ articleNumber }: { articleNumber: string }) {
                   className="w-full"
                 />
               </div>
-              <div className="w-[98%]">
+              <div className="w-[98%] max-[950px]:w-[95%] max-[800px]:w-[90%] max-[550px]:w-[87%]">
                 <Section1 articleNumber={articleNumber} />
               </div>
             </div>

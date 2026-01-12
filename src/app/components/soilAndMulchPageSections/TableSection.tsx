@@ -65,16 +65,16 @@ export function TableSection({
                 index % 2 === 1 ? "bg-[#F1F3F6]" : "bg-white"
               }`}
             >
-              <TableCell className="pl-[4rem]">
+              <TableCell className="pl-[4rem] ">
                 {tableTranslation(`row${index + 1}.cell1`)}
               </TableCell>
 
-              <TableCell className="text-center">
+              <TableCell className="text-center ">
                 {tableTranslation(`row${index + 1}.cell2`)}
               </TableCell>
 
               {isSoil && (
-                <TableCell className="text-center">
+                <TableCell className="text-center ">
                   {tableTranslation(`row${index + 1}.cell3`)}
                 </TableCell>
               )}

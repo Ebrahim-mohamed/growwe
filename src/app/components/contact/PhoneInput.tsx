@@ -36,7 +36,7 @@ export function PhoneInputField({
         defaultCountry="EG"
         value={value}
         onChange={onChange}
-        className="w-full border-b border-[#8D8D8D] pb-[0.3rem] text-[1.2rem] outline-0 focus:outline-0"
+        className="w-full border-b text-[1.2rem] outline-0 focus:outline-0"
       />
 
       {errorMessage && (

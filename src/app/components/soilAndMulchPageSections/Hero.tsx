@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 export function Hero({ title }: { title: string }) {
   const t = useTranslations("informationMulchAndSoil.hero");
   const locale = useLocale();
-  const [isEgypt, setIsEgypt] = useState(false);
+  const [isEgypt, setIsEgypt] = useState(true);
   useEffect(() => {
     async function checkIfEgypt() {
       try {
@@ -25,19 +25,19 @@ export function Hero({ title }: { title: string }) {
   }, []);
   return (
     <div
-      className=" bg-cover w-dvw h-dvh p-[var(--section-Padding)]  flex items-end max-[500px]:items-center justify-between  relative"
+      className=" bg-cover w-dvw h-dvh p-[var(--section-Padding)]  flex items-end max-[1000px]:items-center justify-between  relative"
       style={{ backgroundImage: `url(/mulchAndSoil/${title}-hero.png)` }}
     >
-      <div className="flex items-end justify-between max-[500px]:flex-col max-[500px]:items-center max-[500px]:gap-[3rem] w-full -mb-[1.5rem]">
-        <p
-          className={` text-[5rem] font-black text-white font-[ClassicoURW] mb-[-1rem] max-[500px]:text-center`}
+      <div className="flex items-end justify-between max-[1000px]:flex-col max-[1000px]:items-center max-[1000px]:gap-[3rem] w-full -mb-[1.5rem]">
+        <h1
+          className={` text-[5rem] max-[1300px]:text-[4.5rem] max-[1200px]:text-[4rem]  font-black text-white font-[ClassicoURW] mb-[-1rem] max-[500px]:text-center`}
         >
           {t(title)}
-        </p>
+        </h1>
         {isEgypt ? (
           <Link
             href={`/${locale}/products`}
-            className="bg-[#FF0606] text-white rounded-[2.5rem] text-[2.3rem] font-bold py-[0.2rem] px-[1.5rem] mb-[0.75rem] mr-[0.75rem]"
+            className="bg-[#FF0606] text-white rounded-[2.5rem] text-[2.3rem] font-bold py-[0.2rem] px-[1.5rem] mb-[0.75rem] max-[1300px]:mb-[0.4rem] mr-[0.75rem]"
           >
             {t("shop")}
           </Link>

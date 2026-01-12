@@ -12,7 +12,7 @@ export function Section3({ articleNumber }: { articleNumber: string }) {
       }`}
     >
       {articleNumber === "3" && (
-        <div className="w-[12%]">
+        <div className="w-[12%] max-[900px]:w-[24%] max-[550px]:w-[40%]">
           <Image
             alt="flower image"
             src="/articles/flower.png"

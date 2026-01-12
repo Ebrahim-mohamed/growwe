@@ -9,15 +9,17 @@ export function PartTowInSecondSection(data: PartTowInSecondSectionType) {
       <h1 className="text-[#E5AC71] text-[3rem] font-black mb-[4rem]">
         {t(data.header)}
       </h1>
-      <div className="flex gap-3 items-stretch">
+      <div className="flex gap-3 items-stretch max-[550px]:flex-col">
         <div className="flex flex-col gap-3 w-full  mt-[0.5rem] justify-between h-full">
           <div className="flex-1 text-[#387023] mb-[1rem]">
-            <h3 className="text-[2.4rem] max-[1200px]:text-[1.5rem] font-black ">
+            <h3 className="text-[2.4rem] max-[1200px]:text-[1.5rem] font-black max-[550px]:text-[2.7rem]">
               {t(data.mainPra)}
             </h3>
-            <p className="text-[1.8rem] font-medium">{t(data.des)}</p>
+            <p className="text-[1.8rem] font-medium max-[550px]:text-[2rem]">
+              {t(data.des)}
+            </p>
           </div>
-          <div className="flex items-stretch gap-3 flex-1">
+          <div className="flex items-stretch gap-3 flex-1 ">
             {data.boxes2.map((box) => (
               <SecondSectionBox text={t(box)} key={box} />
             ))}

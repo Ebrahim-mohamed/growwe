@@ -33,7 +33,7 @@ export function ProductCard({ product, productOrder }: ProductCardProps) {
   const addToCart = async () => {
     setLoading(true);
     try {
-      const res = await fetch("https://growwe.com/api/cart", {
+      const res = await fetch("http://localhost:3002/cart", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -71,7 +71,7 @@ export function ProductCard({ product, productOrder }: ProductCardProps) {
       {/* Product image */}
       <Image
         alt={name}
-        src={`https://growwe.com/api/uploads/${product.productImage}`}
+        src={`http://localhost:3002/uploads/${product.productImage}`}
         width={500}
         height={700}
         className="w-[25rem] h-[36rem] object-contain z-50"

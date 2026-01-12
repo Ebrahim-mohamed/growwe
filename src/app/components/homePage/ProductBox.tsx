@@ -9,10 +9,10 @@ export function ProductBox(product: productType) {
       <div className="w-full h-[25rem] bg-white">
         {/* <Image
           alt="product image"
-          src={product.img}
+          src={`http://localhost:3002/${product.img}`}
           width={500}
           height={300}
-          className=""
+          className="w-full h-full"
         /> */}
       </div>
       <div className=" p-[1rem]  bg-[#FAFAF5]">

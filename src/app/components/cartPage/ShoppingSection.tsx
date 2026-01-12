@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { SelectedItemBox } from "./SelectedItemBox";
 import { API_BASE_URL } from "@/utils/api";
 import { refreshAccessToken } from "@/lib/auth";
@@ -18,6 +18,7 @@ interface CartItem {
 }
 
 export function ShoppingSection() {
+  const locale = useLocale();
   const t = useTranslations("cart.shoppingSection");
   const [cart, setCart] = useState<CartItem[]>([]);
   const [loading, setLoading] = useState(true);
@@ -40,7 +41,7 @@ export function ShoppingSection() {
             credentials: "include",
           });
         } else {
-          window.location.href = "/login";
+          window.location.href = `${locale}/login`;
           return;
         }
       }

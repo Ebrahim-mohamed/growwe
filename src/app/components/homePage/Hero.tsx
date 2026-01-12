@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 export function Hero() {
   const t = useTranslations("homePage");
   const locale = useLocale();
-  const [isEgypt, setIsEgypt] = useState(false);
+  const [isEgypt, setIsEgypt] = useState(true);
   useEffect(() => {
     async function checkIfEgypt() {
       try {
@@ -25,10 +25,10 @@ export function Hero() {
     checkIfEgypt();
   }, []);
   return (
-    <div className="bg-[url('/home/hero.png')] bg-cover w-dvw h-dvh p-[var(--section-Padding)]  flex items-end max-[500px]:items-center justify-between max-[500px]:bg-right">
-      <div className="flex items-end justify-between max-[500px]:flex-col max-[500px]:items-center max-[500px]:gap-[3rem] w-full">
-        <div className="flex items-end justify-start gap-[1rem] max-[500px]:items-center ">
-          <p className=" text-[4rem]  font-black text-white leading-[5.5rem] max-[1200px]:text-[4rem] max-[1200px]:leading-[5rem] max-[500px]:text-[3rem] max-[500px]:text-center">
+    <div className="bg-[url('/home/hero.png')] bg-cover w-dvw h-dvh p-[var(--section-Padding)]  flex items-end max-[1000px]:items-center justify-between max-[500px]:bg-right">
+      <div className="flex items-end justify-between max-[1000px]:flex-col max-[1000px]:items-center max-[1000px]:gap-[3rem] w-full">
+        <div className="flex items-end justify-start gap-[1rem] max-[1000px]:items-center ">
+          <p className=" text-[4rem] max-[1000px]:text-[3.5rem]  font-black text-white leading-[5.5rem] max-[1200px]:text-[4rem] max-[1200px]:leading-[5rem] max-[500px]:text-[3rem] max-[1000px]:text-center">
             {t("title")
               .split(" | ")
               .map((part, index) => (
@@ -43,7 +43,7 @@ export function Hero() {
             width={100}
             height={100}
             src="/leaves.png"
-            className="w-[3.5rem] mb-[0.75rem] max-[550px]:hidden"
+            className="w-[3.5rem] mb-[0.75rem] max-[1000px]:hidden"
           />
         </div>
         {isEgypt ? (

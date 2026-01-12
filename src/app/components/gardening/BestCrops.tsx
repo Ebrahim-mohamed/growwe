@@ -9,7 +9,7 @@ export function BestCrops() {
         <h1>{t("header")}</h1>
         <h1>{t("header2")}</h1>
       </div>
-      <div className="grid grid-cols-5 gap-6 items-center justify-center  max-[1050px]:grid-cols-3">
+      <div className="grid grid-cols-5 gap-6 items-center justify-center  max-[1050px]:grid-cols-3 max-[550px]:grid-cols-1">
         {crops.map((crop) => (
           <CropCard key={crop} cropName={t(crop)} img={crop} />
         ))}

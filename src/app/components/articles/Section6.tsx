@@ -6,7 +6,7 @@ export function Section6({ articleNumber }: { articleNumber: string }) {
 
   return (
     <div
-      className="bg-cover p-[var(--section-Padding)] text-white relative h-[33rem] flex items-center"
+      className="bg-cover p-[var(--section-Padding)] text-white relative min-[800px]:h-[33rem] flex items-center"
       style={{
         backgroundImage: `url(/articles/section6-${articleNumber}.png)`,
       }}

@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { NavTab } from "./NavTab";
 import { useLocale, useTranslations } from "next-intl";
 import { useRouter, usePathname } from "next/navigation";
@@ -15,7 +15,7 @@ export function Header() {
   const router = useRouter();
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
-
+  const [isLoggedIn, setIsLoggedIn] = useState<boolean | null>(null);
   function onCloseMenu() {
     if (isOpen) setIsOpen(false);
   }
@@ -24,6 +24,10 @@ export function Header() {
     const nextLocale = locale === "en" ? "ar" : "en";
     router.push(`/${nextLocale}${pathname.replace(/^\/(en|ar)/, "")}`);
   };
+  useEffect(() => {
+    const user = localStorage.getItem("user");
+    setIsLoggedIn(!!user);
+  }, []);
   return (
     <div className="flex items-center justify-between gap-[2rem] py-10 px-[var(--section-Padding)] absolute top-0 left-0 w-full z-50 bg-gradient-to-b from-black to-transparent">
       {/* Logo */}
@@ -76,7 +80,7 @@ export function Header() {
       </div>
 
       {/* Right Section */}
-      <div className="flex items-center justify-end gap-10 flex-1">
+      <div className="flex items-center justify-end gap-10 max-[1100px]:gap-5 flex-1">
         {/* Mobile Menu Button */}
         <button className="min-[800px]:hidden" onClick={() => setIsOpen(true)}>
           <Image
@@ -107,7 +111,7 @@ export function Header() {
             height={20}
           />
         </Link>
-        {pathname.includes("article") && (
+        {/* {pathname.includes("article") && (
           <button>
             <Image
               alt="cart image"
@@ -118,15 +122,9 @@ export function Header() {
               height={20}
             />
           </button>
-        )}
+        )} */}
         {/* Profile Icon */}
-        <Link
-          href={
-            typeof window !== "undefined" && localStorage.getItem("user")
-              ? `/${locale}/profile`
-              : `/${locale}/login`
-          }
-        >
+        <Link href={isLoggedIn ? `/${locale}/profile` : `/${locale}/login`}>
           <Image
             alt="profile image"
             src="/profile.png"

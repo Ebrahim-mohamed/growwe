@@ -43,7 +43,7 @@ export default function Products() {
   const [isLoading, setIsLoading] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const API_BASE = "https://growwe.com/api"; // backend URL
+  const API_BASE = "http://localhost:3002"; // backend URL
 
   // Fetch products
   const fetchProducts = async () => {

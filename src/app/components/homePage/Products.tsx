@@ -24,10 +24,10 @@ export type ProductItem = {
 export function Products() {
   const t = useTranslations("homePage.productsSection");
   const locale = useLocale();
-  const [isEgypt, setIsEgypt] = useState(false);
+  const [isEgypt, setIsEgypt] = useState(true);
   const [soilProducts, setSoilProducts] = useState<ProductItem[]>([]);
   const [mulchProducts, setMulchProducts] = useState<ProductItem[]>([]);
-  const API_BASE = "https://growwe.com/api"; // backend URL
+  const API_BASE = "http://localhost:3002"; // backend URL
 
   useEffect(() => {
     async function checkIfEgypt() {

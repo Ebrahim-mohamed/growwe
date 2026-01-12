@@ -4,8 +4,7 @@ import { FourthSectionBox } from "./FourthSectionBox";
 interface contentType {
   header: string;
   attachedHeader: string;
-  boxes1: { header: string; img: string; des: string }[];
-  boxes2: { header: string; img: string; des: string }[];
+  boxes: { header: string; img: string; des: string }[];
 }
 export function FourthSection(content: contentType) {
   const t = useTranslations("informationMulchAndSoil.fourthSection");
@@ -34,7 +33,9 @@ export function FourthSection(content: contentType) {
           <h2 className="text-center">{t(content.header)}</h2>
           <h1
             className={` mb-20 ${
-              locale === "en" ? " ml-[45rem] " : " mr-[45rem] "
+              locale === "en"
+                ? " ml-[45rem] max-[1300px]:ml-[35rem] max-[1000px]:ml-0 "
+                : " mr-[45rem] max-[1300px]:mr-[35rem] max-[1000px]:mr-0 "
             } text-center`}
           >
             {t.rich(content.attachedHeader, {
@@ -46,18 +47,8 @@ export function FourthSection(content: contentType) {
         </div>
       )}
       <div className="flex flex-col gap-[2rem] items-center justify-center">
-        <div className="flex  gap-[2rem] justify-between items-center w-full">
-          {content.boxes1.map((box) => (
-            <FourthSectionBox
-              des={t.rich(box.des, { second: (chunk) => <div>{chunk}</div> })}
-              header={t(box.header)}
-              img={box.img}
-              key={t(box.header)}
-            />
-          ))}
-        </div>
-        <div className="flex gap-[2rem]  justify-between items-center w-full">
-          {content.boxes2.map((box) => (
+        <div className="grid grid-cols-3 max-[1000px]:grid-cols-2  gap-[2rem] justify-between items-start max-[1000px]:items-center w-full">
+          {content.boxes.map((box) => (
             <FourthSectionBox
               des={t.rich(box.des, { second: (chunk) => <div>{chunk}</div> })}
               header={t(box.header)}

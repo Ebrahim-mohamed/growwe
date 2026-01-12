@@ -6,12 +6,14 @@ import { zodResolver } from "@hookform/resolvers/zod";
 
 import { API_BASE_URL } from "@/utils/api";
 import { signUpType, signUpSchema } from "@/app/schemas/schema";
+import { useLocale } from "next-intl";
 
 type SignUpErrorResponse = {
   error?: string;
 };
 
 export default function Signup() {
+  const locale = useLocale();
   const {
     register,
     handleSubmit,
@@ -24,7 +26,7 @@ export default function Signup() {
     try {
       await axios.post(`${API_BASE_URL}/auth/register`, data);
       alert("Registered successfully. Please login.");
-      window.location.href = "/login";
+      window.location.href = `${locale}/login`;
     } catch (error) {
       const err = error as AxiosError<SignUpErrorResponse>;
       const message =

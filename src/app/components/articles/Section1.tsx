@@ -14,13 +14,15 @@ export function Section1({ articleNumber }: { articleNumber: string }) {
           <div
             className={`flex  ${
               articleNumber === "4" ? " w-[85%] " : " w-full "
-            } items-start justify-between gap-[6rem] text-[1.8rem]`}
+            } items-start max-[1000px]:items-center justify-between gap-[6rem] text-[1.8rem] max-[700px]:flex-col max-[700px]:gap-0  `}
           >
             <p className="flex-1">{t("pra1")}</p>
             {articleNumber !== "4" && (
               <div
-                className={`w-[20%] ${
-                  articleNumber === "1" ? "  " : " -mt-[6rem] "
+                className={`w-[20%] max-[700px]:w-[50%] max-[700px]:my-[1.5rem] ${
+                  articleNumber === "1"
+                    ? " max-[1100px]:w-[30%] "
+                    : " -mt-[6rem] max-[1270px]:-mt-[3rem] "
                 }`}
               >
                 <Image

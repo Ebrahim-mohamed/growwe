@@ -30,8 +30,6 @@ const soilBox = [
     des: "mulchThirdBoxDescription",
     img: "Third",
   },
-];
-const soilBox2 = [
   {
     header: "mulchFourthBoxHeader",
     des: "mulchFourthBoxDescription",
@@ -73,8 +71,7 @@ export default function Mulch() {
       <FourthSection
         header="mulchHeader"
         attachedHeader="mulchAttachHeader"
-        boxes1={soilBox}
-        boxes2={soilBox2}
+        boxes={soilBox}
       />
       <div className="w-full py-[var(--section-Padding)] min-[1200px]:px-[15rem] max-[1200px]:px-[var(--section-Padding)] flex flex-col gap-[2rem] items-center justify-center bg-[#F8F9FB] relative">
         <Link

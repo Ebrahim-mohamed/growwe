@@ -11,8 +11,8 @@ export function FourthSectionBox({
   img: string;
 }) {
   return (
-    <div className="flex items-start justify-center gap-[1.5rem] flex-1 max-[550px]:flex-col max-[550px]:items-center">
-      <div className="p-0 bg-[#F7E6D4] flex items-center justify-center rounded-full w-[20%] max-[500px]:w-[50%] aspect-square max-[550px]:items-center">
+    <div className="flex items-start max-[1000px]:items-center justify-center gap-[1.5rem] flex-1 max-[550px]:flex-col max-[550px]:items-center">
+      <div className="p-0 bg-[#F7E6D4] flex items-center justify-center rounded-full w-[20%] max-[500px]:w-[50%] max-[1000px]:w-[30%] aspect-square max-[550px]:items-center min-w-[6rem]">
         <Image
           alt="image"
           src={`/home/smart${img}Icon.svg`}
@@ -23,13 +23,13 @@ export function FourthSectionBox({
           } ${header === "Weed Suppression" ? " w-[60%] " : "  "}`}
         />
       </div>
-      <div className="text-[#426B1F]  max-w-[50%] max-[550px]:max-w-full max-[550px]:items-center flex flex-col">
+      <div className="text-[#426B1F]  max-w-[50%] max-[1300px]:max-w-[80%] max-[1000px]:flex-1  max-[1000px]:max-w-full max-[550px]:items-center flex flex-col">
         <h1 className="font-bold text-[1.6rem] max-[550px]:text-center">
           {header}
         </h1>
-        <p className="font-normal text-[1.3rem] max-[550px]:text-center">
+        <div className="font-normal text-[1.3rem] max-[550px]:text-center">
           {des}
-        </p>
+        </div>
       </div>
     </div>
   );

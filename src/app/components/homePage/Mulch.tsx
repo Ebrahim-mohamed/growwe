@@ -19,7 +19,7 @@ export function Mulch() {
           second: (chunk) => <span className="italic font-bold">{chunk}</span>,
         })}
       </p>
-      <div className="flex items-center gap-2 w-full justify-between max-[550px]:flex-col mt-[-3rem] max-[500px]:mt-0">
+      <div className="flex items-center gap-2 w-full justify-between max-[550px]:flex-col mt-[-3rem] max-[1350px]:mt-[-1rem] max-[1100px]:mt-0">
         <p className="text-[2rem] max-[500px]:text-center">
           {t.rich("content", {
             second: (chunk) => <span className="font-bold">{chunk}</span>,

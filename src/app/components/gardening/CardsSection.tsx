@@ -45,7 +45,7 @@ export function CardsSection() {
       <h1 className="text-[#387023] text-[4rem] font-bold mb-[2.5rem] text-center">
         {t("header")}
       </h1>
-      <div className="grid grid-cols-3  w-fit   gap-[1.5rem] max-[500px]:grid-cols-2">
+      <div className="grid grid-cols-3 max-[1100px]:grid-cols-2 w-fit   gap-[1.5rem] max-[500px]:grid-cols-2">
         {cards.map((card) => (
           <Card
             des={t(card.des)}

@@ -10,7 +10,6 @@ import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
 import { isValidPhoneNumber } from "react-phone-number-input";
 
-
 // ==================== ZOD SCHEMA ====================
 const contactSchema = z.object({
   firstName: z.string().min(3, { message: "firstNameError" }),
@@ -25,7 +24,6 @@ const contactSchema = z.object({
 });
 
 type ContactData = z.infer<typeof contactSchema>;
-
 
 // ==================== COMPONENT ====================
 export function FormSection() {
@@ -51,8 +49,7 @@ export function FormSection() {
     <div className="w-full p-[var(--section-Padding)] flex items-center flex-col justify-center gap-[1.5rem]">
       <MostUseHeader header={t("header")} des={t("des")} />
 
-      <div className="flex items-stretch justify-between w-[60%] rounded-[0.6rem] shadow-[0_0_60px_30px_rgba(0,0,0,0.03)] gap-[3rem] overflow-hidden py-[1.5rem] pl-[1.5rem] pr-[5rem] max-[550px]:pr-[1.5rem] max-[550px]:flex-col max-[550px]:items-center">
-        
+      <div className="flex items-stretch justify-between w-[60%] max-[1200px]:w-[80%] rounded-[0.6rem] shadow-[0_0_60px_30px_rgba(0,0,0,0.03)] gap-[3rem] overflow-hidden py-[1.5rem] pl-[1.5rem] pr-[5rem] max-[550px]:pr-[1.5rem] max-[550px]:flex-col max-[550px]:items-center">
         <div className="flex-1 p-[1.5rem]">
           <form
             onSubmit={handleSubmit(submit)}
@@ -83,9 +80,7 @@ export function FormSection() {
               <Input
                 label={t("emailLabel")}
                 {...register("email")}
-                errorMessage={
-                  errors.email?.message && t(errors.email.message)
-                }
+                errorMessage={errors.email?.message && t(errors.email.message)}
                 place={t("emailPlace")}
               />
 
@@ -103,7 +98,7 @@ export function FormSection() {
                       {...field}
                       defaultCountry="SA"
                       placeholder={t("phonePlace")}
-                      className="w-full py-2 px-3 rounded border outline-none"
+                      className="w-full outline-none"
                     />
                   )}
                 />
@@ -139,7 +134,6 @@ export function FormSection() {
             </div>
           </form>
         </div>
-
       </div>
 
       <p className="text-black text-[1.3rem]">{t("footer")}</p>
