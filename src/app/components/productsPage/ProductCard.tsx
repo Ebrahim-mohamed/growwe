@@ -4,6 +4,9 @@ import { useTranslations, useLocale } from "next-intl";
 import Image from "next/image";
 import { useState } from "react";
 import { Product } from "@/types/product";
+import { refreshAccessToken } from "@/lib/auth";
+
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "https://growwe.com";
 
 interface ProductCardProps {
   product: Product;
@@ -16,7 +19,6 @@ export function ProductCard({ product, productOrder }: ProductCardProps) {
   const [quantity, setQuantity] = useState(1);
   const [loading, setLoading] = useState(false);
 
-  // Choose the correct language fields
   const name = locale === "ar" ? product.nameAR : product.nameEN;
   const description = locale === "ar" ? product.desAR : product.desEN;
   const type = locale === "ar" ? product.typeAR : product.typeEN;
@@ -33,23 +35,59 @@ export function ProductCard({ product, productOrder }: ProductCardProps) {
   const addToCart = async () => {
     setLoading(true);
     try {
-      const res = await fetch("http://localhost:3002/cart", {
+      let token = localStorage.getItem("accessToken");
+
+      if (!token) {
+        alert("Please login first");
+        window.location.href = `/${locale}/login`;
+        return;
+      }
+
+      let res = await fetch(`${API_BASE_URL}/cart`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          // Add Authorization header if using JWT: Authorization: `Bearer ${token}`
+          Authorization: `Bearer ${token}`,
         },
+        credentials: "include",
         body: JSON.stringify({
           productId: product._id,
           quantity,
         }),
       });
 
-      if (!res.ok) throw new Error("Failed to add to cart");
+      if (res.status === 401) {
+        const newToken = await refreshAccessToken();
+        if (newToken) {
+          res = await fetch(`${API_BASE_URL}/cart`, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: `Bearer ${newToken}`,
+            },
+            credentials: "include",
+            body: JSON.stringify({
+              productId: product._id,
+              quantity,
+            }),
+          });
+        } else {
+          alert("Session expired. Please login again");
+          window.location.href = `/${locale}/login`;
+          return;
+        }
+      }
+
+      if (!res.ok) {
+        const error = await res.json();
+        throw new Error(error.message || "Failed to add to cart");
+      }
+
       alert(t("addedSuccessfully"));
-    } catch (err) {
+      setQuantity(1);
+    } catch (err: any) {
       console.error(err);
-      alert(t("addFailed"));
+      alert(err.message || t("addFailed"));
     } finally {
       setLoading(false);
     }
@@ -61,24 +99,21 @@ export function ProductCard({ product, productOrder }: ProductCardProps) {
         productOrder % 2 !== 0 ? "flex-row-reverse" : ""
       }`}
     >
-      {/* Background highlight */}
       <div
         className={`absolute w-full top-0 h-full ${
           productOrder % 2 !== 0 ? "bg-[#FCF7F1]" : ""
         }`}
       />
 
-      {/* Product image */}
       <Image
         alt={name}
-        src={`http://localhost:3002/uploads/${product.productImage}`}
+        src={`${API_BASE_URL}/uploads/${product.productImage}`}
         width={500}
         height={700}
         className="w-[25rem] h-[36rem] object-contain z-50"
         unoptimized
       />
 
-      {/* Product info */}
       <div className="flex flex-col gap-6 flex-1 z-40 max-w-[45rem]">
         <div>
           <h1 className="text-[#426B1F] text-3xl font-semibold">{name}</h1>
@@ -90,7 +125,6 @@ export function ProductCard({ product, productOrder }: ProductCardProps) {
         <p className="text-black text-lg">{description}</p>
 
         <div className="flex items-center justify-between gap-4">
-          {/* Quantity selector */}
           <div className="flex items-center gap-3 border rounded-full px-3 py-1">
             <button onClick={decrease} className="text-xl font-bold">
               −
@@ -101,12 +135,10 @@ export function ProductCard({ product, productOrder }: ProductCardProps) {
             </button>
           </div>
 
-          {/* Price */}
           <p className="text-xl font-bold">
             {t("egp")} {product.price * quantity}
           </p>
 
-          {/* Add to cart button */}
           <button
             onClick={addToCart}
             disabled={loading}

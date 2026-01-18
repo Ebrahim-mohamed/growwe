@@ -1,57 +1,41 @@
-// src/lib/auth.ts
-import axios from "axios";
-import { API_BASE_URL } from "@/utils/api";
+// lib/auth.ts
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "https://growwe.com";
 
-let accessToken: string | null =
-  typeof window !== "undefined" ? localStorage.getItem("accessToken") : null;
-
-export function getAccessToken() {
-  return accessToken;
-}
-export function setAccessToken(token: string | null) {
-  accessToken = token;
-  if (typeof window !== "undefined") {
-    if (token) localStorage.setItem("accessToken", token);
-    else localStorage.removeItem("accessToken");
-  }
-}
-
-export async function refreshAccessToken() {
+export async function refreshAccessToken(): Promise<string | null> {
   try {
-    const res = await axios.post(
-      `${API_BASE_URL}/auth/refresh`,
-      {},
-      { withCredentials: true }
-    );
-    setAccessToken(res.data.accessToken);
-    return res.data.accessToken;
-  } catch {
-    setAccessToken(null);
+    const response = await fetch(`${API_BASE_URL}/auth/refresh`, {
+      method: "POST",
+      credentials: "include",
+    });
+
+    if (!response.ok) {
+      throw new Error("Refresh token failed");
+    }
+
+    const data = await response.json();
+    localStorage.setItem("accessToken", data.accessToken);
+    return data.accessToken;
+  } catch (error) {
+    console.error("Token refresh error:", error);
+    localStorage.removeItem("accessToken");
     return null;
   }
 }
 
-export async function apiFetch(input: RequestInfo, init: RequestInit = {}) {
-  // attach access token
-  if (!init.headers) init.headers = {};
-  const token = getAccessToken();
-  if (token) (init.headers as any).Authorization = `Bearer ${token}`;
-  const res = await fetch(
-    input.toString().startsWith("https") ? input : `${API_BASE_URL}${input}`,
-    { ...init, credentials: "include" }
-  );
-  if (res.status === 401) {
-    // try refresh once
-    const newToken = await refreshAccessToken();
-    if (newToken) {
-      (init.headers as any).Authorization = `Bearer ${newToken}`;
-      return fetch(
-        input.toString().startsWith("https")
-          ? input
-          : `${API_BASE_URL}${input}`,
-        { ...init, credentials: "include" }
-      );
-    }
+export function getAccessToken(): string | null {
+  return localStorage.getItem("accessToken");
+}
+
+export async function logout(): Promise<void> {
+  try {
+    await fetch(`${API_BASE_URL}/auth/logout`, {
+      method: "POST",
+      credentials: "include",
+    });
+  } catch (error) {
+    console.error("Logout error:", error);
+  } finally {
+    localStorage.removeItem("accessToken");
+    window.location.href = "/login";
   }
-  return res;
 }

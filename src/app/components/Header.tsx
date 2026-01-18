@@ -15,7 +15,8 @@ export function Header() {
   const router = useRouter();
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState<boolean | null>(null);
+  const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
+
   function onCloseMenu() {
     if (isOpen) setIsOpen(false);
   }
@@ -24,15 +25,35 @@ export function Header() {
     const nextLocale = locale === "en" ? "ar" : "en";
     router.push(`/${nextLocale}${pathname.replace(/^\/(en|ar)/, "")}`);
   };
+
+  // Check login status
   useEffect(() => {
-    const user = localStorage.getItem("user");
-    setIsLoggedIn(!!user);
+    const checkAuth = () => {
+      const token = localStorage.getItem("accessToken");
+      setIsLoggedIn(!!token);
+    };
+
+    checkAuth();
+
+    // Listen for storage changes (e.g., login/logout in another tab)
+    window.addEventListener("storage", checkAuth);
+
+    return () => {
+      window.removeEventListener("storage", checkAuth);
+    };
   }, []);
+
+  // Update login status when pathname changes (after login/logout redirect)
+  useEffect(() => {
+    const token = localStorage.getItem("accessToken");
+    setIsLoggedIn(!!token);
+  }, [pathname]);
+
   return (
     <div className="flex items-center justify-between gap-[2rem] py-10 px-[var(--section-Padding)] absolute top-0 left-0 w-full z-50 bg-gradient-to-b from-black to-transparent">
       {/* Logo */}
       <div className="flex-1">
-        <Link href="/">
+        <Link href={`/${locale}`}>
           <Image
             alt="logo image"
             src="/logo.png"
@@ -111,18 +132,7 @@ export function Header() {
             height={20}
           />
         </Link>
-        {/* {pathname.includes("article") && (
-          <button>
-            <Image
-              alt="cart image"
-              src="/openArticle.jpg"
-              priority
-              className="w-[1.8rem]"
-              width={20}
-              height={20}
-            />
-          </button>
-        )} */}
+
         {/* Profile Icon */}
         <Link href={isLoggedIn ? `/${locale}/profile` : `/${locale}/login`}>
           <Image

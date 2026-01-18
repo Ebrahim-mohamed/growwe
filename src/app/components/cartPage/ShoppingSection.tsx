@@ -3,8 +3,9 @@
 import { useEffect, useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { SelectedItemBox } from "./SelectedItemBox";
-import { API_BASE_URL } from "@/utils/api";
 import { refreshAccessToken } from "@/lib/auth";
+
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "https://growwe.com";
 
 interface CartItem {
   productId: {
@@ -22,18 +23,24 @@ export function ShoppingSection() {
   const t = useTranslations("cart.shoppingSection");
   const [cart, setCart] = useState<CartItem[]>([]);
   const [loading, setLoading] = useState(true);
+  const [checkoutLoading, setCheckoutLoading] = useState(false);
 
   async function loadCart() {
     setLoading(true);
     try {
       const token = localStorage.getItem("accessToken");
+
+      if (!token) {
+        window.location.href = `/${locale}/login`;
+        return;
+      }
+
       let res = await fetch(`${API_BASE_URL}/users/me`, {
         headers: { Authorization: `Bearer ${token}` },
         credentials: "include",
       });
 
-      if (!res.ok) {
-        // try refresh
+      if (res.status === 401) {
         const newToken = await refreshAccessToken();
         if (newToken) {
           res = await fetch(`${API_BASE_URL}/users/me`, {
@@ -41,9 +48,13 @@ export function ShoppingSection() {
             credentials: "include",
           });
         } else {
-          window.location.href = `${locale}/login`;
+          window.location.href = `/${locale}/login`;
           return;
         }
+      }
+
+      if (!res.ok) {
+        throw new Error("Failed to load cart");
       }
 
       const data = await res.json();
@@ -60,21 +71,29 @@ export function ShoppingSection() {
   }, []);
 
   const checkout = async () => {
+    setCheckoutLoading(true);
     try {
       const token = localStorage.getItem("accessToken");
+
+      if (!token) {
+        alert("Please login first");
+        window.location.href = `/${locale}/login`;
+        return;
+      }
+
       const items = cart.map((c) => ({
         name: c.productId?.nameEN || "product",
-        price: Math.round((c.productId?.price || 0) * 100), // amount in cents
+        price: Math.round((c.productId?.price || 0) * 100),
         quantity: c.quantity,
         productId: c.productId._id,
       }));
 
       const amount_cents = items.reduce(
         (s, it) => s + it.price * it.quantity,
-        0
+        0,
       );
 
-      const res = await fetch(`${API_BASE_URL}/payments/create-pay`, {
+      let res = await fetch(`${API_BASE_URL}/payments/create-pay`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -83,9 +102,35 @@ export function ShoppingSection() {
         credentials: "include",
         body: JSON.stringify({
           amount_cents,
-          order: { items, orderNumber: `local-${Date.now()}` },
+          order: { items, orderNumber: `order-${Date.now()}` },
         }),
       });
+
+      if (res.status === 401) {
+        const newToken = await refreshAccessToken();
+        if (newToken) {
+          res = await fetch(`${API_BASE_URL}/payments/create-pay`, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: `Bearer ${newToken}`,
+            },
+            credentials: "include",
+            body: JSON.stringify({
+              amount_cents,
+              order: { items, orderNumber: `order-${Date.now()}` },
+            }),
+          });
+        } else {
+          alert("Session expired. Please login again");
+          window.location.href = `/${locale}/login`;
+          return;
+        }
+      }
+
+      if (!res.ok) {
+        throw new Error("Payment initiation failed");
+      }
 
       const data = await res.json();
       if (data.iframeURL) {
@@ -96,15 +141,30 @@ export function ShoppingSection() {
     } catch (err) {
       console.error(err);
       alert("Checkout failed");
+    } finally {
+      setCheckoutLoading(false);
     }
   };
 
-  if (loading) return <div>Loading...</div>;
-  if (!cart.length) return <div>No items in cart</div>;
+  if (loading) {
+    return (
+      <div className="flex justify-center items-center min-h-[400px]">
+        <p className="text-xl">Loading cart...</p>
+      </div>
+    );
+  }
+
+  if (!cart.length) {
+    return (
+      <div className="flex justify-center items-center min-h-[400px]">
+        <p className="text-xl">No items in cart</p>
+      </div>
+    );
+  }
 
   const totalPrice = cart.reduce(
     (sum, c) => sum + (c.productId?.price || 0) * c.quantity,
-    0
+    0,
   );
 
   return (
@@ -115,7 +175,7 @@ export function ShoppingSection() {
         <div className="w-full flex justify-start mb-4">
           <a
             className="text-[1.5rem] font-semibold flex items-center gap-[1rem]"
-            href="#"
+            href={`/${locale}/products`}
           >
             <p className="text-[3rem]">&#x2039;</p>
             <p className="mt-[0.4rem]">{t("return")}</p>
@@ -129,7 +189,7 @@ export function ShoppingSection() {
             <SelectedItemBox
               key={c.productId._id}
               img={c.productId.productImage}
-              name={c.productId.nameEN}
+              name={locale === "ar" ? c.productId.nameAR : c.productId.nameEN}
               price={c.productId.price}
               que={c.quantity}
             />
@@ -137,13 +197,14 @@ export function ShoppingSection() {
 
           <div className="flex justify-between items-center mt-4">
             <p className="text-xl font-bold">
-              {t("total")}: {totalPrice} EGP
+              {t("total")}: {totalPrice.toFixed(2)} EGP
             </p>
             <button
               onClick={checkout}
-              className="text-[1.5rem] font-bold text-white bg-black rounded-[1.5rem] py-[0.5rem] px-[1rem] cursor-pointer"
+              disabled={checkoutLoading}
+              className="text-[1.5rem] font-bold text-white bg-black rounded-[1.5rem] py-[0.5rem] px-[1rem] cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              {t("checkout")}
+              {checkoutLoading ? "Processing..." : t("checkout")}
             </button>
           </div>
         </div>

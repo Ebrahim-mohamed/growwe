@@ -1,58 +1,176 @@
 "use client";
-
-import { useForm } from "react-hook-form";
-import axios, { AxiosError } from "axios";
+import { FormSection } from "@/app/components/auth/FormSection";
+import { Hero } from "@/app/components/auth/Hero";
+import { Input } from "@/app/components/contact/Input";
+import { signUpSchema, signUpType } from "@/app/schemas/schema";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useTranslations, useLocale } from "next-intl";
+import { useForm } from "react-hook-form";
+import { useState } from "react";
+import { useRouter } from "next/navigation";
 
-import { API_BASE_URL } from "@/utils/api";
-import { signUpType, signUpSchema } from "@/app/schemas/schema";
-import { useLocale } from "next-intl";
-
-type SignUpErrorResponse = {
-  error?: string;
-};
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "https://growwe.com";
 
 export default function Signup() {
+  const t = useTranslations("auth.signup");
   const locale = useLocale();
+  const router = useRouter();
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+
   const {
     register,
+    formState: { errors },
     handleSubmit,
-    formState: { errors, isSubmitting },
-  } = useForm<signUpType>({
-    resolver: zodResolver(signUpSchema),
-  });
+  } = useForm<signUpType>({ resolver: zodResolver(signUpSchema) });
 
   async function onSignUp(data: signUpType) {
+    setLoading(true);
+    setError("");
+
     try {
-      await axios.post(`${API_BASE_URL}/auth/register`, data);
-      alert("Registered successfully. Please login.");
-      window.location.href = `${locale}/login`;
-    } catch (error) {
-      const err = error as AxiosError<SignUpErrorResponse>;
-      const message =
-        err.response?.data?.error || err.message || "Register failed";
-      alert(message);
-      console.error(err);
+      const response = await fetch(`${API_BASE_URL}/auth/signup`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        credentials: "include",
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.message || "Signup failed");
+      }
+
+      localStorage.setItem("accessToken", result.accessToken);
+      router.push(`/${locale}`);
+    } catch (err: any) {
+      setError(err.message || "Something went wrong");
+    } finally {
+      setLoading(false);
     }
   }
 
   return (
-    <form onSubmit={handleSubmit(onSignUp)}>
-      <input {...register("userName")} placeholder="Username" />
-      {errors.userName && <p>{errors.userName.message}</p>}
+    <div>
+      <Hero bg="login-hero" img="add-user" title={t("header")} />
+      <FormSection header={t("header")} des={t("des")}>
+        <div className="w-[60%] p-10 bg-white rounded-[1.5rem]">
+          <form
+            onSubmit={handleSubmit(onSignUp)}
+            className="w-full items-center justify-center gap-[1.5rem] flex flex-col"
+          >
+            {error && (
+              <div className="w-full p-3 bg-red-100 text-red-700 rounded-lg">
+                {error}
+              </div>
+            )}
 
-      <input {...register("password")} type="password" placeholder="Password" />
-      {errors.password && <p>{errors.password.message}</p>}
+            <h2 className="text-[2rem] text-black font-medium mb-[1.5rem]">
+              {t("personal")}
+            </h2>
 
-      <input {...register("phone")} placeholder="Phone" />
-      {errors.phone && <p>{errors.phone.message}</p>}
+            <div className="flex gap-[3rem] w-full">
+              <Input
+                label={t("userNameLabel")}
+                place={t("userNamePlaceholder")}
+                errorMessage={
+                  errors.userName?.message
+                    ? t(errors.userName?.message)
+                    : undefined
+                }
+                {...register("userName")}
+              />
+              <Input
+                label={t("passwordLabel")}
+                place={t("passwordPlaceholder")}
+                type="password"
+                errorMessage={
+                  errors.password?.message
+                    ? t(errors.password?.message)
+                    : undefined
+                }
+                {...register("password")}
+              />
+            </div>
 
-      <input {...register("email")} type="email" placeholder="Email" />
-      {errors.email && <p>{errors.email.message}</p>}
+            <div className="flex gap-[3rem] w-full">
+              <Input
+                label={t("phoneLabel")}
+                place={t("phonePlaceholder")}
+                errorMessage={
+                  errors.phone?.message ? t(errors.phone?.message) : undefined
+                }
+                {...register("phone")}
+              />
+              <Input
+                label={t("emailLabel")}
+                place={t("emailPlaceholder")}
+                errorMessage={
+                  errors.email?.message ? t(errors.email?.message) : undefined
+                }
+                {...register("email")}
+              />
+            </div>
 
-      <button type="submit" disabled={isSubmitting}>
-        {isSubmitting ? "Signing up..." : "Sign up"}
-      </button>
-    </form>
+            <h2 className="text-[2rem] text-black font-medium my-[1.5rem]">
+              {t("shipping")}
+            </h2>
+
+            <div className="flex gap-[3rem] w-full">
+              <Input
+                label={t("addressLabel")}
+                place={t("addressPlaceholder")}
+                errorMessage={
+                  errors.address?.message
+                    ? t(errors.address?.message)
+                    : undefined
+                }
+                {...register("address")}
+              />
+              <Input
+                label={t("countryLabel")}
+                place={t("countryPlaceholder")}
+                errorMessage={
+                  errors.country?.message
+                    ? t(errors.country?.message)
+                    : undefined
+                }
+                {...register("country")}
+              />
+            </div>
+
+            <div className="flex gap-[3rem] w-full">
+              <Input
+                label={t("cityLabel")}
+                place={t("cityPlaceholder")}
+                errorMessage={
+                  errors.city?.message ? t(errors.city?.message) : undefined
+                }
+                {...register("city")}
+              />
+              <Input
+                label={t("areaLabel")}
+                place={t("areaPlaceholder")}
+                errorMessage={
+                  errors.area?.message ? t(errors.area?.message) : undefined
+                }
+                {...register("area")}
+              />
+            </div>
+
+            <button
+              type="submit"
+              disabled={loading}
+              className="bg-[#426B1F] text-[1.2rem] text-white font-medium px-6 py-2 block rounded-[4rem] cursor-pointer mt-[2rem] disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              {loading ? "Loading..." : t("button")}
+            </button>
+          </form>
+        </div>
+      </FormSection>
+    </div>
   );
 }
