@@ -9,7 +9,7 @@ export function ProductBox(product: productType) {
       <div className="w-full h-[25rem] bg-white">
         <img
           alt="product image"
-          src={`https://growwe.com${product.img}`}
+          src={`https://api.growwe.com${product.img}`}
           // width={500}
           // height={300}
           className="w-full h-full"

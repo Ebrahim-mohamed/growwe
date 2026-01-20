@@ -1,5 +1,6 @@
 // lib/auth.ts
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "https://growwe.com";
+const API_BASE_URL =
+  process.env.NEXT_PUBLIC_API_URL || "https://api.growwe.com";
 
 export async function refreshAccessToken(): Promise<string | null> {
   try {

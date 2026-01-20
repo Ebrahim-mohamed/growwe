@@ -1,7 +1,7 @@
 export const API_BASE_URL =
-  process.env.NEXT_PUBLIC_API_URL || "https://growwe.com";
+  process.env.NEXT_PUBLIC_API_URL || "https://api.growwe.com";
 
-export const API_URL = "https://growwe.com";
+export const API_URL = "https://api.growwe.com";
 
 export async function api(path: string, options?: RequestInit) {
   const token = localStorage.getItem("token");

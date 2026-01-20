@@ -5,7 +5,8 @@ import { useLocale, useTranslations } from "next-intl";
 import { SelectedItemBox } from "./SelectedItemBox";
 import { refreshAccessToken } from "@/lib/auth";
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "https://growwe.com";
+const API_BASE_URL =
+  process.env.NEXT_PUBLIC_API_URL || "https://api.growwe.com";
 
 interface CartItem {
   productId: {

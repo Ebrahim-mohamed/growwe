@@ -6,7 +6,8 @@ import { useState } from "react";
 import { Product } from "@/types/product";
 import { refreshAccessToken } from "@/lib/auth";
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "https://growwe.com";
+const API_BASE_URL =
+  process.env.NEXT_PUBLIC_API_URL || "https://api.growwe.com";
 
 interface ProductCardProps {
   product: Product;

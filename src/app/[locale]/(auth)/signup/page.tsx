@@ -9,7 +9,8 @@ import { useForm } from "react-hook-form";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "https://growwe.com";
+const API_BASE_URL =
+  process.env.NEXT_PUBLIC_API_URL || "https://api.growwe.com";
 
 export default function Signup() {
   const t = useTranslations("auth.signup");
