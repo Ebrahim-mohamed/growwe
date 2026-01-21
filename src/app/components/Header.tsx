@@ -6,7 +6,9 @@ import { useEffect, useState } from "react";
 import { NavTab } from "./NavTab";
 import { useLocale, useTranslations } from "next-intl";
 import { useRouter, usePathname } from "next/navigation";
+import { refreshAccessToken } from "@/lib/auth";
 
+const API_BASE_URL = "http://localhost:3002";
 const navTabs = ["about", "products", "gardening", "contact"];
 
 export function Header() {
@@ -16,6 +18,7 @@ export function Header() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
+  const [cartItemCount, setCartItemCount] = useState<number>(0);
 
   function onCloseMenu() {
     if (isOpen) setIsOpen(false);
@@ -26,16 +29,57 @@ export function Header() {
     router.push(`/${nextLocale}${pathname.replace(/^\/(en|ar)/, "")}`);
   };
 
+  // Fetch cart count
+  const fetchCartCount = async () => {
+    const token = localStorage.getItem("accessToken");
+    if (!token) {
+      setCartItemCount(0);
+      return;
+    }
+
+    try {
+      let res = await fetch(`${API_BASE_URL}/users/me`, {
+        headers: { Authorization: `Bearer ${token}` },
+        credentials: "include",
+      });
+
+      if (res.status === 401) {
+        const newToken = await refreshAccessToken();
+        if (newToken) {
+          res = await fetch(`${API_BASE_URL}/users/me`, {
+            headers: { Authorization: `Bearer ${newToken}` },
+            credentials: "include",
+          });
+        }
+      }
+
+      if (res.ok) {
+        const data = await res.json();
+        const totalItems =
+          data.cart?.reduce(
+            (sum: number, item: any) => sum + item.quantity,
+            0,
+          ) || 0;
+        setCartItemCount(totalItems);
+      }
+    } catch (error) {
+      console.error("Failed to fetch cart count:", error);
+    }
+  };
+
   // Check login status
   useEffect(() => {
     const checkAuth = () => {
       const token = localStorage.getItem("accessToken");
       setIsLoggedIn(!!token);
+      if (token) {
+        fetchCartCount();
+      }
     };
 
     checkAuth();
 
-    // Listen for storage changes (e.g., login/logout in another tab)
+    // Listen for storage changes
     window.addEventListener("storage", checkAuth);
 
     return () => {
@@ -43,11 +87,27 @@ export function Header() {
     };
   }, []);
 
-  // Update login status when pathname changes (after login/logout redirect)
+  // Update login status when pathname changes
   useEffect(() => {
     const token = localStorage.getItem("accessToken");
     setIsLoggedIn(!!token);
+    if (token) {
+      fetchCartCount();
+    }
   }, [pathname]);
+
+  // Custom event listener for cart updates
+  useEffect(() => {
+    const handleCartUpdate = () => {
+      fetchCartCount();
+    };
+
+    window.addEventListener("cartUpdated", handleCartUpdate);
+
+    return () => {
+      window.removeEventListener("cartUpdated", handleCartUpdate);
+    };
+  }, []);
 
   return (
     <div className="flex items-center justify-between gap-[2rem] py-10 px-[var(--section-Padding)] absolute top-0 left-0 w-full z-50 bg-gradient-to-b from-black to-transparent">
@@ -121,8 +181,8 @@ export function Header() {
           {locale === "en" ? "العربية" : "English"}
         </button>
 
-        {/* Cart Icon */}
-        <Link href={`/${locale}/cart`}>
+        {/* Cart Icon with Badge */}
+        <Link href={`/${locale}/cart`} className="relative">
           <Image
             alt="cart image"
             src="/cart.png"
@@ -131,6 +191,11 @@ export function Header() {
             width={20}
             height={20}
           />
+          {cartItemCount > 0 && (
+            <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
+              {cartItemCount > 9 ? "9+" : cartItemCount}
+            </span>
+          )}
         </Link>
 
         {/* Profile Icon */}

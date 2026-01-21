@@ -6,8 +6,7 @@ import { useState } from "react";
 import { Product } from "@/types/product";
 import { refreshAccessToken } from "@/lib/auth";
 
-const API_BASE_URL =
-  process.env.NEXT_PUBLIC_API_URL || "https://api.growwe.com";
+const API_BASE_URL = "http://localhost:3002";
 
 interface ProductCardProps {
   product: Product;
@@ -36,7 +35,7 @@ export function ProductCard({ product, productOrder }: ProductCardProps) {
   const addToCart = async () => {
     setLoading(true);
     try {
-      let token = localStorage.getItem("accessToken");
+      const token = localStorage.getItem("accessToken");
 
       if (!token) {
         alert("Please login first");
@@ -96,7 +95,7 @@ export function ProductCard({ product, productOrder }: ProductCardProps) {
 
   return (
     <div
-      className={`flex items-center justify-center gap-20 w-full relative max-[580px]:flex-col py-20 ${
+      className={`flex items-center justify-center gap-20 w-full relative max-[580px]:flex-col py-5 ${
         productOrder % 2 !== 0 ? "flex-row-reverse" : ""
       }`}
     >
@@ -111,7 +110,7 @@ export function ProductCard({ product, productOrder }: ProductCardProps) {
         src={`${API_BASE_URL}/uploads/${product.productImage}`}
         width={500}
         height={700}
-        className="w-[25rem] h-[36rem] object-contain z-50"
+        className="w-[25rem] object-contain z-50"
         unoptimized
       />
 

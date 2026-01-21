@@ -128,7 +128,8 @@
       "products": "Products",
       "quantity": "Quantity",
       "egp": "EGP",
-      "add": "Add to Cart"
+      "add": "Add to Cart",
+      "adding": "جاري الاضافة"
     },
     "calculator": {
       "title": "الالة الحاسبة",
@@ -650,7 +651,8 @@
       "return": "متابعة التسوق",
       "cartHead": "سلة التسوق",
       "itemsNumber": "لديك {number} عنصر في سلتك",
-      "checkout": "الدفع"
+      "checkout": "الدفع",
+      "total": "الاجمالي"
     }
   },
   "refund": {

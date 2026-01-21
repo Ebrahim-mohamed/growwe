@@ -141,7 +141,8 @@
     "productsSection": {
       "quantity": "Quantity",
       "egp": "EGP",
-      "add": "Add to Cart"
+      "add": "Add to Cart",
+      "adding": "Adding"
     },
     "calculator": {
       "title": "Calculator",
@@ -660,7 +661,8 @@
       "return": "Continue Shopping",
       "cartHead": "Shopping cart",
       "itemsNumber": "You have {number} item in your cart",
-      "checkout": "Checkout"
+      "checkout": "Checkout",
+      "total": "total"
     }
   },
   "profile": {

@@ -36,7 +36,7 @@ export default function NewsPage() {
   const [isLoading, setIsLoading] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const API_BASE = "https://api.growwe.com"; // Backend URL
+  const API_BASE = "http://localhost:3002"; // Backend URL
 
   const fetchNews = async () => {
     setIsLoading(true);

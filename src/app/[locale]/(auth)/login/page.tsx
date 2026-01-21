@@ -10,8 +10,7 @@ import { useForm } from "react-hook-form";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 
-const API_BASE_URL =
-  process.env.NEXT_PUBLIC_API_URL || "https://api.growwe.com";
+const API_BASE_URL = "http://localhost:3002";
 
 export default function Login() {
   const t = useTranslations("auth.login");
@@ -59,7 +58,7 @@ export default function Login() {
     <div>
       <Hero bg="login-hero" img="add-user" title={t("header")} />
       <FormSection header={t("header")} des={t("des")}>
-        <div className="w-1/2 p-6 bg-white rounded-[1.5rem]">
+        <div className="w-1/2 max-[1000px]:w-[60%] max-[600px]:w-[70%] max-[500px]:w-[80%] max-[450px]:w-[95%] p-6 bg-white rounded-[1.5rem]">
           <form
             onSubmit={handleSubmit(onLogin)}
             className="w-full items-center justify-center gap-[1.5rem] flex flex-col"
@@ -112,9 +111,9 @@ export default function Login() {
                 {t("signUp")}
               </Link>
             </p>
-            <Link href={`/${locale}/forget`} className="text-[#426B1F]">
+            {/* <Link href={`/${locale}/forget`} className="text-[#426B1F]">
               {t("forget")}
-            </Link>
+            </Link> */}
           </div>
         </div>
       </FormSection>
