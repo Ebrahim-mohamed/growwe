@@ -33,7 +33,7 @@ export function SelectedItemBox({
       <div className="flex items-center gap-[2rem] flex-1">
         <img
           alt="product image"
-          src={`https://api.growwe.com/${img}`}
+          src={`https://api.growwe.com/uploads/${img}`}
           className="w-full h-full max-w-[8rem] rounded-lg"
         />
         <div className="flex flex-col gap-1">
