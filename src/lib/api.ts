@@ -1,6 +1,6 @@
-export const API_BASE_URL = "http://localhost:3002";
+export const API_BASE_URL = "https://api.growwe.com";
 
-export const API_URL = "http://localhost:3002";
+export const API_URL = "https://api.growwe.com";
 
 export async function api(path: string, options?: RequestInit) {
   const token = localStorage.getItem("token");

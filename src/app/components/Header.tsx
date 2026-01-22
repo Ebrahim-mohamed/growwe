@@ -8,8 +8,8 @@ import { useLocale, useTranslations } from "next-intl";
 import { useRouter, usePathname } from "next/navigation";
 import { refreshAccessToken } from "@/lib/auth";
 
-const API_BASE_URL = "http://localhost:3002";
-const navTabs = ["about", "products", "gardening", "contact"];
+const API_BASE_URL = "https://api.growwe.com";
+const navTabs = ["about", "products", "horticulture", "contact"];
 
 export function Header() {
   const locale = useLocale();

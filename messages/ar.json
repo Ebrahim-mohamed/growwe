@@ -3,7 +3,7 @@
     "lang": "EN",
     "about": "من نحن؟",
     "products": "منتجاتنا",
-    "gardening": "دليل الزراعة",
+    "horticulture": "دليل الزراعة",
     "contact": "تواصل معنا",
     "aboutProduct": {
       "mulch": "المالش",
@@ -15,7 +15,7 @@
     "link": "روابط",
     "about": "من نحن؟",
     "products": "منتجاتنا",
-    "gardening": "دليل الزراعة",
+    "horticulture": "دليل الزراعة",
     "contact": "تواصل معنا",
     "email": "info@growwe.com",
     "phone1": "+2 (02) 2488 0000",
@@ -125,11 +125,12 @@
       "cost": "اقتصادي في التكلفة"
     },
     "productsSection": {
-      "products": "Products",
-      "quantity": "Quantity",
-      "egp": "EGP",
-      "add": "Add to Cart",
-      "adding": "جاري الاضافة"
+      "products": "منتجاتنا",
+      "quantity": "الكميه",
+      "egp": "ج.م",
+      "add": "اضافة للعربة",
+      "adding": "جاري الاضافة",
+      "addedSuccessfully": "تمت الاضافة بنجاح"
     },
     "calculator": {
       "title": "الالة الحاسبة",
@@ -143,14 +144,14 @@
       "peat": "بيت"
     }
   },
-  "gardening": {
+  "horticulture": {
     "heroSection": {
       "quote": "اطلب عروض الاسعار",
       "title": "دليل الزراعة",
       "p": "مزرعتك أفضل .. محاصيلك أفضل وأكثر",
       "shop": "تسوق الان"
     },
-    "gardeningSection": {
+    "HorticultureSection": {
       "title": "العناية بالحدائق",
       "des1": "تربة صحية لمحاصيل أفضل!",
       "header": "مثالي للنباتات المحبة للحموضة",

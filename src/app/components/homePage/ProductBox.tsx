@@ -6,7 +6,7 @@ import { useState } from "react";
 import { useLocale } from "next-intl";
 import { refreshAccessToken } from "@/lib/auth";
 
-const API_BASE_URL = "http://localhost:3002";
+const API_BASE_URL = "https://api.growwe.com";
 
 export function ProductBox(product: productType) {
   const locale = useLocale();

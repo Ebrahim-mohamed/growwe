@@ -19,7 +19,7 @@ import {
 } from "@/components/ui/dialog";
 import { refreshAccessToken } from "@/lib/auth";
 
-const API_BASE_URL = "http://localhost:3002";
+const API_BASE_URL = "https://api.growwe.com";
 
 type ShippingData = {
   address: string;

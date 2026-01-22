@@ -10,7 +10,7 @@ import { useForm } from "react-hook-form";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 
-const API_BASE_URL = "http://localhost:3002";
+const API_BASE_URL = "https://api.growwe.com";
 
 export default function Login() {
   const t = useTranslations("auth.login");

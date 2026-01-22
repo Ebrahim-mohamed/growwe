@@ -3,7 +3,7 @@
     "lang": "AR",
     "about": "About Us",
     "products": "Products",
-    "gardening": "Gardening",
+    "horticulture": "Horticulture",
     "contact": "Contact Us",
     "aboutProduct": {
       "mulch": "Mulch",
@@ -15,7 +15,7 @@
     "link": "Links",
     "about": "About Us",
     "products": "Products",
-    "gardening": "Gardening Guide",
+    "horticulture": "Horticulture Guide",
     "contact": "Contact Us",
     "email": "info@growwe.com",
     "phone1": "+2 (02) 2488 0000",
@@ -55,10 +55,10 @@
     },
     "plantsSection": {
       "header": "Perfect for All Plants",
-      "des": "Ideal for gardening, hydroponics, nurseries, and potting mixes.",
+      "des": "Ideal for horticulture, hydroponics, nurseries, and potting mixes.",
       "secHeader": "Best Uses",
       "firstUse": "✅  Seed starting",
-      "secondUse": "✅  Container gardening ",
+      "secondUse": "✅  Container horticulture ",
       "thirdUse": "✅  Soil amendment",
       "forthUse": "✅  Hydroponic growing"
     },
@@ -70,7 +70,7 @@
     },
     "mulch": {
       "title": "Mulch",
-      "des": "The Secret to <second>Smart</second> Gardening",
+      "des": "The Secret to <second>Smart</second> Horticulture",
       "content": "Mulch is a <second>protective layer</second> of material spread on top of the soil to protect it and decorate your landscape. Think of it like a blanket for your garden. Mulch protects the soil and the plants growing in it. It is <second>natural</second>, <second>organic</second> and <second>reusable</second>.",
       "features": "Mulch Benefits & Features",
       "feat1": "✅ Saves water",
@@ -142,7 +142,8 @@
       "quantity": "Quantity",
       "egp": "EGP",
       "add": "Add to Cart",
-      "adding": "Adding"
+      "adding": "Adding",
+      "addedSuccessfully": "Added Successfully"
     },
     "calculator": {
       "title": "Calculator",
@@ -159,14 +160,14 @@
       "peat": "Soilless Media"
     }
   },
-  "gardening": {
+  "horticulture": {
     "heroSection": {
       "quote": "Get a Quote",
       "title": "Horticulture",
       "p": "Your Garden is Greener,Your Crops are Healthier.",
       "shop": "Shop Now"
     },
-    "gardeningSection": {
+    "HorticultureSection": {
       "title": "Horticulture",
       "des1": "Horticulture: Healthy Soil for a Healthier Harvest!",
       "header": "Ideal for Most Plants",
@@ -269,7 +270,7 @@
       "soilHeader": "Soilless Growing Media",
       "soilPra1": "GROWWE soilless growing media is a biodegradable soil alternative, produced from natural resources. GROWWE is a sustainable eco-friendly solution that utilizes natural organic resources to contribute to organic agriculture, while enhancing soil quality for horticulture, landscaping and farming.",
       "mulchHeader": "Mulch",
-      "mulchPra1": "GROWWE mulch is a 100% natural organic material applied to the surface of soil, used in gardening and landscaping. GROWWE mulch is a 100% organic, free from chemicals, that helps nourish the soil and support its aeration while improve its quality. Mulch is a protective layer for the soil that helps retain moisture, improve soil structure and protect plants.",
+      "mulchPra1": "GROWWE mulch is a 100% natural organic material applied to the surface of soil, used in horticulture and landscaping. GROWWE mulch is a 100% organic, free from chemicals, that helps nourish the soil and support its aeration while improve its quality. Mulch is a protective layer for the soil that helps retain moisture, improve soil structure and protect plants.",
       "mulchPra2": "Our premium mulch is designed to provide growers and landscapers with a reliable, sustainable solution for soil coverage and crop protection. Made from 100% natural materials, it enhances soil moisture retention, regulates temperature, and helps control weed growth while gradually enriching the soil as it decomposes. With its consistent quality and easy application, our mulch is an effective way to improve plant health, reduce maintenance, and support environmentally responsible cultivation practices.",
       "advantages": "Advantages",
       "soilBox1": "Higher Productivity",
@@ -287,7 +288,7 @@
       "mulchBox5": "Reduce Soil Erosion",
       "mulchBox6": "Temperature Regulation",
       "mulchMainPra": "Ideal for Growers and Landscapers",
-      "mulchDes": "Landscaping and Gardening"
+      "mulchDes": "Landscaping and Horticulture"
     },
     "thirdSection": {
       "advantages": "Advantages+",
@@ -680,7 +681,7 @@
     },
     "mulch": {
       "mulchTitle": "Mulch",
-      "mulchDes": "GROWWE mulch is a 100% natural organic material applied to the surface of soil, used in gardening and landscaping.  GROWWE mulch is free from chemicals, that helps nourish the soil and support its aeration while improve its quality. Mulch is a protective layer for the soil that helps retain moisture, improve soil structure and protect plants. ",
+      "mulchDes": "GROWWE mulch is a 100% natural organic material applied to the surface of soil, used in horticulture and landscaping.  GROWWE mulch is free from chemicals, that helps nourish the soil and support its aeration while improve its quality. Mulch is a protective layer for the soil that helps retain moisture, improve soil structure and protect plants. ",
       "know": "  know more"
     }
   },
@@ -853,7 +854,7 @@
     },
     "section2": {
       "title1": "Mulch & Mulching",
-      "pra1": "Mulch is a layer of material applied to the surface of soil, primarily used in gardening. While mulching in agriculture is the practice of covering the soil surface around plants. Mulch can be made from different materials such as coconut, straw, compost, plastic films, or crop residues. The main purpose is to protect the soil, retain moisture, regulate temperature, and improve crop performance.",
+      "pra1": "Mulch is a layer of material applied to the surface of soil, primarily used in horticulture. While mulching in agriculture is the practice of covering the soil surface around plants. Mulch can be made from different materials such as coconut, straw, compost, plastic films, or crop residues. The main purpose is to protect the soil, retain moisture, regulate temperature, and improve crop performance.",
       "title2": "Benefits of Organic Farming",
       "point1": "<second>Moisture conservation:</second> The high water retention of mulch keeps the soil moist by reducing evaporation.",
       "point2": "<second>Weed Control:</second> Prevents weed germination by blocking sunlight.",
@@ -999,7 +1000,7 @@
     "section1": {
       "title": "Pruning Plants ",
       "des": "Techniques, Benefits, and Best Practices",
-      "pra1": "Pruning is one of the most important gardening and farming activities for promoting healthy plant development, increasing yields, and improving aesthetics. Pruning allows plants to direct their energy toward productive development by carefully removing undesirable or unhealthy sections. This article explores the importance, techniques, timing, and benefits of pruning, with practical tips for gardeners, farmers, and landscapers."
+      "pra1": "Pruning is one of the most important horticulture and farming activities for promoting healthy plant development, increasing yields, and improving aesthetics. Pruning allows plants to direct their energy toward productive development by carefully removing undesirable or unhealthy sections. This article explores the importance, techniques, timing, and benefits of pruning, with practical tips for gardeners, farmers, and landscapers."
     },
     "section2": {
       "title1": "What is Pruning?",
@@ -1009,7 +1010,7 @@
       "point2": "<second>Growth Control:</second> Shapes plants and prevents overcrowding.",
       "point3": "<second>Productivity:</second> Encourages flowering and fruiting.",
       "point4": "<second>Safety:</second> Prevents hazards from overgrown or weak branches.",
-      "point5": "<second>Aesthetics:</second> Improves appearance in landscaping and gardening."
+      "point5": "<second>Aesthetics:</second> Improves appearance in landscaping and horticulture."
     },
     "section3": {
       "title1": "Tools Used in Pruning",
@@ -1052,7 +1053,7 @@
     },
     "section6": {
       "title": "Conclusion",
-      "pra": "Pruning is a vital gardening and farming technique that promotes healthier, more productive, and aesthetically pleasing plants. By applying the right methods, tools, and timing, pruning becomes a sustainable practice that supports both home gardening and large-scale agriculture."
+      "pra": "Pruning is a vital horticulture and farming technique that promotes healthier, more productive, and aesthetically pleasing plants. By applying the right methods, tools, and timing, pruning becomes a sustainable practice that supports both home horticulture and large-scale agriculture."
     },
     "section7": {
       "head": "Frequently Asked Questions FAQs",
@@ -1082,7 +1083,7 @@
     "section1": {
       "title": "Irrigation",
       "des": "Importance, Methods, and Best Practices in Agriculture",
-      "pra1": "Irrigation is a vital practice in agriculture and landscaping. It ensures that plants receive sufficient water for healthy growth, higher yields, and sustainability, particularly in locations with irregular rainfall. This article explains the types of irrigation systems, their advantages, challenges, and modern techniques that make farming and gardening more efficient."
+      "pra1": "Irrigation is a vital practice in agriculture and landscaping. It ensures that plants receive sufficient water for healthy growth, higher yields, and sustainability, particularly in locations with irregular rainfall. This article explains the types of irrigation systems, their advantages, challenges, and modern techniques that make farming and horticulture more efficient."
     },
     "section2": {
       "title1": "What is Irrigation?",

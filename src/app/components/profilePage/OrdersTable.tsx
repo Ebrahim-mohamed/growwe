@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/table";
 import { refreshAccessToken } from "@/lib/auth";
 
-const API_BASE_URL = "http://localhost:3002";
+const API_BASE_URL = "https://api.growwe.com";
 
 type Order = {
   _id: string;

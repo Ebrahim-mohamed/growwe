@@ -11,7 +11,7 @@ type News = {
   link: string;
 };
 
-const API_BASE = "http://localhost:3002";
+const API_BASE = "https://api.growwe.com";
 
 export function NewBox({ news }: { news: News }) {
   const locale = useLocale();

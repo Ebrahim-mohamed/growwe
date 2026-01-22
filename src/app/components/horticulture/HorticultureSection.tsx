@@ -2,8 +2,8 @@ import { useTranslations } from "next-intl";
 import { MostUseHeader } from "../MostUseHeader";
 import Image from "next/image";
 
-export function GardeningSection() {
-  const t = useTranslations("gardening.gardeningSection");
+export function HorticultureSection() {
+  const t = useTranslations("horticulture.HorticultureSection");
   return (
     <div className="p-[var(--section-Padding)] bg-[#FCF7F1]">
       <MostUseHeader header={t("title")} des={t("des1")} />
@@ -15,7 +15,7 @@ export function GardeningSection() {
         <div className="w-[30%]">
           <Image
             alt="leaf image"
-            src="/gardening/leaf.png"
+            src="/horticulture/leaf.png"
             width={500}
             height={500}
             className="w-full"

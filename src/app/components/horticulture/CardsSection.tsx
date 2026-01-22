@@ -5,41 +5,41 @@ const cards = [
     header: "header1",
     des: "des1",
     img: "organic",
-    Number: 1,
+    Number: "Organic-Farming-Hydroponic",
   },
   {
     header: "header2",
     des: "des2",
     img: "agriculture",
-    Number: 2,
+    Number: "Mulching-in-Agriculture",
   },
   {
     header: "header3",
     des: "des3",
     img: "landscap",
-    Number: 3,
+    Number: "Landscaping",
   },
   {
     header: "header4",
     des: "des4",
     img: "prun",
-    Number: 4,
+    Number: "Pruning-Plants",
   },
   {
     header: "header5",
     des: "des5",
     img: "irrigation",
-    Number: 5,
+    Number: "Irrigation",
   },
   {
     header: "header6",
     des: "des6",
     img: "fertilizers",
-    Number: 6,
+    Number: "Fertilizers",
   },
 ];
 export function CardsSection() {
-  const t = useTranslations("gardening.cardsSection");
+  const t = useTranslations("horticulture.cardsSection");
   return (
     <div className="p-[var(--section-Padding)] flex flex-col items-center justify-center gap-[1.5rem] w-full bg-[#E9EFE9]">
       <h1 className="text-[#387023] text-[4rem] font-bold mb-[2.5rem] text-center">
@@ -51,7 +51,7 @@ export function CardsSection() {
             des={t(card.des)}
             header={t(card.header)}
             bg={card.img}
-            articleNumber={card.Number}
+            articleName={card.Number}
             buttonName={t("button")}
             key={card.header}
           />

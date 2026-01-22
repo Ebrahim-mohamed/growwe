@@ -8,13 +8,13 @@ export function Card({
   header,
   des,
   bg,
-  articleNumber,
+  articleName,
   buttonName,
 }: {
   header: string;
   des: string;
   bg: string;
-  articleNumber: number;
+  articleName: string;
   buttonName: string;
 }) {
   const [isin, setIsin] = useState(false);
@@ -34,7 +34,7 @@ export function Card({
       ></div>
       <Image
         alt="background image"
-        src={`/gardening/tips/${bg}.png`}
+        src={`/horticulture/tips/${bg}.png`}
         width={500}
         height={500}
         className={`absolute top-0 left-0 w-full h-full ${
@@ -44,7 +44,7 @@ export function Card({
       <div className="w-fit h-auto rounded-full bg-[#E9EFE9] z-40 flex items-center justify-center p-6">
         <Image
           alt="service image"
-          src={`/gardening/tips/${bg}.svg`}
+          src={`/horticulture/tips/${bg}.svg`}
           width={100}
           height={100}
           className="w-[3rem] h-[3rem] rounded-full "
@@ -58,7 +58,7 @@ export function Card({
       </p>
       <Link
         className="px-[1.5rem] py-[0.2rem] rounded-[0.5rem] bg-[#E9EFE9] text-[1rem] text-[#387023] hover:cursor-pointer flex items-center justify-center gap-1 z-40"
-        href={`/${locale}/articles/${articleNumber}`}
+        href={`/${locale}/articles/${articleName}`}
       >
         &#10010;
         <p>{buttonName}</p>

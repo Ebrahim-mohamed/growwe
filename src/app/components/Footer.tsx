@@ -2,7 +2,7 @@ import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 import { SocialIcon } from "./SocialIcon";
-const links = ["about", "products", "gardening", "contact"];
+const links = ["about", "products", "horticulture", "contact"];
 const SocialLinks = [
   { name: "facebook", url: "https://www.facebook.com/growweofficial" },
   { name: "instagram", url: "https://www.instagram.com/growweofficial/" },

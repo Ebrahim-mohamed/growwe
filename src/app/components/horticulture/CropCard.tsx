@@ -2,7 +2,7 @@ export function CropCard({ cropName, img }: { cropName: string; img: string }) {
   return (
     <div
       className="flex-1  rounded-[1rem] text-white text-[2rem] font-bold p-[1rem] flex items-end justify-center overflow-hidden min-h-[30rem] bg-no-repeat bg-cover max-[550px]:bg-center"
-      style={{ backgroundImage: `url(/gardening/crops/${img}.png)` }}
+      style={{ backgroundImage: `url(/horticulture/crops/${img}.png)` }}
     >
       <p>{cropName}</p>
     </div>

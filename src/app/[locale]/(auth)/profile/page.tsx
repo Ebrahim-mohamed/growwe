@@ -9,7 +9,7 @@ import { useEffect, useState } from "react";
 import { refreshAccessToken } from "@/lib/auth";
 import { useRouter } from "next/navigation";
 
-const API_BASE_URL = "http://localhost:3002";
+const API_BASE_URL = "https://api.growwe.com";
 
 type UserData = {
   userName: string;

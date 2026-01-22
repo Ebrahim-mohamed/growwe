@@ -1,5 +1,5 @@
 // lib/auth.ts
-const API_BASE_URL = "http://localhost:3002";
+const API_BASE_URL = "https://api.growwe.com";
 
 export async function refreshAccessToken(): Promise<string | null> {
   try {

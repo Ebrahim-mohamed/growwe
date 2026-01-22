@@ -25,9 +25,9 @@ export function Calculator() {
     let calculatedBags = 0;
 
     if (type === "mulch") {
-      calculatedBags = (L * W * D * 121) / 100;
+      calculatedBags = (L * W * D * 75) / 100;
     } else if (type === "peat") {
-      calculatedBags = (L * W * D * 75) / 500;
+      calculatedBags = (L * W * D * 100) / 500;
     }
 
     setResult(Math.ceil(calculatedBags));

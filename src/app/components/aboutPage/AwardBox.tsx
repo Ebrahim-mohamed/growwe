@@ -4,16 +4,18 @@ import Image from "next/image";
 export function AwardBox({ boxNum }: { boxNum: number }) {
   const t = useTranslations(`about.awardBox${boxNum}`);
   return (
-    <div className="flex gap-[0.5rem] items-center justify-center  flex-1 ">
-      {/* <Image
-        alt="image"
-        src={`/about/awardLeft.png`}
-        width={200}
-        height={500}
-        className="h-full min-[1000px]:hidden"
-      /> */}
+    <div className="flex gap-[0.5rem] items-center justify-center relative w-full min-h-[20rem]">
+      <div className="w-1/2 absolute top-1/2 -translate-y-1/2 -left-[17%]">
+        <Image
+          alt="image"
+          src={`/about/awardLeft.png`}
+          width={200}
+          height={500}
+          className="w-full"
+        />
+      </div>
 
-      <div className="flex flex-col gap-[0.5rem] items-center justify-start text-black  w-full ">
+      <div className="flex flex-col gap-[0.5rem] items-center justify-start text-black ">
         <div className="text-center">
           <h1 className="text-[1.5rem] font-bold max-[1000px]:text-[2rem]">
             {t("year")}
@@ -23,7 +25,7 @@ export function AwardBox({ boxNum }: { boxNum: number }) {
             {t("prize2")}
           </p>
         </div>
-        <div className="w-full h-[0.2rem] bg-black"></div>
+        <div className="w-[70%] h-[0.05rem] bg-black"></div>
         <div className="text-center">
           <h1 className="text-[1.5rem] font-bold max-[1000px]:text-[2rem]">
             {t.rich("pra", { second: (chunk) => <div>{chunk}</div> })}
@@ -35,14 +37,15 @@ export function AwardBox({ boxNum }: { boxNum: number }) {
           )}
         </div>
       </div>
-
-      {/* <Image
-        alt="image"
-        src={`/about/awardRight.png`}
-        width={200}
-        height={500}
-        className="h-full min-[1000px]:hidden"
-      /> */}
+      <div className="w-1/2 absolute top-1/2 -translate-y-1/2 -right-[17%]">
+        <Image
+          alt="image"
+          src={`/about/awardRight.png`}
+          width={200}
+          height={500}
+          className="w-full "
+        />
+      </div>
     </div>
   );
 }

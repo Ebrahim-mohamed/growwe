@@ -27,7 +27,7 @@ export function Products() {
   const [isEgypt, setIsEgypt] = useState(true);
   const [soilProducts, setSoilProducts] = useState<ProductItem[]>([]);
   const [mulchProducts, setMulchProducts] = useState<ProductItem[]>([]);
-  const API_BASE = "http://localhost:3002"; // backend URL
+  const API_BASE = "https://api.growwe.com"; // backend URL
 
   useEffect(() => {
     async function checkIfEgypt() {
