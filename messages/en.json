@@ -603,7 +603,10 @@
       "button": "Log In",
       "have'tAccount": "Don't have an account? ",
       "signUp": "SignUp",
-      "forget": "Forget your password?"
+      "forget": "Forget your password?",
+      "emailLabel": "E-mail",
+      "emailPlaceholder": "E-mail",
+      "emailError": "E-mail should contain @"
     },
     "signup": {
       "header": "CREATE PROFILE",

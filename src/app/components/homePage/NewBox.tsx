@@ -32,7 +32,9 @@ export function NewBox({ news }: { news: News }) {
         </h2>
 
         <p className="text-[#494949] text-[1.2rem]">
-          {locale === "en" ? news.desEN : news.desAR}
+          {locale === "en"
+            ? `${news.desEN.substring(0, 100)}...`
+            : `${news.desAR.substring(0, 100)}`}
         </p>
 
         <Link href={news.link} className="text-[#C05DEF] font-medium mt-auto">

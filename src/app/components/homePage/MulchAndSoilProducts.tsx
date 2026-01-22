@@ -81,8 +81,8 @@ export function MulchAndSoilProducts(content: productSectionType) {
               ? "No soil products available."
               : "لا توجد منتجات تربة متاحة."
             : locale === "en"
-            ? "No mulch products available."
-            : "لا توجد منتجات نشارة متاحة."}
+              ? "No mulch products available."
+              : "لا توجد منتجات نشارة متاحة."}
         </p>
       ) : (
         <div className="mt-[1.5rem] relative min-[600px]:px-[10rem]">
@@ -99,7 +99,7 @@ export function MulchAndSoilProducts(content: productSectionType) {
             onSwiper={(swiper) => {
               swiperRef.current = swiper;
             }}
-            className="flex gap-4 h-full items-center justify-center"
+            className="flex gap-4 h-full items-center justify-center "
           >
             {content.products.map((product) => (
               <SwiperSlide

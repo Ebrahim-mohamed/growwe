@@ -51,7 +51,7 @@ export function Footer() {
           </div>
         </div>
       </div>
-      <div className="flex items-center justify-between w-full font-normal">
+      <div className="flex items-center justify-between w-full font-normal max-[500px]:flex-col max-[500px]:gap-4">
         <div className="flex items-center justify-center gap-[3rem] text-[1.2rem] ">
           <Link href={`/${locale}/privacy-policy`}>{t("privacy")}</Link>
           <Link href={`/${locale}/refund`}>{t("terms")}</Link>

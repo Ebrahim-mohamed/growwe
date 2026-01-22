@@ -1,10 +1,10 @@
 import * as z from "zod";
 
 export const loginSchema = z.object({
-  userName: z
+  email: z
     .string()
-    .nonempty({ message: "userNameError" })
-    .min(3, { message: "minUserNameError" }),
+    .nonempty({ message: "emailError" })
+    .min(3, { message: "minEmailError" }),
   password: z
     .string()
     .nonempty({ message: "passwordError" })

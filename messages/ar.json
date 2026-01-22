@@ -581,9 +581,9 @@
     "login": {
       "header": "تسجيل الدخول",
       "des": "اطلب بسهولة، اطلب مرة أخرى، تتبع طلباتك واحصل على أحدث العروض!",
-      "userNamePlaceholder": "البريد الالكتروني",
-      "userNameLabel": "البريد الالكتروني",
-      "userNameError": "من فضلك ادخل بريدك الالكتروني",
+      "userNamePlaceholder": "الاسم",
+      "userNameLabel": "الاسم",
+      "userNameError": "من فضلك ادخل الاسم",
       "minUserNameError": "يجب ان يحنوي البريد الالكتروني علي @",
       "passwordPlaceholder": "كلمة السر",
       "passwordLabel": "كلمة السر",
@@ -592,7 +592,10 @@
       "button": "تسجيل الدخول",
       "have'tAccount": "ليس لديك حساب؟ ",
       "signUp": "أنشئ حساب",
-      "forget": "هل نسيت كلمة السر؟"
+      "forget": "هل نسيت كلمة السر؟",
+      "emailLabel": "البريد الالكتروني",
+      "emailPlaceholder": "البريد الالكتروني",
+      "emailError": "يجب ان يحتوي البريد الالكتروني علي @"
     },
     "signup": {
       "header": "أنشئ حساب",

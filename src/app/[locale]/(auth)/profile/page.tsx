@@ -77,10 +77,11 @@ export default function Profile() {
 
   function handleLogout() {
     // Optional: call backend logout endpoint
-    // fetch(`${API_BASE_URL}/auth/logout`, { credentials: "include" });
+    fetch(`${API_BASE_URL}/auth/logout`, { credentials: "include" });
 
     localStorage.removeItem("accessToken");
     router.replace(`/${locale}`);
+    window.location.reload();
   }
 
   if (loading) {

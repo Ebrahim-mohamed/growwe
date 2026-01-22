@@ -5,7 +5,7 @@ export function AwardBox({ boxNum }: { boxNum: number }) {
   const t = useTranslations(`about.awardBox${boxNum}`);
   return (
     <div className="flex gap-[0.5rem] items-center justify-center relative w-full min-h-[20rem]">
-      <div className="w-1/2 absolute top-1/2 -translate-y-1/2 -left-[17%]">
+      <div className="w-1/2 absolute top-1/2 -translate-y-1/2 -left-[17%] max-[1350px]:-left-[20%]">
         <Image
           alt="image"
           src={`/about/awardLeft.png`}
@@ -37,7 +37,7 @@ export function AwardBox({ boxNum }: { boxNum: number }) {
           )}
         </div>
       </div>
-      <div className="w-1/2 absolute top-1/2 -translate-y-1/2 -right-[17%]">
+      <div className="w-1/2 absolute top-1/2 -translate-y-1/2 -right-[17%] max-[1350px]:-right-[20%]">
         <Image
           alt="image"
           src={`/about/awardRight.png`}

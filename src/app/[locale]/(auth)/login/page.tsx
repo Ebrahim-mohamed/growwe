@@ -70,14 +70,13 @@ export default function Login() {
             )}
 
             <Input
-              label={t("userNameLabel")}
-              place={t("userNamePlaceholder")}
+              type="e-mail"
+              label={t("emailLabel")}
+              place={t("emailPlaceholder")}
               errorMessage={
-                errors.userName?.message
-                  ? t(errors.userName?.message)
-                  : undefined
+                errors.email?.message ? t(errors.email?.message) : undefined
               }
-              {...register("userName")}
+              {...register("email")}
             />
 
             <Input
