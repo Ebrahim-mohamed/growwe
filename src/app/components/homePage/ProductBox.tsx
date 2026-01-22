@@ -85,8 +85,8 @@ export function ProductBox(product: productType) {
         />
       </div>
       <div className="p-[1rem] bg-[#FAFAF5]">
-        <div className="flex items-center justify-between gap-2">
-          <div className="font-bold">
+        <div className="flex items-start justify-between gap-2">
+          <div className="font-bold w-[90%]">
             <h1 className="text-black text-[1.2rem]">{product.header}</h1>
             <p className="text-[#426B1F] text-[1.25rem]">
               EGP {product.price} / {product.type}
@@ -95,14 +95,14 @@ export function ProductBox(product: productType) {
           <button
             onClick={addToCart}
             disabled={loading}
-            className="disabled:opacity-50 disabled:cursor-not-allowed"
+            className="disabled:opacity-50 disabled:cursor-not-allowed min-w-[3rem]"
           >
             <Image
               alt="add button"
               src="/add-button.svg"
               width={100}
               height={100}
-              className="w-[3rem] hover:cursor-pointer mb-[0.5rem]"
+              className="w-full hover:cursor-pointer mb-[0.5rem]"
             />
           </button>
         </div>

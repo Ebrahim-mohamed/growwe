@@ -31,12 +31,10 @@ export function SelectedItemBox({
     <div className="flex w-full items-center justify-between gap-[1.5rem] shadow-md rounded-[1rem] bg-white py-[1rem] px-[1.5rem] mb-4">
       {/* Product Info */}
       <div className="flex items-center gap-[2rem] flex-1">
-        <Image
+        <img
           alt="product image"
-          width={120}
-          height={120}
-          src={`https://api.growwe.com/uploads/${img}`}
-          className="max-w-[8rem] aspect-square object-cover rounded-lg"
+          src={`https://api.growwe.com/${img}`}
+          className="w-full h-full max-w-[8rem] rounded-lg"
         />
         <div className="flex flex-col gap-1">
           <p className="text-lg font-semibold text-black">{name}</p>
