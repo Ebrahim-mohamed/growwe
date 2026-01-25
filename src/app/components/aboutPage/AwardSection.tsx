@@ -8,7 +8,7 @@ export function AwardSection() {
       <h1 className="text-[3rem] text-[#E5AC71] font-bold mb-[5rem] text-center">
         {t("head")}
       </h1>
-      <div className="flex items-start gap-[1rem] max-[950px]:flex-col max-[950px]:items-center max-[950px]:justify-center max-[950px]:gap-[4rem] flex-1">
+      <div className="flex items-start gap-[1rem] max-[1000px]:flex-col max-[1000px]:items-center max-[1000px]:justify-center max-[1000px]:gap-[4rem] flex-1">
         {Array.from({ length: 3 }).map((_, index) => (
           <AwardBox key={index} boxNum={index + 1} />
         ))}

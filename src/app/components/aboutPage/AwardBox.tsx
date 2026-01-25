@@ -5,15 +5,13 @@ export function AwardBox({ boxNum }: { boxNum: number }) {
   const t = useTranslations(`about.awardBox${boxNum}`);
   return (
     <div className="flex gap-[0.5rem] items-center justify-center relative w-full min-h-[20rem]">
-      <div className="w-1/2 absolute top-1/2 -translate-y-1/2 -left-[17%] max-[1350px]:-left-[20%]">
-        <Image
-          alt="image"
-          src={`/about/awardLeft.png`}
-          width={200}
-          height={500}
-          className="w-full"
-        />
-      </div>
+      <Image
+        alt="image"
+        src={`/about/awardLeft.png`}
+        width={200}
+        height={500}
+        className="w-[4rem] absolute top-1/2 -translate-y-1/2 left-0 max-[1350px]:w-[2.5rem] max-[1200px]:w-[2rem] max-[1000px]:w-[4.5rem] "
+      />
 
       <div className="flex flex-col gap-[0.5rem] items-center justify-start text-black ">
         <div className="text-center">
@@ -37,15 +35,14 @@ export function AwardBox({ boxNum }: { boxNum: number }) {
           )}
         </div>
       </div>
-      <div className="w-1/2 absolute top-1/2 -translate-y-1/2 -right-[17%] max-[1350px]:-right-[20%]">
-        <Image
-          alt="image"
-          src={`/about/awardRight.png`}
-          width={200}
-          height={500}
-          className="w-full "
-        />
-      </div>
+
+      <Image
+        alt="image"
+        src={`/about/awardRight.png`}
+        width={200}
+        height={500}
+        className="w-[4rem] absolute top-1/2 -translate-y-1/2 right-0 max-[1350px]:w-[2.5rem] max-[1200px]:w-[2rem] max-[1000px]:w-[4.5rem]"
+      />
     </div>
   );
 }
