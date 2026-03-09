@@ -48,9 +48,9 @@
       "smartFourthBoxHeader": "Low EC",
       "smartFourthBoxDescription": "Low salt levels (safer <second> for sensitive plants)</second>",
       "smartFifthBoxHeader": "Neutral pH",
-      "smartFifthBoxDescription": "Ideal pH for crops <second> pH  5.5 - 6.5 </second>",
+      "smartFifthBoxDescription": "Ideal pH for crops <second> pH  5.5 - 7.5 </second>",
       "smartSixthBoxHeader": "Add Water",
-      "smartSixthBoxDescription": "Add 18 liters of water <second>per block to get</second> <second>50 liters volume.</second>",
+      "smartSixthBoxDescription": "Add 20 - 25 liters of water <second>per block to get</second> <second>50 liters volume.</second>",
       "know": "  know more"
     },
     "plantsSection": {
@@ -319,9 +319,9 @@
       "soilFourthBoxHeader": "Low EC",
       "soilFourthBoxDescription": "Low salt levels (safer <second>for sensitive plants)</second>",
       "soilFifthBoxHeader": "Neutral pH",
-      "soilFifthBoxDescription": "Ideal pH for crops <second>pH 5.5 - 6.5</second>",
+      "soilFifthBoxDescription": "Ideal pH for crops <second>pH 5.5 - 7.5</second>",
       "soilSixthBoxHeader": "Add Water",
-      "soilSixthBoxDescription": "Add 18 liters of water <second>per block to get</second> <second>50 liters volume.</second>",
+      "soilSixthBoxDescription": "Add 20 - 25 liters of water <second>per block to get</second> <second>50 liters volume.</second>",
       "mulchHeader": "Save Your Soil, Enhance Your Landscape,",
       "mulchAttachHeader": " with a <second>Premium</second> Look.",
       "mulchFirstBoxHeader": "100% Organic",

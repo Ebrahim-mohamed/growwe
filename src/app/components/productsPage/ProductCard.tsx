@@ -114,7 +114,7 @@ export function ProductCard({ product, productOrder }: ProductCardProps) {
         unoptimized
       />
 
-      <div className="flex flex-col gap-6 flex-1 z-40 max-w-[45rem]">
+      <div className="flex flex-col gap-6 flex-1 z-40 max-w-[45rem] max-[580px]:px-4">
         <div>
           <h1 className="text-[#426B1F] text-3xl font-semibold">{name}</h1>
           <p className="text-[#E5AC71] font-semibold">

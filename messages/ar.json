@@ -48,7 +48,7 @@
       "smartFourthBoxHeader": "منخفض الملوحة",
       "smartFourthBoxDescription": "مستوى ملوحة منخفض مما يوفر بيئة مثالية للنباتات الحساسة",
       "smartFifthBoxHeader": "محايد الحموضة",
-      "smartFifthBoxDescription": "مستوى pH 5.5 - 6.5 يوفر بيئة مثالية للنمو",
+      "smartFifthBoxDescription": "مستوى pH 5.5 - 7.5 يوفر بيئة مثالية للنمو",
       "smartSixthBoxHeader": "أَضف مياه",
       "smartSixthBoxDescription": "أضف 18 لتر من المياه لكل 5 كجم لتحصل على 50 لتر من التربة"
     },
@@ -81,6 +81,27 @@
     }
   },
   "about": {
+    "awardBox1": {
+      "head": "جوائز التكنولوجيا",
+      "year": "WINNER 2024",
+      "prize": "PIONEERING & SOPHISTICATED INNOVATIONS",
+      "prize2": "Serving the Agriculture Sector Category",
+      "pra": "KHALIFA INT.<second> AWARD FOR DATE PALM</second>",
+      "subPra": "and agricultural innovation"
+    },
+    "awardBox2": {
+      "year": "WINNER 2024",
+      "prize": "INNOVATIVE TECHNOLOGY EXCELLENCE",
+      "prize2": "prize Category",
+      "pra": "NATIONAL CENTER <second>FOR PALMS & DATES</second>",
+      "subPra": "International Prize"
+    },
+    "awardBox3": {
+      "year": "WINNER 2024",
+      "prize": "CONTINUITY AND RESILIENCE INNOVATION",
+      "prize2": "Africa Award",
+      "pra": "BUSINESS CONTINUITY <second>INSTITUTE</second>"
+    },
     "heroSection": {
       "title": "عن جرووي",
       "natural": "طبيعي",
@@ -304,7 +325,7 @@
       "soilFourthBoxHeader": "منخفض الملوحة",
       "soilFourthBoxDescription": "مستوى ملوحة منخفض مما يوفر بيئة مثالية للنباتات الحساسة",
       "soilFifthBoxHeader": "محايد الحموضة",
-      "soilFifthBoxDescription": "مستوى pH 5.5 - 6.5 يوفر بيئة مثالية للنمو",
+      "soilFifthBoxDescription": "مستوى pH 5.5 - 7.5 يوفر بيئة مثالية للنمو",
       "soilSixthBoxHeader": "أَضف مياه",
       "soilSixthBoxDescription": "أضف 18 لتر من المياه لكل 5 كجم لتحصل على 50 لتر من التربة",
       "mulchHeader": "حافظ على تربتك، وطور حديقتك،",
