@@ -28,7 +28,7 @@ export function SelectedItemBox({
   };
 
   return (
-    <div className="flex w-full items-center justify-between gap-[1.5rem] shadow-md rounded-[1rem] bg-white py-[1rem] px-[1.5rem] mb-4">
+    <div className="flex w-full items-center justify-between gap-[1.5rem] max-[750px]:flex-col shadow-md rounded-[1rem] bg-white py-[1rem] px-[1.5rem] mb-4">
       {/* Product Info */}
       <div className="flex items-center gap-[2rem] flex-1">
         <img
