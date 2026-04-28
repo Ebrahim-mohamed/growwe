@@ -10,11 +10,11 @@ export function FourthSection(content: contentType) {
   const t = useTranslations("informationMulchAndSoil.fourthSection");
   const locale = useLocale();
   return (
-    <div className="p-[var(--section-Padding)] bg-[#FCF7F1]  overflow-hidden">
+    <div className="p-[var(--section-Padding)] bg-[#FCF7F1]  ">
       {content.header === "soilHeader" ? (
         <div className="relative text-[#387023] text-[3rem] font-black">
           <h2
-            className={`absolute -top-[80%] ${
+            className={`absolute -top-[80%] max-[430px]:-top-[55%] ${
               locale === "en" ? " left-[18%] " : " right-[18%] "
             }`}
           >

@@ -114,15 +114,15 @@ export function MulchAndSoilProducts(content: productSectionType) {
           {/* Custom Navigation Arrows */}
           <div
             ref={prevRef}
-            className="custom-prev text-[2rem] font-bold absolute top-1/2 -left-0 max-[1000px]:-left-7 -translate-y-1/2 bg-[#E6E6E6] rounded-full flex items-center justify-center cursor-pointer transition z-10 p-2"
+            className="custom-prev text-[2rem] font-bold absolute top-1/2 -left-0 max-[1000px]:-left-7 py-[0.5rem] px-[1.2rem]  -translate-y-1/2 bg-[#E6E6E6] rounded-full flex items-center justify-center cursor-pointer transition z-10 p-2"
           >
-            &lt;
+            {locale === "en" ? "<" : ">"}
           </div>
           <div
             ref={nextRef}
-            className="custom-next text-[2rem] font-bold absolute top-1/2 -right-0 max-[1000px]:-right-7 -translate-y-1/2 bg-[#E6E6E6] rounded-full flex items-center justify-center cursor-pointer transition z-10 p-2"
+            className="custom-next text-[2rem] font-bold absolute top-1/2 -right-0 max-[1000px]:-right-7 py-[0.5rem] px-[1.2rem] -translate-y-1/2 bg-[#E6E6E6] rounded-full flex items-center justify-center cursor-pointer transition z-10 p-2"
           >
-            &gt;
+            {locale === "en" ? ">" : "<"}
           </div>
         </div>
       )}

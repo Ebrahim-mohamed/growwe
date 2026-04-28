@@ -82,8 +82,8 @@ export default function SoillessGrowing() {
           }
           className={`w-[4rem] aspect-square absolute top-[5rem] max-[500px]:top-[3rem] ${
             locale === "en"
-              ? " min-[1300px]:right-[17rem] max-[1300px]:right-[7rem] max-[500px]:right-[7rem]"
-              : " min-[1300px]:left-[17rem] max-[1300px]:left-[7rem] max-[500px]:right-[7rem]"
+              ? " min-[1300px]:right-[17rem] max-[1300px]:right-[7rem] max-[500px]:right-[7rem] max-[400px]:right-[4rem]"
+              : " min-[1300px]:left-[17rem] max-[1300px]:left-[7rem] max-[500px]:left-[7rem] max-[400px]:left-[4rem]"
           } cursor-pointer`}
           download
         >

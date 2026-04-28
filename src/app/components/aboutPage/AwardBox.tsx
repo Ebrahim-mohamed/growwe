@@ -10,7 +10,7 @@ export function AwardBox({ boxNum }: { boxNum: number }) {
         src={`/about/awardLeft.png`}
         width={200}
         height={500}
-        className="w-[4rem] absolute top-1/2 -translate-y-1/2 left-0 max-[1350px]:w-[2.5rem] max-[1200px]:w-[2rem] max-[1000px]:w-[4.5rem] "
+        className="w-[4rem]  absolute top-1/2 -translate-y-1/2 left-0 max-[1350px]:w-[2.5rem] max-[1200px]:w-[2rem] max-[1000px]:w-[4.5rem] max-[420px]:hidden "
       />
 
       <div className="flex flex-col gap-[0.5rem] items-center justify-start text-black ">
@@ -41,7 +41,7 @@ export function AwardBox({ boxNum }: { boxNum: number }) {
         src={`/about/awardRight.png`}
         width={200}
         height={500}
-        className="w-[4rem] absolute top-1/2 -translate-y-1/2 right-0 max-[1350px]:w-[2.5rem] max-[1200px]:w-[2rem] max-[1000px]:w-[4.5rem]"
+        className="w-[4rem] absolute top-1/2 -translate-y-1/2 right-0 max-[1350px]:w-[2.5rem] max-[1200px]:w-[2rem] max-[1000px]:w-[4.5rem] max-[420px]:hidden "
       />
     </div>
   );
