@@ -38,14 +38,18 @@ export default function AdminLoginForm() {
       const data = await response.json();
 
       if (!response.ok) {
-        throw new Error(data.message || "Login failed.");
+        throw new Error(
+          data.message || "Login failed."
+        );
       }
 
-      // Store admin token in localStorage
       if (!data.token) {
-        throw new Error("Authentication token was not returned.");
+        throw new Error(
+          "Authentication token was not returned."
+        );
       }
 
+      // Store admin session token
       localStorage.setItem("adminToken", data.token);
 
       // Redirect to dashboard

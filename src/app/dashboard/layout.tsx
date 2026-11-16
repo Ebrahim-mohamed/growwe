@@ -18,6 +18,8 @@ export default function DashboardLayout({
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    let isMounted = true;
+
     const verifyAdmin = async () => {
       const adminToken = localStorage.getItem("adminToken");
 
@@ -40,26 +42,39 @@ export default function DashboardLayout({
 
         if (!response.ok) {
           localStorage.removeItem("adminToken");
+
           router.replace("/admin-login");
           return;
         }
 
-        setIsAuthenticated(true);
+        if (isMounted) {
+          setIsAuthenticated(true);
+        }
       } catch (error) {
         console.error("Admin verification error:", error);
+
+        localStorage.removeItem("adminToken");
         router.replace("/admin-login");
       } finally {
-        setLoading(false);
+        if (isMounted) {
+          setLoading(false);
+        }
       }
     };
 
     verifyAdmin();
+
+    return () => {
+      isMounted = false;
+    };
   }, [router]);
 
   if (loading || !isAuthenticated) {
     return (
       <div className="flex min-h-screen items-center justify-center bg-black">
-        <div className="text-white">Verifying authentication...</div>
+        <p className="text-white">
+          Verifying authentication...
+        </p>
       </div>
     );
   }
