@@ -4,7 +4,6 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 
-
 export default function AdminLoginForm() {
   const router = useRouter();
 
@@ -23,10 +22,9 @@ export default function AdminLoginForm() {
 
     try {
       const response = await fetch(
-        `https://api.growwe.com/auth/admin/login`,
+        "https://api.growwe.com/auth/admin/login",
         {
           method: "POST",
-          credentials: "include",
           headers: {
             "Content-Type": "application/json",
           },
@@ -43,8 +41,15 @@ export default function AdminLoginForm() {
         throw new Error(data.message || "Login failed.");
       }
 
+      // Store admin token in localStorage
+      if (!data.token) {
+        throw new Error("Authentication token was not returned.");
+      }
+
+      localStorage.setItem("adminToken", data.token);
+
+      // Redirect to dashboard
       router.replace("/dashboard");
-      router.refresh();
     } catch (err) {
       setError(
         err instanceof Error
